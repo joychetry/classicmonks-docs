@@ -1,11 +1,11 @@
 ---
 title: "How to Use Auto Featured Image in Classic Monks | CM"
-slug: core/auto-featured-image
+slug: auto-featured-image
 description: "Auto Featured Image in Classic Monks automatically sets the first image in post content as the featured image when saving. Ensures every post has a featured image."
 last_updated: 2026-06-24
 author: Joy
 reading_time: 5 min
-canonical: https://classicmonks.com/docs/core/auto-featured-image/
+canonical: https://classicmonks.com/docs/auto-featured-image/
 ---
 
 # How to Use Auto Featured Image in WordPress

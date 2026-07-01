@@ -1,11 +1,11 @@
 ---
 title: "How to Lazy Load iFrames in WordPress | CM"
-slug: performance/perf-lazy-load-iframes
+slug: perf-lazy-load-iframes
 description: "Enable lazy loading for iFrames in Classic Monks. Defers loading of embedded content (YouTube, Vimeo, maps) until they enter the viewport."
 last_updated: 2026-06-24
 author: Joy
 reading_time: 3 min
-canonical: https://classicmonks.com/docs/performance/perf-lazy-load-iframes/
+canonical: https://classicmonks.com/docs/perf-lazy-load-iframes/
 ---
 
 # How to Lazy Load iFrames in WordPress

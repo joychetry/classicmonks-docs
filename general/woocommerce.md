@@ -5,7 +5,7 @@ description: "Index of all WooCommerce tab features in Classic Monks. 49 per-fea
 last_updated: 2026-06-24
 author: Joy
 reading_time: 3 min
-canonical: https://classicmonks.com/docs/woocommerce/
+canonical: https://classicmonks.com/docs/
 ---
 
 # How to Use the WooCommerce Tab in Classic Monks: Feature Index

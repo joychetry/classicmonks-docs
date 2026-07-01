@@ -1,11 +1,11 @@
 ---
 title: "How to Lazy Render Videos in WordPress | CM"
-slug: performance/perf-lazy-render-videos
+slug: perf-lazy-render-videos
 description: "Enable lazy rendering for video elements in Classic Monks. Defers video rendering until the video enters the viewport."
 last_updated: 2026-06-24
 author: Joy
 reading_time: 3 min
-canonical: https://classicmonks.com/docs/performance/perf-lazy-render-videos/
+canonical: https://classicmonks.com/docs/perf-lazy-render-videos/
 ---
 
 # How to Lazy Render Videos in WordPress

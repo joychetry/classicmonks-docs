@@ -1,11 +1,11 @@
 ---
 title: "How to Enable Custom Order Columns in WordPress | CM"
-slug: woocommerce/enable-custom-order-columns
+slug: enable-custom-order-columns
 description: "Add additional columns to the WooCommerce orders table in Classic Monks. Includes 19 column options like payment method, shipping details, customer info, and more."
 last_updated: 2026-06-24
 author: Joy
 reading_time: 7 min
-canonical: https://classicmonks.com/docs/woocommerce/enable-custom-order-columns/
+canonical: https://classicmonks.com/docs/enable-custom-order-columns/
 ---
 
 # How to Enable Custom Order Columns in WordPress

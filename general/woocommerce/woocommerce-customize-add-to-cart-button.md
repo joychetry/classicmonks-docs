@@ -1,11 +1,11 @@
 ---
 title: "How to Customize the Add to Cart Button in WordPress | CM"
-slug: woocommerce/customize-add-to-cart-button
+slug: customize-add-to-cart-button
 description: "Customize the Add to Cart button text in Classic Monks for different product types, user roles, and stock states. Includes dynamic and personalized messaging variants."
 last_updated: 2026-06-24
 author: Joy
 reading_time: 5 min
-canonical: https://classicmonks.com/docs/woocommerce/customize-add-to-cart-button/
+canonical: https://classicmonks.com/docs/customize-add-to-cart-button/
 ---
 
 # How to Customize the Add to Cart Button in WordPress

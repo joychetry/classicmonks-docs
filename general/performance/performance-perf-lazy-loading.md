@@ -1,11 +1,11 @@
 ---
 title: "How to Enable Lazy Loading in WordPress | CM"
-slug: performance/perf-lazy-loading
+slug: perf-lazy-loading
 description: "Enable lazy loading for images, iFrames, videos, and backgrounds in Classic Monks. Defers loading of off-screen content for faster initial page load."
 last_updated: 2026-06-24
 author: Joy
 reading_time: 3 min
-canonical: https://classicmonks.com/docs/performance/perf-lazy-loading/
+canonical: https://classicmonks.com/docs/perf-lazy-loading/
 ---
 
 # How to Enable Lazy Loading in WordPress

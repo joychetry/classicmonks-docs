@@ -1,11 +1,11 @@
 ---
 title: "How to Enable Negative Loading in WordPress | CM"
-slug: performance/perf-negative-loading
+slug: perf-negative-loading
 description: "Load images before they enter the viewport in Classic Monks. Preloads images that are about to become visible, preventing a flash of unloaded content."
 last_updated: 2026-06-24
 author: Joy
 reading_time: 3 min
-canonical: https://classicmonks.com/docs/performance/perf-negative-loading/
+canonical: https://classicmonks.com/docs/perf-negative-loading/
 ---
 
 # How to Enable Negative Loading in WordPress

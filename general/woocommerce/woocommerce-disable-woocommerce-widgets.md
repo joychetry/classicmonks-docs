@@ -1,11 +1,11 @@
 ---
 title: "How to Disable All WooCommerce Widgets in WordPress | CM"
-slug: woocommerce/disable-woocommerce-widgets
+slug: disable-woocommerce-widgets
 description: "Remove all WooCommerce widgets from the widgets admin area. Simplifies widget management for stores that don't use WooCommerce widgets."
 last_updated: 2026-06-24
 author: Joy
 reading_time: 2 min
-canonical: https://classicmonks.com/docs/woocommerce/disable-woocommerce-widgets/
+canonical: https://classicmonks.com/docs/disable-woocommerce-widgets/
 ---
 
 # How to Disable All WooCommerce Widgets in WordPress

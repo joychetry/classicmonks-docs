@@ -1,11 +1,11 @@
 ---
 title: "How to Allow Duplicate Comments in Classic Monks | CM"
-slug: core/allow-duplicate-comments
+slug: allow-duplicate-comments
 description: "Allow the same user to comment multiple times on a single post in Classic Monks. Overrides WordPress's default duplicate comment block."
 last_updated: 2026-06-24
 author: Joy
 reading_time: 3 min
-canonical: https://classicmonks.com/docs/core/allow-duplicate-comments/
+canonical: https://classicmonks.com/docs/allow-duplicate-comments/
 ---
 
 # How to Allow Duplicate Comments in WordPress

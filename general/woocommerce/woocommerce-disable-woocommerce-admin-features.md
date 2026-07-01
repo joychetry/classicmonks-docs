@@ -1,11 +1,11 @@
 ---
 title: "How to Disable All WooCommerce Admin Features in WordPress | CM"
-slug: woocommerce/disable-woocommerce-admin-features
+slug: disable-woocommerce-admin-features
 description: "Completely disable WooCommerce 4.0+ admin features. Reverts to the classic admin interface for improved performance and compatibility."
 last_updated: 2026-06-24
 author: Joy
 reading_time: 3 min
-canonical: https://classicmonks.com/docs/woocommerce/disable-woocommerce-admin-features/
+canonical: https://classicmonks.com/docs/disable-woocommerce-admin-features/
 ---
 
 # How to Disable All WooCommerce Admin Features in WordPress

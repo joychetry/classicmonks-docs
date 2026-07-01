@@ -1,11 +1,11 @@
 ---
 title: "How to Enable 2FA Rate Limiting in WordPress | CM"
-slug: security/2fa-rate-limiting
+slug: 2fa-rate-limiting
 description: "Add rate limiting to 2FA verification in Classic Monks. Locks out users after too many failed 2FA attempts to prevent brute force attacks on the second factor."
 last_updated: 2026-06-24
 author: Joy
 reading_time: 3 min
-canonical: https://classicmonks.com/docs/security/2fa-rate-limiting/
+canonical: https://classicmonks.com/docs/2fa-rate-limiting/
 ---
 
 # How to Enable 2FA Rate Limiting in WordPress

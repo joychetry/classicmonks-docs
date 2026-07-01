@@ -1,11 +1,11 @@
 ---
 title: "How to Check and Delete Images by Dimensions in WordPress | CM"
-slug: performance/perf-delete-image-sizes
+slug: perf-delete-image-sizes
 description: "Find and delete specific image sizes in Classic Monks. Remove generated image sizes (thumbnails, medium, large) for specific dimensions."
 last_updated: 2026-06-24
 author: Joy
 reading_time: 3 min
-canonical: https://classicmonks.com/docs/performance/perf-delete-image-sizes/
+canonical: https://classicmonks.com/docs/perf-delete-image-sizes/
 ---
 
 # How to Check and Delete Images by Dimensions in WordPress

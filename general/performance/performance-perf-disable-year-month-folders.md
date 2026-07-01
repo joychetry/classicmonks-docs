@@ -1,11 +1,11 @@
 ---
 title: "How to Disable Year/Month Folders for Uploads in WordPress | CM"
-slug: performance/perf-disable-year-month-folders
+slug: perf-disable-year-month-folders
 description: "Disable the year/month folder structure for media uploads in Classic Monks. Saves uploads directly to the uploads folder instead of creating date-based subdirectories."
 last_updated: 2026-06-24
 author: Joy
 reading_time: 3 min
-canonical: https://classicmonks.com/docs/performance/perf-disable-year-month-folders/
+canonical: https://classicmonks.com/docs/perf-disable-year-month-folders/
 ---
 
 # How to Disable Year/Month Folders for Uploads in WordPress

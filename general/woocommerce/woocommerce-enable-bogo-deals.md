@@ -1,11 +1,11 @@
 ---
 title: "How to Enable BOGO Deals in WordPress | CM"
-slug: woocommerce/enable-bogo-deals
+slug: enable-bogo-deals
 description: "Create Buy One Get One promotions in Classic Monks. Supports same-product BOGO, quantity scaling, and category-based offers."
 last_updated: 2026-06-24
 author: Joy
 reading_time: 4 min
-canonical: https://classicmonks.com/docs/woocommerce/enable-bogo-deals/
+canonical: https://classicmonks.com/docs/enable-bogo-deals/
 ---
 
 # How to Enable BOGO Deals in WordPress

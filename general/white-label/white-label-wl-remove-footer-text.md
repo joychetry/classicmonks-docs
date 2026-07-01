@@ -1,6 +1,6 @@
 ---
 title: "How to Remove WordPress Footer Text and Version in WordPress | CM"
-slug: white-label/wl-remove-footer-text
+slug: wl-remove-footer-text
 description: "Remove the WordPress footer text and version number from the admin in Classic Monks. Hides the WordPress version and \"Thank you\" message."
 last_updated: 2026-06-24
 author: Joy

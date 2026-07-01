@@ -1,11 +1,11 @@
 ---
 title: "How to Update Price on Variation Selection in WordPress | CM"
-slug: woocommerce/update-price-on-variation
+slug: update-price-on-variation
 description: "Update the displayed price in real-time when customers select a different variation in Classic Monks. Provides immediate price feedback during the variation selection process."
 last_updated: 2026-06-24
 author: Joy
 reading_time: 3 min
-canonical: https://classicmonks.com/docs/woocommerce/update-price-on-variation/
+canonical: https://classicmonks.com/docs/update-price-on-variation/
 ---
 
 # How to Update Price on Variation Selection in WordPress

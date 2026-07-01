@@ -1,11 +1,11 @@
 ---
 title: "How to Add Nofollow to External Links in Classic Monks | CM"
-slug: core/nofollow-external-links
+slug: nofollow-external-links
 description: "Automatically add rel=\"nofollow\" and target=\"_blank\" to external links in Classic Monks. Preserve link equity, reduce bounce rate, no theme edits required."
 last_updated: 2026-06-24
 author: Joy
 reading_time: 5 min
-canonical: https://classicmonks.com/docs/core/nofollow-external-links/
+canonical: https://classicmonks.com/docs/nofollow-external-links/
 ---
 
 # How to Add Nofollow to External Links in WordPress

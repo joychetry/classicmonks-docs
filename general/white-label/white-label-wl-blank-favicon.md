@@ -1,11 +1,11 @@
 ---
 title: "How to Add a Blank Favicon in WordPress | CM"
-slug: white-label/wl-blank-favicon
+slug: wl-blank-favicon
 description: "Add a blank favicon to the site in Classic Monks. Removes the default WordPress favicon or browser default."
 last_updated: 2026-06-24
 author: Joy
 reading_time: 3 min
-canonical: https://classicmonks.com/docs/white-label/wl-blank-favicon/
+canonical: https://classicmonks.com/docs/wl-blank-favicon/
 ---
 
 # How to Add a Blank Favicon in WordPress

@@ -1,11 +1,11 @@
 ---
 title: "How to Disable Search Functionality in WordPress | CM"
-slug: performance/perf-disable-search
+slug: perf-disable-search
 description: "Disable the WordPress search functionality in Classic Monks. Prevents bot traffic from hitting the search endpoint, improving performance."
 last_updated: 2026-06-24
 author: Joy
 reading_time: 3 min
-canonical: https://classicmonks.com/docs/performance/perf-disable-search/
+canonical: https://classicmonks.com/docs/perf-disable-search/
 ---
 
 # How to Disable Search Functionality in WordPress

@@ -1,11 +1,11 @@
 ---
 title: "How to Hide Laser Loader on Mobile Devices in WordPress | CM"
-slug: interface/interface-laser-loader-mobile
+slug: interface-laser-loader-mobile
 description: "Hide the laser loader on mobile devices in Classic Monks. Prevents the progress bar from appearing on phones and tablets where loading animations are less effective."
 last_updated: 2026-06-24
 author: Joy
 reading_time: 3 min
-canonical: https://classicmonks.com/docs/interface/interface-laser-loader-mobile/
+canonical: https://classicmonks.com/docs/interface-laser-loader-mobile/
 ---
 
 # How to Hide Laser Loader on Mobile Devices in WordPress

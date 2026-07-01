@@ -1,11 +1,11 @@
 ---
 title: "How to Use Page Transitions in WordPress | CM"
-slug: interface/interface-page-transitions
+slug: interface-page-transitions
 description: "Add smooth page transitions to your WordPress site in Classic Monks. Pages transition with a smooth animation instead of a hard reload."
 last_updated: 2026-06-24
 author: Joy
 reading_time: 3 min
-canonical: https://classicmonks.com/docs/interface/interface-page-transitions/
+canonical: https://classicmonks.com/docs/interface-page-transitions/
 ---
 
 # How to Use Page Transitions in WordPress

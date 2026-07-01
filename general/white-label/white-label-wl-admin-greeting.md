@@ -1,6 +1,6 @@
 ---
 title: "How to Customize the Admin Bar Greeting in WordPress | CM"
-slug: white-label/wl-admin-greeting
+slug: wl-admin-greeting
 description: "Replace the default \"Howdy, [Name]\" greeting in the WordPress admin bar with custom text in Classic Monks."
 last_updated: 2026-06-24
 author: Joy

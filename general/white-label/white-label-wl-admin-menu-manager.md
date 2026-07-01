@@ -1,11 +1,11 @@
 ---
 title: "How to Use the Admin Menu Manager in WordPress | CM"
-slug: white-label/wl-admin-menu-manager
+slug: wl-admin-menu-manager
 description: "Customize the WordPress admin menu in Classic Monks. Reorder, rename, hide, or reorganize menu items."
 last_updated: 2026-06-24
 author: Joy
 reading_time: 3 min
-canonical: https://classicmonks.com/docs/white-label/wl-admin-menu-manager/
+canonical: https://classicmonks.com/docs/wl-admin-menu-manager/
 ---
 
 # How to Use the Admin Menu Manager in WordPress

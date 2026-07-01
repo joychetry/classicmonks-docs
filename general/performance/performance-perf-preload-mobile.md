@@ -1,11 +1,11 @@
 ---
 title: "How to Enable Preloading on Mobile Devices in WordPress | CM"
-slug: performance/perf-preload-mobile
+slug: perf-preload-mobile
 description: "Enable intelligent preloading on mobile devices in Classic Monks. Preloads pages for mobile visitors."
 last_updated: 2026-06-24
 author: Joy
 reading_time: 3 min
-canonical: https://classicmonks.com/docs/performance/perf-preload-mobile/
+canonical: https://classicmonks.com/docs/perf-preload-mobile/
 ---
 
 # How to Enable Preloading on Mobile Devices in WordPress

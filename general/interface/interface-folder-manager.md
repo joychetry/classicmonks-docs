@@ -1,11 +1,11 @@
 ---
 title: "How to Use the Folder Manager in WordPress | CM"
-slug: interface/folder-manager
+slug: folder-manager
 description: "Organize WordPress media files into folders in Classic Monks. Drag-and-drop organization, multiple folders per item, and automatic categorization."
 last_updated: 2026-06-24
 author: Joy
 reading_time: 4 min
-canonical: https://classicmonks.com/docs/interface/folder-manager/
+canonical: https://classicmonks.com/docs/folder-manager/
 ---
 
 # How to Use the Folder Manager in WordPress

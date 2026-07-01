@@ -1,11 +1,11 @@
 ---
 title: "How to Use Image Converter in WordPress | CM"
-slug: performance/perf-image-converter
+slug: perf-image-converter
 description: "Convert images between formats in Classic Monks. Supports WebP, AVIF, JPEG, and PNG conversion with batch processing."
 last_updated: 2026-06-24
 author: Joy
 reading_time: 3 min
-canonical: https://classicmonks.com/docs/performance/perf-image-converter/
+canonical: https://classicmonks.com/docs/perf-image-converter/
 ---
 
 # How to Use Image Converter in WordPress

@@ -1,11 +1,11 @@
 ---
 title: "How to Remove All WooCommerce Notices in WordPress | CM"
-slug: woocommerce/remove-all-woocommerce-notices
+slug: remove-all-woocommerce-notices
 description: "Suppress all WooCommerce admin notices. Provides the cleanest admin interface for stores that don't need WooCommerce's promotional or informational content."
 last_updated: 2026-06-24
 author: Joy
 reading_time: 2 min
-canonical: https://classicmonks.com/docs/woocommerce/remove-all-woocommerce-notices/
+canonical: https://classicmonks.com/docs/remove-all-woocommerce-notices/
 ---
 
 # How to Remove All WooCommerce Notices in WordPress

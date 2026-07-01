@@ -1,11 +1,11 @@
 ---
 title: "How to Use the Unused Media Checker in WordPress | CM"
-slug: performance/perf-unused-media
+slug: perf-unused-media
 description: "Find and delete unused media files in Classic Monks. Scans your Media Library for files that are not referenced in any post or page."
 last_updated: 2026-06-24
 author: Joy
 reading_time: 3 min
-canonical: https://classicmonks.com/docs/performance/perf-unused-media/
+canonical: https://classicmonks.com/docs/perf-unused-media/
 ---
 
 # How to Use the Unused Media Checker in WordPress

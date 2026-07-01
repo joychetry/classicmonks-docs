@@ -1,11 +1,11 @@
 ---
 title: "How to Remove REST API Links in WordPress | CM"
-slug: security/remove-rest-api-links
+slug: remove-rest-api-links
 description: "Remove REST API links from the WordPress head to prevent users enumeration. Disables the link tag that exposes the API endpoint and other version information."
 last_updated: 2026-06-24
 author: Joy
 reading_time: 3 min
-canonical: https://classicmonks.com/docs/security/remove-rest-api-links/
+canonical: https://classicmonks.com/docs/remove-rest-api-links/
 ---
 
 # How to Remove REST API Links in WordPress

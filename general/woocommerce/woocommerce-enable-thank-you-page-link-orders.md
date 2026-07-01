@@ -1,11 +1,11 @@
 ---
 title: "How to Enable Thank You Page Link in Orders in WordPress | CM"
-slug: woocommerce/enable-thank-you-page-link-orders
+slug: enable-thank-you-page-link-orders
 description: "Add a direct link to the order's thank you page in the WooCommerce admin orders table in Classic Monks. Provides quick access to the customer-facing order confirmation."
 last_updated: 2026-06-24
 author: Joy
 reading_time: 3 min
-canonical: https://classicmonks.com/docs/woocommerce/enable-thank-you-page-link-orders/
+canonical: https://classicmonks.com/docs/enable-thank-you-page-link-orders/
 ---
 
 # How to Enable Thank You Page Link in Orders in WordPress

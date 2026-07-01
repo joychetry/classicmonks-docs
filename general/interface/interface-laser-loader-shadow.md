@@ -1,11 +1,11 @@
 ---
 title: "How to Enable Shadow Effect in Laser Loader in WordPress | CM"
-slug: interface/interface-laser-loader-shadow
+slug: interface-laser-loader-shadow
 description: "Add a shadow effect to the laser loader in Classic Monks. Creates a glowing, neon-like effect that makes the loader more visually striking."
 last_updated: 2026-06-24
 author: Joy
 reading_time: 3 min
-canonical: https://classicmonks.com/docs/interface/interface-laser-loader-shadow/
+canonical: https://classicmonks.com/docs/interface-laser-loader-shadow/
 ---
 
 # How to Enable Shadow Effect in Laser Loader in WordPress

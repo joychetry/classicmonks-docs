@@ -1,11 +1,11 @@
 ---
 title: "How to Enable the Checkout Product Selector in WordPress | CM"
-slug: woocommerce/enable-checkout-product-selector
+slug: enable-checkout-product-selector
 description: "Add a product selector widget to the WooCommerce checkout page in Classic Monks. Enables last-minute product additions and supports variable product pricing."
 last_updated: 2026-06-24
 author: Joy
 reading_time: 4 min
-canonical: https://classicmonks.com/docs/woocommerce/enable-checkout-product-selector/
+canonical: https://classicmonks.com/docs/enable-checkout-product-selector/
 ---
 
 # How to Enable the Checkout Product Selector in WordPress

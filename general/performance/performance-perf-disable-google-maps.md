@@ -1,11 +1,11 @@
 ---
 title: "How to Disable Google Maps in WordPress | CM"
-slug: performance/perf-disable-google-maps
+slug: perf-disable-google-maps
 description: "Disable Google Maps loading on the frontend in Classic Monks. Prevents the Google Maps JavaScript from loading unless explicitly needed."
 last_updated: 2026-06-24
 author: Joy
 reading_time: 3 min
-canonical: https://classicmonks.com/docs/performance/perf-disable-google-maps/
+canonical: https://classicmonks.com/docs/perf-disable-google-maps/
 ---
 
 # How to Disable Google Maps in WordPress

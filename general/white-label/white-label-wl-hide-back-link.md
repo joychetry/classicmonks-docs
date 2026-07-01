@@ -1,6 +1,6 @@
 ---
 title: "How to Hide the Back to Site Link in WordPress | CM"
-slug: white-label/wl-hide-back-link
+slug: wl-hide-back-link
 description: "Hide the \"Back to Site\" link on the login page in Classic Monks. Prevents visitors from leaving the login page."
 last_updated: 2026-06-24
 author: Joy

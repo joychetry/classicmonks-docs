@@ -1,11 +1,11 @@
 ---
 title: "How to Disable Language Dropdown on Login Page in WordPress | CM"
-slug: white-label/wl-disable-language-dropdown
+slug: wl-disable-language-dropdown
 description: "Remove the language dropdown from the login page in Classic Monks. Provides a simpler login page for single-language sites."
 last_updated: 2026-06-24
 author: Joy
 reading_time: 3 min
-canonical: https://classicmonks.com/docs/white-label/wl-disable-language-dropdown/
+canonical: https://classicmonks.com/docs/wl-disable-language-dropdown/
 ---
 
 # How to Disable Language Dropdown on Login Page in WordPress

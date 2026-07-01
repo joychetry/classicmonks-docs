@@ -1,11 +1,11 @@
 ---
 title: "How to Show Price Savings in WordPress | CM"
-slug: woocommerce/show-price-savings
+slug: show-price-savings
 description: "Display the amount or percentage saved on sale products in Classic Monks. Customizable prefix and suffix text, with optional display in product loops."
 last_updated: 2026-06-24
 author: Joy
 reading_time: 4 min
-canonical: https://classicmonks.com/docs/woocommerce/show-price-savings/
+canonical: https://classicmonks.com/docs/show-price-savings/
 ---
 
 # How to Show Price Savings in WordPress

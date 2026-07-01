@@ -1,11 +1,11 @@
 ---
 title: "How to Style the Login Form in WordPress | CM"
-slug: white-label/wl-login-form-styling
+slug: wl-login-form-styling
 description: "Customize the WordPress login form styling in Classic Monks. Change colors, borders, shadows, and layout."
 last_updated: 2026-06-24
 author: Joy
 reading_time: 3 min
-canonical: https://classicmonks.com/docs/white-label/wl-login-form-styling/
+canonical: https://classicmonks.com/docs/wl-login-form-styling/
 ---
 
 # How to Style the Login Form in WordPress

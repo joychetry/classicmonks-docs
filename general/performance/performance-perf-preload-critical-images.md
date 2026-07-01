@@ -1,11 +1,11 @@
 ---
 title: "How to Preload Critical Images in WordPress | CM"
-slug: performance/perf-preload-critical-images
+slug: perf-preload-critical-images
 description: "Preload above-the-fold images in Classic Monks. Loads critical images immediately while other images are lazy loaded."
 last_updated: 2026-06-24
 author: Joy
 reading_time: 3 min
-canonical: https://classicmonks.com/docs/performance/perf-preload-critical-images/
+canonical: https://classicmonks.com/docs/perf-preload-critical-images/
 ---
 
 # How to Preload Critical Images in WordPress

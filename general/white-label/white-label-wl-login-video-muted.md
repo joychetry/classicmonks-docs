@@ -1,11 +1,11 @@
 ---
 title: "How to Mute the Login Video in WordPress | CM"
-slug: white-label/wl-login-video-muted
+slug: wl-login-video-muted
 description: "Mute the login page video in Classic Monks. Prevents the background video from playing audio."
 last_updated: 2026-06-24
 author: Joy
 reading_time: 3 min
-canonical: https://classicmonks.com/docs/white-label/wl-login-video-muted/
+canonical: https://classicmonks.com/docs/wl-login-video-muted/
 ---
 
 # How to Mute the Login Video in WordPress

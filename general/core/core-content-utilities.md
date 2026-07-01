@@ -1,11 +1,11 @@
 ---
 title: "How to Use Content Utilities in Classic Monks: Feature Index | CM"
-slug: core/content-utilities
+slug: content-utilities
 description: "Index of content utilities in Classic Monks. SEO and visibility features with per-feature guides covering configuration, troubleshooting, and developer filters."
 last_updated: 2026-06-24
 author: Joy
 reading_time: 2 min
-canonical: https://classicmonks.com/docs/core/content-utilities/
+canonical: https://classicmonks.com/docs/content-utilities/
 ---
 
 # How to Use Content Utilities in WordPress

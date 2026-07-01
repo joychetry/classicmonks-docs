@@ -1,11 +1,11 @@
 ---
 title: "AI Status Panel in Classic Monks: WordPress Compatibility Check | CM"
-slug: ai/ai-status
+slug: ai-status
 description: "Read the AI Status panel in Classic Monks to verify WordPress version, Abilities API availability, AI feature state, and active provider configuration."
 last_updated: 2026-06-24
 author: Joy
 reading_time: 6 min
-canonical: https://classicmonks.com/docs/ai/ai-status/
+canonical: https://classicmonks.com/docs/ai-status/
 ---
 
 # AI Status Panel in WordPress

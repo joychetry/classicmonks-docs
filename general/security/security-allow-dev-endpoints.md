@@ -1,11 +1,11 @@
 ---
 title: "How to Allow Development Endpoints in WordPress | CM"
-slug: security/allow-dev-endpoints
+slug: allow-dev-endpoints
 description: "Allow access to WordPress development endpoints (WP_DEBUG, error logs, debug info) on staging sites. Useful for development and debugging while keeping the rest of the staging protection active."
 last_updated: 2026-06-24
 author: Joy
 reading_time: 3 min
-canonical: https://classicmonks.com/docs/security/allow-dev-endpoints/
+canonical: https://classicmonks.com/docs/allow-dev-endpoints/
 ---
 
 # How to Allow Development Endpoints in WordPress

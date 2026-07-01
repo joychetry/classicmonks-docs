@@ -1,11 +1,11 @@
 ---
 title: "How to Disable WooCommerce Status Meta Box in WordPress | CM"
-slug: woocommerce/disable-woocommerce-status-meta-box
+slug: disable-woocommerce-status-meta-box
 description: "Remove the WooCommerce status widget from the WordPress admin dashboard. Simplifies the admin interface by removing WooCommerce-specific widgets."
 last_updated: 2026-06-24
 author: Joy
 reading_time: 2 min
-canonical: https://classicmonks.com/docs/woocommerce/disable-woocommerce-status-meta-box/
+canonical: https://classicmonks.com/docs/disable-woocommerce-status-meta-box/
 ---
 
 # How to Disable WooCommerce Status Meta Box in WordPress

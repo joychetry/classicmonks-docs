@@ -1,11 +1,11 @@
 ---
 title: "How to Disable Product Reviews in WordPress | CM"
-slug: woocommerce/disable-product-reviews
+slug: disable-product-reviews
 description: "Completely disable the WooCommerce product review system in Classic Monks. Removes review forms and review displays from product pages."
 last_updated: 2026-06-24
 author: Joy
 reading_time: 3 min
-canonical: https://classicmonks.com/docs/woocommerce/disable-product-reviews/
+canonical: https://classicmonks.com/docs/disable-product-reviews/
 ---
 
 # How to Disable Product Reviews in WordPress

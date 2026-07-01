@@ -1,11 +1,11 @@
 ---
 title: "How to Enable Maximum Coupon Discount in WordPress | CM"
-slug: woocommerce/enable-coupon-max-discount
+slug: enable-coupon-max-discount
 description: "Cap coupon discounts in Classic Monks with the Maximum Discount Amount feature. Supports time-based, role-based, category-specific, and tiered limits."
 last_updated: 2026-06-24
 author: Joy
 reading_time: 5 min
-canonical: https://classicmonks.com/docs/woocommerce/enable-coupon-max-discount/
+canonical: https://classicmonks.com/docs/enable-coupon-max-discount/
 ---
 
 # How to Enable Maximum Coupon Discount in WordPress

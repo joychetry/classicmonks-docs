@@ -1,11 +1,11 @@
 ---
 title: "How to Redirect My Account for Non-logged-in Users in WordPress | CM"
-slug: woocommerce/enable-redirect-my-account
+slug: enable-redirect-my-account
 description: "Configure redirection for non-logged-in users who try to access the My Account page. Prevents unauthorized access and provides appropriate landing pages for guest users."
 last_updated: 2026-06-24
 author: Joy
 reading_time: 3 min
-canonical: https://classicmonks.com/docs/woocommerce/enable-redirect-my-account/
+canonical: https://classicmonks.com/docs/enable-redirect-my-account/
 ---
 
 # How to Redirect My Account for Non-logged-in Users in WordPress

@@ -1,11 +1,11 @@
 ---
 title: "How to Force HTTPS Links in WordPress | CM"
-slug: performance/perf-force-https
+slug: perf-force-https
 description: "Force all internal links to use HTTPS in Classic Monks. Automatically rewrites HTTP links to HTTPS for a consistent, secure site."
 last_updated: 2026-06-24
 author: Joy
 reading_time: 3 min
-canonical: https://classicmonks.com/docs/performance/perf-force-https/
+canonical: https://classicmonks.com/docs/perf-force-https/
 ---
 
 # How to Force HTTPS Links in WordPress

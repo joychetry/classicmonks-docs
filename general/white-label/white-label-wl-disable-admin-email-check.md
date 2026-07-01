@@ -1,11 +1,11 @@
 ---
 title: "How to Disable Admin Email Check During Login in WordPress | CM"
-slug: white-label/wl-disable-admin-email-check
+slug: wl-disable-admin-email-check
 description: "Disable the WordPress admin email verification check in Classic Monks. Prevents the email verification prompt on login."
 last_updated: 2026-06-24
 author: Joy
 reading_time: 3 min
-canonical: https://classicmonks.com/docs/white-label/wl-disable-admin-email-check/
+canonical: https://classicmonks.com/docs/wl-disable-admin-email-check/
 ---
 
 # How to Disable Admin Email Check During Login in WordPress

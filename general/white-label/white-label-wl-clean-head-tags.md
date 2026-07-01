@@ -1,11 +1,11 @@
 ---
 title: "How to Clean Head Tags in WordPress | CM"
-slug: white-label/wl-clean-head-tags
+slug: wl-clean-head-tags
 description: "Remove unnecessary link tags from the WordPress head in Classic Monks. Cleans up the HTML head for better performance and SEO."
 last_updated: 2026-06-24
 author: Joy
 reading_time: 3 min
-canonical: https://classicmonks.com/docs/white-label/wl-clean-head-tags/
+canonical: https://classicmonks.com/docs/wl-clean-head-tags/
 ---
 
 # How to Clean Head Tags in WordPress

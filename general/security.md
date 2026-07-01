@@ -5,7 +5,7 @@ description: "Index of all Security tab features in Classic Monks. 39 per-featur
 last_updated: 2026-06-24
 author: Joy
 reading_time: 3 min
-canonical: https://classicmonks.com/docs/security/
+canonical: https://classicmonks.com/docs/
 ---
 
 # How to Use the Security Tab in Classic Monks: Feature Index

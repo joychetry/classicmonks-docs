@@ -1,11 +1,11 @@
 ---
 title: "How to Manage Content in Classic Monks: Feature Index | CM"
-slug: core/content-management
+slug: content-management
 description: "Index of content management features in Classic Monks. Each feature has its own dedicated guide with configuration, troubleshooting, and developer filters."
 last_updated: 2026-06-24
 author: Joy
 reading_time: 3 min
-canonical: https://classicmonks.com/docs/core/content-management/
+canonical: https://classicmonks.com/docs/content-management/
 ---
 
 # How to Manage Content in WordPress

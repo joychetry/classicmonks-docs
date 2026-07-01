@@ -1,11 +1,11 @@
 ---
 title: "How to Use Form Desk in WordPress | CM"
-slug: interface/form-desk
+slug: form-desk
 description: "Centralize all form entries in one place in Classic Monks. Form Desk collects entries from Bricks Builder forms, Fluent Forms, and other plugins into a single admin page."
 last_updated: 2026-06-24
 author: Joy
 reading_time: 4 min
-canonical: https://classicmonks.com/docs/interface/form-desk/
+canonical: https://classicmonks.com/docs/form-desk/
 ---
 
 # How to Use Form Desk in WordPress

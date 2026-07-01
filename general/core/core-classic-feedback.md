@@ -1,11 +1,11 @@
 ---
 title: "How to Use Classic Feedback in Classic Monks | CM"
-slug: core/classic-feedback
+slug: classic-feedback
 description: "Add a 'Was this article helpful?' yes/no widget to posts in Classic Monks. Customize question text, theme, position, target post types, and Bricks dynamic data tags."
 last_updated: 2026-06-24
 author: Joy
 reading_time: 7 min
-canonical: https://classicmonks.com/docs/core/classic-feedback/
+canonical: https://classicmonks.com/docs/classic-feedback/
 ---
 
 # How to Use Classic Feedback in WordPress

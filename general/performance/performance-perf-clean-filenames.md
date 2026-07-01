@@ -1,11 +1,11 @@
 ---
 title: "How to Use Clean Image Filenames in WordPress | CM"
-slug: performance/perf-clean-filenames
+slug: perf-clean-filenames
 description: "Auto-clean uploaded image filenames in Classic Monks. Removes special characters, spaces, and non-ASCII characters from file names."
 last_updated: 2026-06-24
 author: Joy
 reading_time: 3 min
-canonical: https://classicmonks.com/docs/performance/perf-clean-filenames/
+canonical: https://classicmonks.com/docs/perf-clean-filenames/
 ---
 
 # How to Use Clean Image Filenames in WordPress

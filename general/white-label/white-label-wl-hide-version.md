@@ -1,11 +1,11 @@
 ---
 title: "How to Hide the WordPress Version in WordPress | CM"
-slug: white-label/wl-hide-version
+slug: wl-hide-version
 description: "Hide the WordPress version number from the page source in Classic Monks. Removes the version meta tag and generator tag."
 last_updated: 2026-06-24
 author: Joy
 reading_time: 3 min
-canonical: https://classicmonks.com/docs/white-label/wl-hide-version/
+canonical: https://classicmonks.com/docs/wl-hide-version/
 ---
 
 # How to Hide the WordPress Version in WordPress

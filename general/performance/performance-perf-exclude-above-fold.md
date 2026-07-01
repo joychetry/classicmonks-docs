@@ -1,11 +1,11 @@
 ---
 title: "How to Exclude Above-the-Fold Images from Lazy Loading in WordPress | CM"
-slug: performance/perf-exclude-above-fold
+slug: perf-exclude-above-fold
 description: "Exclude above-the-fold images from lazy loading in Classic Monks. Ensures visible images load immediately."
 last_updated: 2026-06-24
 author: Joy
 reading_time: 3 min
-canonical: https://classicmonks.com/docs/performance/perf-exclude-above-fold/
+canonical: https://classicmonks.com/docs/perf-exclude-above-fold/
 ---
 
 # How to Exclude Above-the-Fold Images from Lazy Loading in WordPress

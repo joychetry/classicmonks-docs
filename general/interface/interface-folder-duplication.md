@@ -1,11 +1,11 @@
 ---
 title: "How to Use Folder Duplication in WordPress | CM"
-slug: interface/folder-duplication
+slug: folder-duplication
 description: "Duplicate media folders in Classic Monks. Create a complete copy of a folder structure including all nested folders and files."
 last_updated: 2026-06-24
 author: Joy
 reading_time: 3 min
-canonical: https://classicmonks.com/docs/interface/folder-duplication/
+canonical: https://classicmonks.com/docs/folder-duplication/
 ---
 
 # How to Use Folder Duplication in WordPress

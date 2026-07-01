@@ -1,11 +1,11 @@
 ---
 title: "How to Use Bricks Builder UI Improvements in WordPress | CM"
-slug: bricks/bricks-ui-improvements
+slug: bricks-ui-improvements
 description: "Enhance the Bricks Builder editor interface in Classic Monks. UI improvements include active element highlighting, style panel enhancements, and better control separators."
 last_updated: 2026-06-24
 author: Joy
 reading_time: 4 min
-canonical: https://classicmonks.com/docs/bricks/bricks-ui-improvements/
+canonical: https://classicmonks.com/docs/bricks-ui-improvements/
 ---
 
 # How to Use Bricks Builder UI Improvements in WordPress

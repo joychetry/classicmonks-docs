@@ -1,11 +1,11 @@
 ---
 title: "How to Show Custom Quantity Generator in WordPress | CM"
-slug: woocommerce/show-custom-quantity-generator
+slug: show-custom-quantity-generator
 description: "Display a custom quantity input on the WooCommerce direct checkout page in Classic Monks. Lets customers set custom quantities (e.g., for bulk orders) when using direct checkout links."
 last_updated: 2026-06-24
 author: Joy
 reading_time: 3 min
-canonical: https://classicmonks.com/docs/woocommerce/show-custom-quantity-generator/
+canonical: https://classicmonks.com/docs/show-custom-quantity-generator/
 ---
 
 # How to Show Custom Quantity Generator in WordPress

@@ -1,11 +1,11 @@
 ---
 title: "How to Lazy Load HTML5 Videos in WordPress | CM"
-slug: performance/perf-lazy-load-videos
+slug: perf-lazy-load-videos
 description: "Enable lazy loading for HTML5 video elements in Classic Monks. Defers video loading until the video enters the viewport."
 last_updated: 2026-06-24
 author: Joy
 reading_time: 3 min
-canonical: https://classicmonks.com/docs/performance/perf-lazy-load-videos/
+canonical: https://classicmonks.com/docs/perf-lazy-load-videos/
 ---
 
 # How to Lazy Load HTML5 Videos in WordPress

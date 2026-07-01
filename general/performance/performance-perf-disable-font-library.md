@@ -1,11 +1,11 @@
 ---
 title: "How to Disable the WordPress Font Library in WordPress | CM"
-slug: performance/perf-disable-font-library
+slug: perf-disable-font-library
 description: "Disable the WordPress Font Library in Classic Monks. Removes the font manager from the admin, preventing unexpected font loading."
 last_updated: 2026-06-24
 author: Joy
 reading_time: 3 min
-canonical: https://classicmonks.com/docs/performance/perf-disable-font-library/
+canonical: https://classicmonks.com/docs/perf-disable-font-library/
 ---
 
 # How to Disable the WordPress Font Library in WordPress

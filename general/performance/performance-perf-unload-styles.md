@@ -1,11 +1,11 @@
 ---
 title: "How to Unload CSS Styles in WordPress | CM"
-slug: performance/perf-unload-styles
+slug: perf-unload-styles
 description: "Unload CSS styles on specific pages in Classic Monks. Prevents CSS files from loading on pages where they are not needed."
 last_updated: 2026-06-24
 author: Joy
 reading_time: 3 min
-canonical: https://classicmonks.com/docs/performance/perf-unload-styles/
+canonical: https://classicmonks.com/docs/perf-unload-styles/
 ---
 
 # How to Unload CSS Styles in WordPress

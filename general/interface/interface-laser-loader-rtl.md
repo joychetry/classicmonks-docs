@@ -1,11 +1,11 @@
 ---
 title: "How to Enable RTL Support in Laser Loader in WordPress | CM"
-slug: interface/interface-laser-loader-rtl
+slug: interface-laser-loader-rtl
 description: "Enable right-to-left (RTL) support for the laser loader in Classic Monks. The progress bar moves from right to left for Arabic, Hebrew, and other RTL languages."
 last_updated: 2026-06-24
 author: Joy
 reading_time: 3 min
-canonical: https://classicmonks.com/docs/interface/interface-laser-loader-rtl/
+canonical: https://classicmonks.com/docs/interface-laser-loader-rtl/
 ---
 
 # How to Enable RTL Support in Laser Loader in WordPress

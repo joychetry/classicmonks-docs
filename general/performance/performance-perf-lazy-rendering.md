@@ -1,11 +1,11 @@
 ---
 title: "How to Enable Lazy Rendering in WordPress | CM"
-slug: performance/perf-lazy-rendering
+slug: perf-lazy-rendering
 description: "Enable lazy rendering for off-screen content in Classic Monks. Defers rendering of content that is not visible in the viewport."
 last_updated: 2026-06-24
 author: Joy
 reading_time: 3 min
-canonical: https://classicmonks.com/docs/performance/perf-lazy-rendering/
+canonical: https://classicmonks.com/docs/perf-lazy-rendering/
 ---
 
 # How to Enable Lazy Rendering in WordPress

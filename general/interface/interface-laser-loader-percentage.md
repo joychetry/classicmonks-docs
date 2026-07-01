@@ -1,11 +1,11 @@
 ---
 title: "How to Show Percentage in Laser Loader in WordPress | CM"
-slug: interface/interface-laser-loader-percentage
+slug: interface-laser-loader-percentage
 description: "Show a percentage indicator on the laser loader progress bar in Classic Monks. Displays how much of the page has loaded."
 last_updated: 2026-06-24
 author: Joy
 reading_time: 3 min
-canonical: https://classicmonks.com/docs/interface/interface-laser-loader-percentage/
+canonical: https://classicmonks.com/docs/interface-laser-loader-percentage/
 ---
 
 # How to Show Percentage in Laser Loader in WordPress

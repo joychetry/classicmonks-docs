@@ -1,11 +1,11 @@
 ---
 title: "How to Disable Comments in Classic Monks | CM"
-slug: core/disable-comments
+slug: disable-comments
 description: "Globally disable WordPress comments in Classic Monks. Hides comment forms, prevents new submissions, and disables comment-related admin sections site-wide."
 last_updated: 2026-06-24
 author: Joy
 reading_time: 4 min
-canonical: https://classicmonks.com/docs/core/disable-comments/
+canonical: https://classicmonks.com/docs/disable-comments/
 ---
 
 # How to Disable Comments in WordPress

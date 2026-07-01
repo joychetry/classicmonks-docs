@@ -1,11 +1,11 @@
 ---
 title: "How to Hide Default Variation Price in WordPress | CM"
-slug: woocommerce/hide-default-variation-price
+slug: hide-default-variation-price
 description: "Hide the default price display for variable WooCommerce products in Classic Monks. Shows price only when a specific variation is selected, reducing customer confusion."
 last_updated: 2026-06-24
 author: Joy
 reading_time: 3 min
-canonical: https://classicmonks.com/docs/woocommerce/hide-default-variation-price/
+canonical: https://classicmonks.com/docs/hide-default-variation-price/
 ---
 
 # How to Hide Default Variation Price in WordPress

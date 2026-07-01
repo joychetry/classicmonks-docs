@@ -1,11 +1,11 @@
 ---
 title: "How to Remove Dashboard Widgets in WordPress | CM"
-slug: white-label/wl-remove-dashboard-widgets
+slug: wl-remove-dashboard-widgets
 description: "Remove all dashboard widgets from the WordPress admin in Classic Monks. Provides a clean, empty dashboard."
 last_updated: 2026-06-24
 author: Joy
 reading_time: 3 min
-canonical: https://classicmonks.com/docs/white-label/wl-remove-dashboard-widgets/
+canonical: https://classicmonks.com/docs/wl-remove-dashboard-widgets/
 ---
 
 # How to Remove Dashboard Widgets in WordPress

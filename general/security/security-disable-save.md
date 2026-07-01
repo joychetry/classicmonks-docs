@@ -1,11 +1,11 @@
 ---
 title: "How to Disable Save in WordPress | CM"
-slug: security/disable-save
+slug: disable-save
 description: "Disable the CTRL+S keyboard shortcut to save the page in Classic Monks. Prevents users from easily saving the page to their local disk."
 last_updated: 2026-06-24
 author: Joy
 reading_time: 3 min
-canonical: https://classicmonks.com/docs/security/disable-save/
+canonical: https://classicmonks.com/docs/disable-save/
 ---
 
 # How to Disable Save in WordPress

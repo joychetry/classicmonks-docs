@@ -1,11 +1,11 @@
 ---
 title: "How to Disable Google Fonts in WordPress | CM"
-slug: performance/perf-disable-google-fonts
+slug: perf-disable-google-fonts
 description: "Disable Google Fonts loading on the frontend in Classic Monks. Prevents external font requests that slow down page load and compromise privacy."
 last_updated: 2026-06-24
 author: Joy
 reading_time: 3 min
-canonical: https://classicmonks.com/docs/performance/perf-disable-google-fonts/
+canonical: https://classicmonks.com/docs/perf-disable-google-fonts/
 ---
 
 # How to Disable Google Fonts in WordPress

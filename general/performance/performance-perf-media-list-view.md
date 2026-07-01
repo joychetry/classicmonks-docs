@@ -1,11 +1,11 @@
 ---
 title: "How to Use Media List View Default in WordPress | CM"
-slug: performance/perf-media-list-view
+slug: perf-media-list-view
 description: "Set the Media Library to list view by default in Classic Monks. Shows files in a detailed list format instead of a grid."
 last_updated: 2026-06-24
 author: Joy
 reading_time: 3 min
-canonical: https://classicmonks.com/docs/performance/perf-media-list-view/
+canonical: https://classicmonks.com/docs/perf-media-list-view/
 ---
 
 # How to Use Media List View Default in WordPress

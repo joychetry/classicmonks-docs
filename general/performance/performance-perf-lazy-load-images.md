@@ -1,11 +1,11 @@
 ---
 title: "How to Lazy Load Images in WordPress | CM"
-slug: performance/perf-lazy-load-images
+slug: perf-lazy-load-images
 description: "Enable lazy loading specifically for images in Classic Monks. Defers image loading until they enter the viewport."
 last_updated: 2026-06-24
 author: Joy
 reading_time: 3 min
-canonical: https://classicmonks.com/docs/performance/perf-lazy-load-images/
+canonical: https://classicmonks.com/docs/perf-lazy-load-images/
 ---
 
 # How to Lazy Load Images in WordPress

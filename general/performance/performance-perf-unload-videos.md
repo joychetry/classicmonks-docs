@@ -1,11 +1,11 @@
 ---
 title: "How to Unload Videos in WordPress | CM"
-slug: performance/perf-unload-videos
+slug: perf-unload-videos
 description: "Unload videos on specific pages in Classic Monks. Prevents video elements from loading on pages where they are not needed."
 last_updated: 2026-06-24
 author: Joy
 reading_time: 3 min
-canonical: https://classicmonks.com/docs/performance/perf-unload-videos/
+canonical: https://classicmonks.com/docs/perf-unload-videos/
 ---
 
 # How to Unload Videos in WordPress

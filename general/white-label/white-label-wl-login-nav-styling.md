@@ -1,6 +1,6 @@
 ---
 title: "How to Style Navigation Links in WordPress | CM"
-slug: white-label/wl-login-nav-styling
+slug: wl-login-nav-styling
 description: "Customize the navigation link styling on the login page in Classic Monks. Change the \"Lost your password?\" and \"Back to Site\" link styles."
 last_updated: 2026-06-24
 author: Joy

@@ -1,11 +1,11 @@
 ---
 title: "How to Use Bricks AI Builder in Classic Monks: HTML to Bricks | CM"
-slug: bricks/bricks-ai-builder
+slug: bricks-ai-builder
 description: Use Bricks AI Builder in Classic Monks to convert HTML into Bricks Builder elements. Generates sections, classes, components, and JavaScript from natural language.
 last_updated: 2026-06-24
 author: Joy
 reading_time: 9 min
-canonical: https://classicmonks.com/docs/bricks/bricks-ai-builder/
+canonical: https://classicmonks.com/docs/bricks-ai-builder/
 ---
 
 # How to Use Bricks AI Builder in WordPress

@@ -1,11 +1,11 @@
 ---
 title: "How to Use Quick Post Nav in WordPress | CM"
-slug: white-label/wl-quick-post-nav
+slug: wl-quick-post-nav
 description: "Add quick navigation between posts in the WordPress admin in Classic Monks. Navigate between posts without returning to the list."
 last_updated: 2026-06-24
 author: Joy
 reading_time: 3 min
-canonical: https://classicmonks.com/docs/white-label/wl-quick-post-nav/
+canonical: https://classicmonks.com/docs/wl-quick-post-nav/
 ---
 
 # How to Use Quick Post Nav in WordPress

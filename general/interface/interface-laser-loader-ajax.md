@@ -1,11 +1,11 @@
 ---
 title: "How to Show Laser Loader on AJAX Requests in WordPress | CM"
-slug: interface/interface-laser-loader-ajax
+slug: interface-laser-loader-ajax
 description: "Show the laser loader during AJAX requests in Classic Monks. Displays the progress bar when the page is making background requests (e.g., loading more posts, form submissions)."
 last_updated: 2026-06-24
 author: Joy
 reading_time: 3 min
-canonical: https://classicmonks.com/docs/interface/interface-laser-loader-ajax/
+canonical: https://classicmonks.com/docs/interface-laser-loader-ajax/
 ---
 
 # How to Show Laser Loader on AJAX Requests in WordPress

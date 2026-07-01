@@ -1,11 +1,11 @@
 ---
 title: "How to Enable Selective Media Preload in WordPress | CM"
-slug: performance/perf-selective-media-preload
+slug: perf-selective-media-preload
 description: "Enable selective media preloading in Classic Monks. Preloads specific media files instead of all media on the page."
 last_updated: 2026-06-24
 author: Joy
 reading_time: 3 min
-canonical: https://classicmonks.com/docs/performance/perf-selective-media-preload/
+canonical: https://classicmonks.com/docs/perf-selective-media-preload/
 ---
 
 # How to Enable Selective Media Preload in WordPress

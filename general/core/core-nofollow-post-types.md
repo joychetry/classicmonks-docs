@@ -1,11 +1,11 @@
 ---
 title: "How to Enable Nofollow for Post Types in Classic Monks | CM"
-slug: core/nofollow-post-types
+slug: nofollow-post-types
 description: "Add a meta nofollow tag to selected post types in Classic Monks. Per-post-type control with three modes: only-on, except-on, or all-post-types."
 last_updated: 2026-06-24
 author: Joy
 reading_time: 5 min
-canonical: https://classicmonks.com/docs/core/nofollow-post-types/
+canonical: https://classicmonks.com/docs/nofollow-post-types/
 ---
 
 # How to Enable Nofollow for Post Types in WordPress

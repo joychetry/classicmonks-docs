@@ -1,11 +1,11 @@
 ---
 title: "How to Allow Duplicate Reviews in WordPress | CM"
-slug: woocommerce/allow-duplicate-reviews
+slug: allow-duplicate-reviews
 description: "Allow the same user to submit multiple reviews for the same WooCommerce product in Classic Monks. Overrides WordPress's default duplicate-comment block for product reviews."
 last_updated: 2026-06-24
 author: Joy
 reading_time: 3 min
-canonical: https://classicmonks.com/docs/woocommerce/allow-duplicate-reviews/
+canonical: https://classicmonks.com/docs/allow-duplicate-reviews/
 ---
 
 # How to Allow Duplicate Reviews in WordPress

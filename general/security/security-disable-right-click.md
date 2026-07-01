@@ -1,11 +1,11 @@
 ---
 title: "How to Disable Right Click in WordPress | CM"
-slug: security/disable-right-click
+slug: disable-right-click
 description: "Disable the right-click context menu on the WordPress frontend in Classic Monks. Prevents casual right-click access to view source, copy, and save actions."
 last_updated: 2026-06-24
 author: Joy
 reading_time: 3 min
-canonical: https://classicmonks.com/docs/security/disable-right-click/
+canonical: https://classicmonks.com/docs/disable-right-click/
 ---
 
 # How to Disable Right Click in WordPress

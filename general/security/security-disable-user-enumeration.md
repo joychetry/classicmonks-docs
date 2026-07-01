@@ -1,11 +1,11 @@
 ---
 title: "How to Disable User Enumeration in WordPress | CM"
-slug: security/disable-user-enumeration
+slug: disable-user-enumeration
 description: "Block WordPress user enumeration attacks via REST API and author archives. Prevents attackers from discovering valid usernames by querying your site."
 last_updated: 2026-06-24
 author: Joy
 reading_time: 3 min
-canonical: https://classicmonks.com/docs/security/disable-user-enumeration/
+canonical: https://classicmonks.com/docs/disable-user-enumeration/
 ---
 
 # How to Disable User Enumeration in WordPress

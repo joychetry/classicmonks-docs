@@ -1,11 +1,11 @@
 ---
 title: "How to Disable XML-RPC in WordPress | CM"
-slug: security/disable-xmlrpc
+slug: disable-xmlrpc
 description: "Disable XML-RPC in WordPress via Classic Monks. Blocks brute force attacks, pingbacks, and other vulnerabilities that exploit the XML-RPC endpoint."
 last_updated: 2026-06-24
 author: Joy
 reading_time: 3 min
-canonical: https://classicmonks.com/docs/security/disable-xmlrpc/
+canonical: https://classicmonks.com/docs/disable-xmlrpc/
 ---
 
 # How to Disable XML-RPC in WordPress

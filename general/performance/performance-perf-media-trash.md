@@ -1,11 +1,11 @@
 ---
 title: "How to Use Media Trash in WordPress | CM"
-slug: performance/perf-media-trash
+slug: perf-media-trash
 description: "Enable trash functionality for the Media Library in Classic Monks. Deleted media goes to trash instead of being permanently removed."
 last_updated: 2026-06-24
 author: Joy
 reading_time: 3 min
-canonical: https://classicmonks.com/docs/performance/perf-media-trash/
+canonical: https://classicmonks.com/docs/perf-media-trash/
 ---
 
 # How to Use Media Trash in WordPress

@@ -1,11 +1,11 @@
 ---
 title: "How to Disable the Gutenberg Editor in Classic Monks: 8 Controls | CM"
-slug: core/gutenberg
+slug: gutenberg
 description: "Control the Gutenberg editor in Classic Monks: disable for specific post types, remove block patterns, revert widgets, disable fullscreen mode, and more."
 last_updated: 2026-06-24
 author: Joy
 reading_time: 6 min
-canonical: https://classicmonks.com/docs/core/gutenberg/
+canonical: https://classicmonks.com/docs/gutenberg/
 ---
 
 # How to Disable the Gutenberg Editor in WordPress

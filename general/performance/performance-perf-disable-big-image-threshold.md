@@ -1,11 +1,11 @@
 ---
 title: "How to Disable Big Image Size Threshold in WordPress | CM"
-slug: performance/perf-disable-big-image-threshold
+slug: perf-disable-big-image-threshold
 description: "Disable the big image size threshold in WordPress via Classic Monks. Prevents WordPress from downsizing images on upload."
 last_updated: 2026-06-24
 author: Joy
 reading_time: 3 min
-canonical: https://classicmonks.com/docs/performance/perf-disable-big-image-threshold/
+canonical: https://classicmonks.com/docs/perf-disable-big-image-threshold/
 ---
 
 # How to Disable Big Image Size Threshold in WordPress

@@ -1,11 +1,11 @@
 ---
 title: "How to Lazy Load YouTube Videos in WordPress | CM"
-slug: performance/perf-lazy-load-youtube
+slug: perf-lazy-load-youtube
 description: "Enable lazy loading for YouTube embeds in Classic Monks. Replaces YouTube iframes with lightweight placeholders until clicked."
 last_updated: 2026-06-24
 author: Joy
 reading_time: 3 min
-canonical: https://classicmonks.com/docs/performance/perf-lazy-load-youtube/
+canonical: https://classicmonks.com/docs/perf-lazy-load-youtube/
 ---
 
 # How to Lazy Load YouTube Videos in WordPress

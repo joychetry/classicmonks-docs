@@ -1,11 +1,11 @@
 ---
 title: "How to Use Product Swatches in WordPress | CM"
-slug: woocommerce/product-swatches
+slug: product-swatches
 description: "Transform WooCommerce product attributes into visual swatches (color, image, label) in Classic Monks. Configure swatch layout, size, tooltips, and archive display."
 last_updated: 2026-06-24
 author: Joy
 reading_time: 5 min
-canonical: https://classicmonks.com/docs/woocommerce/product-swatches/
+canonical: https://classicmonks.com/docs/product-swatches/
 ---
 
 # How to Use Product Swatches in WordPress

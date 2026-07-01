@@ -1,11 +1,11 @@
 ---
 title: "How to Only Allow Reset Password Email in WordPress | CM"
-slug: email/only-allow-reset-password-email
+slug: only-allow-reset-password-email
 description: "Disable all WooCommerce emails except the password reset email in Classic Monks. Customers can still recover accounts even when transactional emails are off."
 last_updated: 2026-06-24
 author: Joy
 reading_time: 3 min
-canonical: https://classicmonks.com/docs/email/only-allow-reset-password-email/
+canonical: https://classicmonks.com/docs/only-allow-reset-password-email/
 ---
 
 # How to Only Allow Reset Password Email in WordPress

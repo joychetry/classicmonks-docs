@@ -1,11 +1,11 @@
 ---
 title: "How to Disable Lazy Loading for Admin Users in WordPress | CM"
-slug: performance/perf-lazy-load-disable-admin
+slug: perf-lazy-load-disable-admin
 description: "Disable lazy loading for logged-in admin users in Classic Monks. Ensures admins see all content immediately without lazy loading."
 last_updated: 2026-06-24
 author: Joy
 reading_time: 3 min
-canonical: https://classicmonks.com/docs/performance/perf-lazy-load-disable-admin/
+canonical: https://classicmonks.com/docs/perf-lazy-load-disable-admin/
 ---
 
 # How to Disable Lazy Loading for Admin Users in WordPress

@@ -1,11 +1,11 @@
 ---
 title: "How to Enable CDN Rewrite in WordPress | CM"
-slug: performance/perf-cdn-rewrite
+slug: perf-cdn-rewrite
 description: "Rewrite media URLs to use a CDN in Classic Monks. Automatically replaces your domain with a CDN domain in media URLs."
 last_updated: 2026-06-24
 author: Joy
 reading_time: 3 min
-canonical: https://classicmonks.com/docs/performance/perf-cdn-rewrite/
+canonical: https://classicmonks.com/docs/perf-cdn-rewrite/
 ---
 
 # How to Enable CDN Rewrite in WordPress

@@ -1,11 +1,11 @@
 ---
 title: "How to Remove RSS Feed Links in WordPress | CM"
-slug: performance/perf-remove-rss-feed-links
+slug: perf-remove-rss-feed-links
 description: "Remove RSS feed link tags from the WordPress head in Classic Monks. Prevents browsers from discovering RSS feed URLs."
 last_updated: 2026-06-24
 author: Joy
 reading_time: 3 min
-canonical: https://classicmonks.com/docs/performance/perf-remove-rss-feed-links/
+canonical: https://classicmonks.com/docs/perf-remove-rss-feed-links/
 ---
 
 # How to Remove RSS Feed Links in WordPress

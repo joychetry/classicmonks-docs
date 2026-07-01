@@ -1,11 +1,11 @@
 ---
 title: "How to Disable Scheduled Deletion in Classic Monks | CM"
-slug: core/disable-scheduled-deletion
+slug: disable-scheduled-deletion
 description: "Disable Scheduled Deletion in Classic Monks prevents WordPress from auto-deleting trashed posts after 30 days. Gives you a longer recovery window for accidentally deleted content."
 last_updated: 2026-06-24
 author: Joy
 reading_time: 3 min
-canonical: https://classicmonks.com/docs/core/disable-scheduled-deletion/
+canonical: https://classicmonks.com/docs/disable-scheduled-deletion/
 ---
 
 # How to Disable Scheduled Deletion in WordPress

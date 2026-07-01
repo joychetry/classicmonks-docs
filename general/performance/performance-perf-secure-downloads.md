@@ -1,11 +1,11 @@
 ---
 title: "How to Use Secure Downloads in WordPress | CM"
-slug: performance/perf-secure-downloads
+slug: perf-secure-downloads
 description: "Add secure download links to media files in Classic Monks. Prevents direct file access by using signed, time-limited URLs for downloads."
 last_updated: 2026-06-24
 author: Joy
 reading_time: 3 min
-canonical: https://classicmonks.com/docs/performance/perf-secure-downloads/
+canonical: https://classicmonks.com/docs/perf-secure-downloads/
 ---
 
 # How to Use Secure Downloads in WordPress

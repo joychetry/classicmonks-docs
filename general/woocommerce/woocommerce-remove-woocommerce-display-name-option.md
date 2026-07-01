@@ -1,11 +1,11 @@
 ---
 title: "How to Remove Display Name from Account Settings in WordPress | CM"
-slug: woocommerce/remove-woocommerce-display-name-option
+slug: remove-woocommerce-display-name-option
 description: "Remove the display name field from customer account settings in Classic Monks. Simplifies the account management interface for B2C customers."
 last_updated: 2026-06-24
 author: Joy
 reading_time: 3 min
-canonical: https://classicmonks.com/docs/woocommerce/remove-woocommerce-display-name-option/
+canonical: https://classicmonks.com/docs/remove-woocommerce-display-name-option/
 ---
 
 # How to Remove Display Name from Account Settings in WordPress

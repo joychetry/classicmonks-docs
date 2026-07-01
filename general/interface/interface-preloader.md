@@ -1,11 +1,11 @@
 ---
 title: "How to Use Preloader in WordPress | CM"
-slug: interface/interface-preloader
+slug: interface-preloader
 description: "Add a loading animation to your WordPress site in Classic Monks. Shows a preloader while pages load, creating a smoother perceived performance experience."
 last_updated: 2026-06-24
 author: Joy
 reading_time: 3 min
-canonical: https://classicmonks.com/docs/interface/interface-preloader/
+canonical: https://classicmonks.com/docs/interface-preloader/
 ---
 
 # How to Use Preloader in WordPress

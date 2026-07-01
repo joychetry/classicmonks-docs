@@ -1,11 +1,11 @@
 ---
 title: "How to Disable Marketplace Suggestions in WordPress | CM"
-slug: woocommerce/disable-marketplace-suggestions
+slug: disable-marketplace-suggestions
 description: "Remove WooCommerce marketplace suggestions from the admin interface. Reduces clutter for stores that don't need the marketplace recommendations."
 last_updated: 2026-06-24
 author: Joy
 reading_time: 2 min
-canonical: https://classicmonks.com/docs/woocommerce/disable-marketplace-suggestions/
+canonical: https://classicmonks.com/docs/disable-marketplace-suggestions/
 ---
 
 # How to Disable Marketplace Suggestions in WordPress

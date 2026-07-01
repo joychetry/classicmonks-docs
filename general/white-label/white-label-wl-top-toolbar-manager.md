@@ -1,11 +1,11 @@
 ---
 title: "How to Use the Top Toolbar Manager in WordPress | CM"
-slug: white-label/wl-top-toolbar-manager
+slug: wl-top-toolbar-manager
 description: "Customize the WordPress admin toolbar in Classic Monks. Reorder, hide, or reorganize toolbar items."
 last_updated: 2026-06-24
 author: Joy
 reading_time: 3 min
-canonical: https://classicmonks.com/docs/white-label/wl-top-toolbar-manager/
+canonical: https://classicmonks.com/docs/wl-top-toolbar-manager/
 ---
 
 # How to Use the Top Toolbar Manager in WordPress

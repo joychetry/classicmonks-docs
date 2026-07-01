@@ -1,11 +1,11 @@
 ---
 title: "How to Disable Link in Comments in Classic Monks | CM"
-slug: core/disable-link-in-comments
+slug: disable-link-in-comments
 description: "Strip auto-linking and rendered links from WordPress comment text in Classic Monks. Disables URL-to-anchor conversion and removes existing link tags from comment content."
 last_updated: 2026-06-24
 author: Joy
 reading_time: 3 min
-canonical: https://classicmonks.com/docs/core/disable-link-in-comments/
+canonical: https://classicmonks.com/docs/disable-link-in-comments/
 ---
 
 # How to Disable Link in Comment and Disable Auto-linking in WordPress

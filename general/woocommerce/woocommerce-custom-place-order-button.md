@@ -1,11 +1,11 @@
 ---
 title: "How to Customize the Place Order Button in WordPress | CM"
-slug: woocommerce/custom-place-order-button
+slug: custom-place-order-button
 description: "Customize the Place Order button text and icon on the WooCommerce checkout page in Classic Monks. Configurable text, icon, and icon position."
 last_updated: 2026-06-24
 author: Joy
 reading_time: 3 min
-canonical: https://classicmonks.com/docs/woocommerce/custom-place-order-button/
+canonical: https://classicmonks.com/docs/custom-place-order-button/
 ---
 
 # How to Customize the Place Order Button in WordPress

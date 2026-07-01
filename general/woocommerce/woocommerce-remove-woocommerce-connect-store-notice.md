@@ -1,11 +1,11 @@
 ---
 title: "How to Remove the Connect Your Store Notice in WordPress | CM"
-slug: woocommerce/remove-woocommerce-connect-store-notice
+slug: remove-woocommerce-connect-store-notice
 description: "Remove the persistent WooCommerce.com connection notice from the admin interface. Reduces admin clutter for stores that don't need the marketplace connection."
 last_updated: 2026-06-24
 author: Joy
 reading_time: 2 min
-canonical: https://classicmonks.com/docs/woocommerce/remove-woocommerce-connect-store-notice/
+canonical: https://classicmonks.com/docs/remove-woocommerce-connect-store-notice/
 ---
 
 # How to Remove the Connect Your Store Notice in WordPress

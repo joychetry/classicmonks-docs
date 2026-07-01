@@ -1,11 +1,11 @@
 ---
 title: "How to Disable Embeds in WordPress | CM"
-slug: performance/perf-disable-embeds
+slug: perf-disable-embeds
 description: "Disable the WordPress embed functionality in Classic Monks. Prevents oEmbed from loading, reducing HTTP requests and page load time."
 last_updated: 2026-06-24
 author: Joy
 reading_time: 3 min
-canonical: https://classicmonks.com/docs/performance/perf-disable-embeds/
+canonical: https://classicmonks.com/docs/perf-disable-embeds/
 ---
 
 # How to Disable Embeds in WordPress

@@ -1,11 +1,11 @@
 ---
 title: "How to Use Email and Phone Protection in WordPress | CM"
-slug: security/email-phone-protection
+slug: email-phone-protection
 description: "Protect email addresses and phone numbers from scrapers and bots in Classic Monks. Auto-detect or manual configuration, with cloaking methods to prevent automated harvesting."
 last_updated: 2026-06-24
 author: Joy
 reading_time: 4 min
-canonical: https://classicmonks.com/docs/security/email-phone-protection/
+canonical: https://classicmonks.com/docs/email-phone-protection/
 ---
 
 # How to Use Email and Phone Protection in WordPress

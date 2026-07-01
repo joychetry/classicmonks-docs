@@ -1,11 +1,11 @@
 ---
 title: "How to Use Bulk Media Download in WordPress | CM"
-slug: performance/perf-bulk-media-download
+slug: perf-bulk-media-download
 description: "Download multiple media files at once in Classic Monks. Select multiple files in the Media Library and download them as a ZIP archive."
 last_updated: 2026-06-24
 author: Joy
 reading_time: 3 min
-canonical: https://classicmonks.com/docs/performance/perf-bulk-media-download/
+canonical: https://classicmonks.com/docs/perf-bulk-media-download/
 ---
 
 # How to Use Bulk Media Download in WordPress

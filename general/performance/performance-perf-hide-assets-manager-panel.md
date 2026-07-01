@@ -1,11 +1,11 @@
 ---
 title: "How to Hide the Assets Manager Panel in WordPress | CM"
-slug: performance/perf-hide-assets-manager-panel
+slug: perf-hide-assets-manager-panel
 description: "Hide the Assets Manager panel from the admin bar in Classic Monks. Removes the control panel from the admin bar for a cleaner interface."
 last_updated: 2026-06-24
 author: Joy
 reading_time: 3 min
-canonical: https://classicmonks.com/docs/performance/perf-hide-assets-manager-panel/
+canonical: https://classicmonks.com/docs/perf-hide-assets-manager-panel/
 ---
 
 # How to Hide the Assets Manager Panel in WordPress

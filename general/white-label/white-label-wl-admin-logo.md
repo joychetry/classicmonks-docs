@@ -1,11 +1,11 @@
 ---
 title: "How to Replace the WordPress Admin Bar Logo in WordPress | CM"
-slug: white-label/wl-admin-logo
+slug: wl-admin-logo
 description: "Replace the WordPress logo in the admin bar with your own logo in Classic Monks. Creates a branded admin experience."
 last_updated: 2026-06-24
 author: Joy
 reading_time: 3 min
-canonical: https://classicmonks.com/docs/white-label/wl-admin-logo/
+canonical: https://classicmonks.com/docs/wl-admin-logo/
 ---
 
 # How to Replace the WordPress Admin Bar Logo in WordPress

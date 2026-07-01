@@ -1,11 +1,11 @@
 ---
 title: "How to Enable Intelligent Preloading in WordPress | CM"
-slug: performance/perf-monks-preload
+slug: perf-monks-preload
 description: "Enable intelligent page preloading in Classic Monks. Preloads pages that the user is likely to visit next, based on hover and scroll behavior."
 last_updated: 2026-06-24
 author: Joy
 reading_time: 3 min
-canonical: https://classicmonks.com/docs/performance/perf-monks-preload/
+canonical: https://classicmonks.com/docs/perf-monks-preload/
 ---
 
 # How to Enable Intelligent Preloading in WordPress

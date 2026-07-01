@@ -1,11 +1,11 @@
 ---
 title: "How to Manage Users in Classic Monks: 6 Features | CM"
-slug: core/users
+slug: users
 description: "Manage users in Classic Monks: local avatars, view admin as role, user switching, login and registration columns, disable gravatars, username changer."
 last_updated: 2026-06-24
 author: Joy
 reading_time: 6 min
-canonical: https://classicmonks.com/docs/core/users/
+canonical: https://classicmonks.com/docs/users/
 ---
 
 # How to Manage Users in WordPress

@@ -1,11 +1,11 @@
 ---
 title: "How to Use Bricks Conditions in WordPress | CM"
-slug: bricks/bricks-conditions
+slug: bricks-conditions
 description: "Overview of all conditional display rules in Classic Monks. 80 conditions for showing/hiding elements based on post, user, content, and WooCommerce data."
 last_updated: 2026-06-24
 author: Joy
 reading_time: 5 min
-canonical: https://classicmonks.com/docs/bricks/bricks-conditions/
+canonical: https://classicmonks.com/docs/bricks-conditions/
 ---
 
 # How to Use Bricks Conditions in WordPress

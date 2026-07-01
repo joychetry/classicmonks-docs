@@ -1,11 +1,11 @@
 ---
 title: "How to Use Media Replacement in WordPress | CM"
-slug: performance/perf-media-replace
+slug: perf-media-replace
 description: "Replace media files without breaking existing references in Classic Monks. Update a file in the Media Library and all references are updated automatically."
 last_updated: 2026-06-24
 author: Joy
 reading_time: 3 min
-canonical: https://classicmonks.com/docs/performance/perf-media-replace/
+canonical: https://classicmonks.com/docs/perf-media-replace/
 ---
 
 # How to Use Media Replacement in WordPress

@@ -1,11 +1,11 @@
 ---
 title: "How to Lazy Load Background Images in WordPress | CM"
-slug: performance/perf-lazy-load-backgrounds
+slug: perf-lazy-load-backgrounds
 description: "Enable lazy loading for CSS background images in Classic Monks. Defers loading of background images until the element enters the viewport."
 last_updated: 2026-06-24
 author: Joy
 reading_time: 3 min
-canonical: https://classicmonks.com/docs/performance/perf-lazy-load-backgrounds/
+canonical: https://classicmonks.com/docs/perf-lazy-load-backgrounds/
 ---
 
 # How to Lazy Load Background Images in WordPress

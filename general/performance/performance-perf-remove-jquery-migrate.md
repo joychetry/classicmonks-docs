@@ -1,11 +1,11 @@
 ---
 title: "How to Remove jQuery Migrate in WordPress | CM"
-slug: performance/perf-remove-jquery-migrate
+slug: perf-remove-jquery-migrate
 description: "Remove the jQuery Migrate script in Classic Monks. Eliminates the legacy jQuery compatibility script that loads on every page."
 last_updated: 2026-06-24
 author: Joy
 reading_time: 3 min
-canonical: https://classicmonks.com/docs/performance/perf-remove-jquery-migrate/
+canonical: https://classicmonks.com/docs/perf-remove-jquery-migrate/
 ---
 
 # How to Remove jQuery Migrate in WordPress

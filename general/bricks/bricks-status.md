@@ -1,11 +1,11 @@
 ---
 title: "How to Check Bricks Builder Status in WordPress | CM"
-slug: bricks/bricks-status
+slug: bricks-status
 description: "Check the Bricks Builder integration status in Classic Monks. Verifies theme activation, plugin compatibility, and system requirements."
 last_updated: 2026-06-24
 author: Joy
 reading_time: 3 min
-canonical: https://classicmonks.com/docs/bricks/bricks-status/
+canonical: https://classicmonks.com/docs/bricks-status/
 ---
 
 # How to Check Bricks Builder Status in WordPress

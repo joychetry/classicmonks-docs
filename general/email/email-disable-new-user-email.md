@@ -1,11 +1,11 @@
 ---
 title: "How to Disable New User Email in WordPress | CM"
-slug: email/disable-new-user-email
+slug: disable-new-user-email
 description: "Stop WordPress from sending the welcome email to admins when new users register. Reduces admin email volume, especially on high-traffic membership sites."
 last_updated: 2026-06-24
 author: Joy
 reading_time: 3 min
-canonical: https://classicmonks.com/docs/email/disable-new-user-email/
+canonical: https://classicmonks.com/docs/disable-new-user-email/
 ---
 
 # How to Disable New User Email in WordPress

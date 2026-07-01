@@ -1,11 +1,11 @@
 ---
 title: "How to Redirect Logged-in Users from Login Page in WordPress | CM"
-slug: woocommerce/redirect-logged-in-users-from-login
+slug: redirect-logged-in-users-from-login
 description: "Automatically redirect users who are already logged in away from the login page. Prevents confusion and improves the user experience for already-authenticated users."
 last_updated: 2026-06-24
 author: Joy
 reading_time: 3 min
-canonical: https://classicmonks.com/docs/woocommerce/redirect-logged-in-users-from-login/
+canonical: https://classicmonks.com/docs/redirect-logged-in-users-from-login/
 ---
 
 # How to Redirect Logged-in Users from Login Page in WordPress

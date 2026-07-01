@@ -1,11 +1,11 @@
 ---
 title: "How to Order Post Types in Classic Monks | CM"
-slug: core/order-post-types
+slug: order-post-types
 description: "Add drag-and-drop reordering to WordPress post type list tables in Classic Monks. Choose which post types are reorderable with per-post-type control."
 last_updated: 2026-06-24
 author: Joy
 reading_time: 6 min
-canonical: https://classicmonks.com/docs/core/order-post-types/
+canonical: https://classicmonks.com/docs/order-post-types/
 ---
 
 # How to Order Post Types in WordPress

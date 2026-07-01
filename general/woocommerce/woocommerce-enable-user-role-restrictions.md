@@ -1,11 +1,11 @@
 ---
 title: "How to Enable User Role Coupon Restrictions in WordPress | CM"
-slug: woocommerce/enable-user-role-restrictions
+slug: enable-user-role-restrictions
 description: "Restrict WooCommerce coupons to specific user roles in Classic Monks. Includes WooCommerce customer roles and membership plugin compatibility."
 last_updated: 2026-06-24
 author: Joy
 reading_time: 4 min
-canonical: https://classicmonks.com/docs/woocommerce/enable-user-role-restrictions/
+canonical: https://classicmonks.com/docs/enable-user-role-restrictions/
 ---
 
 # How to Enable User Role Coupon Restrictions in WordPress

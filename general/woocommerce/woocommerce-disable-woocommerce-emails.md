@@ -1,11 +1,11 @@
 ---
 title: "How to Disable WooCommerce Emails in WordPress | CM"
-slug: woocommerce/disable-woocommerce-emails
+slug: disable-woocommerce-emails
 description: "Disable all WooCommerce transactional emails including order confirmations, shipping notices, and admin notifications. Provides complete control over customer communications."
 last_updated: 2026-06-24
 author: Joy
 reading_time: 4 min
-canonical: https://classicmonks.com/docs/woocommerce/disable-woocommerce-emails/
+canonical: https://classicmonks.com/docs/disable-woocommerce-emails/
 ---
 
 # How to Disable WooCommerce Emails in WordPress

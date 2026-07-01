@@ -1,11 +1,11 @@
 ---
 title: "How to Use Bricks Dynamic Data in WordPress | CM"
-slug: bricks/bricks-dynamic-data
+slug: bricks-dynamic-data
 description: "Overview of all dynamic data sources in Classic Monks. 81 data sources covering post, user, content, taxonomy, WooCommerce, and custom data."
 last_updated: 2026-06-24
 author: Joy
 reading_time: 5 min
-canonical: https://classicmonks.com/docs/bricks/bricks-dynamic-data/
+canonical: https://classicmonks.com/docs/bricks-dynamic-data/
 ---
 
 # How to Use Bricks Dynamic Data in WordPress

@@ -1,11 +1,11 @@
 ---
 title: "How to Enable Login Form Shadow in WordPress | CM"
-slug: white-label/wl-login-form-shadow
+slug: wl-login-form-shadow
 description: "Add a shadow effect to the login form in Classic Monks. Creates depth and visual hierarchy on the login page."
 last_updated: 2026-06-24
 author: Joy
 reading_time: 3 min
-canonical: https://classicmonks.com/docs/white-label/wl-login-form-shadow/
+canonical: https://classicmonks.com/docs/wl-login-form-shadow/
 ---
 
 # How to Enable Login Form Shadow in WordPress

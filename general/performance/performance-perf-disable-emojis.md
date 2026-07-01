@@ -1,11 +1,11 @@
 ---
 title: "How to Disable Emojis in WordPress | CM"
-slug: performance/perf-disable-emojis
+slug: perf-disable-emojis
 description: "Disable the WordPress emoji script in Classic Monks. Removes the JavaScript file that handles emoji rendering, reducing page load time."
 last_updated: 2026-06-24
 author: Joy
 reading_time: 3 min
-canonical: https://classicmonks.com/docs/performance/perf-disable-emojis/
+canonical: https://classicmonks.com/docs/perf-disable-emojis/
 ---
 
 # How to Disable Emojis in WordPress

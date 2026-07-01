@@ -1,11 +1,11 @@
 ---
 title: "How to Remove the Clear Variation Link in WordPress | CM"
-slug: woocommerce/remove-clear-variation-link
+slug: remove-clear-variation-link
 description: "Remove the Clear link that lets customers deselect chosen product variations in Classic Monks. Streamlines the variation selection process."
 last_updated: 2026-06-24
 author: Joy
 reading_time: 3 min
-canonical: https://classicmonks.com/docs/woocommerce/remove-clear-variation-link/
+canonical: https://classicmonks.com/docs/remove-clear-variation-link/
 ---
 
 # How to Remove the Clear Variation Link in WordPress

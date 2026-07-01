@@ -5,7 +5,7 @@ description: "Index of all Interface tab features in Classic Monks. 29 features 
 last_updated: 2026-06-24
 author: Joy
 reading_time: 3 min
-canonical: https://classicmonks.com/docs/interface/
+canonical: https://classicmonks.com/docs/
 ---
 
 # How to Use the Interface Tab in Classic Monks: Feature Index

@@ -1,11 +1,11 @@
 ---
 title: "How to Disable .htaccess File Access in WordPress | CM"
-slug: security/disable-htaccess-file-access
+slug: disable-htaccess-file-access
 description: "Disable .htaccess file access in WordPress via Classic Monks. Prevents unauthorized access to the .htaccess file which could expose server configuration details."
 last_updated: 2026-06-24
 author: Joy
 reading_time: 3 min
-canonical: https://classicmonks.com/docs/security/disable-htaccess-file-access/
+canonical: https://classicmonks.com/docs/disable-htaccess-file-access/
 ---
 
 # How to Disable .htaccess File Access in WordPress

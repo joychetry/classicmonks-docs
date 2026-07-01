@@ -1,11 +1,11 @@
 ---
 title: "How to Disable Self Pingbacks in WordPress | CM"
-slug: performance/perf-disable-self-pingbacks
+slug: perf-disable-self-pingbacks
 description: "Disable self-pingbacks in Classic Monks. Prevents WordPress from pinging your own site when you link to your own content."
 last_updated: 2026-06-24
 author: Joy
 reading_time: 3 min
-canonical: https://classicmonks.com/docs/performance/perf-disable-self-pingbacks/
+canonical: https://classicmonks.com/docs/perf-disable-self-pingbacks/
 ---
 
 # How to Disable Self Pingbacks in WordPress

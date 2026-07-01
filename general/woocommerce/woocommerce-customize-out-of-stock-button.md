@@ -1,11 +1,11 @@
 ---
 title: "How to Customize the Out of Stock Button in WordPress | CM"
-slug: woocommerce/customize-out-of-stock-button
+slug: customize-out-of-stock-button
 description: "Customize the out-of-stock button text and behavior in Classic Monks. Choose disabled, link-to-product, or hidden behavior, with optional CSS class and Gutenberg blocks compatibility."
 last_updated: 2026-06-24
 author: Joy
 reading_time: 4 min
-canonical: https://classicmonks.com/docs/woocommerce/customize-out-of-stock-button/
+canonical: https://classicmonks.com/docs/customize-out-of-stock-button/
 ---
 
 # How to Customize the Out of Stock Button in WordPress

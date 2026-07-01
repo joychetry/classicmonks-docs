@@ -1,11 +1,11 @@
 ---
 title: "How to Center the Login Logo in WordPress | CM"
-slug: white-label/wl-login-logo-centered
+slug: wl-login-logo-centered
 description: "Center the login page logo in Classic Monks. Provides a balanced, professional login page layout."
 last_updated: 2026-06-24
 author: Joy
 reading_time: 3 min
-canonical: https://classicmonks.com/docs/white-label/wl-login-logo-centered/
+canonical: https://classicmonks.com/docs/wl-login-logo-centered/
 ---
 
 # How to Center the Login Logo in WordPress

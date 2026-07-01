@@ -1,11 +1,11 @@
 ---
 title: "How to Enable Login Lockdown in WordPress | CM"
-slug: security/login-lockdown
+slug: login-lockdown
 description: "Lock out users after a configurable number of failed login attempts in Classic Monks. Protects against brute force attacks with extended lockouts and IP whitelisting."
 last_updated: 2026-06-24
 author: Joy
 reading_time: 5 min
-canonical: https://classicmonks.com/docs/security/login-lockdown/
+canonical: https://classicmonks.com/docs/login-lockdown/
 ---
 
 # How to Enable Login Lockdown in WordPress

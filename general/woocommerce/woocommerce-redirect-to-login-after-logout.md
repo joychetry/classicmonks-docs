@@ -1,11 +1,11 @@
 ---
 title: "How to Redirect After Logout in WordPress | CM"
-slug: woocommerce/redirect-to-login-after-logout
+slug: redirect-to-login-after-logout
 description: "Send users to the login page immediately after they log out. Provides clear logout confirmation and maintains security by preventing accidental access."
 last_updated: 2026-06-24
 author: Joy
 reading_time: 3 min
-canonical: https://classicmonks.com/docs/woocommerce/redirect-to-login-after-logout/
+canonical: https://classicmonks.com/docs/redirect-to-login-after-logout/
 ---
 
 # How to Redirect After Logout in WordPress

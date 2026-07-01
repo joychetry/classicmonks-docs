@@ -1,11 +1,11 @@
 ---
 title: "How to Show Percentage Off in WordPress | CM"
-slug: woocommerce/show-percentage-off
+slug: show-percentage-off
 description: "Display the percentage discount on sale products in Classic Monks. Customizable prefix and suffix text, with optional display in product loops."
 last_updated: 2026-06-24
 author: Joy
 reading_time: 4 min
-canonical: https://classicmonks.com/docs/woocommerce/show-percentage-off/
+canonical: https://classicmonks.com/docs/show-percentage-off/
 ---
 
 # How to Show Percentage Off in WordPress

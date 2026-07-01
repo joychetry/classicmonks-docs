@@ -1,11 +1,11 @@
 ---
 title: "How to Enable URL Coupons in WordPress | CM"
-slug: woocommerce/enable-url-coupons
+slug: enable-url-coupons
 description: "Apply WooCommerce coupons via shareable URL parameters in Classic Monks. Supports UTM tracking, source attribution, and customizable redirect destinations."
 last_updated: 2026-06-24
 author: Joy
 reading_time: 4 min
-canonical: https://classicmonks.com/docs/woocommerce/enable-url-coupons/
+canonical: https://classicmonks.com/docs/enable-url-coupons/
 ---
 
 # How to Enable URL Coupons in WordPress

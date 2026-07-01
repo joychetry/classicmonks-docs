@@ -1,6 +1,6 @@
 ---
 title: "How to Customize the Admin Footer in WordPress | CM"
-slug: white-label/wl-admin-footer
+slug: wl-admin-footer
 description: "Customize the WordPress admin footer text in Classic Monks. Replace \"Thank you for creating with WordPress\" with your own message."
 last_updated: 2026-06-24
 author: Joy

@@ -1,11 +1,11 @@
 ---
 title: "How to Use Mobile-Specific Preloader Customization in WordPress | CM"
-slug: interface/interface-preloader-mobile
+slug: interface-preloader-mobile
 description: "Customize the preloader behavior specifically for mobile devices in Classic Monks. Different preloader settings for mobile vs desktop to optimize for mobile load times."
 last_updated: 2026-06-24
 author: Joy
 reading_time: 3 min
-canonical: https://classicmonks.com/docs/interface/interface-preloader-mobile/
+canonical: https://classicmonks.com/docs/interface-preloader-mobile/
 ---
 
 # How to Use Mobile-Specific Preloader Customization in WordPress

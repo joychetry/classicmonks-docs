@@ -1,11 +1,11 @@
 ---
 title: "How to Enable WooCommerce Direct Checkout Links in WordPress | CM"
-slug: woocommerce/enable-woocommerce-direct-checkout
+slug: enable-woocommerce-direct-checkout
 description: "Create direct checkout links for WooCommerce products in Classic Monks. Use SKU or product ID URL parameters to send customers straight to checkout with a product pre-added."
 last_updated: 2026-06-24
 author: Joy
 reading_time: 3 min
-canonical: https://classicmonks.com/docs/woocommerce/enable-woocommerce-direct-checkout/
+canonical: https://classicmonks.com/docs/enable-woocommerce-direct-checkout/
 ---
 
 # How to Enable WooCommerce Direct Checkout Links in WordPress

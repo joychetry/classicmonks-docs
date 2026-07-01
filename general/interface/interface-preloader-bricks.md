@@ -1,11 +1,11 @@
 ---
 title: "How to Disable Preloader Inside Bricks Builder in WordPress | CM"
-slug: interface/interface-preloader-bricks
+slug: interface-preloader-bricks
 description: "Disable the preloader when editing pages in Bricks Builder in Classic Monks. Prevents the preloader from appearing during the Bricks editor, which would interfere with editing."
 last_updated: 2026-06-24
 author: Joy
 reading_time: 3 min
-canonical: https://classicmonks.com/docs/interface/interface-preloader-bricks/
+canonical: https://classicmonks.com/docs/interface-preloader-bricks/
 ---
 
 # How to Disable Preloader Inside Bricks Builder in WordPress

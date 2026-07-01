@@ -1,11 +1,11 @@
 ---
 title: "How to Use the Currency Converter in Classic Monks | CM"
-slug: core/currency-converter
+slug: currency-converter
 description: "Add a currency converter to your WordPress site with the [cm_currency_converter] shortcode in Classic Monks. Configure base currency, target currencies, API endpoint, and cache duration."
 last_updated: 2026-06-24
 author: Joy
 reading_time: 6 min
-canonical: https://classicmonks.com/docs/core/currency-converter/
+canonical: https://classicmonks.com/docs/currency-converter/
 ---
 
 # How to Use the Currency Converter in WordPress

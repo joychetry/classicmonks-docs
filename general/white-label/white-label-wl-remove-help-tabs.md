@@ -1,11 +1,11 @@
 ---
 title: "How to Remove Help Tabs in WordPress | CM"
-slug: white-label/wl-remove-help-tabs
+slug: wl-remove-help-tabs
 description: "Remove the help tabs from the WordPress admin in Classic Monks. Provides a cleaner admin interface without help documentation."
 last_updated: 2026-06-24
 author: Joy
 reading_time: 3 min
-canonical: https://classicmonks.com/docs/white-label/wl-remove-help-tabs/
+canonical: https://classicmonks.com/docs/wl-remove-help-tabs/
 ---
 
 # How to Remove Help Tabs in WordPress

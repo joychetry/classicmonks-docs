@@ -1,11 +1,11 @@
 ---
 title: "How to Add a Custom Login Logo in WordPress | CM"
-slug: white-label/wl-login-logo
+slug: wl-login-logo
 description: "Replace the WordPress logo on the login page with your own logo in Classic Monks. Creates a branded login experience."
 last_updated: 2026-06-24
 author: Joy
 reading_time: 3 min
-canonical: https://classicmonks.com/docs/white-label/wl-login-logo/
+canonical: https://classicmonks.com/docs/wl-login-logo/
 ---
 
 # How to Add a Custom Login Logo in WordPress

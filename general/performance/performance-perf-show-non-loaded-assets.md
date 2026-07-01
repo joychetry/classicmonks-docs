@@ -1,11 +1,11 @@
 ---
 title: "How to Show Non-Loaded Assets in WordPress | CM"
-slug: performance/perf-show-non-loaded-assets
+slug: perf-show-non-loaded-assets
 description: "Show CSS and JavaScript files that are not loaded on the current page in Classic Monks. Helps identify which assets are disabled."
 last_updated: 2026-06-24
 author: Joy
 reading_time: 3 min
-canonical: https://classicmonks.com/docs/performance/perf-show-non-loaded-assets/
+canonical: https://classicmonks.com/docs/perf-show-non-loaded-assets/
 ---
 
 # How to Show Non-Loaded Assets in WordPress

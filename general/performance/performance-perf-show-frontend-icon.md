@@ -1,11 +1,11 @@
 ---
 title: "How to Show the Assets Manager Frontend Icon in WordPress | CM"
-slug: performance/perf-show-frontend-icon
+slug: perf-show-frontend-icon
 description: "Show the Assets Manager icon on the frontend for logged-in admins in Classic Monks. Provides quick access to asset controls from the frontend."
 last_updated: 2026-06-24
 author: Joy
 reading_time: 3 min
-canonical: https://classicmonks.com/docs/performance/perf-show-frontend-icon/
+canonical: https://classicmonks.com/docs/perf-show-frontend-icon/
 ---
 
 # How to Show the Assets Manager Frontend Icon in WordPress

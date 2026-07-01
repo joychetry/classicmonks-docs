@@ -1,11 +1,11 @@
 ---
 title: "How to Disable Admin Email Change Notification in WordPress | CM"
-slug: email/disable-admin-email-change
+slug: disable-admin-email-change
 description: "Stop WordPress from sending the verification email when the site admin email address is changed. Speeds up admin email updates and removes the verification step."
 last_updated: 2026-06-24
 author: Joy
 reading_time: 3 min
-canonical: https://classicmonks.com/docs/email/disable-admin-email-change/
+canonical: https://classicmonks.com/docs/disable-admin-email-change/
 ---
 
 # How to Disable Admin Email Change Notification in WordPress

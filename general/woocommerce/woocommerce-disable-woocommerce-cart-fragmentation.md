@@ -1,11 +1,11 @@
 ---
 title: "How to Disable WooCommerce Cart Fragmentation in WordPress | CM"
-slug: woocommerce/disable-woocommerce-cart-fragmentation
+slug: disable-woocommerce-cart-fragmentation
 description: "Prevent WooCommerce from fragmenting the cart for caching. Improves compatibility with caching plugins and enhances site performance."
 last_updated: 2026-06-24
 author: Joy
 reading_time: 3 min
-canonical: https://classicmonks.com/docs/woocommerce/disable-woocommerce-cart-fragmentation/
+canonical: https://classicmonks.com/docs/disable-woocommerce-cart-fragmentation/
 ---
 
 # How to Disable WooCommerce Cart Fragmentation in WordPress

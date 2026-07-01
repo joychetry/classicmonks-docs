@@ -1,11 +1,11 @@
 ---
 title: "How to Disable Copy/Cut/Paste in WordPress | CM"
-slug: security/disable-copy-paste
+slug: disable-copy-paste
 description: "Disable the copy, cut, and paste keyboard shortcuts in Classic Monks. Prevents users from easily copying content from your site via CTRL+C, CTRL+X, or CTRL+V."
 last_updated: 2026-06-24
 author: Joy
 reading_time: 3 min
-canonical: https://classicmonks.com/docs/security/disable-copy-paste/
+canonical: https://classicmonks.com/docs/disable-copy-paste/
 ---
 
 # How to Disable Copy/Cut/Paste in WordPress

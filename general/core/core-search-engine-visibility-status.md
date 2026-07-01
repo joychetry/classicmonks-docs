@@ -1,11 +1,11 @@
 ---
 title: "How to Enable Search Engine Visibility Status in Classic Monks | CM"
-slug: core/search-engine-visibility-status
+slug: search-engine-visibility-status
 description: "Show search engine indexing status in the WordPress admin bar in Classic Monks. Auto-discourage indexing on URLs that don't match your Live Site URL. Prevent accidental staging site indexing."
 last_updated: 2026-06-24
 author: Joy
 reading_time: 5 min
-canonical: https://classicmonks.com/docs/core/search-engine-visibility-status/
+canonical: https://classicmonks.com/docs/search-engine-visibility-status/
 ---
 
 # How to Enable Search Engine Visibility Status in WordPress

@@ -1,11 +1,11 @@
 ---
 title: "How to Auto-select First Variation in WordPress | CM"
-slug: woocommerce/auto-select-first-variation
+slug: auto-select-first-variation
 description: "Automatically select the first available product variation in Classic Monks when customers visit variable product pages. Speeds up the purchase decision."
 last_updated: 2026-06-24
 author: Joy
 reading_time: 3 min
-canonical: https://classicmonks.com/docs/woocommerce/auto-select-first-variation/
+canonical: https://classicmonks.com/docs/auto-select-first-variation/
 ---
 
 # How to Auto-select First Variation in WordPress

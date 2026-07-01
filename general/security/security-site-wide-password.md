@@ -1,11 +1,11 @@
 ---
 title: "How to Use Site-Wide Password Protection in WordPress | CM"
-slug: security/site-wide-password
+slug: site-wide-password
 description: "Add site-wide password protection in Classic Monks. Visitors must enter a password to access any content. Useful for staging sites, member-only sites, and pre-launch sites."
 last_updated: 2026-06-24
 author: Joy
 reading_time: 3 min
-canonical: https://classicmonks.com/docs/security/site-wide-password/
+canonical: https://classicmonks.com/docs/site-wide-password/
 ---
 
 # How to Use Site-Wide Password Protection in WordPress

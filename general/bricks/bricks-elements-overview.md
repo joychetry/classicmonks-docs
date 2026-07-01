@@ -1,11 +1,11 @@
 ---
 title: "How to Use Bricks Elements in WordPress | CM"
-slug: bricks/bricks-elements-overview
+slug: bricks-elements-overview
 description: "Overview of all custom Bricks elements in Classic Monks. 77 elements including animations, content, WooCommerce, gallery, and utility elements."
 last_updated: 2026-06-24
 author: Joy
 reading_time: 5 min
-canonical: https://classicmonks.com/docs/bricks/bricks-elements-overview/
+canonical: https://classicmonks.com/docs/bricks-elements-overview/
 ---
 
 # How to Use Bricks Elements in WordPress

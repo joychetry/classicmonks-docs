@@ -1,11 +1,11 @@
 ---
 title: "How to Enable Checkout Field Placeholders in WordPress | CM"
-slug: woocommerce/enable-checkout-field-placeholders
+slug: enable-checkout-field-placeholders
 description: "Add placeholder text inside WooCommerce checkout form fields in Classic Monks. Improves form usability and guides customer input."
 last_updated: 2026-06-24
 author: Joy
 reading_time: 3 min
-canonical: https://classicmonks.com/docs/woocommerce/enable-checkout-field-placeholders/
+canonical: https://classicmonks.com/docs/enable-checkout-field-placeholders/
 ---
 
 # How to Enable Checkout Field Placeholders in WordPress

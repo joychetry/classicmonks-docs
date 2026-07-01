@@ -1,11 +1,11 @@
 ---
 title: Self-Hosted Google Analytics v4 in Classic Monks | CM
-slug: core/self-hosted-analytics
+slug: self-hosted-analytics
 description: Self-host Google Analytics v4 tracking in Classic Monks. Choose between Minimal Analytics (1.4KB) or Gtag.js (90KB) for performance-focused analytics.
 last_updated: 2026-06-24
 author: Joy
 reading_time: 5 min
-canonical: https://classicmonks.com/docs/core/self-hosted-analytics/
+canonical: https://classicmonks.com/docs/self-hosted-analytics/
 ---
 
 # How to Use Self-Hosted Google Analytics v4 in WordPress

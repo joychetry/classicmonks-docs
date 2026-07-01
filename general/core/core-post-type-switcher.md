@@ -1,11 +1,11 @@
 ---
 title: "How to Use the Post Type Switcher in Classic Monks | CM"
-slug: core/post-type-switcher
+slug: post-type-switcher
 description: "Change a post from one type to another in Classic Monks (post to page, page to custom post type) while preserving metadata, custom fields, and compatible taxonomies."
 last_updated: 2026-06-24
 author: Joy
 reading_time: 6 min
-canonical: https://classicmonks.com/docs/core/post-type-switcher/
+canonical: https://classicmonks.com/docs/post-type-switcher/
 ---
 
 # How to Use the Post Type Switcher in WordPress

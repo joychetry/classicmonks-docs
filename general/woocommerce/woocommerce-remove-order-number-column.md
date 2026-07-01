@@ -1,11 +1,11 @@
 ---
 title: "How to Remove Order Number Column from Admin Orders Page in WordPress | CM"
-slug: woocommerce/remove-order-number-column
+slug: remove-order-number-column
 description: "Hide the order number column from the WooCommerce admin orders page in Classic Monks. Provides more space for other important order information."
 last_updated: 2026-06-24
 author: Joy
 reading_time: 3 min
-canonical: https://classicmonks.com/docs/woocommerce/remove-order-number-column/
+canonical: https://classicmonks.com/docs/remove-order-number-column/
 ---
 
 # How to Remove Order Number Column from Admin Orders Page in WordPress

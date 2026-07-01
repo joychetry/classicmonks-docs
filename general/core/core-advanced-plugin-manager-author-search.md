@@ -1,11 +1,11 @@
 ---
 title: "How to Use the WordPress.org Author Search in Classic Monks | CM"
-slug: core/advanced-plugin-manager-author-search
+slug: advanced-plugin-manager-author-search
 description: "Find all plugins by a specific WordPress.org author and install multiple at once in Classic Monks. Search by author slug, select, and bulk install."
 last_updated: 2026-06-24
 author: Joy
 reading_time: 6 min
-canonical: https://classicmonks.com/docs/core/advanced-plugin-manager-author-search/
+canonical: https://classicmonks.com/docs/advanced-plugin-manager-author-search/
 ---
 
 # How to Use the WordPress.org Author Search in WordPress

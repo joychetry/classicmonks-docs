@@ -1,11 +1,11 @@
 ---
 title: "How to Enable Auto Start on Link Click in Laser Loader in WordPress | CM"
-slug: interface/interface-laser-loader-autostart
+slug: interface-laser-loader-autostart
 description: "Start the laser loader automatically when a visitor clicks any link in Classic Monks. Shows the loader on internal navigation without waiting for the browser to start loading."
 last_updated: 2026-06-24
 author: Joy
 reading_time: 3 min
-canonical: https://classicmonks.com/docs/interface/interface-laser-loader-autostart/
+canonical: https://classicmonks.com/docs/interface-laser-loader-autostart/
 ---
 
 # How to Enable Auto Start on Link Click in Laser Loader in WordPress

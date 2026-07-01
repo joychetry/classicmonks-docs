@@ -1,11 +1,11 @@
 ---
 title: "How to Stop Preloading on Errors in WordPress | CM"
-slug: performance/perf-preload-stop-errors
+slug: perf-preload-stop-errors
 description: "Stop preloading when errors are detected in Classic Monks. Prevents preloading from continuing when errors occur."
 last_updated: 2026-06-24
 author: Joy
 reading_time: 3 min
-canonical: https://classicmonks.com/docs/performance/perf-preload-stop-errors/
+canonical: https://classicmonks.com/docs/perf-preload-stop-errors/
 ---
 
 # How to Stop Preloading on Errors in WordPress

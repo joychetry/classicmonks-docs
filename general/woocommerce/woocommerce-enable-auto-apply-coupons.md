@@ -1,11 +1,11 @@
 ---
 title: "How to Enable Auto-Apply Coupons in WordPress | CM"
-slug: woocommerce/enable-auto-apply-coupons
+slug: enable-auto-apply-coupons
 description: "Automatically apply eligible coupons in Classic Monks based on cart conditions. Prioritizes highest-value coupons, limits stack count, and supports optional notifications."
 last_updated: 2026-06-24
 author: Joy
 reading_time: 4 min
-canonical: https://classicmonks.com/docs/woocommerce/enable-auto-apply-coupons/
+canonical: https://classicmonks.com/docs/enable-auto-apply-coupons/
 ---
 
 # How to Enable Auto-Apply Coupons in WordPress

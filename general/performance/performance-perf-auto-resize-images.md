@@ -1,11 +1,11 @@
 ---
 title: "How to Auto Resize Images After Upload in WordPress | CM"
-slug: performance/perf-auto-resize-images
+slug: perf-auto-resize-images
 description: "Automatically resize uploaded images to a maximum dimension in Classic Monks. Prevents oversized images from being stored in the Media Library."
 last_updated: 2026-06-24
 author: Joy
 reading_time: 3 min
-canonical: https://classicmonks.com/docs/performance/perf-auto-resize-images/
+canonical: https://classicmonks.com/docs/perf-auto-resize-images/
 ---
 
 # How to Auto Resize Images After Upload in WordPress

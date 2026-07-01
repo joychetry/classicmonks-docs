@@ -1,11 +1,11 @@
 ---
 title: "How to Enable AI Features in Classic Monks: Master Toggle | CM"
-slug: ai/ai-features-master
+slug: ai-features-master
 description: Enable the AI Features master toggle in Classic Monks to unlock the AI Agent, AI Tools, AI Provider, Vision provider, and Bricks AI Builder.
 last_updated: 2026-06-24
 author: Joy
 reading_time: 6 min
-canonical: https://classicmonks.com/docs/ai/ai-features-master/
+canonical: https://classicmonks.com/docs/ai-features-master/
 ---
 
 # How to Enable AI Features in WordPress (Master Toggle)

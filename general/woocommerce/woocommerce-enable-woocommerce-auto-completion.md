@@ -1,11 +1,11 @@
 ---
 title: "How to Enable Auto-Completion for Virtual/Downloadable Orders in WordPress | CM"
-slug: woocommerce/enable-woocommerce-auto-completion
+slug: enable-woocommerce-auto-completion
 description: "Auto-complete orders for virtual and downloadable products in Classic Monks. Streamline digital product fulfillment with configurable product type logic and email notifications."
 last_updated: 2026-06-24
 author: Joy
 reading_time: 4 min
-canonical: https://classicmonks.com/docs/woocommerce/enable-woocommerce-auto-completion/
+canonical: https://classicmonks.com/docs/enable-woocommerce-auto-completion/
 ---
 
 # How to Enable Auto-Completion for Virtual/Downloadable Orders in WordPress

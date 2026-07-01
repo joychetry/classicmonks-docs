@@ -1,11 +1,11 @@
 ---
 title: "How to Allow Reset Password Email in WordPress | CM"
-slug: woocommerce/allow-reset-password-email
+slug: allow-reset-password-email
 description: "Allow the WooCommerce customer reset password email even when all other WooCommerce emails are disabled. Ensures customers can always recover their account access."
 last_updated: 2026-06-24
 author: Joy
 reading_time: 3 min
-canonical: https://classicmonks.com/docs/woocommerce/allow-reset-password-email/
+canonical: https://classicmonks.com/docs/allow-reset-password-email/
 ---
 
 # How to Allow Reset Password Email in WordPress

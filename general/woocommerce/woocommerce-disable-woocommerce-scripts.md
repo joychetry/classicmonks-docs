@@ -1,11 +1,11 @@
 ---
 title: "How to Disable WooCommerce Scripts and Styles on Non-WooCommerce Pages in WordPress | CM"
-slug: woocommerce/disable-woocommerce-scripts
+slug: disable-woocommerce-scripts
 description: "Prevent WooCommerce CSS and JavaScript files from loading on pages that don't need WooCommerce functionality. Improves site performance by reducing unnecessary asset loading."
 last_updated: 2026-06-24
 author: Joy
 reading_time: 3 min
-canonical: https://classicmonks.com/docs/woocommerce/disable-woocommerce-scripts/
+canonical: https://classicmonks.com/docs/disable-woocommerce-scripts/
 ---
 
 # How to Disable WooCommerce Scripts and Styles on Non-WooCommerce Pages in WordPress

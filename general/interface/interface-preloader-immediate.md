@@ -1,11 +1,11 @@
 ---
 title: "How to Enable Immediate Preloader in WordPress | CM"
-slug: interface/preloader-immediate
+slug: preloader-immediate
 description: "Show the preloader immediately when a link is clicked in Classic Monks. The preloader appears on click, not after the page starts loading, for a faster perceived response."
 last_updated: 2026-06-24
 author: Joy
 reading_time: 3 min
-canonical: https://classicmonks.com/docs/interface/preloader-immediate/
+canonical: https://classicmonks.com/docs/preloader-immediate/
 ---
 
 # How to Enable Immediate Preloader in WordPress

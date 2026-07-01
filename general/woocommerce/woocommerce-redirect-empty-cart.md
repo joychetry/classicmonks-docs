@@ -1,11 +1,11 @@
 ---
 title: "How to Redirect Empty Cart in WordPress | CM"
-slug: woocommerce/redirect-empty-cart
+slug: redirect-empty-cart
 description: "Automatically redirect customers to the shop page when they try to access an empty cart page. Improves the user experience by preventing dead-end pages."
 last_updated: 2026-06-24
 author: Joy
 reading_time: 3 min
-canonical: https://classicmonks.com/docs/woocommerce/redirect-empty-cart/
+canonical: https://classicmonks.com/docs/redirect-empty-cart/
 ---
 
 # How to Redirect Empty Cart in WordPress

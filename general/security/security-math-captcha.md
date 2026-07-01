@@ -1,11 +1,11 @@
 ---
 title: "How to Use Math Captcha in WordPress | CM"
-slug: security/math-captcha
+slug: math-captcha
 description: "Add math-based captcha challenges to WordPress, WooCommerce, and comment forms in Classic Monks. Privacy-friendly alternative to image-based captchas that doesn't depend on third-party services."
 last_updated: 2026-06-24
 author: Joy
 reading_time: 4 min
-canonical: https://classicmonks.com/docs/security/math-captcha/
+canonical: https://classicmonks.com/docs/math-captcha/
 ---
 
 # How to Use Math Captcha in WordPress

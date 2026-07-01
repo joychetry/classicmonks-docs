@@ -1,11 +1,11 @@
 ---
 title: "How to Remove Order Notes from WooCommerce Checkout in WordPress | CM"
-slug: woocommerce/remove-order-notes
+slug: remove-order-notes
 description: "Remove the optional order notes field from the WooCommerce checkout form in Classic Monks. Streamlines the checkout experience by reducing form fields."
 last_updated: 2026-06-24
 author: Joy
 reading_time: 3 min
-canonical: https://classicmonks.com/docs/woocommerce/remove-order-notes/
+canonical: https://classicmonks.com/docs/remove-order-notes/
 ---
 
 # How to Remove Order Notes from WooCommerce Checkout in WordPress

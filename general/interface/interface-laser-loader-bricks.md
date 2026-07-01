@@ -1,11 +1,11 @@
 ---
 title: "How to Disable Laser Loader Inside Bricks Builder in WordPress | CM"
-slug: interface/interface-laser-loader-bricks
+slug: interface-laser-loader-bricks
 description: "Disable the laser loader when editing in Bricks Builder in Classic Monks. Prevents the progress bar from appearing during the visual editor."
 last_updated: 2026-06-24
 author: Joy
 reading_time: 3 min
-canonical: https://classicmonks.com/docs/interface/interface-laser-loader-bricks/
+canonical: https://classicmonks.com/docs/interface-laser-loader-bricks/
 ---
 
 # How to Disable Laser Loader Inside Bricks Builder in WordPress

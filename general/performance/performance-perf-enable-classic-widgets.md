@@ -1,11 +1,11 @@
 ---
 title: "How to Enable Classic Widgets in WordPress | CM"
-slug: performance/perf-enable-classic-widgets
+slug: perf-enable-classic-widgets
 description: "Enable the Classic Widgets interface in WordPress via Classic Monks. Reverts to the drag-and-drop widget interface instead of the block-based widget editor."
 last_updated: 2026-06-24
 author: Joy
 reading_time: 3 min
-canonical: https://classicmonks.com/docs/performance/perf-enable-classic-widgets/
+canonical: https://classicmonks.com/docs/perf-enable-classic-widgets/
 ---
 
 # How to Enable Classic Widgets in WordPress

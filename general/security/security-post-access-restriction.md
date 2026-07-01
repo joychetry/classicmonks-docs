@@ -1,11 +1,11 @@
 ---
 title: "How to Restrict Editor Access to Specific Posts in WordPress | CM"
-slug: security/post-access-restriction
+slug: post-access-restriction
 description: "Restrict editor access to specific posts in Classic Monks. Editors can only edit posts they authored or are explicitly granted access to, useful for multi-author sites."
 last_updated: 2026-06-24
 author: Joy
 reading_time: 3 min
-canonical: https://classicmonks.com/docs/security/post-access-restriction/
+canonical: https://classicmonks.com/docs/post-access-restriction/
 ---
 
 # How to Restrict Editor Access to Specific Posts in WordPress

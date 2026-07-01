@@ -1,11 +1,11 @@
 ---
 title: "How to Install Plugin from URL in Classic Monks: ZIP URL Support | CM"
-slug: core/advanced-plugin-manager-install-url
+slug: advanced-plugin-manager-install-url
 description: "Install WordPress plugins directly from a ZIP URL in Classic Monks. Supports GitHub releases, S3 buckets, CDNs, and any direct ZIP download link."
 last_updated: 2026-06-24
 author: Joy
 reading_time: 6 min
-canonical: https://classicmonks.com/docs/core/advanced-plugin-manager-install-url/
+canonical: https://classicmonks.com/docs/advanced-plugin-manager-install-url/
 ---
 
 # How to Install Plugin from URL in WordPress

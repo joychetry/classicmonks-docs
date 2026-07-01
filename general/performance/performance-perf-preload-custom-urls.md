@@ -1,11 +1,11 @@
 ---
 title: "How to Use Custom URL Preload Method in WordPress | CM"
-slug: performance/perf-preload-custom-urls
+slug: perf-preload-custom-urls
 description: "Preload specific URLs in Classic Monks. Manually specify which URLs to preload for maximum control."
 last_updated: 2026-06-24
 author: Joy
 reading_time: 3 min
-canonical: https://classicmonks.com/docs/performance/perf-preload-custom-urls/
+canonical: https://classicmonks.com/docs/perf-preload-custom-urls/
 ---
 
 # How to Use Custom URL Preload Method in WordPress

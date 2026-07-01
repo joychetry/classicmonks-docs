@@ -1,11 +1,11 @@
 ---
 title: "How to Configure the Vision / Image Provider in Classic Monks | CM"
-slug: ai/vision-image-provider
+slug: vision-image-provider
 description: "Configure the Vision / Image Provider in Classic Monks for image-aware workflows: alt text generation, image generation, image editing, Bricks AI attachments."
 last_updated: 2026-06-24
 author: Joy
 reading_time: 7 min
-canonical: https://classicmonks.com/docs/ai/vision-image-provider/
+canonical: https://classicmonks.com/docs/vision-image-provider/
 ---
 
 # How to Configure the Vision / Image Provider in WordPress

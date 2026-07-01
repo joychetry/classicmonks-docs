@@ -1,11 +1,11 @@
 ---
 title: "How to Unload iFrames in WordPress | CM"
-slug: performance/perf-unload-iframes
+slug: perf-unload-iframes
 description: "Unload iFrames on specific pages in Classic Monks. Prevents iFrame loading on pages where embedded content is not needed."
 last_updated: 2026-06-24
 author: Joy
 reading_time: 3 min
-canonical: https://classicmonks.com/docs/performance/perf-unload-iframes/
+canonical: https://classicmonks.com/docs/perf-unload-iframes/
 ---
 
 # How to Unload iFrames in WordPress

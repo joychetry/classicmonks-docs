@@ -1,11 +1,11 @@
 ---
 title: "How to Enable Staging Protection in WordPress | CM"
-slug: security/staging-protection
+slug: staging-protection
 description: "Enable staging protection in Classic Monks. Locks down staging and development sites with HTTP authentication, blocks indexing, and shows a visible staging indicator."
 last_updated: 2026-06-24
 author: Joy
 reading_time: 3 min
-canonical: https://classicmonks.com/docs/security/staging-protection/
+canonical: https://classicmonks.com/docs/staging-protection/
 ---
 
 # How to Enable Staging Protection in WordPress

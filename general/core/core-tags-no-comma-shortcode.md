@@ -1,11 +1,11 @@
 ---
 title: "How to Use the Tags No Comma Shortcode in Classic Monks | CM"
-slug: core/tags-no-comma-shortcode
+slug: tags-no-comma-shortcode
 description: "Display WordPress post tags without the default comma separator using the [tags_no_comma] shortcode in Classic Monks. Customize the separator with the separator attribute."
 last_updated: 2026-06-24
 author: Joy
 reading_time: 3 min
-canonical: https://classicmonks.com/docs/core/tags-no-comma-shortcode/
+canonical: https://classicmonks.com/docs/tags-no-comma-shortcode/
 ---
 
 # How to Use the Tags No Comma Shortcode in WordPress

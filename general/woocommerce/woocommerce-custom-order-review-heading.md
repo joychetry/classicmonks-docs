@@ -1,11 +1,11 @@
 ---
 title: "How to Customize the Order Review Heading in WordPress | CM"
-slug: woocommerce/custom-order-review-heading
+slug: custom-order-review-heading
 description: "Customize the Order Review heading text on the WooCommerce checkout page in Classic Monks. Creates consistent branding throughout the checkout flow."
 last_updated: 2026-06-24
 author: Joy
 reading_time: 3 min
-canonical: https://classicmonks.com/docs/woocommerce/custom-order-review-heading/
+canonical: https://classicmonks.com/docs/custom-order-review-heading/
 ---
 
 # How to Customize the Order Review Heading in WordPress

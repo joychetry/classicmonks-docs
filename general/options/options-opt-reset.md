@@ -1,11 +1,11 @@
 ---
 title: "How to Reset Classic Monks Settings in WordPress | CM"
-slug: options/opt-reset
+slug: opt-reset
 description: "Reset all Classic Monks settings to defaults. Useful for starting fresh without reinstalling the plugin."
 last_updated: 2026-06-24
 author: Joy
 reading_time: 3 min
-canonical: https://classicmonks.com/docs/options/opt-reset/
+canonical: https://classicmonks.com/docs/opt-reset/
 ---
 
 # How to Reset Classic Monks Settings in WordPress

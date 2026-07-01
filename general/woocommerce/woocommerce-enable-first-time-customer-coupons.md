@@ -1,11 +1,11 @@
 ---
 title: "How to Enable First-Time Customer Coupons in WordPress | CM"
-slug: woocommerce/enable-first-time-customer-coupons
+slug: enable-first-time-customer-coupons
 description: "Automatically reward new customers with welcome coupons in Classic Monks. Configurable welcome email with subject, body, and unique code generation."
 last_updated: 2026-06-24
 author: Joy
 reading_time: 4 min
-canonical: https://classicmonks.com/docs/woocommerce/enable-first-time-customer-coupons/
+canonical: https://classicmonks.com/docs/enable-first-time-customer-coupons/
 ---
 
 # How to Enable First-Time Customer Coupons in WordPress

@@ -1,11 +1,11 @@
 ---
 title: "How to Show Product Images in WooCommerce Checkout in WordPress | CM"
-slug: woocommerce/show-product-images-checkout
+slug: show-product-images-checkout
 description: "Display product images on the WooCommerce checkout page in Classic Monks. Configurable size, style, and dimensions for visual purchase confirmation."
 last_updated: 2026-06-24
 author: Joy
 reading_time: 4 min
-canonical: https://classicmonks.com/docs/woocommerce/show-product-images-checkout/
+canonical: https://classicmonks.com/docs/show-product-images-checkout/
 ---
 
 # How to Show Product Images in WooCommerce Checkout in WordPress

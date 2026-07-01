@@ -1,11 +1,11 @@
 ---
 title: "How to Loop the Login Video in WordPress | CM"
-slug: white-label/wl-login-video-loop
+slug: wl-login-video-loop
 description: "Loop the login page video in Classic Monks. The background video plays continuously instead of stopping after one cycle."
 last_updated: 2026-06-24
 author: Joy
 reading_time: 3 min
-canonical: https://classicmonks.com/docs/white-label/wl-login-video-loop/
+canonical: https://classicmonks.com/docs/wl-login-video-loop/
 ---
 
 # How to Loop the Login Video in WordPress

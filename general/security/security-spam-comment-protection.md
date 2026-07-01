@@ -1,11 +1,11 @@
 ---
 title: "How to Enable Spam Comment and Review Protection in WordPress | CM"
-slug: security/spam-comment-protection
+slug: spam-comment-protection
 description: "Enable spam comment and review protection in Classic Monks. Stops spam bots from submitting comments or reviews with multiple layers of protection."
 last_updated: 2026-06-24
 author: Joy
 reading_time: 3 min
-canonical: https://classicmonks.com/docs/security/spam-comment-protection/
+canonical: https://classicmonks.com/docs/spam-comment-protection/
 ---
 
 # How to Enable Spam Comment and Review Protection in WordPress

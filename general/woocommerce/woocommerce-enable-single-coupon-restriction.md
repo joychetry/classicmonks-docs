@@ -1,11 +1,11 @@
 ---
 title: "How to Enable Single Coupon Restriction in WordPress | CM"
-slug: woocommerce/enable-single-coupon-restriction
+slug: enable-single-coupon-restriction
 description: "Restrict the cart to only one coupon at a time in Classic Monks. Configure which coupon takes priority when multiple are applied."
 last_updated: 2026-06-24
 author: Joy
 reading_time: 3 min
-canonical: https://classicmonks.com/docs/woocommerce/enable-single-coupon-restriction/
+canonical: https://classicmonks.com/docs/enable-single-coupon-restriction/
 ---
 
 # How to Enable Single Coupon Restriction in WordPress

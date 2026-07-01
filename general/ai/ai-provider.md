@@ -1,11 +1,11 @@
 ---
 title: "AI Provider Setup in Classic Monks: 8 Providers | CM"
-slug: ai/ai-provider
+slug: ai-provider
 description: Configure the AI Provider in Classic Monks to connect with OpenRouter, OpenAI, Anthropic, Gemini, NVIDIA, Zhipu, OpenAI-compatible, or custom endpoints.
 last_updated: 2026-06-24
 author: Joy
 reading_time: 7 min
-canonical: https://classicmonks.com/docs/ai/ai-provider/
+canonical: https://classicmonks.com/docs/ai-provider/
 ---
 
 # How to Configure the AI Provider in WordPress

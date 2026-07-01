@@ -1,11 +1,11 @@
 ---
 title: "How to Use Media Duplicator in WordPress | CM"
-slug: performance/perf-media-duplicator
+slug: perf-media-duplicator
 description: "Duplicate media files in the Media Library in Classic Monks. Create a copy of any media file without re-uploading."
 last_updated: 2026-06-24
 author: Joy
 reading_time: 3 min
-canonical: https://classicmonks.com/docs/performance/perf-media-duplicator/
+canonical: https://classicmonks.com/docs/perf-media-duplicator/
 ---
 
 # How to Use Media Duplicator in WordPress

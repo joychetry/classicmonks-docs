@@ -1,11 +1,11 @@
 ---
 title: "How to Disallow File Modifications in WordPress | CM"
-slug: security/disallow-file-mods
+slug: disallow-file-mods
 description: "Disable file modifications via the WordPress admin in Classic Monks. Prevents theme and plugin editors from changing files via the dashboard."
 last_updated: 2026-06-24
 author: Joy
 reading_time: 3 min
-canonical: https://classicmonks.com/docs/security/disallow-file-mods/
+canonical: https://classicmonks.com/docs/disallow-file-mods/
 ---
 
 # How to Disallow File Modifications in WordPress

@@ -1,11 +1,11 @@
 ---
 title: "How to Use Shortcodes and Filter Utilities in Classic Monks: Feature Index | CM"
-slug: core/shortcodes
+slug: shortcodes
 description: "Index of shortcode utilities in Classic Monks. Four specialized shortcodes for tag display, SEO meta descriptions, time format, and currency conversion."
 last_updated: 2026-06-24
 author: Joy
 reading_time: 2 min
-canonical: https://classicmonks.com/docs/core/shortcodes/
+canonical: https://classicmonks.com/docs/shortcodes/
 ---
 
 # How to Use Shortcodes and Filter Utilities in WordPress

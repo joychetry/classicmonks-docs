@@ -1,11 +1,11 @@
 ---
 title: "How to Disable WooCommerce Gutenberg Blocks Styles in WordPress | CM"
-slug: woocommerce/disable-woocommerce-blocks-styles
+slug: disable-woocommerce-blocks-styles
 description: "Prevent WooCommerce Gutenberg blocks CSS from loading when blocks aren't used. Improves frontend performance on sites that don't use WooCommerce blocks."
 last_updated: 2026-06-24
 author: Joy
 reading_time: 2 min
-canonical: https://classicmonks.com/docs/woocommerce/disable-woocommerce-blocks-styles/
+canonical: https://classicmonks.com/docs/disable-woocommerce-blocks-styles/
 ---
 
 # How to Disable WooCommerce Gutenberg Blocks Styles in WordPress

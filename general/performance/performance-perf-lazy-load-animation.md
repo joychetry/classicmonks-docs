@@ -1,11 +1,11 @@
 ---
 title: "How to Enable Fade-in Animation in WordPress | CM"
-slug: performance/perf-lazy-load-animation
+slug: perf-lazy-load-animation
 description: "Add a fade-in animation to lazy-loaded content in Classic Monks. Creates a smooth appearance effect when content enters the viewport."
 last_updated: 2026-06-24
 author: Joy
 reading_time: 3 min
-canonical: https://classicmonks.com/docs/performance/perf-lazy-load-animation/
+canonical: https://classicmonks.com/docs/perf-lazy-load-animation/
 ---
 
 # How to Enable Fade-in Animation in WordPress

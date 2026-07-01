@@ -1,11 +1,11 @@
 ---
 title: "How to Enable Inline Checkout Field Validation in WordPress | CM"
-slug: woocommerce/enable-inline-checkout-field-validation
+slug: enable-inline-checkout-field-validation
 description: "Validate WooCommerce checkout form fields in real-time in Classic Monks. Provides immediate feedback on field requirements as customers type."
 last_updated: 2026-06-24
 author: Joy
 reading_time: 3 min
-canonical: https://classicmonks.com/docs/woocommerce/enable-inline-checkout-field-validation/
+canonical: https://classicmonks.com/docs/enable-inline-checkout-field-validation/
 ---
 
 # How to Enable Inline Checkout Field Validation in WordPress

@@ -1,11 +1,11 @@
 ---
 title: "How to Style Login Notices in WordPress | CM"
-slug: white-label/wl-login-notices-styling
+slug: wl-login-notices-styling
 description: "Customize the styling of login notices (error messages, success messages) in Classic Monks. Matches your brand colors."
 last_updated: 2026-06-24
 author: Joy
 reading_time: 3 min
-canonical: https://classicmonks.com/docs/white-label/wl-login-notices-styling/
+canonical: https://classicmonks.com/docs/wl-login-notices-styling/
 ---
 
 # How to Style Login Notices in WordPress

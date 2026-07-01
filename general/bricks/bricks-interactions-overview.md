@@ -1,11 +1,11 @@
 ---
 title: "How to Use Bricks Interactions in WordPress | CM"
-slug: bricks/bricks-interactions
+slug: bricks-interactions
 description: "Overview of all interaction triggers and actions in Classic Monks. 43 triggers and actions for creating dynamic, interactive page experiences."
 last_updated: 2026-06-24
 author: Joy
 reading_time: 5 min
-canonical: https://classicmonks.com/docs/bricks/bricks-interactions/
+canonical: https://classicmonks.com/docs/bricks-interactions/
 ---
 
 # How to Use Bricks Interactions in WordPress

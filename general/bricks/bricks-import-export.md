@@ -1,11 +1,11 @@
 ---
 title: "How to Import and Export Bricks Settings in WordPress | CM"
-slug: bricks/bricks-import-export
+slug: bricks-import-export
 description: "Import and export Bricks Builder settings in Classic Monks. Transfer theme styles, global settings, and templates between sites."
 last_updated: 2026-06-24
 author: Joy
 reading_time: 5 min
-canonical: https://classicmonks.com/docs/bricks/bricks-import-export/
+canonical: https://classicmonks.com/docs/bricks-import-export/
 ---
 
 # How to Import and Export Bricks Settings in WordPress

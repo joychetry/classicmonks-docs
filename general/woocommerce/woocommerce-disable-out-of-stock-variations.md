@@ -1,11 +1,11 @@
 ---
 title: "How to Disable Out of Stock Variations in WordPress | CM"
-slug: woocommerce/disable-out-of-stock-variations
+slug: disable-out-of-stock-variations
 description: "Visually disable or hide out-of-stock product variations in Classic Monks. Choose between blur with cross, blur only, or completely hidden behavior."
 last_updated: 2026-06-24
 author: Joy
 reading_time: 3 min
-canonical: https://classicmonks.com/docs/woocommerce/disable-out-of-stock-variations/
+canonical: https://classicmonks.com/docs/disable-out-of-stock-variations/
 ---
 
 # How to Disable Out of Stock Variations in WordPress

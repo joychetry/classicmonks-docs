@@ -1,11 +1,11 @@
 ---
 title: "How to Use Auto Logout in WordPress | CM"
-slug: security/auto-logout
+slug: auto-logout
 description: "Automatically log out idle users after a configurable timeout in Classic Monks. Reduces risk of unauthorized access on shared or unattended computers."
 last_updated: 2026-06-24
 author: Joy
 reading_time: 3 min
-canonical: https://classicmonks.com/docs/security/auto-logout/
+canonical: https://classicmonks.com/docs/auto-logout/
 ---
 
 # How to Use Auto Logout in WordPress

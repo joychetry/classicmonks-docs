@@ -1,11 +1,11 @@
 ---
 title: "How to Remove the Company Field from WooCommerce Checkout in WordPress | CM"
-slug: woocommerce/remove-company-field
+slug: remove-company-field
 description: "Remove the company name field from the WooCommerce checkout form in Classic Monks. Streamlines checkout for B2C customers and reduces form abandonment."
 last_updated: 2026-06-24
 author: Joy
 reading_time: 3 min
-canonical: https://classicmonks.com/docs/woocommerce/remove-company-field/
+canonical: https://classicmonks.com/docs/remove-company-field/
 ---
 
 # How to Remove the Company Field from WooCommerce Checkout in WordPress

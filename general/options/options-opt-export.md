@@ -1,11 +1,11 @@
 ---
 title: "How to Export Settings in WordPress | CM"
-slug: options/opt-export
+slug: opt-export
 description: "Export Classic Monks settings to a JSON file. Back up your configuration or share it with other sites."
 last_updated: 2026-06-24
 author: Joy
 reading_time: 3 min
-canonical: https://classicmonks.com/docs/options/opt-export/
+canonical: https://classicmonks.com/docs/opt-export/
 ---
 
 # How to Export Settings in WordPress

@@ -1,11 +1,11 @@
 ---
 title: "How to Disable Author Edit in Classic Monks | CM"
-slug: core/disable-author-edit
+slug: disable-author-edit
 description: "Prevent non-admin users from changing post authors in Classic Monks. Locks the author field on the post edit screen for editors and below."
 last_updated: 2026-06-24
 author: Joy
 reading_time: 3 min
-canonical: https://classicmonks.com/docs/core/disable-author-edit/
+canonical: https://classicmonks.com/docs/disable-author-edit/
 ---
 
 # How to Disable Author Edit in WordPress

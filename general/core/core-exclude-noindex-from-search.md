@@ -1,11 +1,11 @@
 ---
 title: "How to Exclude Noindex Posts from Search Results in Classic Monks | CM"
-slug: core/exclude-noindex-from-search
+slug: exclude-noindex-from-search
 description: "Exclude noindexed posts from WordPress internal search results in Classic Monks. Keeps noindex tags in place but hides them from site search."
 last_updated: 2026-06-24
 author: Joy
 reading_time: 4 min
-canonical: https://classicmonks.com/docs/core/exclude-noindex-from-search/
+canonical: https://classicmonks.com/docs/exclude-noindex-from-search/
 ---
 
 # How to Exclude Noindex Posts from Search Results in WordPress

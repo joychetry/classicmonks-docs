@@ -1,11 +1,11 @@
 ---
 title: "How to Enable Custom Order Status in WordPress | CM"
-slug: woocommerce/enable-custom-order-status
+slug: enable-custom-order-status
 description: "Add and manage custom order statuses in WooCommerce through Classic Monks. Provides more granular order management beyond the default WooCommerce statuses."
 last_updated: 2026-06-24
 author: Joy
 reading_time: 3 min
-canonical: https://classicmonks.com/docs/woocommerce/enable-custom-order-status/
+canonical: https://classicmonks.com/docs/enable-custom-order-status/
 ---
 
 # How to Enable Custom Order Status in WordPress

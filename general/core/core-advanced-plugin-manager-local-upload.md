@@ -1,11 +1,11 @@
 ---
 title: "How to Upload Plugins Locally in Classic Monks: ZIP Upload | CM"
-slug: core/advanced-plugin-manager-local-upload
+slug: advanced-plugin-manager-local-upload
 description: "Upload WordPress plugins from your computer in Classic Monks. Enhanced version of the default uploader with better progress tracking, error handling, and ZIP validation."
 last_updated: 2026-06-24
 author: Joy
 reading_time: 5 min
-canonical: https://classicmonks.com/docs/core/advanced-plugin-manager-local-upload/
+canonical: https://classicmonks.com/docs/advanced-plugin-manager-local-upload/
 ---
 
 # How to Upload Plugins Locally in WordPress

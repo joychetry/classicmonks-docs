@@ -1,11 +1,11 @@
 ---
 title: "How to Use Shared Element Transitions in WordPress | CM"
-slug: interface/interface-shared-element-transitions
+slug: interface-shared-element-transitions
 description: "Add shared element transitions to your WordPress site in Classic Monks. Elements that appear on both pages animate between their old and new positions."
 last_updated: 2026-06-24
 author: Joy
 reading_time: 3 min
-canonical: https://classicmonks.com/docs/interface/interface-shared-element-transitions/
+canonical: https://classicmonks.com/docs/interface-shared-element-transitions/
 ---
 
 # How to Use Shared Element Transitions in WordPress

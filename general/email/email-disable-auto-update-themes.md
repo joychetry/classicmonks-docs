@@ -1,11 +1,11 @@
 ---
 title: "How to Disable Theme Auto-Update Emails in WordPress | CM"
-slug: email/disable-auto-update-themes
+slug: disable-auto-update-themes
 description: "Stop WordPress from sending email notifications when themes auto-update in the background. Reduces admin email clutter from routine theme updates."
 last_updated: 2026-06-24
 author: Joy
 reading_time: 3 min
-canonical: https://classicmonks.com/docs/email/disable-auto-update-themes/
+canonical: https://classicmonks.com/docs/disable-auto-update-themes/
 ---
 
 # How to Disable Theme Auto-Update Emails in WordPress

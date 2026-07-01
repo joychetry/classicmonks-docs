@@ -1,11 +1,11 @@
 ---
 title: "How to Log WordPress Emails in Classic Monks | CM"
-slug: email/email-logging
+slug: email-logging
 description: "Track and log every email WordPress sends in Classic Monks. View email history, resend failed emails, and audit communications from the Logs submenu."
 last_updated: 2026-06-24
 author: Joy
 reading_time: 5 min
-canonical: https://classicmonks.com/docs/email/email-logging/
+canonical: https://classicmonks.com/docs/email-logging/
 ---
 
 # How to Log WordPress Emails in Classic Monks

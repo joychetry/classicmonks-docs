@@ -1,11 +1,11 @@
 ---
 title: "How to Completely Uninstall Classic Monks in WordPress | CM"
-slug: options/opt-uninstall
+slug: opt-uninstall
 description: "Completely uninstall Classic Monks and remove all data from the database. A clean uninstall removes all traces of the plugin."
 last_updated: 2026-06-24
 author: Joy
 reading_time: 3 min
-canonical: https://classicmonks.com/docs/options/opt-uninstall/
+canonical: https://classicmonks.com/docs/opt-uninstall/
 ---
 
 # How to Completely Uninstall Classic Monks in WordPress

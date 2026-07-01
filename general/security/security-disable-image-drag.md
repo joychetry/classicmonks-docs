@@ -1,11 +1,11 @@
 ---
 title: "How to Disable Image Drag in WordPress | CM"
-slug: security/disable-image-drag
+slug: disable-image-drag
 description: "Disable the mouse drag action on images in Classic Monks. Prevents users from easily dragging images to their desktop or another tab."
 last_updated: 2026-06-24
 author: Joy
 reading_time: 3 min
-canonical: https://classicmonks.com/docs/security/disable-image-drag/
+canonical: https://classicmonks.com/docs/disable-image-drag/
 ---
 
 # How to Disable Image Drag in WordPress

@@ -1,11 +1,11 @@
 ---
 title: "How to Enable the Assets Manager in WordPress | CM"
-slug: performance/perf-assets-manager
+slug: perf-assets-manager
 description: "Control which CSS and JavaScript files load on each page in Classic Monks. Disable unnecessary assets per page for optimal performance."
 last_updated: 2026-06-24
 author: Joy
 reading_time: 3 min
-canonical: https://classicmonks.com/docs/performance/perf-assets-manager/
+canonical: https://classicmonks.com/docs/perf-assets-manager/
 ---
 
 # How to Enable the Assets Manager in WordPress

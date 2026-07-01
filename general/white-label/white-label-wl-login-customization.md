@@ -1,11 +1,11 @@
 ---
 title: "How to Customize the Login Page in WordPress | CM"
-slug: white-label/wl-login-customization
+slug: wl-login-customization
 description: "Customize the WordPress login page in Classic Monks. Change the logo, background, form styling, and more."
 last_updated: 2026-06-24
 author: Joy
 reading_time: 3 min
-canonical: https://classicmonks.com/docs/white-label/wl-login-customization/
+canonical: https://classicmonks.com/docs/wl-login-customization/
 ---
 
 # How to Customize the Login Page in WordPress

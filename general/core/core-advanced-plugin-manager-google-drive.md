@@ -1,11 +1,11 @@
 ---
 title: "How to Use the Google Drive Plugin Repository in Classic Monks | CM"
-slug: core/advanced-plugin-manager-google-drive
+slug: advanced-plugin-manager-google-drive
 description: "Use Google Drive as a centralized plugin distribution source in Classic Monks. Authenticate with Google API, browse your Drive folder, and install plugins."
 last_updated: 2026-06-24
 author: Joy
 reading_time: 7 min
-canonical: https://classicmonks.com/docs/core/advanced-plugin-manager-google-drive/
+canonical: https://classicmonks.com/docs/advanced-plugin-manager-google-drive/
 ---
 
 # How to Use the Google Drive Plugin Repository in WordPress

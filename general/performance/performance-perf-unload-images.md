@@ -1,11 +1,11 @@
 ---
 title: "How to Unload Images in WordPress | CM"
-slug: performance/perf-unload-images
+slug: perf-unload-images
 description: "Unload images on specific pages in Classic Monks. Prevents images from loading on pages where they are not needed."
 last_updated: 2026-06-24
 author: Joy
 reading_time: 3 min
-canonical: https://classicmonks.com/docs/performance/perf-unload-images/
+canonical: https://classicmonks.com/docs/perf-unload-images/
 ---
 
 # How to Unload Images in WordPress

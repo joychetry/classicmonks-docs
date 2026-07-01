@@ -1,11 +1,11 @@
 ---
 title: "How to Disable Intelligent Preloading for Admin Users in WordPress | CM"
-slug: performance/perf-preload-disable-admin
+slug: perf-preload-disable-admin
 description: "Disable intelligent preloading for logged-in admin users in Classic Monks. Ensures admins see the full page without preloading."
 last_updated: 2026-06-24
 author: Joy
 reading_time: 3 min
-canonical: https://classicmonks.com/docs/performance/perf-preload-disable-admin/
+canonical: https://classicmonks.com/docs/perf-preload-disable-admin/
 ---
 
 # How to Disable Intelligent Preloading for Admin Users in WordPress

@@ -1,11 +1,11 @@
 ---
 title: "How to Use Content Duplication in Classic Monks | CM"
-slug: core/content-duplication
+slug: content-duplication
 description: "Duplicate any post, page, or custom post type in one click in Classic Monks. Preserves all metadata, custom fields, and taxonomies in the copy."
 last_updated: 2026-06-24
 author: Joy
 reading_time: 6 min
-canonical: https://classicmonks.com/docs/core/content-duplication/
+canonical: https://classicmonks.com/docs/content-duplication/
 ---
 
 # How to Use Content Duplication in WordPress

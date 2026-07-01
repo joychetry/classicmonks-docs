@@ -1,11 +1,11 @@
 ---
 title: "How to Remove Comment URLs in Classic Monks | CM"
-slug: core/remove-comment-urls
+slug: remove-comment-urls
 description: "Remove the Website URL field from the WordPress comment form in Classic Monks. Strips the website field from the rendered comment meta. Reduces spam signals and simplifies the form."
 last_updated: 2026-06-24
 author: Joy
 reading_time: 3 min
-canonical: https://classicmonks.com/docs/core/remove-comment-urls/
+canonical: https://classicmonks.com/docs/remove-comment-urls/
 ---
 
 # How to Remove Comment URLs in WordPress
