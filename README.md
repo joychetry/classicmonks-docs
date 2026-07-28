@@ -15,7 +15,7 @@ docs/
 │   ├── code-manager.md         # Standalone (Code Manager submenu)
 │   ├── short-links-tracking.md # Standalone (Short Links submenu)
 │   ├── email.md                # Email tab index
-│   ├── email/                  # Email tab docs (12 files)
+│   ├── email/                  # Email tab docs (10 files)
 │   │   ├── email-logging.md
 │   │   ├── email-smtp-settings.md
 │   │   ├── email-notifications.md
@@ -25,9 +25,7 @@ docs/
 │   │   ├── email-disable-admin-email-change.md
 │   │   ├── email-disable-auto-update-core.md
 │   │   ├── email-disable-auto-update-plugins.md
-│   │   ├── email-disable-auto-update-themes.md
-│   │   ├── email-disable-woocommerce-emails.md
-│   │   └── email-only-allow-reset-password-email.md
+│   │   └── email-disable-auto-update-themes.md
 │   ├── ai/                     # AI tab docs (8 files)
 │   │   ├── ai-features-master.md
 │   │   ├── ai-provider.md
@@ -37,7 +35,7 @@ docs/
 │   │   ├── ai-advanced.md
 │   │   ├── ai-status.md
 │   │   └── ai-systems-prompt.md (coming)
-│   ├── core/                   # Core tab docs (42 files)
+│   ├── core/                   # Core tab docs (39 files)
 │   │   ├── core-quick-wp-setup.md
 │   │   ├── core-self-hosted-analytics.md
 │   │   ├── core-file-downloader.md
@@ -50,10 +48,7 @@ docs/
 │   │   ├── core-gutenberg.md
 │   │   ├── core-users.md
 │   │   ├── core-plugins.md
-│   │   ├── core-advanced-plugin-manager-install-url.md
-│   │   ├── core-advanced-plugin-manager-local-upload.md
-│   │   ├── core-advanced-plugin-manager-google-drive.md
-│   │   ├── core-advanced-plugin-manager-author-search.md
+│   │   ├── core-advanced-plugin-manager.md
 │   │   ├── core-logs.md
 │   │   ├── core-post-type-switcher.md
 │   │   ├── core-taxonomy-switcher.md
@@ -185,7 +180,7 @@ docs/
 │   │   ├── security-allow-dev-endpoints.md
 │   │   └── security-staging-indicator.md
 │   ├── interface.md            # Interface tab index
-│   ├── interface/              # Interface tab docs (24 files)
+│   ├── interface/              # Interface tab docs (16 files)
 │   │   ├── interface-folder-manager.md
 │   │   ├── interface-folder-download.md
 │   │   ├── interface-folder-duplication.md
@@ -194,24 +189,16 @@ docs/
 │   │   ├── interface-admin-notices-manager.md
 │   │   ├── interface-form-desk.md
 │   │   ├── interface-preloader.md
-│   │   ├── interface-preloader-mobile.md
 │   │   ├── interface-preloader-bricks.md
-│   │   ├── interface-preloader-immediate.md
 │   │   ├── interface-laser-loader.md
 │   │   ├── interface-laser-loader-bricks.md
-│   │   ├── interface-laser-loader-percentage.md
-│   │   ├── interface-laser-loader-autostart.md
-│   │   ├── interface-laser-loader-shadow.md
-│   │   ├── interface-laser-loader-ajax.md
-│   │   ├── interface-laser-loader-rtl.md
-│   │   ├── interface-laser-loader-mobile.md
 │   │   ├── interface-page-transitions.md
 │   │   ├── interface-shared-element-transitions.md
 │   │   ├── interface-reduced-motion.md
 │   │   ├── interface-transitions-admin.md
 │   │   └── interface-admin-bar-bottom.md
 │   ├── performance.md          # Performance tab index
-│   ├── performance/            # Performance tab docs (72 files)
+│   ├── performance/            # Performance tab docs (69 files)
 │   │   ├── performance-perf-force-https.md
 │   │   ├── performance-perf-disable-all-updates.md
 │   │   ├── performance-perf-disable-search.md
@@ -269,9 +256,6 @@ docs/
 │   │   ├── performance-perf-exclude-above-fold.md
 │   │   ├── performance-perf-lazy-load-animation.md
 │   │   ├── performance-perf-lazy-rendering.md
-│   │   ├── performance-perf-lazy-render-iframes.md
-│   │   ├── performance-perf-lazy-render-videos.md
-│   │   ├── performance-perf-lazy-render-backgrounds.md
 │   │   ├── performance-perf-negative-loading.md
 │   │   ├── performance-perf-unload-styles.md
 │   │   ├── performance-perf-unload-images.md
@@ -285,7 +269,7 @@ docs/
 │   │   ├── performance-perf-selective-media-preload.md
 │   │   └── performance-perf-preload-custom-urls.md
 │   ├── white-label.md          # White Label tab index
-│   ├── white-label/            # White Label tab docs (24 files)
+│   ├── white-label/            # White Label tab docs (20 files)
 │   │   ├── white-label-wl-admin-greeting.md
 │   │   ├── white-label-wl-admin-footer.md
 │   │   ├── white-label-wl-admin-logo.md
@@ -298,11 +282,7 @@ docs/
 │   │   ├── white-label-wl-clean-head-tags.md
 │   │   ├── white-label-wl-login-customization.md
 │   │   ├── white-label-wl-login-logo.md
-│   │   ├── white-label-wl-login-logo-centered.md
-│   │   ├── white-label-wl-login-video-muted.md
-│   │   ├── white-label-wl-login-video-loop.md
 │   │   ├── white-label-wl-login-form-styling.md
-│   │   ├── white-label-wl-login-form-shadow.md
 │   │   ├── white-label-wl-login-nav-styling.md
 │   │   ├── white-label-wl-hide-back-link.md
 │   │   ├── white-label-wl-login-notices-styling.md
