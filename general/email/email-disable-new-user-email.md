@@ -91,7 +91,7 @@ The feature only suppresses the admin notification. The user-facing emails are u
 - **User email verification**: If your site has email verification enabled, that flow is independent
 - **Admin user list**: The WordPress Users > Add New / All Users page still shows all registered users
 - **Custom registration flows**: Membership plugins (MemberPress, Ultimate Member, etc.) handle their own registration emails
-- **WooCommerce customer registration**: WooCommerce has its own email flow; see [Disable WooCommerce Emails](email-disable-woocommerce-emails.md)
+- **WooCommerce customer registration**: WooCommerce has its own email flow; see [Disable WooCommerce Emails](../woocommerce/woocommerce-disable-woocommerce-emails.md)
 
 ---
 

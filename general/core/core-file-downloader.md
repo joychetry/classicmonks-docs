@@ -187,5 +187,5 @@ Plugin ZIPs from WordPress.org are the same files the official repository serves
 
 ## Related Articles
 
-- [How to Use the Advanced Plugin Manager in Classic Monks](core-advanced-plugin-manager-install-url.md)
+- [How to Use the Plugin Manager in Classic Monks](core-advanced-plugin-manager.md)
 - [How to Use the Logs in Classic Monks](core-logs.md)

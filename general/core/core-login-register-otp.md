@@ -61,7 +61,7 @@ Click the **Users** subtab in the left sub-navigation.
 
 Toggle on **Login & Register Forms With OTP**. The toggle has a submenu indicator (the `«` icon) that signals it adds a new submenu to the admin sidebar.
 
-![Login & Register Forms With OTP toggle in Core > Users subtab](../../images/core/users/login-register-otp-toggle.png)
+![Login & Register Forms With OTP toggle in Core > Users subtab](../../images/core/users/login-register-otp-toggle.jpg)
 
 ### Step 5: Save and Reload
 
@@ -78,7 +78,7 @@ Click **Classic Monks > Login** to open the settings page. Six tabs are availabl
 5. **Style** -- Form appearance, colors, header image, custom CSS
 6. **Shortcodes** -- Shortcode reference and copy-to-clipboard helper
 
-![Classic Monks > Login settings page showing the six configuration tabs](../../images/core/login/login-settings-page.png)
+![Classic Monks > Login settings page showing the six configuration tabs](../../images/core/login/login-settings-page.jpg)
 
 ---
 
@@ -143,7 +143,7 @@ The General tab has five subtabs:
 
 The **Shortcodes** tab provides a visual shortcode builder with copy-to-clipboard functionality.
 
-![Shortcodes tab showing the shortcode preview, copy button, and quick examples](../../images/core/login/shortcodes-tab.png)
+![Shortcodes tab showing the shortcode preview, copy button, and quick examples](../../images/core/login/shortcodes-tab.jpg)
 
 ### How to Use the Shortcode Builder
 

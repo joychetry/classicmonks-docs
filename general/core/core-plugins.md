@@ -224,11 +224,8 @@ The Advanced Plugin Manager is automatically disabled when `DISALLOW_FILE_MODS` 
 
 ### How do I install a custom plugin that's not on WordPress.org?
 
-Use the [Advanced Plugin Manager](core-advanced-plugin-manager-install-url.md). Enable the master toggle, then enable one of the four installation methods: Install from URL, Local Upload, Google Drive, or WordPress.org Author Search. See those docs for details on each method.
+Use the [Advanced Plugin Manager](core-advanced-plugin-manager.md). Enable the master toggle, then enable one of the four installation methods: Install from URL, Local Upload, Google Drive, or WordPress.org Author Search. See the Plugin Manager doc for details on each method.
 
 ## Related Articles
 
-- [How to Install Plugin from URL in Classic Monks](core-advanced-plugin-manager-install-url.md)
-- [How to Upload Plugins Locally in Classic Monks](core-advanced-plugin-manager-local-upload.md)
-- [How to Use the Google Drive Plugin Repository in Classic Monks](core-advanced-plugin-manager-google-drive.md)
-- [How to Use the WordPress.org Author Search in Classic Monks](core-advanced-plugin-manager-author-search.md)
+- [How to Use the Plugin Manager in Classic Monks](core-advanced-plugin-manager.md)

@@ -1,11 +1,12 @@
 ---
 title: "How to Use Preloader in WordPress | CM"
 slug: interface-preloader
-description: "Add a loading animation to your WordPress site in Classic Monks. Shows a preloader while pages load, creating a smoother perceived performance experience."
-last_updated: 2026-06-24
+description: "Add a loading animation to your WordPress site in Classic Monks. Shows a preloader while pages load, with mobile-specific and immediate-show options."
+last_updated: 2026-07-28
 author: Joy
-reading_time: 3 min
+reading_time: 5 min
 canonical: https://classicmonks.com/docs/interface-preloader/
+merged_docs: "How to Use Mobile-Specific Preloader Customization in WordPress, How to Enable Immediate Preloader in WordPress"
 ---
 
 # How to Use Preloader in WordPress
@@ -14,13 +15,13 @@ canonical: https://classicmonks.com/docs/interface-preloader/
 
 ## Key Takeaways
 
-- Single toggle, no nested options
 - Enable Preloader is the master switch
+- Mobile-specific settings for different behavior on mobile devices
+- Immediate show option for instant feedback on link click
 - Works with most WordPress themes
-- Configurable loading animation
 - Does not affect page load time (visual only)
 
-## What Is the Enable Preloader feature?
+## What Is the Enable Preloader Feature?
 
 The Enable Preloader feature in Classic Monks adds a loading animation to your WordPress site. When a visitor navigates to a new page, the preloader shows while the page loads, then fades out when the page is ready.
 
@@ -49,15 +50,34 @@ Click into the **Classic Monks** plugin settings in your WordPress dashboard.
 
 Click on the **Interface** menu, then click the **Preloader** subtab.
 
-### Step 3: Enable Enable Preloader
+### Step 3: Enable Preloader
 
 Scroll to **Enable Preloader** and toggle on.
 
-### Step 4: Save Changes
+### Step 4: Configure Mobile Settings (Optional)
+
+Toggle on **Enable Mobile-Specific Customization** to configure different preloader behavior for mobile devices. This is useful when:
+
+- Your traffic is primarily mobile (60%+)
+- Mobile connections are slower and a lighter preloader is preferred
+- You want to test the mobile experience independently
+
+### Step 5: Configure Immediate Show (Optional)
+
+Toggle on **Show preloader immediately when a link is clicked** to display the preloader as soon as the visitor clicks a link, before the browser starts loading. This creates the perception of an instant page transition.
+
+The timing difference:
+
+- **Default**: Click, wait for browser, preloader shows, page loads
+- **Immediate**: Click, preloader shows, page loads
+
+The second approach feels faster because the visitor sees immediate feedback after clicking.
+
+### Step 6: Save Changes
 
 Click **Save Changes**.
 
-### Step 5: Test
+### Step 7: Test
 
 Visit your site on the frontend. The preloader should appear on page navigation.
 
@@ -68,8 +88,10 @@ Visit your site on the frontend. The preloader should appear on page navigation.
 | Option | Description | Default |
 |--------|-------------|---------|
 | **Enable Preloader** | Master toggle. | Off |
+| **Enable Mobile-Specific Customization** | Different preloader behavior for mobile devices. | Off |
+| **Show preloader immediately when a link is clicked** | Shows preloader on click instead of on page load. | Off |
 
-The preloader animation style, color, and speed are configured via CSS and filters (see Advanced Options).
+The preloader animation style, color, and speed are configured via CSS and filters (see Developer Notes).
 
 ---
 
@@ -88,24 +110,6 @@ The preloader animation style, color, and speed are configured via CSS and filte
 
 ---
 
-### Developer integration
-
-This feature registers 4 WordPress hooks in `preloader.php`:
-
-**Actions:**
-
-- `wp` calls `cm_init_preloader()` (Initializes preloader settings)
-- `wp_head` calls `cm_output_preloader_css()` (Injects preloader CSS (priority 1))
-- `wp_head` calls `cm_output_preloader_js()` (Injects preloader JavaScript (priority 999))
-- `wp_body_open` calls `cm_output_preloader_html()` (Outputs preloader HTML (priority 1))
-
-```php
-// Hooked in preloader.php
-add_action( 'wp', 'cm_init_preloader' );
-```
-
-The feature modifies WordPress behavior by registering or removing hooks. Disabling it reverses those changes.
-
 ## Common Use Cases
 
 ### Portfolio and agency sites
@@ -120,6 +124,18 @@ A preloader on the shop page creates anticipation and masks slow-loading product
 
 If your pages have many high-resolution images, a preloader masks the load time. Visitors are more patient when they see a loading animation than when they see a blank or partially loaded page.
 
+### Mobile-first sites
+
+If your traffic is primarily mobile, mobile-specific preloader settings ensure the best experience for your most common visitors. Mobile connections are often slower, so a lighter preloader (or no preloader) on mobile reduces perceived load time.
+
+### High-traffic sites
+
+For sites with millions of visitors per month, the immediate preloader reduces the "did the click work?" uncertainty, improving engagement.
+
+### App-like experiences
+
+For WordPress sites that want to feel like native apps, the immediate preloader creates the instant response that users expect from apps.
+
 ---
 
 ## Troubleshooting
@@ -132,7 +148,7 @@ If your pages have many high-resolution images, a preloader masks the load time.
 ### The preloader never disappears
 
 **Cause:** The page load is very slow, or the preloader timeout is not set.
-**Fix:** The preloader should auto-hide after the page loads. If it doesn't, check the browser console for JavaScript errors. The preloader auto-hides after the page loads. If it doesn't, check the browser console for JavaScript errors.
+**Fix:** The preloader should auto-hide after the page loads. If it does not, check the browser console for JavaScript errors.
 
 ### The preloader is showing on every page load (including back/forward)
 
@@ -144,6 +160,21 @@ If your pages have many high-resolution images, a preloader masks the load time.
 **Cause:** The preloader is showing in the Bricks Builder editor.
 **Fix:** Disable the preloader inside Bricks Builder using the subtab option.
 
+### The immediate preloader is not showing immediately
+
+**Cause:** The Immediate toggle is off, or the preloader JavaScript is not loading.
+**Fix:** Verify both the Preloader master toggle and the Immediate toggle are on. Check the browser console for errors.
+
+### The preloader shows on external links
+
+**Cause:** The feature is triggered on all link clicks, including external links.
+**Fix:** Add a CSS class to external links and exclude it via the preloader settings in the plugin dashboard.
+
+### The preloader conflicts with page transitions
+
+**Cause:** Both the preloader and page transitions are active.
+**Fix:** Choose one or the other. The preloader is a loading indicator; page transitions are an animation. Using both creates a confusing experience.
+
 ---
 
 ## Related Articles
@@ -151,4 +182,23 @@ If your pages have many high-resolution images, a preloader masks the load time.
 - [How to Use Laser Loader in WordPress](interface-laser-loader.md)
 - [How to Use Page Transitions in WordPress](interface-page-transitions.md)
 - [How to Use the Admin Notices Manager in WordPress](interface-admin-notices-manager.md)
-- [How to Use Form Desk in WordPress](interface-form-desk.md)
+
+---
+
+## Developer Notes
+
+This feature registers hooks in `preloader.php`:
+
+**Actions:**
+
+- `wp` calls `cm_init_preloader()` (initializes preloader settings, including mobile device detection)
+- `wp_head` calls `cm_output_preloader_css()` (injects preloader CSS; priority 1)
+- `wp_head` calls `cm_output_preloader_js()` (injects preloader JavaScript; priority 999)
+- `wp_body_open` calls `cm_output_preloader_html()` (outputs preloader HTML; priority 1)
+
+```php
+// Hooked in preloader.php
+add_action( 'wp', 'cm_init_preloader' );
+```
+
+The feature modifies WordPress behavior by registering or removing hooks. Disabling it reverses those changes.

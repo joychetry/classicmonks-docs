@@ -47,8 +47,8 @@ See the [Notifications index](email/email-notifications.md) for a full overview.
 
 | Feature | Description | Guide |
 |---------|-------------|-------|
-| **Disable WooCommerce Emails** | Suppress all WooCommerce transactional emails. | [View guide](email/email-disable-woocommerce-emails.md) |
-| **Only Allow Reset Password Email** | Allow only the customer reset password email; suppress everything else. | [View guide](email/email-only-allow-reset-password-email.md) |
+| **Disable WooCommerce Emails** | Suppress all WooCommerce transactional emails. | [View guide](woocommerce/woocommerce-disable-woocommerce-emails.md) |
+| **Only Allow Reset Password Email** | Allow only the customer reset password email; suppress everything else. | [View guide](woocommerce/woocommerce-allow-reset-password-email.md) |
 
 ## Common Combinations
 
