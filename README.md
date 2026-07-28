@@ -198,7 +198,7 @@ docs/
 │   │   ├── interface-transitions-admin.md
 │   │   └── interface-admin-bar-bottom.md
 │   ├── performance.md          # Performance tab index
-│   ├── performance/            # Performance tab docs (69 files)
+│   ├── performance/            # Performance tab docs (48 files)
 │   │   ├── performance-perf-force-https.md
 │   │   ├── performance-perf-disable-all-updates.md
 │   │   ├── performance-perf-disable-search.md
@@ -245,29 +245,8 @@ docs/
 │   │   ├── performance-perf-hide-assets-manager-panel.md
 │   │   ├── performance-perf-show-frontend-icon.md
 │   │   ├── performance-perf-lazy-loading.md
-│   │   ├── performance-perf-lazy-load-disable-admin.md
-│   │   ├── performance-perf-lazy-load-images.md
-│   │   ├── performance-perf-lazy-load-iframes.md
-│   │   ├── performance-perf-lazy-load-backgrounds.md
-│   │   ├── performance-perf-lazy-load-videos.md
-│   │   ├── performance-perf-lazy-load-youtube.md
-│   │   ├── performance-perf-lazy-load-native.md
-│   │   ├── performance-perf-preload-critical-images.md
-│   │   ├── performance-perf-exclude-above-fold.md
-│   │   ├── performance-perf-lazy-load-animation.md
-│   │   ├── performance-perf-lazy-rendering.md
-│   │   ├── performance-perf-negative-loading.md
-│   │   ├── performance-perf-unload-styles.md
-│   │   ├── performance-perf-unload-images.md
-│   │   ├── performance-perf-unload-videos.md
-│   │   ├── performance-perf-unload-iframes.md
 │   │   ├── performance-perf-monks-preload.md
-│   │   ├── performance-perf-preload-disable-admin.md
-│   │   ├── performance-perf-preload-mobile.md
-│   │   ├── performance-perf-preload-slow.md
-│   │   ├── performance-perf-preload-stop-errors.md
-│   │   ├── performance-perf-selective-media-preload.md
-│   │   └── performance-perf-preload-custom-urls.md
+│   │   └── performance-perf-selective-media-preload.md
 │   ├── white-label.md          # White Label tab index
 │   ├── white-label/            # White Label tab docs (20 files)
 │   │   ├── white-label-wl-admin-greeting.md

@@ -383,40 +383,88 @@ All merge groups completed. Final audit passed.
 | 8 | Login Form Styling variants | `white-label-wl-login-form-styling.md` | shadow | 1 old doc unreferenced | merged_docs added, links fixed (prefix correction) | Done |
 | 9 | Login Page video variants | `white-label-wl-login-customization.md` | video loop, video muted | 2 old docs unreferenced | merged_docs added, links fixed (prefix correction) | Done |
 | 10 | Final parent/article audit | — | — | — | 0 broken links, 0 em dashes, 9 docs with merged_docs verified | Done |
+| 11 | Lazy Loading mega-merge | `performance-perf-lazy-loading.md` | 16 docs (all lazy-load variants, rendering, negative, unload, preload-critical, exclude-fold) | 16 old docs deleted | merged_docs added, 17 features consolidated | Done |
+| 12 | Monks Preloading merge | `performance-perf-monks-preload.md` | 5 docs (admin, mobile, slow, errors, custom-urls) | 5 old docs deleted | merged_docs corrected, Selective Media Preload removed as separate feature | Done |
+| 13 | Selective Media Preload restored as separate guide | `performance-perf-selective-media-preload.md` (new) | Previously absorbed incorrectly | — | PHP verified; UI verification blocked by test-site custom login | Done |
+| 14 | Operational-guide refactor | `performance-perf-lazy-loading.md`, `performance-perf-monks-preload.md`, `performance-perf-selective-media-preload.md` | — | — | Perfmatters structure applied; source verification complete | Done |
 
 ## Final stats
 
-- **Docs updated**: 9 (2 WooCommerce, 1 Core, 2 Interface, 1 Performance, 3 White Label)
-- **Docs absorbed**: 16 total (2 + 4 + 2 + 6 + 3 + 3 - 4 duplicates)
-- **Inbound links updated**: email.md (2), core-plugins.md (1), core-file-downloader.md (1)
-- **Broken links after audit**: 0
-- **Em dashes in body prose**: 0
-- **Old files still on disk**: 21 (unreferenced, safe to delete)
+- **Docs updated**: 12 (2 WooCommerce, 1 Core, 2 Interface, 3 Performance, 3 White Label, 1 new Selective Media Preload)
+- **Docs absorbed**: 42 total; Selective Media Preload was restored as a separate guide after source review
+- **Inbound links updated**: email.md (2), core-plugins.md (1), core-file-downloader.md (1), email-disable-new-user-email.md (1)
+- **Broken links after merge work**: 0 new merge-caused broken links; the vault still contains pre-existing index path issues
+- **Em dashes in updated operational guides**: 0
+- **Old files still on disk**: 0 except the intentionally restored Selective Media Preload guide
 
-## Removed docs (21 absorbed, safe to delete)
+## Removed docs (39 absorbed, all deleted)
 
-| #   | File path                                                 | Merged into                                             |
-| --- | --------------------------------------------------------- | ------------------------------------------------------- |
-| 1   | `email/email-disable-woocommerce-emails.md`               | `woocommerce/woocommerce-disable-woocommerce-emails.md` |
-| 2   | `email/email-only-allow-reset-password-email.md`          | `woocommerce/woocommerce-allow-reset-password-email.md` |
-| 3   | `core/core-advanced-plugin-manager-install-url.md`        | `core/core-advanced-plugin-manager.md`                  |
-| 4   | `core/core-advanced-plugin-manager-local-upload.md`       | `core/core-advanced-plugin-manager.md`                  |
-| 5   | `core/core-advanced-plugin-manager-google-drive.md`       | `core/core-advanced-plugin-manager.md`                  |
-| 6   | `core/core-advanced-plugin-manager-author-search.md`      | `core/core-advanced-plugin-manager.md`                  |
-| 7   | `interface/interface-preloader-mobile.md`                 | `interface/interface-preloader.md`                      |
-| 8   | `interface/interface-preloader-immediate.md`              | `interface/interface-preloader.md`                      |
-| 9   | `interface/interface-laser-loader-mobile.md`              | `interface/interface-laser-loader.md`                   |
-| 10  | `interface/interface-laser-loader-ajax.md`                | `interface/interface-laser-loader.md`                   |
-| 11  | `interface/interface-laser-loader-autostart.md`           | `interface/interface-laser-loader.md`                   |
-| 12  | `interface/interface-laser-loader-percentage.md`          | `interface/interface-laser-loader.md`                   |
-| 13  | `interface/interface-laser-loader-rtl.md`                 | `interface/interface-laser-loader.md`                   |
-| 14  | `interface/interface-laser-loader-shadow.md`              | `interface/interface-laser-loader.md`                   |
-| 15  | `performance/performance-perf-lazy-render-backgrounds.md` | `performance/performance-perf-lazy-rendering.md`        |
-| 16  | `performance/performance-perf-lazy-render-iframes.md`     | `performance/performance-perf-lazy-rendering.md`        |
-| 17  | `performance/performance-perf-lazy-render-videos.md`      | `performance/performance-perf-lazy-rendering.md`        |
-| 18  | `white-label/white-label-wl-login-logo-centered.md`       | `white-label/white-label-wl-login-logo.md`              |
-| 19  | `white-label/white-label-wl-login-form-shadow.md`         | `white-label/white-label-wl-login-form-styling.md`      |
-| 20  | `white-label/white-label-wl-login-video-loop.md`          | `white-label/white-label-wl-login-customization.md`     |
-| 21  | `white-label/white-label-wl-login-video-muted.md`         | `white-label/white-label-wl-login-customization.md`     |
+### Exact duplicates (2)
+| # | File path | Merged into |
+|---|---|---|
+| 1 | `email/email-disable-woocommerce-emails.md` | `woocommerce/woocommerce-disable-woocommerce-emails.md` |
+| 2 | `email/email-only-allow-reset-password-email.md` | `woocommerce/woocommerce-allow-reset-password-email.md` |
 
-All paths are relative to `docs/general/`. No inbound links remain pointing to any of these files.
+### Advanced Plugin Manager (4)
+| # | File path | Merged into |
+|---|---|---|
+| 3 | `core/core-advanced-plugin-manager-install-url.md` | `core/core-advanced-plugin-manager.md` |
+| 4 | `core/core-advanced-plugin-manager-local-upload.md` | `core/core-advanced-plugin-manager.md` |
+| 5 | `core/core-advanced-plugin-manager-google-drive.md` | `core/core-advanced-plugin-manager.md` |
+| 6 | `core/core-advanced-plugin-manager-author-search.md` | `core/core-advanced-plugin-manager.md` |
+
+### Interface (8)
+| # | File path | Merged into |
+|---|---|---|
+| 7 | `interface/interface-preloader-mobile.md` | `interface/interface-preloader.md` |
+| 8 | `interface/interface-preloader-immediate.md` | `interface/interface-preloader.md` |
+| 9 | `interface/interface-laser-loader-mobile.md` | `interface/interface-laser-loader.md` |
+| 10 | `interface/interface-laser-loader-ajax.md` | `interface/interface-laser-loader.md` |
+| 11 | `interface/interface-laser-loader-autostart.md` | `interface/interface-laser-loader.md` |
+| 12 | `interface/interface-laser-loader-percentage.md` | `interface/interface-laser-loader.md` |
+| 13 | `interface/interface-laser-loader-rtl.md` | `interface/interface-laser-loader.md` |
+| 14 | `interface/interface-laser-loader-shadow.md` | `interface/interface-laser-loader.md` |
+
+### Lazy Loading (16)
+| # | File path | Merged into |
+|---|---|---|
+| 15 | `performance/performance-perf-lazy-load-disable-admin.md` | `performance/performance-perf-lazy-loading.md` |
+| 16 | `performance/performance-perf-lazy-load-images.md` | `performance/performance-perf-lazy-loading.md` |
+| 17 | `performance/performance-perf-lazy-load-iframes.md` | `performance/performance-perf-lazy-loading.md` |
+| 18 | `performance/performance-perf-lazy-load-backgrounds.md` | `performance/performance-perf-lazy-loading.md` |
+| 19 | `performance/performance-perf-lazy-load-videos.md` | `performance/performance-perf-lazy-loading.md` |
+| 20 | `performance/performance-perf-lazy-load-youtube.md` | `performance/performance-perf-lazy-loading.md` |
+| 21 | `performance/performance-perf-lazy-load-native.md` | `performance/performance-perf-lazy-loading.md` |
+| 22 | `performance/performance-perf-lazy-load-animation.md` | `performance/performance-perf-lazy-loading.md` |
+| 23 | `performance/performance-perf-preload-critical-images.md` | `performance/performance-perf-lazy-loading.md` |
+| 24 | `performance/performance-perf-exclude-above-fold.md` | `performance/performance-perf-lazy-loading.md` |
+| 25 | `performance/performance-perf-lazy-rendering.md` | `performance/performance-perf-lazy-loading.md` |
+| 26 | `performance/performance-perf-negative-loading.md` | `performance/performance-perf-lazy-loading.md` |
+| 27 | `performance/performance-perf-unload-styles.md` | `performance/performance-perf-lazy-loading.md` |
+| 28 | `performance/performance-perf-unload-images.md` | `performance/performance-perf-lazy-loading.md` |
+| 29 | `performance/performance-perf-unload-videos.md` | `performance/performance-perf-lazy-loading.md` |
+| 30 | `performance/performance-perf-unload-iframes.md` | `performance/performance-perf-lazy-loading.md` |
+
+### Lazy Rendering variants (3)
+| # | File path | Merged into |
+|---|---|---|
+| 31 | `performance/performance-perf-lazy-render-backgrounds.md` | `performance/performance-perf-lazy-loading.md` |
+| 32 | `performance/performance-perf-lazy-render-iframes.md` | `performance/performance-perf-lazy-loading.md` |
+| 33 | `performance/performance-perf-lazy-render-videos.md` | `performance/performance-perf-lazy-loading.md` |
+
+### Monks Preloading (5)
+| # | File path | Merged into |
+|---|---|---|
+| 34 | `performance/performance-perf-preload-disable-admin.md` | `performance/performance-perf-monks-preload.md` |
+| 35 | `performance/performance-perf-preload-mobile.md` | `performance/performance-perf-monks-preload.md` |
+| 36 | `performance/performance-perf-preload-slow.md` | `performance/performance-perf-monks-preload.md` |
+| 37 | `performance/performance-perf-preload-stop-errors.md` | `performance/performance-perf-monks-preload.md` |
+| 38 | `performance/performance-perf-preload-custom-urls.md` | `performance/performance-perf-monks-preload.md` |
+
+### White Label (4)
+| # | File path | Merged into |
+|---|---|---|
+| 39 | `white-label/white-label-wl-login-logo-centered.md` | `white-label/white-label-wl-login-logo.md` |
+| 40 | `white-label/white-label-wl-login-form-shadow.md` | `white-label/white-label-wl-login-form-styling.md` |
+| 41 | `white-label/white-label-wl-login-video-loop.md` | `white-label/white-label-wl-login-customization.md` |
+| 42 | `white-label/white-label-wl-login-video-muted.md` | `white-label/white-label-wl-login-customization.md` |
