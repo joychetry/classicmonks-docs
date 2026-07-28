@@ -42,6 +42,8 @@ Selective Media Preload is explicit and page-specific. You choose the assets you
 
 In WordPress admin, open **Classic Monks > Performance** and select the **Preloading** subtab.
 
+![Selective Media Preload settings showing custom URL support, scope mode, and selectable post types](../../images/performance/preloading/selective-options.png)
+
 ### Step 2: Enable the feature
 
 Enable **Enable Selective Media Preload**.

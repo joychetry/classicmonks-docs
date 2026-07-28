@@ -32,6 +32,8 @@ Before testing:
 
 In WordPress admin, open **Classic Monks > Performance** and select the **Preloading** subtab.
 
+![Intelligent Preloading settings showing trigger, delay, request, connection, error, and memory controls](../../images/performance/preloading/intelligent-options.png)
+
 ### Step 2: Enable the master toggle
 
 Enable **Enable Intelligent Preloading**.

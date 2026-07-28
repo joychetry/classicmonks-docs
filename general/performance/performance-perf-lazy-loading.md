@@ -35,6 +35,8 @@ Do not lazy-load your logo, hero image, main featured image, or any image requir
 
 In WordPress admin, open **Classic Monks > Performance** and select the **Lazy Loading** subtab.
 
+![Expanded Lazy Loading settings showing the media controls, threshold, exclusions, lazy rendering, and negative loading options](../../images/performance/lazy-loading/settings-options.png)
+
 ### Step 2: Enable the master toggle
 
 Enable **Enable Lazy Loading**. The media-specific options become active below it.
