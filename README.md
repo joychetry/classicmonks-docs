@@ -89,7 +89,7 @@ docs/
 │   │   ├── bricks-optimization.md
 │   │   └── bricks-import-export.md
 │   ├── woocommerce.md          # WooCommerce tab index
-│   ├── woocommerce/            # WooCommerce tab docs (49 files)
+│   ├── woocommerce/            # WooCommerce tab docs (50 files)
 │   │   ├── woocommerce-product-swatches.md
 │   │   ├── woocommerce-customize-add-to-cart-button.md
 │   │   ├── woocommerce-customize-out-of-stock-button.md
@@ -138,7 +138,8 @@ docs/
 │   │   ├── woocommerce-redirect-to-login-after-logout.md
 │   │   ├── woocommerce-enable-redirect-my-account.md
 │   │   ├── woocommerce-disable-woocommerce-emails.md
-│   │   └── woocommerce-allow-reset-password-email.md
+│   │   ├── woocommerce-allow-reset-password-email.md
+│   │   └── woocommerce-product-price-history.md
 │   ├── security.md             # Security tab index
 │   ├── security/               # Security tab docs (39 files)
 │   │   ├── security-custom-login-url.md

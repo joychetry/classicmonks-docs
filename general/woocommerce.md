@@ -14,7 +14,7 @@ canonical: https://classicmonks.com/docs/
 
 ## Key Takeaways
 
-- 49 per-feature docs covering the full WooCommerce tab
+- 50 per-feature docs covering the full WooCommerce tab
 - 11 subtabs: Status, Product Swatches, Single Product, Checkout, One Click Checkout, Orders, Coupons, My Account, Optimization, Redirection, Email
 - Each feature has its own dedicated guide with frontmatter, FAQ, and advanced developer options
 - Performance features (Optimization) and conversion features (Coupons, BOGO) are the highest-impact
@@ -48,6 +48,7 @@ The Single Product subtab customizes the product detail page: button text, price
 | **Disable Out of Stock Variations** | Visually disable or hide out-of-stock variations. | [View guide](woocommerce/woocommerce-disable-out-of-stock-variations.md) |
 | **Update Price on Variation Selection** | Update the price in real-time as variations are selected. | [View guide](woocommerce/woocommerce-update-price-on-variation.md) |
 | **Hide Default Variation Price** | Hide the default "From $X" price range for variable products. | [View guide](woocommerce/woocommerce-hide-default-variation-price.md) |
+| **Product Price History** | Track and display historical prices on sale products for EU Omnibus compliance. | [View guide](woocommerce/woocommerce-product-price-history.md) |
 
 ## Checkout
 

@@ -387,10 +387,11 @@ All merge groups completed. Final audit passed.
 | 12 | Monks Preloading merge | `performance-perf-monks-preload.md` | 5 docs (admin, mobile, slow, errors, custom-urls) | 5 old docs deleted | merged_docs corrected, Selective Media Preload removed as separate feature | Done |
 | 13 | Selective Media Preload restored as separate guide | `performance-perf-selective-media-preload.md` (new) | Previously absorbed incorrectly | — | PHP verified; UI verification blocked by test-site custom login | Done |
 | 14 | Operational-guide refactor | `performance-perf-lazy-loading.md`, `performance-perf-monks-preload.md`, `performance-perf-selective-media-preload.md` | — | — | Perfmatters structure applied; source verification complete | Done |
+| 15 | New article added | `woocommerce-product-price-history.md` | — | — | PHP + source docs verified; live admin + product page verified; WooCommerce index updated | Done |
 
 ## Final stats
 
-- **Docs updated**: 12 (2 WooCommerce, 1 Core, 2 Interface, 3 Performance, 3 White Label, 1 new Selective Media Preload)
+- **Docs updated**: 13 (2 WooCommerce, 1 Core, 2 Interface, 3 Performance, 3 White Label, 1 new Selective Media Preload, 1 new Product Price History)
 - **Docs absorbed**: 42 total; Selective Media Preload was restored as a separate guide after source review
 - **Inbound links updated**: email.md (2), core-plugins.md (1), core-file-downloader.md (1), email-disable-new-user-email.md (1)
 - **Broken links after merge work**: 0 new merge-caused broken links; the vault still contains pre-existing index path issues
