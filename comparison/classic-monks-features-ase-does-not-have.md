@@ -8,7 +8,7 @@ secondary_keywords:
   - "ASE alternative"
   - "Classic Monks alternative to ASE"
   - "WordPress plugin like ASE"
-  - "ASE Pro alternative"
+  - "WordPress plugin comparison"
 date: 2026-07-30
 last_updated: 2026-07-30
 author: "Joy Chetry"
@@ -50,7 +50,7 @@ The clearest difference is category coverage. ASE concentrates on WordPress admi
 | Frontend experience | Preloader, Laser Loader, page transitions, shared-element transitions, and reduced-motion support | No equivalent experience category listed | Add controlled loading and transition behavior without a separate effects plugin |
 | Agency white label | Plugin branding controls, plugin hiding, login customization, admin cleanup, and Enterprise white-label options | ASE has selected admin and login branding modules, but not the same broader agency package | Deliver a more consistent client-facing admin experience |
 
-The table is a category comparison, not a claim that every individual ASE feature has a Classic Monks equivalent. For the module-by-module parity review, see the [full ASE vs Classic Monks comparison](https://classicmonks.com/docs/ase-vs-classic-monks/).
+The table is a category comparison, not a claim that every individual ASE feature has a Classic Monks equivalent. For the module-by-module parity review, see the [full ASE vs Classic Monks comparison](https://classicmonks.com/docs/classic-monks-vs-ase/).
 
 ## Does Classic Monks offer AI features that ASE does not?
 
@@ -184,23 +184,22 @@ These features are not a substitute for good UX or performance work. They are us
 
 Read the [Preloader documentation](https://classicmonks.com/docs/interface-preloader/) and [Laser Loader documentation](https://classicmonks.com/docs/interface-laser-loader/).
 
-## Is Classic Monks a complete replacement for ASE Pro?
+## Is Classic Monks a complete replacement for ASE?
 
 No, not for every site.
 
 Classic Monks is the stronger choice when you want WordPress admin controls plus AI, Bricks, WooCommerce, performance, setup, media, staging, email, security, and white-label workflows. ASE remains the better fit for specific features that Classic Monks does not currently match, including:
 
-- Custom Content Types
+- Custom Content Types, which is planned as a full-featured external CM plugin and is awaiting WordPress.org repository approval
 - Form Builder
 - Full Site Backup and Migration
 - General File Manager operations
-- Some deep Code Snippets Manager controls
 - Some detailed Redirect Manager workflows
 - Several narrow admin and login utilities
 
 That distinction makes the migration decision easier. Do not replace a required workflow because a feature-count headline looks attractive. Inventory your enabled ASE modules first, test Classic Monks on staging, and keep ASE only for the gaps that still matter.
 
-The [full comparison](https://classicmonks.com/docs/ase-vs-classic-monks/) documents the current Yes, Partial, Different approach, No, and Unknown results for all 76 ASE feature cards.
+The [full comparison](https://classicmonks.com/docs/classic-monks-vs-ase/) documents the current Yes, Partial, Different approach, No, and Unknown results for all 76 ASE feature cards.
 
 ## Should you switch from ASE to Classic Monks?
 
@@ -220,9 +219,9 @@ If you are ready to test the broader stack, install Classic Monks on staging, ru
 
 Classic Monks is better for agencies and WordPress professionals who need a broader stack covering AI, Bricks, WooCommerce, performance, media, staging, setup, and white-label delivery. ASE is still better for some focused workflows, especially Custom Content Types, its Form Builder, full backup and migration, and certain code or redirect controls.
 
-### Can Classic Monks replace ASE Free?
+### Can Classic Monks replace ASE?
 
-It can replace many ASE Free modules, but not all of them. Compare the enabled modules on the site, not only the installed plugin. Test the Classic Monks equivalent on staging before disabling ASE.
+It can replace many ASE modules, but not all of them. Compare the enabled modules on the site, not only the installed plugin. Test the Classic Monks equivalent on staging before disabling ASE.
 
 ### Can I use Classic Monks and ASE together?
 
@@ -230,7 +229,7 @@ Yes. This is a sensible migration path. Assign one owner for shared concerns suc
 
 ### Does Classic Monks replace ACF or ASE Custom Content Types?
 
-No confirmed replacement is currently documented. Classic Monks includes content utilities such as Post Type Switcher, Taxonomy Switcher, Folder Manager, and Admin Columns Manager, but it does not currently document a full CPT, taxonomy, field-group, and options-page builder.
+No confirmed current core replacement is available. A full-featured external Custom Content Types plugin is on the Classic Monks roadmap and is awaiting WordPress.org repository approval. The current core plugin has Post Type Switcher, Taxonomy Switcher, Folder Manager, and Admin Columns Manager, but not the external CCT plugin yet.
 
 ### Does Classic Monks replace WordPress caching plugins?
 
@@ -250,7 +249,7 @@ Start with your enabled modules, test on staging, and move the site to Classic M
 
 [View the Classic Monks feature library](https://classicmonks.com/features/)  
 [Check Classic Monks pricing](https://classicmonks.com/pricing/)  
-[Read the full ASE comparison](https://classicmonks.com/docs/ase-vs-classic-monks/)  
+[Read the full ASE comparison](https://classicmonks.com/docs/classic-monks-vs-ase/)  
 [Try the Classic Monks demo](https://classicmonks.com/demo/)
 
 ---

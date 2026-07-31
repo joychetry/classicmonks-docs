@@ -2,13 +2,12 @@
 title: "Classic Monks vs ASE: Which WordPress Plugin Fits?"
 seo_title: "Classic Monks vs ASE: Which WordPress Plugin Fits?"
 description: "Classic Monks vs ASE for WordPress agencies: compare admin controls, AI, Bricks, WooCommerce, performance, pricing, and migration fit before switching."
-slug: ase-vs-classic-monks
+slug: classic-monks-vs-ase
 primary_keyword: "Classic Monks vs ASE"
 secondary_keywords:
   - "ASE alternative"
-  - "ASE Pro alternative"
   - "Classic Monks alternative"
-  - "WordPress plugin comparison"
+  - "WordPress plugin like ASE"
 date: 2026-07-30
 last_updated: 2026-07-30
 author: "Joy Chetry"
@@ -40,6 +39,7 @@ The official ASE page currently presents 76 feature cards. Classic Monks present
 |---|---|---|---|
 | Core focus | Broader WordPress stack for building and operating sites | WordPress admin and site enhancements | Depends on scope |
 | Admin cleanup | Menu, toolbar, notices, columns, widgets, roles, and branding | Strong admin cleanup and utility coverage | Tie for core admin work |
+| Custom code | Code Manager for PHP, JavaScript, CSS, HTML/PHP Content, TXT files, conditions, hooks, validation, and recovery | Code Snippets Manager with its own execution and editor options | Classic Monks for the core snippet workflow |
 | AI | AI Agent, AI Tools, image workflows, multiple providers, and Bricks AI Builder | No AI category in the current official feature list | Classic Monks |
 | Bricks Builder | Native setup, Live Code Sync & Import, elements, dynamic data, conditions, interactions, and optimization | No Bricks category in the current official feature list | Classic Monks |
 | WooCommerce | Product, checkout, coupons, orders, My Account, redirects, optimization, and email tools | No WooCommerce category in the current official feature list | Classic Monks |
@@ -59,6 +59,7 @@ Classic Monks covers many of the same core jobs with features such as:
 - Admin Menu Manager and Top Toolbar Manager
 - Admin Notices Manager
 - Admin Columns Manager
+- Code Manager for PHP, JavaScript, CSS, HTML/PHP Content, TXT files, conditions, hooks, validation, safe mode, and recovery
 - Remove Dashboard Widgets
 - Wider Admin Sidebar
 - Custom Taxonomy Filters
@@ -72,9 +73,27 @@ Classic Monks covers many of the same core jobs with features such as:
 - Limit Post Revisions and Heartbeat controls
 - SMTP, email logging, and WordPress email customization
 
-For basic cleanup and hardening, Classic Monks can replace a meaningful part of an ASE setup. The exact scope still matters. A global setting is not automatically equivalent to a role-specific or post-type-specific setting, and a generic code editor is not automatically equivalent to ASE's full Code Snippets Manager.
+For basic cleanup and hardening, Classic Monks can replace a meaningful part of an ASE setup. The exact scope still matters. A global setting is not automatically equivalent to a role-specific or post-type-specific setting. CM Code Manager is a stronger core snippet workflow than the earlier matrix gave it credit for: it supports PHP, JavaScript, CSS, HTML/PHP Content, TXT files, conditional execution, syntax validation, safe mode, automatic fatal-error recovery, and hook placement for head, body, footer, and content locations.
 
 **Verdict:** ASE and Classic Monks are both credible for core WordPress administration. ASE has more narrow utilities in some areas. Classic Monks makes more sense when admin controls are only one part of the site's stack.
+
+## Which ASE security and WordPress controls does Classic Monks cover?
+
+Classic Monks covers more of the ASE overlap than the earlier comparison suggested. The current CM implementation includes:
+
+- Login lockdown and extended lockout controls
+- Cloudflare Turnstile and Math Captcha integrations
+- TOTP, Email OTP, trusted devices, rate limiting, grace periods, and enrollment controls
+- Email and phone protection with multiple obfuscation methods
+- User-enumeration protection across author query parameters, REST user endpoints, and author archive pages
+- Disable Feeds and Remove RSS Feed Links
+- Disable Embeds
+- Disable XML-RPC
+- Image upload resizing, format conversion, skip-smaller logic, and unnecessary image-size controls
+- Admin-bar and login logo replacement
+- Public Post Preview with temporary URLs, expiration, and optional global password protection
+
+These are current CM capabilities, not roadmap claims. Provider or option differences still belong in the notes, but the core jobs are covered.
 
 ## Does Classic Monks offer more than ASE for Bricks Builder?
 
@@ -167,17 +186,16 @@ ASE has selected admin and login branding features. Classic Monks is the better 
 
 ## What does ASE do better than Classic Monks?
 
-This is where the comparison needs to stay honest. Classic Monks is broader, but it is not a 100% ASE Pro replacement for every site.
+This is where the comparison needs to stay honest. Classic Monks is broader, but it is not a 100% ASE replacement for every site.
 
 Keep ASE, or use a dedicated product, when you depend on:
 
-- **Custom Content Types:** CPTs, custom taxonomies, field groups, and options pages
+- **Custom Content Types:** CPTs, custom taxonomies, field groups, and options pages. A full-featured external CM plugin is on the roadmap and awaiting WordPress.org repository approval, but it is not part of the current core stack.
 - **Form Builder:** a general drag-and-drop builder with fields, autoresponders, and webhooks
 - **Full Site Backup and Migration:** scheduled backup, restore, migration, and sync workflows
 - **File Manager:** file editing, permissions, compression, extraction, and copy or move operations
-- **Deep Code Snippets Manager controls:** automatic PHP safe mode, revisions, HTML or SCSS workflows, and ASE-specific execution controls
 - **Detailed Redirect Manager rules:** regex, status codes, groups, notes, caching, or loop detection where those details matter
-- **Specific narrow utilities:** external permalinks, dynamic login/logout menus, role-specific login redirects, maintenance mode, author archives, ads.txt, robots.txt, or media visibility rules
+- **Specific narrow utilities:** external permalinks, dynamic login/logout menus, role-specific login redirects, maintenance mode, media visibility rules, and custom body-class workflows
 
 Classic Monks Form Desk manages submissions from supported systems such as Bricks Forms and Fluent Forms. It is not a general form builder. Classic Monks settings export is not a full backup system. These distinctions are not footnotes. They decide whether a migration is safe.
 
@@ -187,7 +205,7 @@ See the [Classic Monks feature library](https://classicmonks.com/features/) befo
 
 Pricing changes, so these are the values verified during this comparison.
 
-### ASE Pro annual pricing
+### ASE annual pricing
 
 | License | Sites | Price |
 |---|---:|---:|
@@ -209,7 +227,7 @@ ASE also lists lifetime licenses from $99 for one site to $1,499 for 500 sites. 
 | Agency | 100 | $199/year | $299 one-time |
 | Enterprise | Unlimited | $299/year | $599 one-time |
 
-At 25 sites, Classic Monks is currently $30 less per year than ASE Pro's 25-site license. At 100 sites, the yearly prices are the same. Classic Monks also has an unlimited yearly plan at $299, while ASE's largest listed annual license is 500 sites at $399.
+At 25 sites, Classic Monks is currently $30 less per year than ASE's 25-site license. At 100 sites, the yearly prices are the same. Classic Monks also has an unlimited yearly plan at $299, while ASE's largest listed annual license is 500 sites at $399.
 
 The prices are not the whole story. ASE has many narrow modules and a separate Pro tier. Classic Monks bundles a wider stack, including AI, Bricks, WooCommerce, performance, setup, security, media, and email tools. Compare the workflows you need, not just the license number.
 
@@ -266,13 +284,13 @@ This approach avoids the usual mistake: reducing the plugin count first and disc
 
 Classic Monks is better for agencies and WordPress professionals who need a broader operating stack with AI, Bricks, WooCommerce, performance, setup, media, staging, and white-label tools. ASE is better for some focused workflows, especially Custom Content Types, Form Builder, full backup and migration, and selected code or redirect controls.
 
-### Can Classic Monks replace ASE Free?
+### Can Classic Monks replace ASE?
 
-It can replace many ASE Free modules, but not every one. Inventory the enabled modules, test the Classic Monks equivalents on staging, and keep ASE where a required utility has no confirmed match.
+It can replace many ASE modules, but not every one. Inventory the enabled modules, test the Classic Monks equivalents on staging, and keep ASE where a required utility has no confirmed match.
 
-### Can Classic Monks replace ASE Pro?
+### Can Classic Monks replace ASE?
 
-Not completely for every site. Classic Monks covers a large part of the general WordPress, security, email, performance, and workflow territory, but ASE Pro remains important for CCTs, its Form Builder, full backup and migration, File Manager, and several specialized utilities.
+Not completely for every site. Classic Monks covers a large part of the general WordPress, security, email, performance, and workflow territory, but ASE remains important for CCTs, its Form Builder, full backup and migration, File Manager, and several specialized utilities.
 
 ### Does Classic Monks replace ACF or Custom Content Types?
 

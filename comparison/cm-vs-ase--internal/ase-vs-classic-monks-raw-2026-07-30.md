@@ -65,35 +65,35 @@ The tables below summarize the decision points. The CSV contains the complete 76
 
 ### Content Management
 
-| ASE module | Tier | CM result | Practical answer |
-|---|---|---|---|
-| Custom Content Types | Pro | No | CM does not register CPTs, taxonomies, field groups, or options pages. Keep ASE or use a dedicated CCT tool. |
-| Post Type Switcher | Pro | Yes: Post Type Switcher | Direct match. |
-| Content Duplication | Free+Pro | Yes: Enable Content Duplication | Core duplication matches. Compare role, post-type, and placement controls before removing ASE Pro. |
-| Content Order | Free+Pro | Yes: Order Post Types, Order Taxonomy Terms | CM documents post-type ordering, including attachments, frontend menu_order behavior, and hierarchical taxonomy ordering. |
-| Media Categories | Pro | Different approach: Enable Folder Manager | Folders are not the same as media taxonomy categories. |
-| Media Replacement | Free+Pro | Yes: Enable Media Replacement | CM preserves the attachment ID and existing URLs. ASE Pro’s grid-view control is an extra UI surface not separately stated in CM docs. |
-| Public Preview for Drafts | Pro | Partial: Public Post Preview | Draft previews match. Scheduled-preview parity is not established. |
-| SVG Upload | Free | Yes: SVG Support, SVG Security Sanitization | CM documents SVG upload support, previews, and sanitization. Role-specific upload scope is not separately stated. |
-| AVIF Upload | Free | Different approach: Image Converter | CM converts to AVIF. It is not confirmed as a standalone AVIF MIME-upload module. |
-| External Permalinks | Free+Pro | No | Keep ASE if you assign external URLs as post or page permalinks. |
+| ASE module                | Tier     | CM result                                   | Practical answer                                                                                                                       |
+| ------------------------- | -------- | ------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- |
+| Custom Content Types      | Pro      | No                                          | Not currently in Classic Monks core. A full-featured external Custom Content Types plugin is on the CM roadmap and is awaiting WordPress.org repository approval. It is not a current replacement. |
+| Post Type Switcher        | Pro      | Yes: Post Type Switcher                     | Direct match.                                                                                                                          |
+| Content Duplication       | Free+Pro | Yes: Enable Content Duplication             | Core duplication matches. Compare role, post-type, and placement controls before removing ASE Pro.                                     |
+| Content Order             | Free+Pro | Yes: Order Post Types, Order Taxonomy Terms | CM documents post-type ordering, including attachments, frontend menu_order behavior, and hierarchical taxonomy ordering.              |
+| Media Categories          | Pro      | Different approach: Enable Folder Manager   | Folders are not the same as media taxonomy categories.                                                                                 |
+| Media Replacement         | Free+Pro | Yes: Enable Media Replacement               | CM preserves the attachment ID and existing URLs. ASE Pro’s grid-view control is an extra UI surface not separately stated in CM docs. |
+| Public Preview for Drafts | Pro      | Yes: Public Post Preview                | CM covers secure unpublished-post previews with temporary URLs, expiration, and optional password protection. Scheduled-preview behavior remains a separate workflow to test if required. |
+| SVG Upload                | Free     | Yes: SVG Support, SVG Security Sanitization | CM documents SVG upload support, previews, and sanitization. Role-specific upload scope is not separately stated.                      |
+| AVIF Upload               | Free     | Different approach: Image Converter         | CM converts to AVIF. It is not confirmed as a standalone AVIF MIME-upload module.                                                      |
+| External Permalinks       | Free+Pro | No                                          | Keep ASE if you assign external URLs as post or page permalinks.                                                                       |
 
 **Content verdict:** CM can replace several ASE content utilities, but not ASE Pro’s Custom Content Types. That one module alone is enough to block a full ASE Pro replacement for many agencies.
 
 ### Admin Interface
 
-| ASE module                | Tier     | CM result                                                    | Practical answer                                                                                                            |
-| ------------------------- | -------- | ------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------- |
-| Clean Up Admin Bar        | Free+Pro | Yes: Top Toolbar Manager                                     | CM documents rearranging, hiding, visibility control, and custom toolbar placement for admin-bar items.                     |
+| ASE module                | Tier     | CM result                                                    | Practical answer                                                                                                                                        |
+| ------------------------- | -------- | ------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Clean Up Admin Bar        | Free+Pro | Yes: Top Toolbar Manager                                     | CM documents rearranging, hiding, visibility control, and custom toolbar placement for admin-bar items.                                                 |
 | Admin Bar Custom Elements | Pro      | Yes: Admin Menu Manager, Top Toolbar Manager                 | CM supports custom top-level and child toolbar items, custom sidebar menu/submenu items, icons, separators, spacers, capabilities, and role visibility. |
-| Hide Admin Notices        | Free+Pro | Yes: Admin Notices Manager                                   | CM supports selective notice management, hide-all mode, and dismiss controls. Its workflow differs from ASE’s notices panel. |
-| Disable Dashboard Widgets | Free     | Yes: Remove Dashboard Widgets                                | Direct match.                                                                                                               |
-| Hide Admin Bar            | Free+Pro | No                                                           | Moving or managing the toolbar is not the same as hiding it by role and surface.                                            |
-| Admin Logo                | Pro      | Partial: Replace WordPress Admin Bar Logo, Custom Login Logo | CM covers major branding surfaces. ASE’s admin-menu and site-icon behavior is not fully confirmed.                          |
-| Admin Menu Organizer      | Free+Pro | Yes: Admin Menu Manager                                      | Strong match for hiding, renaming, reordering, and visibility control.                                                      |
-| Admin Columns Manager     | Pro      | Yes: Admin Columns Manager                                   | CM documents post/page/CPT columns, custom fields, taxonomy columns, global search, frozen columns, and inline featured-image editing. |
-| Enhance List Tables       | Free     | Partial: targeted CM column features                         | CM does not present one broad equivalent for every ASE list-table enhancement.                                              |
-| Custom Admin Footer Text  | Free+Pro | Yes: Customize Admin Footer                                  | Direct match.                                                                                                               |
+| Hide Admin Notices        | Free+Pro | Yes: Admin Notices Manager                                   | CM supports selective notice management, hide-all mode, and dismiss controls. Its workflow differs from ASE’s notices panel.                            |
+| Disable Dashboard Widgets | Free     | Yes: Remove Dashboard Widgets                                | Direct match.                                                                                                                                           |
+| Hide Admin Bar            | Free+Pro | No                                                           | Moving or managing the toolbar is not the same as hiding it by role and surface.                                                                        |
+| Admin Logo                | Pro      | Yes: Replace WordPress Admin Bar Logo, Custom Login Logo | CM covers the admin-bar and login logo surfaces. ASE's admin-menu and home-icon branding extras are additional scope differences. |
+| Admin Menu Organizer      | Free+Pro | Yes: Admin Menu Manager                                      | Strong match for hiding, renaming, reordering, and visibility control.                                                                                  |
+| Admin Columns Manager     | Pro      | Yes: Admin Columns Manager                                   | CM documents post/page/CPT columns, custom fields, taxonomy columns, global search, frozen columns, and inline featured-image editing.                  |
+| Enhance List Tables       | Free     | Partial: targeted CM column features                         | CM does not present one broad equivalent for every ASE list-table enhancement.                                                                          |
+| Custom Admin Footer Text  | Free+Pro | Yes: Customize Admin Footer                                  | Direct match.                                                                                                                                           |
 
 **Admin verdict:** CM is credible for admin cleanup and menu management. ASE remains useful for specialized list-table, admin-bar, and admin-surface behavior.
 
@@ -118,51 +118,51 @@ The tables below summarize the decision points. The CSV contains the complete 76
 
 | ASE module                        | Tier | CM result             | Practical answer                                                                                                                                    |
 | --------------------------------- | ---- | --------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Code Snippets Manager             | Pro  | Partial: Code Manager | CM has a serious code manager, but ASE’s HTML/SCSS, revisions, execution controls, and automatic PHP safe mode are not all confirmed as equivalent. |
-| Custom Admin CSS                  | Free | Partial: Code Manager | CSS can be managed through CM, but the dedicated module and exact role scope are not confirmed.                                                     |
-| Custom Frontend CSS               | Free | Partial: Code Manager | Same distinction.                                                                                                                                   |
-| Insert head, body and footer Code | Free | Unknown: Code Manager | CM documents PHP/CSS/JavaScript snippets, but not head/body/footer insertion points or HTML/meta/script/style injection.                            |
-| Custom Body Class                 | Free | Unknown: Code Manager | Generic code snippets are not enough to verify a body-class control.                                                                                |
-| Manage ads.txt and app-ads.txt    | Free | No                    | No confirmed CM equivalent.                                                                                                                         |
-| Manage robots.txt                 | Free | No                    | No confirmed CM equivalent.                                                                                                                         |
+| Code Snippets Manager             | Pro  | Yes: Code Manager | CM Code Manager supports PHP, JavaScript, CSS, HTML/PHP Content, TXT files, conditional execution, syntax validation, safe mode, automatic fatal-error recovery, hook placement, and CodeMirror editing. ASE-specific UI and execution options are additional scope details. |
+| Custom Admin CSS                  | Free | Yes: Code Manager | CM Code Manager supports CSS snippets with conditional loading and admin-side execution contexts. |
+| Custom Frontend CSS               | Free | Yes: Code Manager | CM Code Manager supports CSS snippets with conditional loading and frontend execution contexts. |
+| Insert head, body and footer Code | Free | Yes: Code Manager | CM supports HTML/PHP Content and hook placement at wp_head, wp_body_open, wp_footer, before_content, after_content, login_message, and login_footer. |
+| Custom Body Class                 | Free | Unknown: Code Manager | A dedicated body-class control is still not confirmed. |
+| Manage ads.txt and app-ads.txt    | Free | Yes: Code Manager | CM Code Manager supports virtual ads.txt and app-ads.txt file editing from the admin. |
+| Manage robots.txt                 | Free | Yes: Code Manager | CM Code Manager supports virtual robots.txt file editing from the admin. |
 
-**Code verdict:** Do not remove ASE Pro Code Snippets Manager casually. CM Code Manager is a real alternative for many PHP, CSS, and JavaScript workflows, but “both have a code editor” does not prove feature parity.
+**Code verdict:** CM Code Manager is the stronger core snippet workflow for many agencies. Compare ASE-specific editor or execution options only when the site depends on them.
 
 ### Disable Components
 
-| ASE module | Tier | CM result | Practical answer |
-|---|---|---|---|
-| Disable Gutenberg | Free+Pro | Yes: Disable Gutenberg Editor | Direct match. |
-| Disable Comments | Free+Pro | Partial: Disable Comments | CM lists global disabling. ASE supports more selective post-type scope, especially in Pro. |
-| Disable REST API | Free+Pro | Yes: REST API Access, REST API Exclusions, Remove REST API Links | CM documents admin-only, logged-in-only, and fully disabled access levels, namespace exclusions, and REST URL/link removal. |
-| Disable Feeds | Free | Partial: Disable RSS Feeds, Remove RSS Feed Links | CM covers RSS disabling and feed-link removal. Atom/RDF parity is not explicitly established. |
-| Disable Embeds | Free | Partial: Disable Embeds | CM lists the feature, but ASE also documents related JavaScript and external-embedding controls. |
-| Disable All Updates | Free | Yes: Disable All Updates | CM’s implementation disables core, plugin, theme, translation, and automatic updates, plus update checks, cron hooks, update emails, notices, transients, and WordPress.org update requests. |
-| Disable Author Archives | Free | No | User-enumeration controls are not the same as disabling author archives. |
-| Disable Smaller Components | Free | Partial: Hide WP Version, Remove RSD Link, Remove Shortlink, Disable Emojis, Disable Dashicons, Remove jQuery Migrate, Enable Classic Widgets, and related CM controls | CM covers several bundled ASE subcomponents, but not every component or ancillary behavior in the broad ASE module. |
+| ASE module                 | Tier     | CM result                                                                                                                                                              | Practical answer                                                                                                                                                                             |
+| -------------------------- | -------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Disable Gutenberg          | Free+Pro | Yes: Disable Gutenberg Editor                                                                                                                                          | Direct match.                                                                                                                                                                                |
+| Disable Comments           | Free+Pro | Partial: Disable Comments                                                                                                                                              | CM lists global disabling. ASE supports more selective post-type scope, especially in Pro.                                                                                                   |
+| Disable REST API           | Free+Pro | Yes: REST API Access, REST API Exclusions, Remove REST API Links                                                                                                       | CM documents admin-only, logged-in-only, and fully disabled access levels, namespace exclusions, and REST URL/link removal.                                                                  |
+| Disable Feeds              | Free     | Yes: Disable RSS Feeds, Remove RSS Feed Links | CM disables RSS feeds and removes feed discovery links. Atom/RDF behavior should be tested only if the site depends on those formats. |
+| Disable Embeds             | Free     | Yes: Disable Embeds | CM disables oEmbed scripts, generation, discovery, and endpoints. ASE's related JavaScript and external-embedding controls are additional scope details. |
+| Disable All Updates        | Free     | Yes: Disable All Updates                                                                                                                                               | CM’s implementation disables core, plugin, theme, translation, and automatic updates, plus update checks, cron hooks, update emails, notices, transients, and WordPress.org update requests. |
+| Disable Author Archives    | Free     | Yes: Disable User Enumeration, Disable Author Archives | CM blocks author enumeration through author query parameters, REST user endpoints, and author archive pages. |
+| Disable Smaller Components | Free     | Partial: Hide WP Version, Remove RSD Link, Remove Shortlink, Disable Emojis, Disable Dashicons, Remove jQuery Migrate, Enable Classic Widgets, and related CM controls | CM covers several bundled ASE subcomponents, but not every component or ancillary behavior in the broad ASE module.                                                                          |
 
 **Disable verdict:** CM covers Gutenberg, comments, REST, and updates well enough to be a serious replacement candidate. It does not cover every smaller WordPress switch in ASE.
 
 ### Security
 
-| ASE module | Tier | CM result | Practical answer |
-|---|---|---|---|
-| Limit Login Attempts | Free+Pro | Yes: Enable Login Lockdown, Enable Extended Lockout | CM documents maximum failed attempts, lockout duration, extended lockouts, username-validity hiding, form hiding, IP whitelisting, and activity logging. |
-| CAPTCHA Protection | Pro | Partial: Cloudflare Turnstile and Math Captcha features | CM covers common forms and two methods. ASE also lists ALTCHA and Google reCAPTCHA. |
-| Two-Factor Authentication (2FA) | Pro | Partial: TOTP, Email OTP, Trusted Devices, Rate Limiting | Strong overlap. Recovery codes and per-role configuration parity are not fully established. |
-| Obfuscate Author Slugs | Free | Different approach: Disable User Enumeration | CM prevents username discovery, but does not document randomizing author slugs or returning 404s for original author URLs. |
-| Email Address Obfuscator | Free+Pro | Yes: Email & Phone Protection | CM documents content-filter and full-page protection, multiple methods, shortcodes, no-JavaScript fallbacks, and phone protection. |
-| Disable XML-RPC | Free | Yes: Disable XML-RPC | CM completely disables XML-RPC and documents protection against pingback abuse. |
+| ASE module                      | Tier     | CM result                                                | Practical answer                                                                                                                                         |
+| ------------------------------- | -------- | -------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Limit Login Attempts            | Free+Pro | Yes: Enable Login Lockdown, Enable Extended Lockout      | CM documents maximum failed attempts, lockout duration, extended lockouts, username-validity hiding, form hiding, IP whitelisting, and activity logging. |
+| CAPTCHA Protection              | Pro      | Yes: Cloudflare Turnstile and Math Captcha features | CM covers the core CAPTCHA protection job across WordPress, WooCommerce, comment, and frontend post-submission forms. ASE offers additional providers such as ALTCHA and Google reCAPTCHA. |
+| Two-Factor Authentication (2FA) | Pro      | Yes: TOTP, Email OTP, Trusted Devices, Rate Limiting | CM covers the core 2FA job with TOTP, email OTP, trusted devices, rate limiting, grace periods, and enrollment controls. ASE-specific recovery-code or role-scope behavior should still be checked if required. |
+| Obfuscate Author Slugs          | Free     | Yes: Disable User Enumeration, Disable Author Archives | CM blocks author enumeration through author query parameters, REST user endpoints, and author archive pages. It protects the author-discovery surface without claiming random slug rewriting unless that workflow is specifically required. |
+| Email Address Obfuscator        | Free+Pro | Yes: Email & Phone Protection                            | CM documents content-filter and full-page protection, multiple methods, shortcodes, no-JavaScript fallbacks, and phone protection.                       |
+| Disable XML-RPC                 | Free     | Yes: Disable XML-RPC                                     | CM completely disables XML-RPC and documents protection against pingback abuse.                                                                          |
 
 **Security verdict:** CM has broad security coverage, including login lockdown, Turnstile, math CAPTCHA, 2FA, XML-RPC, REST, staging protection, and content protection. Keep ASE when you depend on a specific provider or a specific author/email behavior.
 
 ### Optimizations
 
-| ASE module | Tier | CM result | Practical answer |
-|---|---|---|---|
-| Image Upload Control | Free+Pro | Partial: Auto Resize Images After Upload, Skip Smaller Images, Image Converter, Disable Unnecessary Image Sizes | CM covers the main optimization direction. Compare original-file deletion, format quality, and upload-context rules. |
-| Revisions Control | Free | Yes: Limit Post Revisions | CM documents setting a maximum revision count or disabling revisions. ASE’s extra post-type include/exclude controls are not separately stated. |
-| Heartbeat Control | Free | Yes: Disable Heartbeat, Heartbeat Frequency | Direct match in the CM library. |
+| ASE module           | Tier     | CM result                                                                                                       | Practical answer                                                                                                                                |
+| -------------------- | -------- | --------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- |
+| Image Upload Control | Free+Pro | Yes: Auto Resize Images After Upload, Skip Smaller Images, Image Converter, Disable Unnecessary Image Sizes | CM covers the core upload-control job through resize, skip-smaller, WebP/AVIF conversion, and intermediate image-size controls. ASE's quality and upload-context options are additional scope details. |
+| Revisions Control    | Free     | Yes: Limit Post Revisions                                                                                       | CM documents setting a maximum revision count or disabling revisions. ASE’s extra post-type include/exclude controls are not separately stated. |
+| Heartbeat Control    | Free     | Yes: Disable Heartbeat, Heartbeat Frequency                                                                     | Direct match in the CM library.                                                                                                                 |
 
 **Optimization verdict:** CM is a strong ASE replacement candidate for these three rows, but CM’s broader Performance tab is a separate advantage, not proof that every ASE optimization switch exists.
 
@@ -216,15 +216,13 @@ Even here, check the details. A match at the feature-name level does not guarant
 
 Keep ASE, or replace it with another dedicated product, when the site depends on:
 
-- **Custom Content Types:** CM has no confirmed CCT, custom taxonomy, field-group, or options-page builder.
+- **Custom Content Types:** The current core plugin does not include CPTs, custom taxonomies, field groups, or options pages. A full-featured external CM plugin is on the roadmap and awaiting WordPress.org repository approval.
 - **Form Builder:** CM Form Desk is an entries manager, not a form builder.
 - **Site Backup and Migration:** CM settings export is not a backup and restore system.
 - **File Manager:** CM download tools do not replace file editing, permissions, compression, extraction, and copy/move operations.
 - **Redirect Manager:** Keep ASE if regex, status codes, groups, notes, cache behavior, or loop detection are important.
-- **Code Snippets Manager:** Keep ASE if automatic PHP safe mode, revisions, HTML/SCSS, or its execution controls are part of your workflow.
-- **CAPTCHA Protection:** Keep ASE if you need ALTCHA or Google reCAPTCHA rather than Turnstile or math CAPTCHA.
 - **Media Categories:** Keep ASE if taxonomy categories and insertion filtering matter. CM folders are a different model.
-- **External Permalinks, login/logout menus, role-specific login redirects, multiple user roles, maintenance mode, author archives, feeds, embeds, ads.txt, or robots.txt:** These are not confirmed CM matches in the current library.
+- **External Permalinks, login/logout menus, role-specific login redirects, multiple user roles, maintenance mode, custom body class, or image sizes panel:** These are not confirmed CM matches in the current library.
 
 ## CM-only strengths
 
@@ -313,11 +311,11 @@ The price comparison is not apples-to-apples. ASE has a large set of narrow admi
 
 ### Can I drop ASE today after installing Classic Monks?
 
-Usually not without an audit. If your ASE setup is mostly covered modules such as Post Type Switcher, Gutenberg/comments controls, XML-RPC, revisions, Heartbeat, basic admin cleanup, and login URL control, CM may replace it. If you use CCTs, Form Builder, full backup/migration, File Manager, Code Snippets Manager safe mode, or detailed redirect rules, keep ASE or another dedicated product.
+Usually not without an audit. If your ASE setup is mostly covered modules such as Post Type Switcher, Gutenberg/comments controls, XML-RPC, revisions, Heartbeat, basic admin cleanup, Code Manager workflows, and login URL control, CM may replace it. If you use CCTs, Form Builder, full backup/migration, File Manager, or detailed redirect rules, keep ASE or another dedicated product.
 
 ### Does Classic Monks replace ACF or an ASE Custom Content Types setup?
 
-No confirmed replacement. The CM feature library lists Post Type Switcher, Taxonomy Switcher, Folder Manager, and related content utilities, but not a Custom Content Types builder for CPTs, taxonomies, field groups, and options pages.
+No confirmed current core replacement is available. A full-featured external Custom Content Types plugin is on the Classic Monks roadmap and is awaiting WordPress.org repository approval. The current core plugin has Post Type Switcher, Taxonomy Switcher, Folder Manager, and related content utilities, but not the external CCT plugin yet.
 
 ### Does Classic Monks replace Form Builder?
 
@@ -346,7 +344,7 @@ Classic Monks can replace a meaningful part of ASE, especially for agencies that
 The practical decision is simple:
 
 - **Drop ASE** when your enabled modules are covered and staging tests pass.
-- **Keep ASE** when you depend on CCTs, forms, full backups, file operations, deep code-snippet safety, detailed redirects, or a narrow ASE-only utility.
+- **Keep ASE** when you depend on CCTs, forms, full backups, file operations, detailed redirects, or a narrow ASE-only utility.
 - **Use both** when CM is your broader core stack and ASE fills a small, clearly documented gap.
 
 If you have an ASE setup that is not covered here, paste the enabled module list in the Classic Monks Facebook group. The exact list is more useful than a generic plugin comparison.

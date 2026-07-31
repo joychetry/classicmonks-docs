@@ -279,6 +279,11 @@ docs/
 │   │   ├── options-opt-uninstall.md
 │   │   ├── options-opt-wp-reset.md
 │   │   └── options-opt-license.md
+├── comparison/                 # Competitor comparison pages
+│   ├── classic-monks-vs-ase.md        # Parity comparison
+│   ├── classic-monks-features-ase-does-not-have.md  # CM-only conversion
+│   ├── README.md
+│   └── cm-vs-ase--internal/           # Internal evidence and roadmaps
 ├── installation/               # Setup, activation, first-time config
 │   └── getting-started.md
 ├── tips/                       # Best practices, comparisons, optimization
@@ -304,6 +309,7 @@ docs/
 | **general/white-label/** | White Label tab features | Admin branding, Login page customization, Menu management |
 | **general/options/** | Options tab features | Environment, Import/Export, Reset, Uninstall, License |
 | **Installation** | Setup guides | First-time install, activation |
+| **Comparison** | Competitor comparisons | Classic Monks vs ASE: parity and CM-only conversion |
 | **Tips** | Best practices | Optimization advice |
 | **Troubleshooting** | Issue fixes | Common errors |
 | **Updates** | Changelog | Version history |
