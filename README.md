@@ -318,14 +318,16 @@ docs/
 
 1. Copy `templates/article-template.md`
 2. Save it in the appropriate tab folder (e.g., `general/ai/` for AI features, `general/core/` for Core features, `general/email/` for Email features)
-3. Follow the `templates/style-guide.md` conventions
-4. Name the file: `kebab-case-feature-name.md`
-5. Update this README with a link to the new article
+3. Fill in the YAML frontmatter with all 7 required fields: `title`, `slug`, `description`, `last_updated`, `author`, `reading_time`, `canonical`. Use a flat slug (no tab prefix), e.g. `advanced-plugin-manager` not `core/advanced-plugin-manager`
+4. Follow the `templates/style-guide.md` conventions, including the H1 brand-placement rule and the blocking em-dash pre-save check
+5. Name the file: `kebab-case-feature-name.md`
+6. Update this README with a link to the new article
 
 ## Naming Convention
 
-- File names: `kebab-case-feature-name.md`
+- File names: `kebab-case-feature-name.md` (tab prefix optional in filenames, e.g. `core-quick-wp-setup.md`)
 - Titles: `How to [Action] in WordPress` (brand in SEO title, not in H1)
+- Slug (frontmatter `slug:` + canonical URL): flat, no tab prefix — `advanced-plugin-manager` not `core/advanced-plugin-manager`
 - Categories match the folder they live in
 
 ## Linking Between Articles
