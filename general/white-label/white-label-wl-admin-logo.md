@@ -1,123 +1,121 @@
 ---
-title: "How to Replace the WordPress Admin Bar Logo in WordPress | CM"
-slug: wl-admin-logo
-description: "Replace the WordPress logo in the admin bar with your own logo in Classic Monks. Creates a branded admin experience."
-last_updated: 2026-06-24
+title: "Replace the WordPress Admin Bar Logo in WordPress"
+slug: "admin-logo"
+description: "Replace the WordPress logo in the admin bar with your own image in Classic Monks. Set the logo URL and its width and height in pixels to match your brand."
+last_updated: 2026-08-04
 author: Joy
-reading_time: 3 min
-canonical: https://classicmonks.com/docs/wl-admin-logo/
+reading_time: 4 min
+canonical: "https://classicmonks.com/docs/admin-logo/"
 ---
 
 # How to Replace the WordPress Admin Bar Logo in WordPress
 
-> Replace the WordPress logo in the admin bar with your own logo in Classic Monks. Creates a branded admin experience.
+> The WordPress logo in the admin bar (top left) is the default WordPress icon. Classic Monks lets you replace it with your own image, sized to fit your brand, so the admin bar matches your site.
 
 ## Key Takeaways
 
-- Single toggle, no nested options
-- Quick admin customization with one click
-- Does not affect frontend functionality
-- Reversible (disable to restore default)
+- Replace the default WordPress logo in the admin bar with your own image.
+- Set the logo URL and its width and height in pixels.
+- The logo links to your site and opens in a new tab.
+- A simple toggle with a logo URL and size fields.
 
-## Why You Need It
+## What Is the Admin Bar Logo
 
-The WordPress logo in the admin bar identifies the platform. Replacing it with your brand logo creates a white-label experience for clients.
+The admin bar logo is the WordPress icon at the top left of the admin bar, shown on every admin page. Classic Monks lets you replace it with your own image. You set the logo URL and the width and height, and the logo links to your site. It is a white-label option in the **White Label** tab.
 
----
+It is separate from the **Custom Login Logo**, which replaces the login page logo. This guide covers the admin bar logo.
 
-## How to Enable this Feature
+## Replace the Admin Bar Logo
 
-### Step 1: Navigate to Settings
+### Step 1: Open the Branding Settings
 
-Click into the **Classic Monks** plugin settings, then the **White Label** tab.
+In your WordPress dashboard, go to **Classic Monks**, open the **White Label** tab, then the **Branding** subtab.
 
-### Step 2: Enable the Feature
+![Classic Monks admin bar logo settings](../../images/white-label/admin-logo/logo-settings.png)
 
-Toggle on the feature.
+### Step 2: Turn On Replace WordPress Admin Bar Logo
 
-### Step 3: Save and Test
+In the **Branding** subtab, toggle on **Replace WordPress Admin Bar Logo**.
 
-Click **Save Changes**. Check the admin to verify the change.
+### Step 3: Add Your Logo
 
----
+Either click **Upload Logo** and pick an image from your media library, or paste an image URL into the **Admin Bar Logo URL** field. A preview appears in the **Admin Logo Preview** area.
 
-## Common Use Cases
+### Step 4: Set the Logo Size
 
-### Client white-labeling
+- **Logo Width (px)**: the logo width, default 20.
+- **Logo Height (px)**: the logo height, default 20.
 
-For agencies that build WordPress sites for clients, white-labeling the admin creates a branded experience. The client sees your agency's branding instead of WordPress.
+### Step 5: Save and Test
 
-### Brand consistency
+Click **Save (⌘+S)**. Check the top left of the admin bar to confirm the custom logo appears.
 
-For companies that use WordPress as their CMS, white-labeling ensures the admin matches the company's brand guidelines.
+## Verify It Works
 
-### Multi-site management
+After saving, open any admin page and confirm:
 
-For companies managing multiple WordPress sites, consistent white-labeling across all sites creates a unified admin experience.
+- The admin bar shows your custom logo instead of the WordPress icon.
+- The logo uses the width and height you set.
+- Clicking the logo opens your site in a new tab.
 
----
+If the logo does not appear, confirm the toggle is on, the logo URL is valid, and the size values are set.
+
+## Examples
+
+### Example 1: Add Your Client's Logo
+
+An agency wants the client's admin bar to show the client's logo. Upload the client's logo and set the width and height to 20px. The admin bar shows the client's brand instead of WordPress.
+
+### Example 2: Use a Larger Logo
+
+A company wants a larger, more visible admin bar logo. Set the width and height to 28px. The logo is more prominent in the admin bar.
+
+### Example 3: A Centered Brand Logo
+
+A site wants its logo to clearly show the brand. Upload a logo with a transparent background and set the width and height to match. The logo blends with the admin bar.
 
 ## Troubleshooting
 
-### The feature is not taking effect
+### The logo does not appear
 
-**Cause:** The toggle is off, or a caching plugin is serving the old page.
-**Fix:** Verify the toggle is on. Clear the admin page cache.
+**Cause:** The toggle is off, or the logo URL is empty.
+**Fix:** Confirm **Replace WordPress Admin Bar Logo** is on and paste a valid image URL. Save.
 
-### The feature breaks the admin
+### The logo is distorted
 
-**Cause:** The white-label feature may conflict with another admin customization plugin.
-**Fix:** Disable other admin customization plugins to find the conflict.
+**Cause:** The width and height do not match the logo's aspect ratio.
+**Fix:** Adjust the width and height to match the logo's natural proportions.
 
----
+### The logo is too large or small
+
+**Cause:** The width or height values are not set as expected.
+**Fix:** Set the width and height to the desired size, then save.
+
+## Common Use Cases
+
+### White-label the admin bar for a client
+
+The WordPress logo in the admin bar is a clear WordPress signal. Replacing it with the client's logo makes the admin bar look like part of the client's product, which is a core part of white-labeling.
+
+### Add a small brand mark for a team
+
+An internal team can replace the WordPress logo with a small brand mark. The logo appears at the top left of every admin screen, reinforcing the brand without taking up space.
+
+### Match the logo to your site
+
+A site that uses a custom logo can reuse it in the admin bar. Setting the logo URL and a matching size keeps the admin and the site visually consistent.
+
+## Troubleshooting
 
 ## Related Articles
 
-- [How to Use Content Management in WordPress](../core/core-content-management.md)
-- [How to Use the Admin Menu Manager in WordPress](../interface/interface-admin-menu-manager.md)
-- [How to Use the Login Page Customization in WordPress](white-label/wl-login-customization.md)
+- [How to Customize the Admin Bar Greeting in WordPress](white-label-wl-admin-greeting.md)
+- [How to Add a Custom Login Logo in WordPress](white-label-wl-login-logo.md)
+- [How to Use the White Label Tab in Classic Monks: Feature Index](../white-label.md)
 
+---
 
-### Developer integration
+*Written by Joy. Last updated August 4, 2026. Tested with WordPress 6.x and Classic Monks 2.1.0.*
 
-This feature registers 2 WordPress hooks in `admin-customization.php`:
-
-**Actions:**
-
-- `admin_head` calls `cm_admin_bar_logo_styles()` (Injects CSS for custom admin bar logo (priority 10))
-
-**Filters:**
-
-- `admin_bar_menu` calls `cm_replace_wp_admin_logo()` (Replaces WP logo in admin bar (priority 15))
-
-```php
-// Hooked in admin-customization.php
-add_filter( 'admin_bar_menu', 'cm_replace_wp_admin_logo' );
-```
-
-The feature modifies WordPress admin output by registering hooks. Disabling it reverses those changes.
-
-### Before you enable this feature
-
-White-label features modify the WordPress admin. Consider:
-
-1. **Client expectations** (white-labeling hides WordPress branding, which may confuse clients)
-2. **Brand guidelines** (match the customizations to your brand)
-3. **Testing on all admin pages** (some customizations may look wrong on certain pages)
-4. **Documentation** (record which customizations are enabled for future reference)
-
-White-label features are designed to be safe, but they modify the admin HTML output. Test on all admin pages before enabling on production.
-
-### How it works under the hood
-
-This feature modifies WordPress behavior by adding or removing hooks (filters and actions) in the WordPress execution pipeline. When enabled, the feature's PHP code runs during the WordPress initialization phase, registering the necessary hooks before the page renders.
-
-The modification is non-destructive. Disabling the feature removes the hooks, and WordPress returns to its default behavior. No database changes are made; the feature state is stored in the `wp_options` table as a simple boolean value.
-
-**Performance impact**: The feature's PHP code runs on every page load. The overhead is negligible (typically under 1ms) because the code only registers hooks, which are lightweight operations. The actual performance benefit comes from the hook behavior (e.g., removing a script, preventing a query), which can save 10-50ms per page load depending on the feature.
-
-**Compatibility**: The feature is designed to be compatible with all standard WordPress plugins and themes. However, plugins that rely on the disabled functionality may break. Always test with your specific plugin stack before enabling on production.
-
-**Security**: The feature does not introduce any new security risks. It only modifies the WordPress hook system, which is a well-documented and secure API. The feature does not process user input, make external requests, or modify database records beyond the feature state.
-
-**Accessibility**: This feature does not affect the site's accessibility. It only modifies server-side behavior (hooks, queries, script loading). The frontend HTML, CSS, and JavaScript are unchanged (except for the specific feature behavior, which is documented in each feature's description).
+<!-- schema: Article, TechArticle -->
+<!-- schema: BreadcrumbList -->

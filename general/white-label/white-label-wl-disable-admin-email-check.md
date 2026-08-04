@@ -1,105 +1,120 @@
 ---
-title: "How to Disable Admin Email Check During Login in WordPress | CM"
-slug: wl-disable-admin-email-check
-description: "Disable the WordPress admin email verification check in Classic Monks. Prevents the email verification prompt on login."
-last_updated: 2026-06-24
+title: "Disable the Admin Email Check in WordPress: Remove Login Reminder"
+slug: "disable-admin-email-check"
+description: "Disable the WordPress admin email verification reminder in Classic Monks. Remove the re-verify email prompt that appears during login for a smoother flow."
+last_updated: 2026-08-04
 author: Joy
-reading_time: 3 min
-canonical: https://classicmonks.com/docs/wl-disable-admin-email-check/
+reading_time: 4 min
+canonical: "https://classicmonks.com/docs/disable-admin-email-check/"
 ---
 
-# How to Disable Admin Email Check During Login in WordPress
+# How to Disable the Admin Email Check in WordPress
 
-> Disable the WordPress admin email verification check in Classic Monks. Prevents the email verification prompt on login.
+> WordPress occasionally asks the admin to re-verify their email during login. Classic Monks lets you disable this admin email verification reminder so the login flow is uninterrupted.
 
 ## Key Takeaways
 
-- Single toggle, no nested options
-- Quick admin customization with one click
-- Does not affect frontend functionality
-- Reversible (disable to restore default)
+- Disable the WordPress admin email verification reminder.
+- Removes the re-verify email prompt that appears during login.
+- A smoother login flow for administrators.
+- A simple toggle, no nested options.
 
-## Why You Need It
+## What Is the Admin Email Check
 
-WordPress periodically prompts admins to verify their email address. Disabling this removes the interruption for administrators.
+WordPress periodically reminds the admin to re-verify their site admin email by showing a notice during login. It is a security feature, but it can interrupt the login flow. Disable Admin Email Check During Login is a white-label option in the Classic Monks **White Label** tab that disables this reminder so the admin does not see the re-verify prompt.
 
----
+## Disable the Admin Email Check
 
-## How to Enable this Feature
+### Step 1: Open the Branding Settings
 
-### Step 1: Navigate to Settings
+In your WordPress dashboard, go to **Classic Monks**, open the **White Label** tab, then the **Branding** subtab.
 
-Click into the **Classic Monks** plugin settings, then the **White Label** tab.
+![Classic Monks White Label branding settings](../../images/white-label/branding/branding-settings.png)
 
-### Step 2: Enable the Feature
+### Step 2: Turn On Disable Admin Email Check During Login
 
-Toggle on the feature.
+In the **Branding** subtab, toggle on **Disable Admin Email Check During Login**.
 
 ### Step 3: Save and Test
 
-Click **Save Changes**. Check the admin to verify the change.
+Click **Save (⌘+S)**. Log out and log back in as an admin to confirm the email verification reminder no longer appears.
 
----
+## Verify It Works
 
-## Common Use Cases
+After saving, log in as an admin and confirm:
 
-### Client white-labeling
+- The admin email verification reminder no longer appears during login.
+- The login flow is uninterrupted.
 
-For agencies that build WordPress sites for clients, white-labeling the admin creates a branded experience. The client sees your agency's branding instead of WordPress.
+If the reminder still appears, confirm the toggle is on and the changes were saved.
 
-### Brand consistency
+## Examples
 
-For companies that use WordPress as their CMS, white-labeling ensures the admin matches the company's brand guidelines.
+### Example 1: Avoid Interrupting the Login Flow
 
-### Multi-site management
+An admin finds the email verification reminder intrusive. Toggle on **Disable Admin Email Check During Login**. The login flow no longer shows the re-verify prompt.
 
-For companies managing multiple WordPress sites, consistent white-labeling across all sites creates a unified admin experience.
+### Example 2: A Cleaner Login for Clients
 
----
+An agency wants clients to log in without prompts. Toggle on **Disable Admin Email Check During Login**. Clients no longer see the admin email verification reminder.
+
+### A stable single-admin site
+
+A site with one admin who rarely changes the admin email can disable the reminder. The login flow is smooth and the admin does not see the re-verify prompt.
+
+### A smoother multi-user login
+
+In a team with several admins, the email verification reminder can appear for each login. Disabling it removes the repeated prompt, so the team logs in more smoothly.
+
+### Reduce repeated admin prompts
+
+The email verification reminder can appear repeatedly until the admin verifies it. Disabling the check removes the recurring prompt, so the admin can log in without the interruption each time.
+
+### A clean workflow for a managed agency
+
+An agency that manages many client sites can disable the email verification reminder on each site. This keeps the login flow consistent across all client sites and avoids support calls about the verification prompt.
 
 ## Troubleshooting
 
-### The feature is not taking effect
+### The reminder still appears
 
-**Cause:** The toggle is off, or a caching plugin is serving the old page.
-**Fix:** Verify the toggle is on. Clear the admin page cache.
+**Cause:** The toggle is off, or the changes were not saved.
+**Fix:** Confirm the toggle is on and click **Save (⌘+S)**. Clear any page cache.
 
-### The feature breaks the admin
+### I want to keep the email check
 
-**Cause:** The white-label feature may conflict with another admin customization plugin.
-**Fix:** Disable other admin customization plugins to find the conflict.
+**Cause:** The check is a security feature.
+**Fix:** Leave **Disable Admin Email Check During Login** off to keep the verification reminder.
 
----
+## Recommendations Before Enabling
+
+- **Keep the check if you manage the admin email.** The email verification reminder helps you catch a wrong admin email. Only disable it if the email is stable and verified.
+- **Test by logging out and in.** After enabling, log out and back in as an admin to confirm the reminder is gone.
+- **Understand the tradeoff.** The reminder is a security feature, so weigh the convenience against the check.
+
+## Common Use Cases
+
+### Avoid interrupting the login flow
+
+The admin email verification reminder can interrupt the login flow. Disabling it lets administrators log in without the re-verify prompt.
+
+### A cleaner login for a client
+
+A client who does not need the email verification reminder can log in without the prompt. Disabling it keeps the login flow smooth and uninterrupted.
+
+### Focus on the admin experience
+
+For teams that want a clean admin experience, disabling the email check removes a recurring reminder. This is useful when the admin email is already verified and stable.
+
+## Troubleshooting
 
 ## Related Articles
 
-- [How to Use Content Management in WordPress](../core/core-content-management.md)
-- [How to Use the Admin Menu Manager in WordPress](../interface/interface-admin-menu-manager.md)
-- [How to Use the Login Page Customization in WordPress](white-label/wl-login-customization.md)
+- [How to Use the White Label Tab in Classic Monks: Feature Index](../white-label.md)
 
+---
 
+*Written by Joy. Last updated August 4, 2026. Tested with WordPress 6.x and Classic Monks 2.1.0.*
 
-### Before you enable this feature
-
-White-label features modify the WordPress admin. Consider:
-
-1. **Client expectations** (white-labeling hides WordPress branding, which may confuse clients)
-2. **Brand guidelines** (match the customizations to your brand)
-3. **Testing on all admin pages** (some customizations may look wrong on certain pages)
-4. **Documentation** (record which customizations are enabled for future reference)
-
-White-label features are designed to be safe, but they modify the admin HTML output. Test on all admin pages before enabling on production.
-
-### How it works under the hood
-
-This feature modifies WordPress behavior by adding or removing hooks (filters and actions) in the WordPress execution pipeline. When enabled, the feature's PHP code runs during the WordPress initialization phase, registering the necessary hooks before the page renders.
-
-The modification is non-destructive. Disabling the feature removes the hooks, and WordPress returns to its default behavior. No database changes are made; the feature state is stored in the `wp_options` table as a simple boolean value.
-
-**Performance impact**: The feature's PHP code runs on every page load. The overhead is negligible (typically under 1ms) because the code only registers hooks, which are lightweight operations. The actual performance benefit comes from the hook behavior (e.g., removing a script, preventing a query), which can save 10-50ms per page load depending on the feature.
-
-**Compatibility**: The feature is designed to be compatible with all standard WordPress plugins and themes. However, plugins that rely on the disabled functionality may break. Always test with your specific plugin stack before enabling on production.
-
-**Security**: The feature does not introduce any new security risks. It only modifies the WordPress hook system, which is a well-documented and secure API. The feature does not process user input, make external requests, or modify database records beyond the feature state.
-
-**Accessibility**: This feature does not affect the site's accessibility. It only modifies server-side behavior (hooks, queries, script loading). The frontend HTML, CSS, and JavaScript are unchanged (except for the specific feature behavior, which is documented in each feature's description).
+<!-- schema: Article, TechArticle -->
+<!-- schema: BreadcrumbList -->

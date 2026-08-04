@@ -1,119 +1,119 @@
 ---
-title: "How to Clean Head Tags in WordPress | CM"
-slug: wl-clean-head-tags
-description: "Remove unnecessary link tags from the WordPress head in Classic Monks. Cleans up the HTML head for better performance and SEO."
-last_updated: 2026-06-24
+title: "Clean Head Tags in WordPress: Remove Unnecessary Meta Tags"
+slug: "clean-head-tags"
+description: "Remove unnecessary meta tags from the WordPress HTML head in Classic Monks. Removes RSD links, Windows Live Writer manifest, and feed links for cleaner code."
+last_updated: 2026-08-04
 author: Joy
-reading_time: 3 min
-canonical: https://classicmonks.com/docs/wl-clean-head-tags/
+reading_time: 4 min
+canonical: "https://classicmonks.com/docs/clean-head-tags/"
 ---
 
 # How to Clean Head Tags in WordPress
 
-> Remove unnecessary link tags from the WordPress head in Classic Monks. Cleans up the HTML head for better performance and SEO.
+> The WordPress HTML head is cluttered with meta tags like RSD links, the Windows Live Writer manifest, and feed links. Classic Monks lets you remove them for cleaner, faster-loading code.
 
 ## Key Takeaways
 
-- Single toggle, no nested options
-- Quick admin customization with one click
-- Does not affect frontend functionality
-- Reversible (disable to restore default)
+- Remove unnecessary meta tags from the HTML head.
+- Removes the RSD link, Windows Live Writer manifest, and generator tag.
+- Removes feed and adjacent-post relation links.
+- A cleaner document head and faster page load.
 
-## Why You Need It
+## What Is Clean Head Tags
 
-WordPress adds many unnecessary link tags (RSD, WLW manifest, shortlink, etc.) to the head. Cleaning them improves page load and SEO.
+Clean Head Tags is a white-label option in the Classic Monks **White Label** tab that removes unnecessary meta tags from the HTML head of your site. It removes the RSD link, the Windows Live Writer (`wlwmanifest`) link, the WordPress generator tag, and the feed and adjacent-post relation links. These tags are mostly unused today, so removing them cleans up your HTML and slightly reduces page size.
 
----
+## Clean the Head Tags
 
-## How to Enable this Feature
+### Step 1: Open the Branding Settings
 
-### Step 1: Navigate to Settings
+In your WordPress dashboard, go to **Classic Monks**, open the **White Label** tab, then the **Branding** subtab.
 
-Click into the **Classic Monks** plugin settings, then the **White Label** tab.
+![Classic Monks White Label branding settings](../../images/white-label/branding/branding-settings.png)
 
-### Step 2: Enable the Feature
+### Step 2: Turn On Clean Head Tags
 
-Toggle on the feature.
+In the **Branding** subtab, toggle on **Clean Head Tags**.
 
 ### Step 3: Save and Test
 
-Click **Save Changes**. Check the admin to verify the change.
+Click **Save (⌘+S)**. Open your site's frontend and inspect the page source to confirm the unwanted tags are gone.
 
----
+## Verify It Works
 
-## Common Use Cases
+After saving, open your site's frontend and inspect the page source:
 
-### Client white-labeling
+- The RSD link, Windows Live Writer manifest, and generator tag are gone.
+- The feed and adjacent-post relation links are removed.
+- The head is cleaner.
 
-For agencies that build WordPress sites for clients, white-labeling the admin creates a branded experience. The client sees your agency's branding instead of WordPress.
+If the tags still show, confirm the toggle is on and clear any page cache.
 
-### Brand consistency
+## Examples
 
-For companies that use WordPress as their CMS, white-labeling ensures the admin matches the company's brand guidelines.
+### Example 1: Cleaner Page Source
 
-### Multi-site management
+A developer wants a clean document head. Toggle on **Clean Head Tags**. Unused meta tags like the RSD link and Windows Live Writer manifest are removed for cleaner code.
 
-For companies managing multiple WordPress sites, consistent white-labeling across all sites creates a unified admin experience.
+### Example 2: Reduce Page Size
 
----
+A site wants a slightly smaller page. Toggle on **Clean Head Tags**. Removing the unused head tags reduces the HTML size by a small amount.
+
+### Example 3: Combine With Hide WP Version
+
+A site wants a lean head. Toggle on **Clean Head Tags** to remove the meta tags, and **Hide WP Version** to remove the version generator tag.
+
+### A lean head for a marketing site
+
+A marketing site that does not use the RSD link or Windows Live Writer manifest can remove them. The head is leaner and the page loads slightly faster.
+
+### A cleaner head for a custom theme
+
+A custom theme may not use the default WordPress head tags. Removing them with Clean Head Tags gives a cleaner, more controlled document head that matches the theme's markup.
 
 ## Troubleshooting
 
-### The feature is not taking effect
+### The tags still show
 
-**Cause:** The toggle is off, or a caching plugin is serving the old page.
-**Fix:** Verify the toggle is on. Clear the admin page cache.
+**Cause:** The toggle is off, a caching plugin is serving the old page, or a theme/plugin adds its own tags.
+**Fix:** Confirm the toggle is on, clear the page cache, and check for plugins that add their own head tags.
 
-### The feature breaks the admin
+### A feed link is missing
 
-**Cause:** The white-label feature may conflict with another admin customization plugin.
-**Fix:** Disable other admin customization plugins to find the conflict.
+**Cause:** Clean Head Tags removes feed relation links.
+**Fix:** If you need a feed link, turn off **Clean Head Tags** or add the feed link manually.
 
----
+## Recommendations Before Enabling
+
+- **Combine with Hide WP Version.** Use Clean Head Tags with Hide WP Version to remove the head meta tags and the version generator tag together.
+- **Check feed links.** Clean Head Tags removes feed relation links, so confirm your feed still works if you use it.
+- **Clear the cache.** A caching plugin may serve the old head, so clear it after enabling.
+
+## Common Use Cases
+
+### Cleaner page source for developers
+
+Unused head tags like the RSD link and Windows Live Writer manifest add clutter to the source. Removing them gives a cleaner, easier-to-read document head.
+
+### Reduce page size slightly
+
+Removing unused head tags reduces the HTML size by a small amount. This contributes to a lighter page, especially on content-heavy sites.
+
+### Combine with Hide WP Version
+
+Use Clean Head Tags with Hide WP Version to remove the head meta tags and the version generator tag. This gives a lean, clean document head.
+
+## Troubleshooting
 
 ## Related Articles
 
-- [How to Use Content Management in WordPress](../core/core-content-management.md)
-- [How to Use the Admin Menu Manager in WordPress](../interface/interface-admin-menu-manager.md)
-- [How to Use the Login Page Customization in WordPress](white-label/wl-login-customization.md)
+- [How to Hide the WordPress Version in WordPress](white-label-wl-hide-version.md)
+- [How to Add a Blank Favicon in WordPress](white-label-wl-blank-favicon.md)
+- [How to Use the White Label Tab in Classic Monks: Feature Index](../white-label.md)
 
+---
 
-### Developer integration
+*Written by Joy. Last updated August 4, 2026. Tested with WordPress 6.x and Classic Monks 2.1.0.*
 
-This feature registers 1 WordPress hook in `head-cleanup.php`:
-
-**Actions:**
-
-- `init` calls `cm_clean_head_tags()` (Removes RSD, WLW manifest, generator, feed links from wp_head)
-
-```php
-// Hooked in head-cleanup.php
-add_action( 'init', 'cm_clean_head_tags' );
-```
-
-The feature modifies WordPress admin output by registering hooks. Disabling it reverses those changes.
-
-### Before you enable this feature
-
-White-label features modify the WordPress admin. Consider:
-
-1. **Client expectations** (white-labeling hides WordPress branding, which may confuse clients)
-2. **Brand guidelines** (match the customizations to your brand)
-3. **Testing on all admin pages** (some customizations may look wrong on certain pages)
-4. **Documentation** (record which customizations are enabled for future reference)
-
-White-label features are designed to be safe, but they modify the admin HTML output. Test on all admin pages before enabling on production.
-
-### How it works under the hood
-
-This feature modifies WordPress behavior by adding or removing hooks (filters and actions) in the WordPress execution pipeline. When enabled, the feature's PHP code runs during the WordPress initialization phase, registering the necessary hooks before the page renders.
-
-The modification is non-destructive. Disabling the feature removes the hooks, and WordPress returns to its default behavior. No database changes are made; the feature state is stored in the `wp_options` table as a simple boolean value.
-
-**Performance impact**: The feature's PHP code runs on every page load. The overhead is negligible (typically under 1ms) because the code only registers hooks, which are lightweight operations. The actual performance benefit comes from the hook behavior (e.g., removing a script, preventing a query), which can save 10-50ms per page load depending on the feature.
-
-**Compatibility**: The feature is designed to be compatible with all standard WordPress plugins and themes. However, plugins that rely on the disabled functionality may break. Always test with your specific plugin stack before enabling on production.
-
-**Security**: The feature does not introduce any new security risks. It only modifies the WordPress hook system, which is a well-documented and secure API. The feature does not process user input, make external requests, or modify database records beyond the feature state.
-
-**Accessibility**: This feature does not affect the site's accessibility. It only modifies server-side behavior (hooks, queries, script loading). The frontend HTML, CSS, and JavaScript are unchanged (except for the specific feature behavior, which is documented in each feature's description).
+<!-- schema: Article, TechArticle -->
+<!-- schema: BreadcrumbList -->

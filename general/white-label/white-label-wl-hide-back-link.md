@@ -1,119 +1,118 @@
 ---
-title: "How to Hide the Back to Site Link in WordPress | CM"
-slug: wl-hide-back-link
-description: "Hide the \"Back to Site\" link on the login page in Classic Monks. Prevents visitors from leaving the login page."
-last_updated: 2026-06-24
+title: "Hide the Back to Site Link on the Login Page in WordPress"
+slug: "hide-back-link"
+description: "Hide the Back to Site link on the WordPress login page in Classic Monks. Remove the link back to your site for a cleaner and more branded login experience."
+last_updated: 2026-08-04
 author: Joy
-reading_time: 3 min
-canonical: "https://classicmonks.com/docs/white-label/wl-hide-back-link/"
+reading_time: 4 min
+canonical: "https://classicmonks.com/docs/hide-back-link/"
 ---
 
-# How to Hide the Back to Site Link in WordPress
+# How to Hide the Back to Site Link on the Login Page
 
-> Hide the "Back to Site" link on the login page in Classic Monks. Prevents visitors from leaving the login page.
+> The WordPress login page shows a "Back to Site" link that returns users to your site. Classic Monks lets you hide it for a cleaner, more branded login page.
 
 ## Key Takeaways
 
-- Single toggle, no nested options
-- Quick admin customization with one click
-- Does not affect frontend functionality
-- Reversible (disable to restore default)
+- Hide the "Back to Site" link below the login form.
+- A cleaner, more focused login page.
+- Part of the **Navigation Links Styling** options.
+- A simple toggle, no nested options.
 
-## Why You Need It
+## What Is the Back to Site Link
 
-The "Back to Site" link on the login page can be confusing. Hiding it creates a more focused login experience.
+The "Back to Site" link appears below the WordPress login form and returns users to your site. Classic Monks lets you hide it. The option is part of **Navigation Links Styling** in the **White Label** tab. Hiding the link creates a cleaner login page, useful when you want to keep users focused on logging in.
 
----
+## Hide the Back to Site Link
 
-## How to Enable this Feature
+### Step 1: Open the Login Page Settings
 
-### Step 1: Navigate to Settings
+In your WordPress dashboard, go to **Classic Monks**, open the **White Label** tab, then the **Login Page** subtab.
 
-Click into the **Classic Monks** plugin settings, then the **White Label** tab.
+![Classic Monks White Label login page settings](../../images/white-label/branding/branding-settings.png)
 
-### Step 2: Enable the Feature
+### Step 2: Turn On Navigation Links Styling
 
-Toggle on the feature.
+In the **Login Page** subtab, toggle on **Navigation Links Styling**.
 
-### Step 3: Save and Test
+### Step 3: Hide the Back to Site Link
 
-Click **Save Changes**. Check the admin to verify the change.
+In the **Navigation Links Styling** options, toggle on **Hide "Back to Site" Link**.
 
----
+### Step 4: Save and Test
 
-## Common Use Cases
+Click **Save (⌘+S)**. Open the login page in a private browser window to confirm the link is gone.
 
-### Client white-labeling
+## Verify It Works
 
-For agencies that build WordPress sites for clients, white-labeling the admin creates a branded experience. The client sees your agency's branding instead of WordPress.
+After saving, open the login page and confirm:
 
-### Brand consistency
+- The "Back to Site" link no longer appears below the login form.
+- The login page looks cleaner.
 
-For companies that use WordPress as their CMS, white-labeling ensures the admin matches the company's brand guidelines.
+If the link still shows, confirm **Navigation Links Styling** and **Hide "Back to Site" Link** are both on, and the changes were saved.
 
-### Multi-site management
+## Examples
 
-For companies managing multiple WordPress sites, consistent white-labeling across all sites creates a unified admin experience.
+### Example 1: A Clean, Focused Login Page
 
----
+An agency wants clients to focus on logging in. Toggle on **Navigation Links Styling** and **Hide "Back to Site" Link**. The link disappears, leaving a cleaner login page.
+
+### Example 2: A Branded Login Page
+
+A site wants a minimal branded login page. Toggle on **Hide "Back to Site" Link** to remove the link back to the site. The login page is cleaner and more on-brand.
+
+### A focused login for a client
+
+When a client only needs to log in, hiding the Back to Site link keeps them focused on the login form. The login page is cleaner and the client is less likely to be distracted.
+
+### A branded login for a single-purpose site
+
+A site built for a single purpose, such as a client portal, can hide the Back to Site link. The login page is focused on the portal and does not direct users back to the main site.
 
 ## Troubleshooting
 
-### The feature is not taking effect
+### The link still shows
 
-**Cause:** The toggle is off, or a caching plugin is serving the old page.
-**Fix:** Verify the toggle is on. Clear the admin page cache.
+**Cause:** **Navigation Links Styling** or **Hide "Back to Site" Link** is off, or the changes were not saved.
+**Fix:** Confirm both toggles are on and click **Save (⌘+S)**.
 
-### The feature breaks the admin
+### I want to keep the back link
 
-**Cause:** The white-label feature may conflict with another admin customization plugin.
-**Fix:** Disable other admin customization plugins to find the conflict.
+**Cause:** The link helps users return to the site.
+**Fix:** Turn off **Hide "Back to Site" Link** to keep the link visible.
 
----
+## Recommendations Before Enabling
+
+- **Decide if users need the back link.** The Back to Site link returns users to your site. Hide it only when you want to keep users focused on logging in.
+- **Combine with Navigation Links Styling.** The option is under Navigation Links Styling, so that toggle needs to be on.
+- **Test on the login page.** Open the login page in a private window to confirm the link is gone.
+
+## Common Use Cases
+
+### A clean, focused login page
+
+The Back to Site link can draw users away from logging in. Hiding it keeps the login page focused on the login action.
+
+### White-label the login page
+
+An agency that white-labels the login page for a client can remove the Back to Site link. This gives a cleaner, more branded login page.
+
+### A minimal login experience
+
+For a site that wants a minimal login page, hiding the Back to Site link reduces clutter. The login page shows only the essential form.
+
+## Troubleshooting
 
 ## Related Articles
 
-- [How to Use Content Management in WordPress](../core/core-content-management.md)
-- [How to Use the Admin Menu Manager in WordPress](../interface/interface-admin-menu-manager.md)
-- [How to Use the Login Page Customization in WordPress](white-label/wl-login-customization.md)
+- [How to Style Navigation Links on the WordPress Login Page](white-label-wl-login-nav-styling.md)
+- [How to Customize the WordPress Login Page](white-label-wl-login-customization.md)
+- [How to Use the White Label Tab in Classic Monks: Feature Index](../white-label.md)
 
+---
 
-### Developer integration
+*Written by Joy. Last updated August 4, 2026. Tested with WordPress 6.x and Classic Monks 2.1.0.*
 
-This feature registers 1 WordPress hook in `custom-login-page.php`:
-
-**Actions:**
-
-- `login_enqueue_scripts` calls `cm_custom_login_page_style()` (Injects CSS to hide back-to-site link (priority 10))
-
-```php
-// Hooked in custom-login-page.php
-add_action( 'login_enqueue_scripts', 'cm_custom_login_page_style' );
-```
-
-The feature modifies WordPress admin output by registering hooks. Disabling it reverses those changes.
-
-### Before you enable this feature
-
-White-label features modify the WordPress admin. Consider:
-
-1. **Client expectations** (white-labeling hides WordPress branding, which may confuse clients)
-2. **Brand guidelines** (match the customizations to your brand)
-3. **Testing on all admin pages** (some customizations may look wrong on certain pages)
-4. **Documentation** (record which customizations are enabled for future reference)
-
-White-label features are designed to be safe, but they modify the admin HTML output. Test on all admin pages before enabling on production.
-
-### How it works under the hood
-
-This feature modifies WordPress behavior by adding or removing hooks (filters and actions) in the WordPress execution pipeline. When enabled, the feature's PHP code runs during the WordPress initialization phase, registering the necessary hooks before the page renders.
-
-The modification is non-destructive. Disabling the feature removes the hooks, and WordPress returns to its default behavior. No database changes are made; the feature state is stored in the `wp_options` table as a simple boolean value.
-
-**Performance impact**: The feature's PHP code runs on every page load. The overhead is negligible (typically under 1ms) because the code only registers hooks, which are lightweight operations. The actual performance benefit comes from the hook behavior (e.g., removing a script, preventing a query), which can save 10-50ms per page load depending on the feature.
-
-**Compatibility**: The feature is designed to be compatible with all standard WordPress plugins and themes. However, plugins that rely on the disabled functionality may break. Always test with your specific plugin stack before enabling on production.
-
-**Security**: The feature does not introduce any new security risks. It only modifies the WordPress hook system, which is a well-documented and secure API. The feature does not process user input, make external requests, or modify database records beyond the feature state.
-
-**Accessibility**: This feature does not affect the site's accessibility. It only modifies server-side behavior (hooks, queries, script loading). The frontend HTML, CSS, and JavaScript are unchanged (except for the specific feature behavior, which is documented in each feature's description).
+<!-- schema: Article, TechArticle -->
+<!-- schema: BreadcrumbList -->

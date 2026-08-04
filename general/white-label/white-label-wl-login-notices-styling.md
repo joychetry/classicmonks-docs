@@ -110,5 +110,5 @@ A friendly brand wants a softer success look. Set the success notice background 
 
 *Written by Joy. Last updated August 4, 2026. Tested with WordPress 6.x and Classic Monks 2.1.0.*
 
-<!-- schema: Article, TechArticle, HowTo -->
+<!-- schema: Article, TechArticle -->
 <!-- schema: BreadcrumbList -->

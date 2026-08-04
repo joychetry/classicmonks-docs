@@ -1,125 +1,116 @@
 ---
-title: "How to Customize the Admin Footer in WordPress | CM"
-slug: wl-admin-footer
-description: "Customize the WordPress admin footer text in Classic Monks. Replace \"Thank you for creating with WordPress\" with your own message."
-last_updated: 2026-06-24
+title: "Customize the Admin Footer in WordPress: Brand Your Footer"
+slug: "admin-footer"
+description: "Replace the default WordPress admin footer text with your own message in Classic Monks. Add your agency name or a support link to the admin footer text."
+last_updated: 2026-08-04
 author: Joy
-reading_time: 3 min
-canonical: "https://classicmonks.com/docs/white-label/wl-admin-footer/"
+reading_time: 4 min
+canonical: "https://classicmonks.com/docs/admin-footer/"
 ---
 
 # How to Customize the Admin Footer in WordPress
 
-> Customize the WordPress admin footer text in Classic Monks. Replace "Thank you for creating with WordPress" with your own message.
+> The WordPress admin footer shows a default message and version number. Classic Monks lets you replace it with your own text, such as your agency name or a support link, for a branded admin experience.
 
 ## Key Takeaways
 
-- Single toggle, no nested options
-- Quick admin customization with one click
-- Does not affect frontend functionality
-- Reversible (disable to restore default)
+- Replace the default WordPress admin footer text with your own message.
+- Add your agency name, brand, or a support message.
+- The change applies to the footer on every admin page.
+- A simple toggle with a text area, no nested options.
 
-## Why You Need It
+## What Is the Admin Footer
 
-The admin footer is visible on every admin page. Customizing it reinforces your brand and removes WordPress branding.
+The admin footer is the small text area at the bottom of the WordPress admin screens. By default it shows a "Thank you for creating with WordPress" message and the version number. Classic Monks lets you replace it with your own text, which is useful for white-labeling the admin for a client.
 
----
+It is a white-label option in the **White Label** tab. It is separate from **Remove WordPress Footer Text and Version**, which hides the footer entirely.
 
-## How to Enable this Feature
+## Customize the Admin Footer
 
-### Step 1: Navigate to Settings
+### Step 1: Open the Branding Settings
 
-Click into the **Classic Monks** plugin settings, then the **White Label** tab.
+In your WordPress dashboard, go to **Classic Monks**, open the **White Label** tab, then the **Branding** subtab.
 
-### Step 2: Enable the Feature
+![Classic Monks admin footer settings](../../images/white-label/admin-footer/footer-settings.png)
 
-Toggle on the feature.
+### Step 2: Turn On Customize Admin Footer
 
-### Step 3: Save and Test
+In the **Branding** subtab, toggle on **Customize Admin Footer**.
 
-Click **Save Changes**. Check the admin to verify the change.
+### Step 3: Enter Your Footer Text
 
----
+In the **Custom Footer** text area, enter the text you want to show in the admin footer. The default is **Powered by Classic Monks**. You can add HTML, such as a link to your agency's support page.
 
-## Common Use Cases
+### Step 4: Save and Test
 
-### Client white-labeling
+Click **Save (⌘+S)**. Check the bottom of any admin page to confirm the custom footer appears.
 
-For agencies that build WordPress sites for clients, white-labeling the admin creates a branded experience. The client sees your agency's branding instead of WordPress.
+## Verify It Works
 
-### Brand consistency
+After saving, open any admin page and confirm:
 
-For companies that use WordPress as their CMS, white-labeling ensures the admin matches the company's brand guidelines.
+- The admin footer shows your custom text instead of the default WordPress message.
+- Any HTML in the footer, such as a link, renders correctly.
+- The footer appears consistently across admin pages.
 
-### Multi-site management
+If the footer does not change, confirm the toggle is on, the text is entered, and the changes were saved.
 
-For companies managing multiple WordPress sites, consistent white-labeling across all sites creates a unified admin experience.
+## Examples
 
----
+### Example 1: Add Your Agency Name
+
+An agency wants clients to see its name in the admin. Set the footer to **Designed by [Agency Name]**. The client sees the agency's branding in the admin footer.
+
+### Example 2: Add a Support Link
+
+A support team wants clients to reach help easily. Set the footer to **Need help? Contact support** with a link to the support page. Clients can click the link from any admin page.
+
+### Example 3: A Branded Tagline
+
+A company wants a branded admin. Set the footer to the company's tagline. The admin footer reinforces the brand on every page.
 
 ## Troubleshooting
 
-### The feature is not taking effect
+### The footer does not change
 
-**Cause:** The toggle is off, or a caching plugin is serving the old page.
-**Fix:** Verify the toggle is on. Clear the admin page cache.
+**Cause:** The toggle is off, or the changes were not saved.
+**Fix:** Confirm **Customize Admin Footer** is on, enter the text, and click **Save (⌘+S)**.
 
-### The feature breaks the admin
+### The footer is empty
 
-**Cause:** The white-label feature may conflict with another admin customization plugin.
-**Fix:** Disable other admin customization plugins to find the conflict.
+**Cause:** The footer text area is empty, so nothing shows.
+**Fix:** Enter text in the footer area and save.
 
----
+### HTML in the footer does not render
+
+**Cause:** The HTML is not valid, or the footer text contains unescaped characters.
+**Fix:** Check the HTML syntax and save. Use simple tags like `<a>` and `<strong>`.
+
+## Common Use Cases
+
+### White-label the admin for a client
+
+When you build a site for a client, the default admin footer shows a WordPress message. Replacing it with your agency name or a support message makes the admin look like a custom product rather than a stock WordPress install.
+
+### Add a support link for clients
+
+A support team can add a link to their help or support page in the admin footer. Clients can reach support from any admin screen, which reduces support tickets and improves the client experience.
+
+### Reinforce the brand on every page
+
+The admin footer appears on every admin screen. Setting it to a brand tagline or message reinforces the brand continuously, which is useful for agencies and companies that want consistent branding.
+
+## Troubleshooting
 
 ## Related Articles
 
-- [How to Use Content Management in WordPress](../core/core-content-management.md)
-- [How to Use the Admin Menu Manager in WordPress](../interface/interface-admin-menu-manager.md)
-- [How to Use the Login Page Customization in WordPress](white-label/wl-login-customization.md)
+- [How to Customize the Admin Bar Greeting in WordPress](white-label-wl-admin-greeting.md)
+- [How to Remove the WordPress Footer Text and Version](white-label-wl-remove-footer-text.md)
+- [How to Use the White Label Tab in Classic Monks: Feature Index](../white-label.md)
 
+---
 
-### Developer integration
+*Written by Joy. Last updated August 4, 2026. Tested with WordPress 6.x and Classic Monks 2.1.0.*
 
-This feature registers 4 WordPress hooks in `admin-customization.php`:
-
-**Actions:**
-
-- `admin_init` calls `cm_remove_footer_admin()` (Conditionally removes admin footer text/version (priority 10))
-
-**Filters:**
-
-- `admin_footer_text` calls `cm_custom_admin_footer()` (Replaces admin footer text (priority 10))
-- `admin_footer_text` calls `apply_filters()` (Customizable filter)
-- `update_footer` calls `apply_filters()` (Customizable filter)
-
-```php
-// Hooked in admin-customization.php
-add_action( 'admin_init', 'cm_remove_footer_admin' );
-```
-
-The feature modifies WordPress admin output by registering hooks. Disabling it reverses those changes.
-
-### Before you enable this feature
-
-White-label features modify the WordPress admin. Consider:
-
-1. **Client expectations** (white-labeling hides WordPress branding, which may confuse clients)
-2. **Brand guidelines** (match the customizations to your brand)
-3. **Testing on all admin pages** (some customizations may look wrong on certain pages)
-4. **Documentation** (record which customizations are enabled for future reference)
-
-White-label features are designed to be safe, but they modify the admin HTML output. Test on all admin pages before enabling on production.
-
-### How it works under the hood
-
-This feature modifies WordPress behavior by adding or removing hooks (filters and actions) in the WordPress execution pipeline. When enabled, the feature's PHP code runs during the WordPress initialization phase, registering the necessary hooks before the page renders.
-
-The modification is non-destructive. Disabling the feature removes the hooks, and WordPress returns to its default behavior. No database changes are made; the feature state is stored in the `wp_options` table as a simple boolean value.
-
-**Performance impact**: The feature's PHP code runs on every page load. The overhead is negligible (typically under 1ms) because the code only registers hooks, which are lightweight operations. The actual performance benefit comes from the hook behavior (e.g., removing a script, preventing a query), which can save 10-50ms per page load depending on the feature.
-
-**Compatibility**: The feature is designed to be compatible with all standard WordPress plugins and themes. However, plugins that rely on the disabled functionality may break. Always test with your specific plugin stack before enabling on production.
-
-**Security**: The feature does not introduce any new security risks. It only modifies the WordPress hook system, which is a well-documented and secure API. The feature does not process user input, make external requests, or modify database records beyond the feature state.
-
-**Accessibility**: This feature does not affect the site's accessibility. It only modifies server-side behavior (hooks, queries, script loading). The frontend HTML, CSS, and JavaScript are unchanged (except for the specific feature behavior, which is documented in each feature's description).
+<!-- schema: Article, TechArticle -->
+<!-- schema: BreadcrumbList -->

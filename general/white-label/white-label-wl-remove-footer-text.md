@@ -1,126 +1,121 @@
 ---
-title: "How to Remove WordPress Footer Text and Version in WordPress | CM"
-slug: wl-remove-footer-text
-description: "Remove the WordPress footer text and version number from the admin in Classic Monks. Hides the WordPress version and \"Thank you\" message."
-last_updated: 2026-06-24
+title: "Remove the WordPress Footer Text and Version in WordPress"
+slug: "remove-footer-text"
+description: "Hide the WordPress footer text and version number from the admin in Classic Monks. Removes the Thank you for creating message and version for a clean footer."
+last_updated: 2026-08-04
 author: Joy
-reading_time: 3 min
-canonical: "https://classicmonks.com/docs/white-label/wl-remove-footer-text/"
+reading_time: 4 min
+canonical: "https://classicmonks.com/docs/remove-footer-text/"
 ---
 
-# How to Remove WordPress Footer Text and Version in WordPress
+# How to Remove the Footer Text and Version in WordPress
 
-> Remove the WordPress footer text and version number from the admin in Classic Monks. Hides the WordPress version and "Thank you" message.
+> The WordPress admin footer shows a "Thank you for creating with WordPress" message and the version number. Classic Monks lets you hide both for a clean, branded admin footer.
 
 ## Key Takeaways
 
-- Single toggle, no nested options
-- Quick admin customization with one click
-- Does not affect frontend functionality
-- Reversible (disable to restore default)
+- Remove the WordPress version number and the admin footer text.
+- Hides the "Thank you for creating with WordPress" message.
+- A clean, uncluttered admin footer for a branded experience.
+- A simple toggle, no nested options.
 
-## Why You Need It
+## What Is Remove Footer Text and Version
 
-The WordPress version and footer text are visible on every admin page. Removing them hides platform information from potential attackers.
+Remove Footer Text and Version is a white-label option in the Classic Monks **White Label** tab that hides the default WordPress admin footer content. It removes the "Thank you for creating with WordPress" message and the version number from the bottom of the admin screens.
 
----
+It is different from **Customize Admin Footer**, which replaces the footer text with your own message. This option hides the footer content entirely.
 
-## How to Enable this Feature
+## Remove the Footer Text and Version
 
-### Step 1: Navigate to Settings
+### Step 1: Open the Branding Settings
 
-Click into the **Classic Monks** plugin settings, then the **White Label** tab.
+In your WordPress dashboard, go to **Classic Monks**, open the **White Label** tab, then the **Branding** subtab.
 
-### Step 2: Enable the Feature
+![Classic Monks White Label branding settings](../../images/white-label/branding/branding-settings.png)
 
-Toggle on the feature.
+### Step 2: Turn On Remove WordPress Footer Text and Version
+
+In the **Branding** subtab, toggle on **Remove WordPress Footer Text and Version**.
 
 ### Step 3: Save and Test
 
-Click **Save Changes**. Check the admin to verify the change.
+Click **Save (⌘+S)**. Check the bottom of any admin page to confirm the footer text and version are gone.
 
----
+## Verify It Works
 
-## Common Use Cases
+After saving, open any admin page and confirm:
 
-### Client white-labeling
+- The "Thank you for creating with WordPress" text is gone.
+- The version number is no longer shown in the footer.
+- The footer area is clean and empty.
 
-For agencies that build WordPress sites for clients, white-labeling the admin creates a branded experience. The client sees your agency's branding instead of WordPress.
+If the footer content still shows, confirm the toggle is on and the changes were saved.
 
-### Brand consistency
+## Examples
 
-For companies that use WordPress as their CMS, white-labeling ensures the admin matches the company's brand guidelines.
+### Example 1: A Clean Footer for a Client
 
-### Multi-site management
+An agency wants a clean admin footer for a client. Toggle on **Remove WordPress Footer Text and Version**. The footer content disappears, leaving a clean, uncluttered footer.
 
-For companies managing multiple WordPress sites, consistent white-labeling across all sites creates a unified admin experience.
+### Example 2: Remove the Version Number
 
----
+A site wants to hide its WordPress version from the admin. Toggle on **Remove WordPress Footer Text and Version**. The version number is removed from the footer.
+
+### Example 3: Combine With a Custom Footer
+
+A site wants a custom footer message. Toggle on **Remove WordPress Footer Text and Version** to clear the default content, then use **Customize Admin Footer** to add your own message.
+
+### A clean footer for a support portal
+
+A support portal wants a clean admin footer with no version or platform text. Toggle on Remove Footer Text and Version, then add a support link with the Customize Admin Footer option. The footer is clean and useful.
+
+### A branded footer for an agency
+
+An agency that builds sites for clients can clear the default WordPress footer content on each client site. Combined with a custom footer message, the admin footer looks like part of the client's product rather than a stock WordPress screen.
 
 ## Troubleshooting
 
-### The feature is not taking effect
+### The footer text still shows
 
-**Cause:** The toggle is off, or a caching plugin is serving the old page.
-**Fix:** Verify the toggle is on. Clear the admin page cache.
+**Cause:** The toggle is off, or the changes were not saved.
+**Fix:** Confirm **Remove WordPress Footer Text and Version** is on and click **Save (⌘+S)**.
 
-### The feature breaks the admin
+### I want to add my own footer text instead
 
-**Cause:** The white-label feature may conflict with another admin customization plugin.
-**Fix:** Disable other admin customization plugins to find the conflict.
+**Cause:** Removing the footer clears the default content.
+**Fix:** Use **Customize Admin Footer** to replace the footer with your own message instead of removing it.
 
----
+## Recommendations Before Enabling
+
+- **Decide between hide and customize.** Use Remove Footer Text and Version to clear the default content, or Customize Admin Footer to replace it with your own message.
+- **Check the version need.** The footer version is rarely needed by users, but removing it is a visible change.
+- **Test on a staging site.** Confirm the footer looks clean after the change.
+
+## Common Use Cases
+
+### White-label the admin footer
+
+The default admin footer shows a WordPress message and version. Removing it clears the footer for a branded, white-label admin experience.
+
+### Hide the version for a cleaner look
+
+The version number in the footer is not useful to most users. Removing it makes the footer cleaner and less technical.
+
+### Combine with a custom footer
+
+You can remove the default footer content and then add your own message with the Customize Admin Footer option. This gives you full control over the footer text.
+
+## Troubleshooting
 
 ## Related Articles
 
-- [How to Use Content Management in WordPress](../core/core-content-management.md)
-- [How to Use the Admin Menu Manager in WordPress](../interface/interface-admin-menu-manager.md)
-- [How to Use the Login Page Customization in WordPress](white-label/wl-login-customization.md)
+- [How to Customize the Admin Footer in WordPress](white-label-wl-admin-footer.md)
+- [How to Hide the WordPress Version in WordPress](white-label-wl-hide-version.md)
+- [How to Use the White Label Tab in Classic Monks: Feature Index](../white-label.md)
 
+---
 
-### Developer integration
+*Written by Joy. Last updated August 4, 2026. Tested with WordPress 6.x and Classic Monks 2.1.0.*
 
-This feature registers 4 WordPress hooks in `admin-customization.php`:
-
-**Actions:**
-
-- `admin_init` calls `cm_remove_footer_admin()` (Conditionally removes admin footer text/version (priority 10))
-
-**Filters:**
-
-- `admin_footer_text` calls `__return_empty_string()` (Customizable filter)
-- `update_footer` calls `__return_empty_string()` (Customizable filter)
-- `admin_footer_text` calls `cm_custom_admin_footer()` (Replaces admin footer text (priority 10))
-
-```php
-// Hooked in admin-customization.php
-add_action( 'admin_init', 'cm_remove_footer_admin' );
-```
-
-The feature modifies WordPress admin output by registering hooks. Disabling it reverses those changes.
-
-
-### Before you enable this feature
-
-White-label features modify the WordPress admin. Consider:
-
-1. **Client expectations** (white-labeling hides WordPress branding, which may confuse clients)
-2. **Brand guidelines** (match the customizations to your brand)
-3. **Testing on all admin pages** (some customizations may look wrong on certain pages)
-4. **Documentation** (record which customizations are enabled for future reference)
-
-White-label features are designed to be safe, but they modify the admin HTML output. Test on all admin pages before enabling on production.
-
-### How it works under the hood
-
-This feature modifies WordPress behavior by adding or removing hooks (filters and actions) in the WordPress execution pipeline. When enabled, the feature's PHP code runs during the WordPress initialization phase, registering the necessary hooks before the page renders.
-
-The modification is non-destructive. Disabling the feature removes the hooks, and WordPress returns to its default behavior. No database changes are made; the feature state is stored in the `wp_options` table as a simple boolean value.
-
-**Performance impact**: The feature's PHP code runs on every page load. The overhead is negligible (typically under 1ms) because the code only registers hooks, which are lightweight operations. The actual performance benefit comes from the hook behavior (e.g., removing a script, preventing a query), which can save 10-50ms per page load depending on the feature.
-
-**Compatibility**: The feature is designed to be compatible with all standard WordPress plugins and themes. However, plugins that rely on the disabled functionality may break. Always test with your specific plugin stack before enabling on production.
-
-**Security**: The feature does not introduce any new security risks. It only modifies the WordPress hook system, which is a well-documented and secure API. The feature does not process user input, make external requests, or modify database records beyond the feature state.
-
-**Accessibility**: This feature does not affect the site's accessibility. It only modifies server-side behavior (hooks, queries, script loading). The frontend HTML, CSS, and JavaScript are unchanged (except for the specific feature behavior, which is documented in each feature's description).
+<!-- schema: Article, TechArticle -->
+<!-- schema: BreadcrumbList -->

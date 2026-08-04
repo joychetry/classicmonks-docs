@@ -1,120 +1,114 @@
 ---
-title: "How to Remove Dashboard Widgets in WordPress | CM"
-slug: wl-remove-dashboard-widgets
-description: "Remove all dashboard widgets from the WordPress admin in Classic Monks. Provides a clean, empty dashboard."
-last_updated: 2026-06-24
+title: "Remove Dashboard Widgets in WordPress: Clean the Admin"
+slug: "remove-dashboard-widgets"
+description: "Remove all default WordPress dashboard widgets in Classic Monks for a clean admin dashboard. Hides widgets like At a Glance, Quick Draft, and Site Health."
+last_updated: 2026-08-04
 author: Joy
-reading_time: 3 min
-canonical: https://classicmonks.com/docs/wl-remove-dashboard-widgets/
+reading_time: 4 min
+canonical: "https://classicmonks.com/docs/remove-dashboard-widgets/"
 ---
 
 # How to Remove Dashboard Widgets in WordPress
 
-> Remove all dashboard widgets from the WordPress admin in Classic Monks. Provides a clean, empty dashboard.
+> The WordPress dashboard is cluttered with default widgets like At a Glance, Quick Draft, and Site Health. Classic Monks lets you remove all dashboard widgets for a clean, focused admin dashboard.
 
 ## Key Takeaways
 
-- Single toggle, no nested options
-- Quick admin customization with one click
-- Does not affect frontend functionality
-- Reversible (disable to restore default)
+- Remove all default WordPress dashboard widgets with one toggle.
+- Hides the welcome panel and widgets like At a Glance, Quick Draft, and WordPress Events.
+- Keeps the dashboard clean for clients who only need to focus on content.
+- A simple toggle, no nested options.
 
-## Why You Need It
+## What Is Remove Dashboard Widgets
 
-Default dashboard widgets (Quick Draft, At a Glance, Activity, etc.) add clutter. Removing them creates a cleaner admin experience.
+Remove Dashboard Widgets is a white-label option in the Classic Monks **White Label** tab that clears all widgets from the WordPress dashboard. When enabled, the dashboard no longer shows default widgets like At a Glance, Quick Draft, Activity, and Site Health, and the welcome panel is removed. This keeps the admin focused and reduces clutter for clients.
 
----
+## Remove the Dashboard Widgets
 
-## How to Enable this Feature
+### Step 1: Open the Branding Settings
 
-### Step 1: Navigate to Settings
+In your WordPress dashboard, go to **Classic Monks**, open the **White Label** tab, then the **Branding** subtab.
 
-Click into the **Classic Monks** plugin settings, then the **White Label** tab.
+![Classic Monks White Label branding settings](../../images/white-label/branding/branding-settings.png)
 
-### Step 2: Enable the Feature
+### Step 2: Turn On Remove Dashboard Widgets
 
-Toggle on the feature.
+In the **Branding** subtab, toggle on **Remove Dashboard Widgets**.
 
 ### Step 3: Save and Test
 
-Click **Save Changes**. Check the admin to verify the change.
+Click **Save (⌘+S)**. Open the WordPress dashboard and confirm the widgets are gone.
 
----
+## Verify It Works
 
-## Common Use Cases
+After saving, open the WordPress dashboard and confirm:
 
-### Client white-labeling
+- The default widgets like At a Glance and Quick Draft are gone.
+- The welcome panel is hidden.
+- Any custom widgets added by other plugins may still appear.
 
-For agencies that build WordPress sites for clients, white-labeling the admin creates a branded experience. The client sees your agency's branding instead of WordPress.
+If the widgets still show, confirm the toggle is on and the changes were saved. Some plugins add widgets that may need a separate cleanup.
 
-### Brand consistency
+## Examples
 
-For companies that use WordPress as their CMS, white-labeling ensures the admin matches the company's brand guidelines.
+### Example 1: Clean the Dashboard for a Client
 
-### Multi-site management
+An agency hands a site to a client who only needs to write content. Toggle on **Remove Dashboard Widgets**. The client's dashboard is clean, with only the content tools they need.
 
-For companies managing multiple WordPress sites, consistent white-labeling across all sites creates a unified admin experience.
+### Example 2: A Minimal Admin
 
----
+A team wants a minimal admin with no distractions. Toggle on **Remove Dashboard Widgets** to remove the default widgets and welcome panel. The dashboard becomes a clean landing area.
+
+### Example 3: Reduce Dashboard Load
+
+A site with many users wants a faster dashboard. Toggle on **Remove Dashboard Widgets** to remove the default widgets that make queries. The dashboard loads faster with fewer widgets.
+
+### A focused dashboard for a support team
+
+A support team that only tracks tickets and content can clear the default widgets. The dashboard shows only what the team uses, reducing clutter and helping them focus on support tasks.
 
 ## Troubleshooting
 
-### The feature is not taking effect
+### Widgets still show after enabling
 
-**Cause:** The toggle is off, or a caching plugin is serving the old page.
-**Fix:** Verify the toggle is on. Clear the admin page cache.
+**Cause:** Another plugin adds its own dashboard widgets, or the change was not saved.
+**Fix:** Confirm the toggle is on and click **Save (⌘+S)**. Check if a plugin adds custom widgets that need their own settings.
 
-### The feature breaks the admin
+### The dashboard is empty and that is unexpected
 
-**Cause:** The white-label feature may conflict with another admin customization plugin.
-**Fix:** Disable other admin customization plugins to find the conflict.
+**Cause:** All widgets were removed as configured.
+**Fix:** Turn off **Remove Dashboard Widgets** to restore the default widgets if you need them.
 
----
+## Recommendations Before Enabling
+
+- **Confirm your team does not use the default widgets.** Remove Dashboard Widgets clears all of them, so check that no one relies on At a Glance or Site Health.
+- **Keep custom widgets in mind.** This option clears only the default widgets; plugins that add their own widgets still show them.
+- **Test on a staging site.** The dashboard is the first thing a user sees, so verify the result on a test environment first.
+
+## Common Use Cases
+
+### Give clients a clean dashboard
+
+When you hand a site to a client who only writes content, clearing the default dashboard widgets removes distractions. The client lands on a clean dashboard focused on their work.
+
+### Reduce admin clutter for a team
+
+A team that does not use the default dashboard widgets can remove them for a cleaner, more focused admin. This reduces clutter and helps users find what they need.
+
+### Speed up the dashboard
+
+The default dashboard widgets make queries. Removing them reduces the work the dashboard does on load, which can make the dashboard feel faster on busy sites.
+
+## Troubleshooting
 
 ## Related Articles
 
-- [How to Use Content Management in WordPress](../core/core-content-management.md)
-- [How to Use the Admin Menu Manager in WordPress](../interface/interface-admin-menu-manager.md)
-- [How to Use the Login Page Customization in WordPress](white-label/wl-login-customization.md)
+- [How to Remove the WordPress Footer Text and Version](white-label-wl-remove-footer-text.md)
+- [How to Use the White Label Tab in Classic Monks: Feature Index](../white-label.md)
 
+---
 
-### Developer integration
+*Written by Joy. Last updated August 4, 2026. Tested with WordPress 6.x and Classic Monks 2.1.0.*
 
-This feature registers 2 WordPress hooks in `dashboard-widgets.php`:
-
-**Actions:**
-
-- `wp_dashboard_setup` calls `cm_remove_all_dashboard_widgets()` (Removes all dashboard widgets (priority PHP_INT_MAX))
-- `wp_network_dashboard_setup` calls `cm_remove_all_dashboard_widgets()` (Removes network dashboard widgets)
-
-```php
-// Hooked in dashboard-widgets.php
-add_action( 'wp_dashboard_setup', 'cm_remove_all_dashboard_widgets' );
-```
-
-The feature modifies WordPress admin output by registering hooks. Disabling it reverses those changes.
-
-### Before you enable this feature
-
-White-label features modify the WordPress admin. Consider:
-
-1. **Client expectations** (white-labeling hides WordPress branding, which may confuse clients)
-2. **Brand guidelines** (match the customizations to your brand)
-3. **Testing on all admin pages** (some customizations may look wrong on certain pages)
-4. **Documentation** (record which customizations are enabled for future reference)
-
-White-label features are designed to be safe, but they modify the admin HTML output. Test on all admin pages before enabling on production.
-
-### How it works under the hood
-
-This feature modifies WordPress behavior by adding or removing hooks (filters and actions) in the WordPress execution pipeline. When enabled, the feature's PHP code runs during the WordPress initialization phase, registering the necessary hooks before the page renders.
-
-The modification is non-destructive. Disabling the feature removes the hooks, and WordPress returns to its default behavior. No database changes are made; the feature state is stored in the `wp_options` table as a simple boolean value.
-
-**Performance impact**: The feature's PHP code runs on every page load. The overhead is negligible (typically under 1ms) because the code only registers hooks, which are lightweight operations. The actual performance benefit comes from the hook behavior (e.g., removing a script, preventing a query), which can save 10-50ms per page load depending on the feature.
-
-**Compatibility**: The feature is designed to be compatible with all standard WordPress plugins and themes. However, plugins that rely on the disabled functionality may break. Always test with your specific plugin stack before enabling on production.
-
-**Security**: The feature does not introduce any new security risks. It only modifies the WordPress hook system, which is a well-documented and secure API. The feature does not process user input, make external requests, or modify database records beyond the feature state.
-
-**Accessibility**: This feature does not affect the site's accessibility. It only modifies server-side behavior (hooks, queries, script loading). The frontend HTML, CSS, and JavaScript are unchanged (except for the specific feature behavior, which is documented in each feature's description).
+<!-- schema: Article, TechArticle -->
+<!-- schema: BreadcrumbList -->

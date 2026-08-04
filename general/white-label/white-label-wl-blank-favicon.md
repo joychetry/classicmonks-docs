@@ -1,119 +1,118 @@
 ---
-title: "How to Add a Blank Favicon in WordPress | CM"
-slug: wl-blank-favicon
-description: "Add a blank favicon to the site in Classic Monks. Removes the default WordPress favicon or browser default."
-last_updated: 2026-06-24
+title: "Add a Blank Favicon in WordPress: Stop favicon.ico Requests"
+slug: "blank-favicon"
+description: "Add a blank favicon in WordPress with Classic Monks. Prevents browser requests for favicon.ico on sites without a custom favicon and reduces 404 errors."
+last_updated: 2026-08-04
 author: Joy
-reading_time: 3 min
-canonical: https://classicmonks.com/docs/wl-blank-favicon/
+reading_time: 4 min
+canonical: "https://classicmonks.com/docs/blank-favicon/"
 ---
 
 # How to Add a Blank Favicon in WordPress
 
-> Add a blank favicon to the site in Classic Monks. Removes the default WordPress favicon or browser default.
+> If your site has no custom favicon, browsers request a favicon.ico file and get a 404. Classic Monks lets you add a blank favicon to stop those requests and reduce errors.
 
 ## Key Takeaways
 
-- Single toggle, no nested options
-- Quick admin customization with one click
-- Does not affect frontend functionality
-- Reversible (disable to restore default)
+- Add a blank favicon to your site to prevent favicon.ico requests.
+- Reduces 404 errors in your server logs.
+- A clean solution for sites that do not use a custom favicon.
+- A simple toggle, no nested options.
 
-## Why You Need It
+## What Is a Blank Favicon
 
-The default WordPress favicon is recognizable. A blank or custom favicon creates a cleaner browsing experience.
+A favicon is the small icon shown in the browser tab next to your site's title. If your site does not set a favicon, browsers still request a `favicon.ico` file, which returns a 404. Add Blank Favicon is a white-label option in the Classic Monks **White Label** tab that adds a blank favicon to your site, so browsers stop requesting the missing file and your server logs stay clean.
 
----
+## Add a Blank Favicon
 
-## How to Enable this Feature
+### Step 1: Open the Branding Settings
 
-### Step 1: Navigate to Settings
+In your WordPress dashboard, go to **Classic Monks**, open the **White Label** tab, then the **Branding** subtab.
 
-Click into the **Classic Monks** plugin settings, then the **White Label** tab.
+![Classic Monks White Label branding settings](../../images/white-label/branding/branding-settings.png)
 
-### Step 2: Enable the Feature
+### Step 2: Turn On Add Blank Favicon
 
-Toggle on the feature.
+In the **Branding** subtab, toggle on **Add Blank Favicon**.
 
 ### Step 3: Save and Test
 
-Click **Save Changes**. Check the admin to verify the change.
+Click **Save (⌘+S)**. Load your site frontend and check the browser tab for the blank favicon, or check your server logs for fewer favicon.ico 404s.
 
----
+## Verify It Works
 
-## Common Use Cases
+After saving, verify the blank favicon:
 
-### Client white-labeling
+- The site no longer requests a missing `favicon.ico` file.
+- Your server logs show fewer favicon 404 errors.
+- The browser tab shows a blank icon.
 
-For agencies that build WordPress sites for clients, white-labeling the admin creates a branded experience. The client sees your agency's branding instead of WordPress.
+If the favicon requests continue, confirm the toggle is on and the changes were saved. Clear any page cache.
 
-### Brand consistency
+## Examples
 
-For companies that use WordPress as their CMS, white-labeling ensures the admin matches the company's brand guidelines.
+### Example 1: Clean Up Server Logs
 
-### Multi-site management
+A site with no custom favicon sees many favicon.ico 404s in its logs. Toggle on **Add Blank Favicon**. The site stops requesting the missing file, and the logs are cleaner.
 
-For companies managing multiple WordPress sites, consistent white-labeling across all sites creates a unified admin experience.
+### Example 2: Avoid a Broken Tab Icon
 
----
+A new site has no favicon yet. Toggle on **Add Blank Favicon** so the browser tab shows a blank icon instead of a broken one while the site is in development.
+
+### Example 3: Combine With a Custom Favicon Later
+
+A site plans to add a favicon later. Toggle on **Add Blank Favicon** now. When you add a real favicon, it takes precedence over the blank one.
+
+### A neutral tab for a fresh install
+
+A brand-new WordPress install has no favicon, so the browser tab can show a broken or generic icon. A blank favicon gives the tab a clean, neutral look until the site is fully branded.
+
+### Fewer broken requests on a shared host
+
+On a shared host, a missing favicon can generate repeated 404 requests that add to your logs and server load. A blank favicon stops the requests, keeping the site quieter and the logs cleaner.
 
 ## Troubleshooting
 
-### The feature is not taking effect
+### The favicon 404s continue
 
 **Cause:** The toggle is off, or a caching plugin is serving the old page.
-**Fix:** Verify the toggle is on. Clear the admin page cache.
+**Fix:** Confirm the toggle is on, clear the page cache, and reload.
 
-### The feature breaks the admin
+### I want to use a real favicon
 
-**Cause:** The white-label feature may conflict with another admin customization plugin.
-**Fix:** Disable other admin customization plugins to find the conflict.
+**Cause:** The blank favicon is a placeholder.
+**Fix:** Set a real favicon in your theme or WordPress Site Icon settings; it takes precedence over the blank one.
 
----
+## Recommendations Before Enabling
+
+- **Use it only when you have no favicon.** If you have a custom favicon, you do not need the blank one.
+- **Check your browser tab.** After enabling, reload the site and confirm the tab icon is clean.
+- **Ready for a real favicon later.** The blank favicon is a placeholder; a real favicon takes precedence when you add one.
+
+## Common Use Cases
+
+### Clean up server logs
+
+Sites without a favicon get frequent favicon.ico 404 requests. Adding a blank favicon stops those requests, keeping server logs clean and reducing noise.
+
+### Avoid a broken tab icon
+
+A site in development without a favicon can show a broken icon in the browser tab. A blank favicon gives a clean, neutral icon until a real favicon is added.
+
+### Prepare for a custom favicon later
+
+If you plan to add a favicon later, a blank favicon fills the gap now. When you add a real favicon, it takes precedence over the blank one.
+
+## Troubleshooting
 
 ## Related Articles
 
-- [How to Use Content Management in WordPress](../core/core-content-management.md)
-- [How to Use the Admin Menu Manager in WordPress](../interface/interface-admin-menu-manager.md)
-- [How to Use the Login Page Customization in WordPress](white-label/wl-login-customization.md)
+- [How to Clean Head Tags in WordPress](white-label-wl-clean-head-tags.md)
+- [How to Use the White Label Tab in Classic Monks: Feature Index](../white-label.md)
 
+---
 
-### Developer integration
+*Written by Joy. Last updated August 4, 2026. Tested with WordPress 6.x and Classic Monks 2.1.0.*
 
-This feature registers 1 WordPress hook in `head-cleanup.php`:
-
-**Actions:**
-
-- `wp_head` calls `cm_add_blank_favicon()` (Adds blank favicon to prevent 404 requests)
-
-```php
-// Hooked in head-cleanup.php
-add_action( 'wp_head', 'cm_add_blank_favicon' );
-```
-
-The feature modifies WordPress admin output by registering hooks. Disabling it reverses those changes.
-
-### Before you enable this feature
-
-White-label features modify the WordPress admin. Consider:
-
-1. **Client expectations** (white-labeling hides WordPress branding, which may confuse clients)
-2. **Brand guidelines** (match the customizations to your brand)
-3. **Testing on all admin pages** (some customizations may look wrong on certain pages)
-4. **Documentation** (record which customizations are enabled for future reference)
-
-White-label features are designed to be safe, but they modify the admin HTML output. Test on all admin pages before enabling on production.
-
-### How it works under the hood
-
-This feature modifies WordPress behavior by adding or removing hooks (filters and actions) in the WordPress execution pipeline. When enabled, the feature's PHP code runs during the WordPress initialization phase, registering the necessary hooks before the page renders.
-
-The modification is non-destructive. Disabling the feature removes the hooks, and WordPress returns to its default behavior. No database changes are made; the feature state is stored in the `wp_options` table as a simple boolean value.
-
-**Performance impact**: The feature's PHP code runs on every page load. The overhead is negligible (typically under 1ms) because the code only registers hooks, which are lightweight operations. The actual performance benefit comes from the hook behavior (e.g., removing a script, preventing a query), which can save 10-50ms per page load depending on the feature.
-
-**Compatibility**: The feature is designed to be compatible with all standard WordPress plugins and themes. However, plugins that rely on the disabled functionality may break. Always test with your specific plugin stack before enabling on production.
-
-**Security**: The feature does not introduce any new security risks. It only modifies the WordPress hook system, which is a well-documented and secure API. The feature does not process user input, make external requests, or modify database records beyond the feature state.
-
-**Accessibility**: This feature does not affect the site's accessibility. It only modifies server-side behavior (hooks, queries, script loading). The frontend HTML, CSS, and JavaScript are unchanged (except for the specific feature behavior, which is documented in each feature's description).
+<!-- schema: Article, TechArticle -->
+<!-- schema: BreadcrumbList -->

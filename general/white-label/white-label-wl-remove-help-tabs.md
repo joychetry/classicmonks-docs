@@ -1,123 +1,121 @@
 ---
-title: "How to Remove Help Tabs in WordPress | CM"
-slug: wl-remove-help-tabs
-description: "Remove the help tabs from the WordPress admin in Classic Monks. Provides a cleaner admin interface without help documentation."
-last_updated: 2026-06-24
+title: "Remove Help Tabs in WordPress: Clean the Admin Interface"
+slug: "remove-help-tabs"
+description: "Remove the Help tab from all WordPress admin pages in Classic Monks. It creates a cleaner, less cluttered admin interface and a more branded experience."
+last_updated: 2026-08-04
 author: Joy
-reading_time: 3 min
-canonical: https://classicmonks.com/docs/wl-remove-help-tabs/
+reading_time: 4 min
+canonical: "https://classicmonks.com/docs/remove-help-tabs/"
 ---
 
 # How to Remove Help Tabs in WordPress
 
-> Remove the help tabs from the WordPress admin in Classic Monks. Provides a cleaner admin interface without help documentation.
+> The WordPress admin shows a Help tab at the top right of every admin screen. Classic Monks lets you remove it from all admin pages for a cleaner interface.
 
 ## Key Takeaways
 
-- Single toggle, no nested options
-- Quick admin customization with one click
-- Does not affect frontend functionality
-- Reversible (disable to restore default)
+- Remove the Help tab from all WordPress admin pages.
+- A cleaner, less cluttered admin interface.
+- Useful for clients who do not need the default WordPress help.
+- A simple toggle, no nested options.
 
-## Why You Need It
+## What Is Remove Help Tabs
 
-The help tabs on admin pages can be distracting. Removing them provides a cleaner admin experience for experienced users.
+Remove Help Tabs is a white-label option in the Classic Monks **White Label** tab that removes the Help tab from the top right of every WordPress admin screen. The Help tab contains contextual help for the current screen. Removing it creates a cleaner interface, which is useful when white-labeling the admin for a client.
 
----
+## Remove the Help Tabs
 
-## How to Enable this Feature
+### Step 1: Open the Branding Settings
 
-### Step 1: Navigate to Settings
+In your WordPress dashboard, go to **Classic Monks**, open the **White Label** tab, then the **Branding** subtab.
 
-Click into the **Classic Monks** plugin settings, then the **White Label** tab.
+![Classic Monks White Label branding settings](../../images/white-label/branding/branding-settings.png)
 
-### Step 2: Enable the Feature
+### Step 2: Turn On Remove Help Tabs
 
-Toggle on the feature.
+In the **Branding** subtab, toggle on **Remove Help Tabs**.
 
 ### Step 3: Save and Test
 
-Click **Save Changes**. Check the admin to verify the change.
+Click **Save (⌘+S)**. Open a few admin pages and confirm the Help tab is gone from the top right.
 
----
+## Verify It Works
 
-## Common Use Cases
+After saving, open several admin pages and confirm:
 
-### Client white-labeling
+- The Help tab is no longer visible at the top right.
+- The removal applies across admin screens.
 
-For agencies that build WordPress sites for clients, white-labeling the admin creates a branded experience. The client sees your agency's branding instead of WordPress.
+If the Help tab still shows, confirm the toggle is on and the changes were saved.
 
-### Brand consistency
+## Examples
 
-For companies that use WordPress as their CMS, white-labeling ensures the admin matches the company's brand guidelines.
+### Example 1: A Cleaner Admin for Clients
 
-### Multi-site management
+An agency wants a clean admin for a client. Toggle on **Remove Help Tabs**. The Help tab disappears from all admin screens, reducing clutter.
 
-For companies managing multiple WordPress sites, consistent white-labeling across all sites creates a unified admin experience.
+### Example 2: Reduce Admin Distractions
 
----
+A team wants a focused admin. Toggle on **Remove Help Tabs** to remove the contextual help from every screen. The admin is cleaner and more focused.
+
+### A clean admin for a managed site
+
+A managed site where the team uses its own documentation can remove the WordPress Help tab. The admin is cleaner and the team relies on its own support resources instead.
+
+### A consistent admin across a plugin set
+
+When a site uses several plugins that each add their own help, the Help tab area can get cluttered. Removing the default WordPress help tab keeps the top of the admin consistent and clean.
+
+### A cleaner admin for a monitored site
+
+For a site that is monitored and maintained by an agency, the WordPress help is not needed. Removing the Help tab gives a cleaner admin that the agency presents to the client as part of the managed service.
+
+### A focused admin for a content team
+
+A content team that writes posts and pages does not need the WordPress contextual help. Removing the Help tab gives a cleaner, more focused admin that reduces distraction for the content team.
 
 ## Troubleshooting
 
-### The feature is not taking effect
+### The Help tab still shows
 
-**Cause:** The toggle is off, or a caching plugin is serving the old page.
-**Fix:** Verify the toggle is on. Clear the admin page cache.
+**Cause:** The toggle is off, or the changes were not saved.
+**Fix:** Confirm **Remove Help Tabs** is on and click **Save (⌘+S)**. Open a fresh admin page to check.
 
-### The feature breaks the admin
+### I want to keep the help
 
-**Cause:** The white-label feature may conflict with another admin customization plugin.
-**Fix:** Disable other admin customization plugins to find the conflict.
+**Cause:** The Help tab shows contextual help.
+**Fix:** Leave **Remove Help Tabs** off to keep the help available.
 
----
+## Recommendations Before Enabling
+
+- **Confirm your team does not use the built-in help.** The Help tab contains contextual help for each screen. Only remove it if your team does not rely on it.
+- **Test on a few screens.** The removal applies to all admin pages, so check a few different screens to confirm.
+- **Consider a staging site.** Removing help is a visible change, so verify it on a test environment first.
+
+## Common Use Cases
+
+### White-label the admin for clients
+
+The Help tab looks like a WordPress feature. Removing it from all admin screens creates a cleaner, more branded admin for clients.
+
+### Reduce admin clutter
+
+The Help tab adds visual clutter to every admin screen. Removing it gives a cleaner, more focused interface, especially for users who do not use the built-in help.
+
+### A focused admin for a team
+
+A team that does not need the default WordPress help can remove the Help tab. This keeps the admin focused on the tasks that matter.
+
+## Troubleshooting
 
 ## Related Articles
 
-- [How to Use Content Management in WordPress](../core/core-content-management.md)
-- [How to Use the Admin Menu Manager in WordPress](../interface/interface-admin-menu-manager.md)
-- [How to Use the Login Page Customization in WordPress](white-label/wl-login-customization.md)
+- [How to Remove the WordPress Footer Text and Version](white-label-wl-remove-footer-text.md)
+- [How to Use the White Label Tab in Classic Monks: Feature Index](../white-label.md)
 
+---
 
-### Developer integration
+*Written by Joy. Last updated August 4, 2026. Tested with WordPress 6.x and Classic Monks 2.1.0.*
 
-This feature registers 2 WordPress hooks in `remove-help-tabs.php`:
-
-**Actions:**
-
-- `admin_head` calls `cm_remove_help_tabs()` (Removes all help tabs from admin screens (priority 10))
-
-**Filters:**
-
-- `pre_cm_update_option_remove_help_tabs` calls `apply_filters()` (Customizable filter)
-
-```php
-// Hooked in remove-help-tabs.php
-add_action( 'admin_head', 'cm_remove_help_tabs' );
-```
-
-The feature modifies WordPress admin output by registering hooks. Disabling it reverses those changes.
-
-### Before you enable this feature
-
-White-label features modify the WordPress admin. Consider:
-
-1. **Client expectations** (white-labeling hides WordPress branding, which may confuse clients)
-2. **Brand guidelines** (match the customizations to your brand)
-3. **Testing on all admin pages** (some customizations may look wrong on certain pages)
-4. **Documentation** (record which customizations are enabled for future reference)
-
-White-label features are designed to be safe, but they modify the admin HTML output. Test on all admin pages before enabling on production.
-
-### How it works under the hood
-
-This feature modifies WordPress behavior by adding or removing hooks (filters and actions) in the WordPress execution pipeline. When enabled, the feature's PHP code runs during the WordPress initialization phase, registering the necessary hooks before the page renders.
-
-The modification is non-destructive. Disabling the feature removes the hooks, and WordPress returns to its default behavior. No database changes are made; the feature state is stored in the `wp_options` table as a simple boolean value.
-
-**Performance impact**: The feature's PHP code runs on every page load. The overhead is negligible (typically under 1ms) because the code only registers hooks, which are lightweight operations. The actual performance benefit comes from the hook behavior (e.g., removing a script, preventing a query), which can save 10-50ms per page load depending on the feature.
-
-**Compatibility**: The feature is designed to be compatible with all standard WordPress plugins and themes. However, plugins that rely on the disabled functionality may break. Always test with your specific plugin stack before enabling on production.
-
-**Security**: The feature does not introduce any new security risks. It only modifies the WordPress hook system, which is a well-documented and secure API. The feature does not process user input, make external requests, or modify database records beyond the feature state.
-
-**Accessibility**: This feature does not affect the site's accessibility. It only modifies server-side behavior (hooks, queries, script loading). The frontend HTML, CSS, and JavaScript are unchanged (except for the specific feature behavior, which is documented in each feature's description).
+<!-- schema: Article, TechArticle -->
+<!-- schema: BreadcrumbList -->

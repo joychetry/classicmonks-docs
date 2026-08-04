@@ -1,120 +1,118 @@
 ---
-title: "How to Hide the WordPress Version in WordPress | CM"
-slug: wl-hide-version
-description: "Hide the WordPress version number from the page source in Classic Monks. Removes the version meta tag and generator tag."
-last_updated: 2026-06-24
+title: "Hide the WordPress Version in WordPress: Remove Version Number"
+slug: "hide-version"
+description: "Hide the WordPress version number from the page source in Classic Monks. Remove the version meta tag and generator tag to improve your website security."
+last_updated: 2026-08-04
 author: Joy
-reading_time: 3 min
-canonical: https://classicmonks.com/docs/wl-hide-version/
+reading_time: 4 min
+canonical: "https://classicmonks.com/docs/hide-version/"
 ---
 
 # How to Hide the WordPress Version in WordPress
 
-> Hide the WordPress version number from the page source in Classic Monks. Removes the version meta tag and generator tag.
+> The WordPress version number appears in the page source and can reveal your platform version to attackers. Classic Monks lets you hide it for better security.
 
 ## Key Takeaways
 
-- Single toggle, no nested options
-- Quick admin customization with one click
-- Does not affect frontend functionality
-- Reversible (disable to restore default)
+- Remove the WordPress version number from the page source.
+- Removes the generator meta tag that reveals your version.
+- A security best practice for hiding your platform version.
+- A simple toggle, no nested options.
 
-## Why You Need It
+## What Is Hide WP Version
 
-The WordPress version in the page source reveals your platform version to attackers. Hiding it is a security best practice.
+Hide WP Version is a white-label option in the Classic Monks **White Label** tab that removes the WordPress version number from the frontend HTML source. WordPress adds a generator meta tag that reveals the version, such as `<meta name="generator" content="WordPress 6.5">`. Hiding it is a security best practice because attackers can use the version to find known vulnerabilities.
 
----
+## Hide the WordPress Version
 
-## How to Enable this Feature
+### Step 1: Open the Branding Settings
 
-### Step 1: Navigate to Settings
+In your WordPress dashboard, go to **Classic Monks**, open the **White Label** tab, then the **Branding** subtab.
 
-Click into the **Classic Monks** plugin settings, then the **White Label** tab.
+![Classic Monks White Label branding settings](../../images/white-label/branding/branding-settings.png)
 
-### Step 2: Enable the Feature
+### Step 2: Turn On Hide WP Version
 
-Toggle on the feature.
+In the **Branding** subtab, toggle on **Hide WP Version**.
 
 ### Step 3: Save and Test
 
-Click **Save Changes**. Check the admin to verify the change.
+Click **Save (⌘+S)**. Open your site's frontend and view the page source to confirm the version is gone.
 
----
+## Verify It Works
 
-## Common Use Cases
+After saving, open your site's frontend and inspect the page source:
 
-### Client white-labeling
+- The `<meta name="generator" content="WordPress ...">` tag is gone.
+- The WordPress version number no longer appears in the source.
 
-For agencies that build WordPress sites for clients, white-labeling the admin creates a branded experience. The client sees your agency's branding instead of WordPress.
+If the version still shows, confirm the toggle is on and the changes were saved. Clear any page cache.
 
-### Brand consistency
+## Examples
 
-For companies that use WordPress as their CMS, white-labeling ensures the admin matches the company's brand guidelines.
+### Example 1: Hide the Version for Security
 
-### Multi-site management
+A site wants to reduce its attack surface. Toggle on **Hide WP Version**. Attackers can no longer see the WordPress version in the source to target known vulnerabilities.
 
-For companies managing multiple WordPress sites, consistent white-labeling across all sites creates a unified admin experience.
+### Example 2: A Cleaner Source
 
----
+A developer wants a cleaner page source. Toggle on **Hide WP Version**. The generator meta tag is removed, leaving a cleaner document head.
+
+### Example 3: Combine With Other Cleanup
+
+A site uses **Clean Head Tags** and **Hide WP Version** together. Toggle on **Hide WP Version** to remove the version tag, and **Clean Head Tags** to remove other head meta tags.
+
+### A security-conscious approach
+
+A site that handles sensitive data may want to reduce the information it exposes. Hiding the WordPress version removes a detail that could be used to target known vulnerabilities, so this is a common step in a security cleanup.
+
+### A professional-looking source
+
+For a developer or agency that wants a clean, professional document head, hiding the version removes the generic WordPress generator tag. The source looks more polished and less like a stock WordPress install.
 
 ## Troubleshooting
 
-### The feature is not taking effect
+### The version still shows
 
-**Cause:** The toggle is off, or a caching plugin is serving the old page.
-**Fix:** Verify the toggle is on. Clear the admin page cache.
+**Cause:** The toggle is off, a caching plugin is serving the old page, or a theme/plugin adds its own version tag.
+**Fix:** Confirm the toggle is on, clear the page cache, and check for plugins that add their own version meta tags.
 
-### The feature breaks the admin
+### The version shows in the admin
 
-**Cause:** The white-label feature may conflict with another admin customization plugin.
-**Fix:** Disable other admin customization plugins to find the conflict.
+**Cause:** This option only hides the version from the frontend source.
+**Fix:** Use **Remove WordPress Footer Text and Version** to hide the version from the admin footer.
 
----
+## Recommendations Before Enabling
+
+- **Combine with Clean Head Tags.** Use Hide WP Version with Clean Head Tags to remove the version tag and other head meta tags in one pass.
+- **Remember the admin.** This option hides the version from the frontend source; use Remove WordPress Footer Text and Version to hide it from the admin footer.
+- **Clear the cache.** A caching plugin may serve the old page, so clear it after enabling.
+
+## Common Use Cases
+
+### Reduce the attack surface
+
+The WordPress version in the page source lets attackers target known vulnerabilities for that version. Hiding it removes a piece of information that can be used against your site.
+
+### Cleaner page source for developers
+
+A developer who wants a clean document head can remove the generator meta tag. This makes the source easier to read and slightly smaller.
+
+### Combine with other cleanup
+
+Use Hide WP Version with Clean Head Tags to remove the version tag and other unnecessary head meta tags. This gives a lean, clean document head.
+
+## Troubleshooting
 
 ## Related Articles
 
-- [How to Use Content Management in WordPress](../core/core-content-management.md)
-- [How to Use the Admin Menu Manager in WordPress](../interface/interface-admin-menu-manager.md)
-- [How to Use the Login Page Customization in WordPress](white-label/wl-login-customization.md)
+- [How to Clean Head Tags in WordPress](white-label-wl-clean-head-tags.md)
+- [How to Remove the WordPress Footer Text and Version](white-label-wl-remove-footer-text.md)
+- [How to Use the White Label Tab in Classic Monks: Feature Index](../white-label.md)
 
+---
 
-### Developer integration
+*Written by Joy. Last updated August 4, 2026. Tested with WordPress 6.x and Classic Monks 2.1.0.*
 
-This feature registers 2 WordPress hooks in `head-cleanup.php`:
-
-**Filters:**
-
-- `the_generator` calls `cm_hide_wp_version()` (Removes WP version from generator tag)
-- `the_generator` calls `apply_filters()` (Customizable filter)
-
-```php
-// Hooked in head-cleanup.php
-add_filter( 'the_generator', 'cm_hide_wp_version' );
-```
-
-The feature modifies WordPress admin output by registering hooks. Disabling it reverses those changes.
-
-### Before you enable this feature
-
-White-label features modify the WordPress admin. Consider:
-
-1. **Client expectations** (white-labeling hides WordPress branding, which may confuse clients)
-2. **Brand guidelines** (match the customizations to your brand)
-3. **Testing on all admin pages** (some customizations may look wrong on certain pages)
-4. **Documentation** (record which customizations are enabled for future reference)
-
-White-label features are designed to be safe, but they modify the admin HTML output. Test on all admin pages before enabling on production.
-
-### How it works under the hood
-
-This feature modifies WordPress behavior by adding or removing hooks (filters and actions) in the WordPress execution pipeline. When enabled, the feature's PHP code runs during the WordPress initialization phase, registering the necessary hooks before the page renders.
-
-The modification is non-destructive. Disabling the feature removes the hooks, and WordPress returns to its default behavior. No database changes are made; the feature state is stored in the `wp_options` table as a simple boolean value.
-
-**Performance impact**: The feature's PHP code runs on every page load. The overhead is negligible (typically under 1ms) because the code only registers hooks, which are lightweight operations. The actual performance benefit comes from the hook behavior (e.g., removing a script, preventing a query), which can save 10-50ms per page load depending on the feature.
-
-**Compatibility**: The feature is designed to be compatible with all standard WordPress plugins and themes. However, plugins that rely on the disabled functionality may break. Always test with your specific plugin stack before enabling on production.
-
-**Security**: The feature does not introduce any new security risks. It only modifies the WordPress hook system, which is a well-documented and secure API. The feature does not process user input, make external requests, or modify database records beyond the feature state.
-
-**Accessibility**: This feature does not affect the site's accessibility. It only modifies server-side behavior (hooks, queries, script loading). The frontend HTML, CSS, and JavaScript are unchanged (except for the specific feature behavior, which is documented in each feature's description).
+<!-- schema: Article, TechArticle -->
+<!-- schema: BreadcrumbList -->

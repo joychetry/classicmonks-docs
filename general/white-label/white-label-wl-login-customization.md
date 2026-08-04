@@ -163,6 +163,5 @@ Toggle on **Disable "Lost your password?"** in the **Login Page** subtab. This h
 
 *Written by Joy. Last updated August 4, 2026. Tested with WordPress 6.x and Classic Monks 2.1.0.*
 
-<!-- schema: Article, TechArticle, HowTo -->
-<!-- schema: FAQPage -->
+<!-- schema: Article, TechArticle -->
 <!-- schema: BreadcrumbList -->

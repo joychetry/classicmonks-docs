@@ -1,119 +1,124 @@
 ---
-title: "How to Customize the Admin Bar Greeting in WordPress | CM"
-slug: wl-admin-greeting
-description: "Replace the default \"Howdy, [Name]\" greeting in the WordPress admin bar with custom text in Classic Monks."
-last_updated: 2026-06-24
+title: "Customize the Admin Bar Greeting in WordPress: Replace Howdy"
+slug: "admin-greeting"
+description: "Replace the Howdy greeting in the WordPress admin bar with your own text in Classic Monks. Change the greeting or remove it for a cleaner admin experience."
+last_updated: 2026-08-04
 author: Joy
-reading_time: 3 min
-canonical: "https://classicmonks.com/docs/white-label/wl-admin-greeting/"
+reading_time: 4 min
+canonical: "https://classicmonks.com/docs/admin-greeting/"
 ---
 
 # How to Customize the Admin Bar Greeting in WordPress
 
-> Replace the default "Howdy, [Name]" greeting in the WordPress admin bar with custom text in Classic Monks.
+> The WordPress admin bar shows a "Howdy" greeting next to your name. Classic Monks lets you replace it with your own text, or remove it entirely, for a cleaner and more branded admin experience.
 
 ## Key Takeaways
 
-- Single toggle, no nested options
-- Quick admin customization with one click
-- Does not affect frontend functionality
-- Reversible (disable to restore default)
+- Replace the default "Howdy" greeting with your own text.
+- Leave the greeting empty to remove it entirely.
+- The change applies to the admin bar on every admin page.
+- A simple toggle with a text input, no nested options.
 
-## Why You Need It
+## What Is the Admin Bar Greeting
 
-The default "Howdy" greeting may not match your brand. Customizing it creates a consistent brand experience throughout the admin.
+The admin bar greeting is the "Howdy" text that appears at the top right of the WordPress admin bar, next to your user name. Classic Monks lets you replace it with your own text, such as "Welcome," or a brand name, or remove it entirely. It is a white-label option in the **White Label** tab.
 
----
+## Customize the Admin Bar Greeting
 
-## How to Enable this Feature
+### Step 1: Open the Branding Settings
 
-### Step 1: Navigate to Settings
+In your WordPress dashboard, go to **Classic Monks**, open the **White Label** tab, then the **Branding** subtab.
 
-Click into the **Classic Monks** plugin settings, then the **White Label** tab.
+![Classic Monks admin bar greeting settings](../../images/white-label/admin-greeting/greeting-settings.png)
 
-### Step 2: Enable the Feature
+### Step 2: Turn On Customize Admin Bar Greeting
 
-Toggle on the feature.
+In the **Branding** subtab, toggle on **Customize Admin Bar Greeting**.
 
-### Step 3: Save and Test
+### Step 3: Set the Greeting Text
 
-Click **Save Changes**. Check the admin to verify the change.
+In the **Custom Greeting** field, enter the text you want to show in place of "Howdy". The default is **Welcome,**. Leave the field empty to remove the greeting text entirely.
 
----
+### Step 4: Save and Test
 
-## Common Use Cases
+Click **Save (⌘+S)**. Check the admin bar at the top of any admin page to confirm the new greeting appears.
 
-### Client white-labeling
+## Verify It Works
 
-For agencies that build WordPress sites for clients, white-labeling the admin creates a branded experience. The client sees your agency's branding instead of WordPress.
+After saving, open any admin page and confirm:
 
-### Brand consistency
+- The admin bar shows your custom greeting instead of "Howdy".
+- The greeting is followed by your user name.
+- If the field is empty, the greeting text is removed entirely.
 
-For companies that use WordPress as their CMS, white-labeling ensures the admin matches the company's brand guidelines.
+If the greeting does not change, confirm the toggle is on, the text is entered, and the changes were saved.
 
-### Multi-site management
+## Examples
 
-For companies managing multiple WordPress sites, consistent white-labeling across all sites creates a unified admin experience.
+### Example 1: Use a Branded Greeting
 
----
+A client wants a branded admin. Set the greeting to **Welcome,** (the default) so the admin bar reads "Welcome, [Client Name]". The admin feels more personal and less WordPress-branded.
+
+### Example 2: Remove the Greeting
+
+A site wants a minimal admin bar. Toggle on **Customize Admin Bar Greeting** and leave the field empty. The "Howdy" text disappears, leaving only the user name.
+
+### Example 3: Use a Friendly Greeting
+
+A team wants a friendly tone. Set the greeting to **Hi there,** so the admin bar reads "Hi there, [Name]". The change applies to everyone who uses the admin.
+
+### A consistent greeting across the team
+
+For a team that wants a consistent, professional admin, a set greeting such as "Welcome," gives every user the same experience. It removes the random-feeling default and makes the admin feel intentional.
 
 ## Troubleshooting
 
-### The feature is not taking effect
+### The greeting does not change
 
-**Cause:** The toggle is off, or a caching plugin is serving the old page.
-**Fix:** Verify the toggle is on. Clear the admin page cache.
+**Cause:** The toggle is off, or the changes were not saved.
+**Fix:** Confirm **Customize Admin Bar Greeting** is on, enter the text, and click **Save (⌘+S)**.
 
-### The feature breaks the admin
+### The greeting shows but the text is empty
 
-**Cause:** The white-label feature may conflict with another admin customization plugin.
-**Fix:** Disable other admin customization plugins to find the conflict.
+**Cause:** The greeting field is empty, which removes the text.
+**Fix:** Enter text in the field, or leave it empty if you want to remove the greeting.
 
----
+### The greeting is not empty but I want to remove it
+
+**Cause:** The field still has text.
+**Fix:** Clear the field and save to remove the greeting entirely.
+
+## Recommendations Before Enabling
+
+- **Pick a neutral or brand greeting.** The greeting appears for every user, so choose text that fits the whole team, not just you.
+- **Test the empty state.** If you leave the greeting empty, confirm the user name still shows correctly in the admin bar.
+- **Keep it short.** A long greeting takes space in the admin bar. Use one or two words.
+
+## Common Use Cases
+
+### White-label the admin for a client
+
+When you build a site for a client, the default "Howdy, [Name]" greeting reveals the WordPress admin. Replacing it with a branded or neutral greeting, such as "Welcome," makes the admin feel like part of the client's product rather than a generic WordPress screen.
+
+### Remove the greeting for a minimal admin
+
+Some teams prefer a clean admin bar with no greeting text. Leaving the greeting field empty removes the "Howdy" text entirely, leaving only the user name. This suits a minimal, uncluttered admin for power users.
+
+### Use a friendly greeting for a team
+
+For an internal team, a friendly greeting such as "Hi there," sets a welcoming tone. The change applies to every user who logs in, giving the whole admin a consistent, human feel.
+
+## Troubleshooting
 
 ## Related Articles
 
-- [How to Use Content Management in WordPress](../core/core-content-management.md)
-- [How to Use the Admin Menu Manager in WordPress](../interface/interface-admin-menu-manager.md)
-- [How to Use the Login Page Customization in WordPress](white-label/wl-login-customization.md)
+- [How to Customize the Admin Footer in WordPress](white-label-wl-admin-footer.md)
+- [How to Replace the WordPress Admin Bar Logo in WordPress](white-label-wl-admin-logo.md)
+- [How to Use the White Label Tab in Classic Monks: Feature Index](../white-label.md)
 
+---
 
-### Developer integration
+*Written by Joy. Last updated August 4, 2026. Tested with WordPress 6.x and Classic Monks 2.1.0.*
 
-This feature registers 1 WordPress hook in `admin-customization.php`:
-
-**Filters:**
-
-- `admin_bar_menu` calls `cm_customize_howdy()` (Replaces the Howdy greeting in admin bar (priority 9999))
-
-```php
-// Hooked in admin-customization.php
-add_filter( 'admin_bar_menu', 'cm_customize_howdy' );
-```
-
-The feature modifies WordPress admin output by registering hooks. Disabling it reverses those changes.
-
-### Before you enable this feature
-
-White-label features modify the WordPress admin. Consider:
-
-1. **Client expectations** (white-labeling hides WordPress branding, which may confuse clients)
-2. **Brand guidelines** (match the customizations to your brand)
-3. **Testing on all admin pages** (some customizations may look wrong on certain pages)
-4. **Documentation** (record which customizations are enabled for future reference)
-
-White-label features are designed to be safe, but they modify the admin HTML output. Test on all admin pages before enabling on production.
-
-### How it works under the hood
-
-This feature modifies WordPress behavior by adding or removing hooks (filters and actions) in the WordPress execution pipeline. When enabled, the feature's PHP code runs during the WordPress initialization phase, registering the necessary hooks before the page renders.
-
-The modification is non-destructive. Disabling the feature removes the hooks, and WordPress returns to its default behavior. No database changes are made; the feature state is stored in the `wp_options` table as a simple boolean value.
-
-**Performance impact**: The feature's PHP code runs on every page load. The overhead is negligible (typically under 1ms) because the code only registers hooks, which are lightweight operations. The actual performance benefit comes from the hook behavior (e.g., removing a script, preventing a query), which can save 10-50ms per page load depending on the feature.
-
-**Compatibility**: The feature is designed to be compatible with all standard WordPress plugins and themes. However, plugins that rely on the disabled functionality may break. Always test with your specific plugin stack before enabling on production.
-
-**Security**: The feature does not introduce any new security risks. It only modifies the WordPress hook system, which is a well-documented and secure API. The feature does not process user input, make external requests, or modify database records beyond the feature state.
-
-**Accessibility**: This feature does not affect the site's accessibility. It only modifies server-side behavior (hooks, queries, script loading). The frontend HTML, CSS, and JavaScript are unchanged (except for the specific feature behavior, which is documented in each feature's description).
+<!-- schema: Article, TechArticle -->
+<!-- schema: BreadcrumbList -->

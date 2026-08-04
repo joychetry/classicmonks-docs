@@ -210,6 +210,5 @@ WordPress plugins and themes enqueue scripts and styles with unique handles and 
 
 **Tested versions:** Classic Monks 2.1.0; WordPress tested up to 7.0.
 
-<!-- schema: Article, TechArticle, HowTo -->
-<!-- schema: FAQPage -->
+<!-- schema: Article, TechArticle -->
 <!-- schema: BreadcrumbList -->

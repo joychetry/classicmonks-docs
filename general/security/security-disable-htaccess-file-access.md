@@ -212,6 +212,5 @@ If the request bypasses WordPress, use the server configuration as the authorita
 **Tested versions:** Classic Monks 2.1.0; WordPress tested up to 7.0.  
 **Last updated:** July 31, 2026
 
-<!-- schema: Article, TechArticle, HowTo -->
-<!-- schema: FAQPage -->
+<!-- schema: Article, TechArticle -->
 <!-- schema: BreadcrumbList -->
