@@ -53,8 +53,8 @@ The Menu subtab manages admin menu items. 3 features.
 
 | Feature | Guide |
 |---------|-------|
-| Admin Menu Manager | [View guide](white-label/wl-admin-menu-manager.md) |
-| Top Toolbar Manager | [View guide](white-label/wl-top-toolbar-manager.md) |
+| Admin Menu Manager | [View guide](interface/interface-admin-menu-manager.md) |
+| Top Toolbar Manager | [View guide](interface/interface-top-toolbar-manager.md) |
 | Quick Post Nav | [View guide](white-label/wl-quick-post-nav.md) |
 
 ## Related Articles

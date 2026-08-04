@@ -10,12 +10,12 @@ canonical: https://classicmonks.com/docs/interface
 
 # How to Use the Interface Tab in Classic Monks: Feature Index
 
-> The Interface tab in Classic Monks adds 29 features across 6 subtabs. This index links to every per-feature guide, organized by subtab.
+> The Interface tab in Classic Monks adds 32 features across 7 subtabs. This index links to every per-feature guide, organized by subtab.
 
 ## Key Takeaways
 
-- 29 features across 6 subtabs
-- 6 subtabs: Folders, Admin Notices, Form Desk, Preloader, Laser Loader, Experience
+- 32 features across 7 subtabs
+- 7 subtabs: Folders, Admin Notices, Form Desk, Preloader, Laser Loader, Experience, Menu Management
 - Each feature has its own dedicated guide with frontmatter, FAQ, and advanced developer options
 - The Folders subtab is the most feature-rich (8 features covering media management)
 
@@ -85,6 +85,16 @@ The Experience subtab adds page transitions and admin UX features. 5 features.
 | **Enable in Admin Area** | Transitions in the WordPress admin. | [View guide](interface/interface-transitions-admin.md) |
 | **Move Admin Bar to Bottom** | Relocate the admin bar. | [View guide](interface/interface-admin-bar-bottom.md) |
 
+## Menu Management
+
+The Menu Management subtab manages the admin sidebar and admin bar. 3 features.
+
+| Feature | Description | Guide |
+|---------|-------------|-------|
+| **Admin Menu Manager** | Reorder, rename, hide, and restyle the admin sidebar menu. Add custom menus, submenus, separators, and spacers, and control visibility per role. | [View guide](interface/interface-admin-menu-manager.md) |
+| **Top Toolbar Manager** | Reorder, rename, hide, and restyle the admin toolbar. Add custom toolbar items and submenus, move items between left and right sides, and control visibility per role. | [View guide](interface/interface-top-toolbar-manager.md) |
+| **Quick Post Nav** | Quick navigation menus in the admin bar for post types, pages, and posts. | [View guide](white-label/white-label-wl-quick-post-nav.md) |
+
 ## Common Combinations
 
 - **Media-heavy site**: Folder Manager + Folder Download + Gallery Shortcode + Quick Inspect
@@ -100,6 +110,7 @@ The Experience subtab adds page transitions and admin UX features. 5 features.
 - [Preloader](interface/interface-preloader.md) (4 features)
 - [Laser Loader](interface/interface-laser-loader.md) (8 features)
 - [Experience](interface/interface-page-transitions.md) (5 features)
+- [Menu Management](interface/interface-admin-menu-manager.md) (3 features)
 
 ## Related Articles
 

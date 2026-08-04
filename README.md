@@ -181,7 +181,7 @@ docs/
 │   │   ├── security-allow-dev-endpoints.md
 │   │   └── security-staging-indicator.md
 │   ├── interface.md            # Interface tab index
-│   ├── interface/              # Interface tab docs (16 files)
+│   ├── interface/              # Interface tab docs (18 files)
 │   │   ├── interface-folder-manager.md
 │   │   ├── interface-folder-download.md
 │   │   ├── interface-folder-duplication.md
@@ -197,7 +197,9 @@ docs/
 │   │   ├── interface-shared-element-transitions.md
 │   │   ├── interface-reduced-motion.md
 │   │   ├── interface-transitions-admin.md
-│   │   └── interface-admin-bar-bottom.md
+│   │   ├── interface-admin-bar-bottom.md
+│   │   ├── interface-admin-menu-manager.md
+│   │   └── interface-top-toolbar-manager.md
 │   ├── performance.md          # Performance tab index
 │   ├── performance/            # Performance tab docs (48 files)
 │   │   ├── performance-perf-force-https.md
@@ -249,7 +251,7 @@ docs/
 │   │   ├── performance-perf-monks-preload.md
 │   │   └── performance-perf-selective-media-preload.md
 │   ├── white-label.md          # White Label tab index
-│   ├── white-label/            # White Label tab docs (20 files)
+│   ├── white-label/            # White Label tab docs (18 files)
 │   │   ├── white-label-wl-admin-greeting.md
 │   │   ├── white-label-wl-admin-footer.md
 │   │   ├── white-label-wl-admin-logo.md
@@ -267,8 +269,6 @@ docs/
 │   │   ├── white-label-wl-hide-back-link.md
 │   │   ├── white-label-wl-login-notices-styling.md
 │   │   ├── white-label-wl-disable-language-dropdown.md
-│   │   ├── white-label-wl-admin-menu-manager.md
-│   │   ├── white-label-wl-top-toolbar-manager.md
 │   │   └── white-label-wl-quick-post-nav.md
 │   ├── options.md              # Options tab index
 │   ├── options/                # Options tab docs (7 files)
@@ -304,9 +304,9 @@ docs/
 | **general/email/** | Email tab features | SMTP, Logging, Notifications, WooCommerce email control |
 | **general/woocommerce/** | WooCommerce tab features | Swatches, Single Product, Checkout, One Click Checkout, Orders, Coupons, My Account, Optimization, Redirection, Email |
 | **general/security/** | Security tab features | Custom Login URL, Login Lockdown, Captcha, 2FA, Content Protection, Stay Logged In, Staging Protection |
-| **general/interface/** | Interface tab features | Folder Manager, Admin Notices, Form Desk, Preloader, Laser Loader, Page Transitions |
+| **general/interface/** | Interface tab features | Folder Manager, Admin Notices, Form Desk, Preloader, Laser Loader, Page Transitions, Menu management (Admin Menu, Top Toolbar, Quick Post Nav), Admin Menu Manager |
 | **general/performance/** | Performance tab features | WP Optimizations, Media, CDN, Assets Manager, Lazy Loading, Preloading |
-| **general/white-label/** | White Label tab features | Admin branding, Login page customization, Menu management |
+| **general/white-label/** | White Label tab features | Admin branding, Login page customization |
 | **general/options/** | Options tab features | Environment, Import/Export, Reset, Uninstall, License |
 | **Installation** | Setup guides | First-time install, activation |
 | **Comparison** | Competitor comparisons | Classic Monks vs ASE: parity and CM-only conversion |

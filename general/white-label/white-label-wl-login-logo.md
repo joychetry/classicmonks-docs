@@ -89,7 +89,7 @@ For companies managing multiple WordPress sites, consistent white-labeling acros
 ## Related Articles
 
 - [How to Use Content Management in WordPress](../core/core-content-management.md)
-- [How to Use the Admin Menu Manager in WordPress](white-label-wl-admin-menu-manager.md)
+- [How to Use the Admin Menu Manager in WordPress](../interface/interface-admin-menu-manager.md)
 - [How to Use the Login Page Customization in WordPress](white-label-wl-login-customization.md)
 
 ---

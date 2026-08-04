@@ -107,7 +107,7 @@ For companies that want a modern, dynamic login page, video backgrounds with loo
 ## Related Articles
 
 - [How to Use Content Management in WordPress](../core/core-content-management.md)
-- [How to Use the Admin Menu Manager in WordPress](white-label-wl-admin-menu-manager.md)
+- [How to Use the Admin Menu Manager in WordPress](../interface/interface-admin-menu-manager.md)
 - [How to Add a Custom Login Logo in WordPress](white-label-wl-login-logo.md)
 
 ---
