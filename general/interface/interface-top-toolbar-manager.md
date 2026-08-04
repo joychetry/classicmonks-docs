@@ -177,7 +177,7 @@ You want the **Howdy** menu on the right but a custom item on the left. Drag the
 ## Related Articles
 
 - [How to Use the Admin Menu Manager in WordPress](interface-admin-menu-manager.md)
-- [How to Use Quick Post Nav in WordPress](../white-label/white-label-wl-quick-post-nav.md)
+- [How to Use Quick Post Nav in WordPress](interface-quick-post-nav.md)
 - [How to Use the Interface Tab in Classic Monks: Feature Index](../interface.md)
 
 ---

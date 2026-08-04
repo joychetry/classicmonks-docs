@@ -181,7 +181,7 @@ docs/
 │   │   ├── security-allow-dev-endpoints.md
 │   │   └── security-staging-indicator.md
 │   ├── interface.md            # Interface tab index
-│   ├── interface/              # Interface tab docs (18 files)
+│   ├── interface/              # Interface tab docs (19 files)
 │   │   ├── interface-folder-manager.md
 │   │   ├── interface-folder-download.md
 │   │   ├── interface-folder-duplication.md
@@ -199,7 +199,8 @@ docs/
 │   │   ├── interface-transitions-admin.md
 │   │   ├── interface-admin-bar-bottom.md
 │   │   ├── interface-admin-menu-manager.md
-│   │   └── interface-top-toolbar-manager.md
+│   │   ├── interface-top-toolbar-manager.md
+│   │   └── interface-quick-post-nav.md
 │   ├── performance.md          # Performance tab index
 │   ├── performance/            # Performance tab docs (48 files)
 │   │   ├── performance-perf-force-https.md
@@ -251,7 +252,7 @@ docs/
 │   │   ├── performance-perf-monks-preload.md
 │   │   └── performance-perf-selective-media-preload.md
 │   ├── white-label.md          # White Label tab index
-│   ├── white-label/            # White Label tab docs (18 files)
+│   ├── white-label/            # White Label tab docs (17 files)
 │   │   ├── white-label-wl-admin-greeting.md
 │   │   ├── white-label-wl-admin-footer.md
 │   │   ├── white-label-wl-admin-logo.md
@@ -268,8 +269,7 @@ docs/
 │   │   ├── white-label-wl-login-nav-styling.md
 │   │   ├── white-label-wl-hide-back-link.md
 │   │   ├── white-label-wl-login-notices-styling.md
-│   │   ├── white-label-wl-disable-language-dropdown.md
-│   │   └── white-label-wl-quick-post-nav.md
+│   │   └── white-label-wl-disable-language-dropdown.md
 │   ├── options.md              # Options tab index
 │   ├── options/                # Options tab docs (7 files)
 │   │   ├── options-opt-environment.md

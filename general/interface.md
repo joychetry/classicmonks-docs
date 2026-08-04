@@ -93,7 +93,7 @@ The Menu Management subtab manages the admin sidebar and admin bar. 3 features.
 |---------|-------------|-------|
 | **Admin Menu Manager** | Reorder, rename, hide, and restyle the admin sidebar menu. Add custom menus, submenus, separators, and spacers, and control visibility per role. | [View guide](interface/interface-admin-menu-manager.md) |
 | **Top Toolbar Manager** | Reorder, rename, hide, and restyle the admin toolbar. Add custom toolbar items and submenus, move items between left and right sides, and control visibility per role. | [View guide](interface/interface-top-toolbar-manager.md) |
-| **Quick Post Nav** | Quick navigation menus in the admin bar for post types, pages, and posts. | [View guide](white-label/white-label-wl-quick-post-nav.md) |
+| **Quick Post Nav** | Add a Quick menu to the admin bar for instant access to post types, pages, and posts. Enable post types, reorder them, add custom links, and control statuses and search. | [View guide](interface/interface-quick-post-nav.md) |
 
 ## Common Combinations
 

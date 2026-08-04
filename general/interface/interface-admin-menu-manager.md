@@ -191,7 +191,7 @@ A client wants the **Events** menu hidden from subscribers. Open the **Events** 
 ## Related Articles
 
 - [How to Use the Top Toolbar Manager in WordPress](interface-top-toolbar-manager.md)
-- [How to Use Quick Post Nav in WordPress](../white-label/white-label-wl-quick-post-nav.md)
+- [How to Use Quick Post Nav in WordPress](interface-quick-post-nav.md)
 - [How to Use the Interface Tab in Classic Monks: Feature Index](../interface.md)
 
 ---
