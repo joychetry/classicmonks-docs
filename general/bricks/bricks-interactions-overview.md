@@ -1,5 +1,5 @@
 ---
-title: "Use Bricks Interactions in WordPress: Triggers and Actions"
+title: "How to Use Bricks Interaction Triggers in WordPress"
 slug: "bricks-interactions"
 description: "Enable Bricks interaction triggers and actions in Classic Monks. Create dynamic, interactive page experiences with triggers (when) and actions (then)."
 last_updated: 2026-08-04
@@ -8,7 +8,7 @@ reading_time: 6 min
 canonical: "https://classicmonks.com/docs/bricks-interactions/"
 ---
 
-# How to Use Bricks Interactions in WordPress
+# How to Use Bricks Interactions in WordPress: Triggers and Actions
 
 > Bricks Builder lets you build interactions that respond to visitor actions, such as scrolling, clicking, or pressing a key. Classic Monks adds more interaction triggers and actions to Bricks, so you can create dynamic, interactive page experiences.
 

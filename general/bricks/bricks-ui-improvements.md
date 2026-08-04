@@ -1,5 +1,5 @@
 ---
-title: "Improve the Bricks Builder UI in WordPress: Editor Enhancements"
+title: "How to Improve the Bricks Builder UI in WordPress: Enhance"
 slug: "bricks-ui-improvements"
 description: "Enhance the Bricks Builder editor interface in Classic Monks. Improve element highlighting, style panel visibility, control separators, and setting indicators."
 last_updated: 2026-08-04
@@ -8,7 +8,7 @@ reading_time: 5 min
 canonical: "https://classicmonks.com/docs/bricks-ui-improvements/"
 ---
 
-# How to Improve the Bricks Builder UI in WordPress
+# How to Improve the Bricks Builder UI in WordPress: Enhancements
 
 > The Bricks Builder editor is powerful but can feel cluttered and hard to read when you build complex layouts. Classic Monks lets you improve the editor interface with clearer active element highlighting, a more visible style panel, and better control separators.
 

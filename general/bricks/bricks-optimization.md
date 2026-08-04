@@ -1,5 +1,5 @@
 ---
-title: "Optimize Bricks Builder Performance in WordPress: Speed Up"
+title: "How to Optimize Bricks Builder Performance in WordPress"
 slug: "bricks-optimization"
 description: "Optimize Bricks Builder performance in Classic Monks. Disable Bricks frontend CSS and JS on non-Bricks pages and enable CSS minification for faster loading."
 last_updated: 2026-08-04

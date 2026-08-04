@@ -1,5 +1,5 @@
 ---
-title: "Use Bricks Elements in WordPress: Add Custom Elements"
+title: "How to Add Custom Elements in Bricks Builder in WordPress"
 slug: "bricks-elements-overview"
 description: "Enable custom Bricks elements in Classic Monks. Add animations, content, WooCommerce, gallery, and utility elements to the Bricks Builder editor canvas."
 last_updated: 2026-08-04
@@ -8,7 +8,7 @@ reading_time: 6 min
 canonical: "https://classicmonks.com/docs/bricks-elements-overview/"
 ---
 
-# How to Use Bricks Elements in WordPress
+# How to Use Bricks Elements in WordPress: Add Custom Components
 
 > Classic Monks adds a set of custom elements to the Bricks Builder. Enable the ones you need and they appear in the Bricks editor, ready to drag into your layout.
 

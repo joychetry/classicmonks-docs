@@ -1,5 +1,5 @@
 ---
-title: "Use Bricks Conditions in WordPress: Show or Hide Elements"
+title: "How to Use Bricks Conditions to Show or Hide Elements"
 slug: "bricks-conditions"
 description: "Enable Bricks conditional display rules in Classic Monks. Show or hide elements based on post, user, content, and WooCommerce data with 80+ conditions."
 last_updated: 2026-08-04
@@ -8,7 +8,7 @@ reading_time: 6 min
 canonical: "https://classicmonks.com/docs/bricks-conditions/"
 ---
 
-# How to Use Bricks Conditions in WordPress
+# How to Use Bricks Conditions to Show or Hide Elements
 
 > The Bricks Builder conditional logic lets you show or hide elements based on data. Classic Monks adds more condition types to Bricks, so you can display content based on post data, user data, content analysis, and WooCommerce conditions.
 

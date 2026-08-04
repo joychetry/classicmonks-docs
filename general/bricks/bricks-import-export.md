@@ -1,5 +1,5 @@
 ---
-title: "Import and Export Bricks Settings in WordPress: Transfer Site Data"
+title: "How to Import and Export Bricks Settings in WordPress"
 slug: "bricks-import-export"
 description: "Import and export Bricks settings in Classic Monks. Transfer global settings, color palettes, classes, variables, components, and theme styles between sites."
 last_updated: 2026-08-04

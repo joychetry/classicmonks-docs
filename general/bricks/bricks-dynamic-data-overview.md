@@ -1,5 +1,5 @@
 ---
-title: "Use Bricks Dynamic Data in WordPress: Display Dynamic Content"
+title: "How to Display Dynamic Data in Bricks in WordPress"
 slug: "bricks-dynamic-data"
 description: "Enable Bricks dynamic data sources in Classic Monks. Display post, user, content, taxonomy, and WooCommerce data with dynamic data tags in the Bricks editor."
 last_updated: 2026-08-04
@@ -8,7 +8,7 @@ reading_time: 6 min
 canonical: "https://classicmonks.com/docs/bricks-dynamic-data/"
 ---
 
-# How to Use Bricks Dynamic Data in WordPress
+# How to Use Bricks Dynamic Data in WordPress: Display Content
 
 > Dynamic data lets you pull live values into your Bricks layouts, such as the current year, a post's reading time, or a product's price. Classic Monks adds more dynamic data sources to Bricks, so you can display post, user, content, taxonomy, and WooCommerce data.
 
