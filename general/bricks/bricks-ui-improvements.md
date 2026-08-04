@@ -1,138 +1,124 @@
 ---
-title: "How to Use Bricks Builder UI Improvements in WordPress | CM"
-slug: bricks-ui-improvements
-description: "Enhance the Bricks Builder editor interface in Classic Monks. UI improvements include active element highlighting, style panel enhancements, and better control separators."
-last_updated: 2026-06-24
+title: "Improve the Bricks Builder UI in WordPress: Editor Enhancements"
+slug: "bricks-ui-improvements"
+description: "Enhance the Bricks Builder editor interface in Classic Monks. Improve element highlighting, style panel visibility, control separators, and setting indicators."
+last_updated: 2026-08-04
 author: Joy
-reading_time: 4 min
-canonical: https://classicmonks.com/docs/bricks-ui-improvements/
+reading_time: 5 min
+canonical: "https://classicmonks.com/docs/bricks-ui-improvements/"
 ---
 
-# How to Use Bricks Builder UI Improvements in WordPress
+# How to Improve the Bricks Builder UI in WordPress
 
-> Bricks Builder UI Improvements in Classic Monks enhance the Bricks editor interface. Includes active element highlighting, style panel enhancements, control separators, and setting indicators.
+> The Bricks Builder editor is powerful but can feel cluttered and hard to read when you build complex layouts. Classic Monks lets you improve the editor interface with clearer active element highlighting, a more visible style panel, and better control separators.
 
 ## Key Takeaways
 
-- Master toggle with 4 sub-options
-- Active Element Highlighting: visual indicator on the canvas
-- Style Panel Enhancements: improved style panel layout
-- Control Separator Enhancements: better visual separators between controls
-- Setting Indicator Enhancements: visual indicators for set values
+- Improve the Bricks editor with clearer active element highlighting.
+- Make the style panel and control separators more visible.
+- Hide element icons or make the elements panel more compact.
+- Move the Bricks toolbar to the bottom for a cleaner layout.
+- These are independent toggles in the **Initial Setup** subtab.
 
-## What Are the Bricks UI Improvements?
+## What Are the Bricks UI Improvements
 
-The Bricks Builder UI Improvements feature adds visual enhancements to the Bricks editor interface. These improvements make the editor easier to use by adding visual cues, better organization, and clearer feedback.
+The Bricks UI Improvements are a group of options in the Classic Monks **Bricks** tab, **Initial Setup** subtab, that change the look of the Bricks Builder editor. They do not change the Bricks data or the frontend; they only improve how the editor looks and how easy it is to read while you build. They are independent toggles, so you can turn on only the improvements you want.
 
-The 4 sub-options include:
+## Recommendations Before Enabling
 
-1. **Active Element Highlighting**: Shows a colored border around the currently selected element on the canvas, making it easier to see which element is active
-2. **Style Panel Enhancements**: Improves the layout and visual hierarchy of the style panel
-3. **Control Separator Enhancements**: Adds better visual separators between control groups
-4. **Setting Indicator Enhancements**: Shows visual indicators (dots, icons) when a setting has a value
+- **Enable improvements one at a time.** Each toggle is independent, so turn them on and check the editor after each change.
+- **Open the Bricks editor to test.** The improvements appear only in the Bricks Builder editor, so test with the editor open.
+- **Use the ones that help your workflow.** Not all improvements suit every user, so pick the ones that make the editor clearer for you.
 
-## Why You Need It
+## Improve the Bricks Editor
 
-The default Bricks editor is functional but can be hard to navigate when building complex layouts:
+### Step 1: Open the Bricks Tab
 
-- **Element identification**: Without highlighting, it's hard to see which element is selected
-- **Style organization**: The style panel can be overwhelming without clear separators
-- **Value awareness**: Without indicators, you can't tell which settings have values at a glance
+In your WordPress dashboard, go to **Classic Monks**, then open the **Bricks** tab.
 
-The UI improvements solve these problems with subtle visual enhancements.
+### Step 2: Open the Initial Setup Subtab
 
----
+Click the **Initial Setup** subtab.
 
-## How to Enable Bricks UI Improvements
+### Step 3: Improve Active Element Highlighting
 
-### Step 1: Navigate to Settings
+Toggle on **Enhanced Active Element Highlighting**. The currently selected element in the structure panel gets a more prominent highlight, so you can see which element is active.
 
-Click into the **Classic Monks** plugin settings in your WordPress dashboard.
+### Step 4: Improve the Style Panel
 
-### Step 2: Go to the Bricks Tab
+Toggle on **Enhance Style Panel Visibility**. The style panel control groups become more visible, making it easier to find the section you are editing.
 
-Click on the **Bricks** menu, then the **Initial Setup** subtab.
+### Step 5: Improve Control Separators
 
-### Step 3: Enable UI Improvements
+Toggle on **Enhance Control Separators**. The separators between control groups in the style panel become clearer, so the panel is easier to scan.
 
-Toggle on **Enable Builder UI Improvements**. The 4 sub-options expand.
+### Step 6: Improve Setting Indicators
 
-### Step 4: Configure Sub-Options
+Toggle on **Improve Setting Indicators**. Controls that have a value set show a clearer indicator, so you can tell at a glance which settings are active.
 
-Select which improvements to enable:
-- **Active Element Highlighting**: Recommended (always useful)
-- **Style Panel Enhancements**: Recommended (improves organization)
-- **Control Separator Enhancements**: Optional (visual preference)
-- **Setting Indicator Enhancements**: Recommended (shows set values)
+### Step 7: Adjust the Elements Panel
 
-### Step 5: Save and Test
+If you want a cleaner elements panel, toggle on **Hide Elements Icons**, **Compact Elements With Icons**, or **Wide Elements Panel** to change how the element list looks.
 
-Click **Save Changes**. Open the Bricks editor and verify the improvements are visible.
+### Step 8: Move the Toolbar to the Bottom
 
----
+Toggle on **Move Bricks Toolbar to Bottom** to move the Bricks toolbar to the bottom of the editor for a different layout.
 
-## Configuration Options
+### Step 9: Save and Test
 
-| Option | Description | Default |
-|--------|-------------|---------|
-| **Enable Builder UI Improvements** | Master toggle. | Off |
-| **Active Element Highlighting** | Highlight selected element on canvas. | On |
-| **Style Panel Enhancements** | Improved style panel layout. | On |
-| **Control Separator Enhancements** | Better visual separators. | On |
-| **Setting Indicator Enhancements** | Show indicators for set values. | On |
+Click **Save (⌘+S)**. Open the Bricks editor and confirm the improvements appear.
 
----
+## Verify It Works
 
-## What Gets Affected
+After saving, open the Bricks editor and confirm:
 
-- The Bricks editor interface: visual enhancements applied
-- The canvas: active element highlighted with a colored border
-- The style panel: improved layout and organization
-- The control groups: better visual separators
-- The settings panel: visual indicators for set values
+- The active element has a clear highlight in the structure panel.
+- The style panel and control separators are more visible.
+- Controls with set values show a clear indicator.
+- The elements panel and toolbar match your chosen layout.
 
-## What Does NOT Get Affected
+If an improvement does not appear, confirm its toggle is on and the editor was refreshed.
 
-- The Bricks editor functionality: unchanged (visual only)
-- The frontend: no effect on the live site
-- The Bricks data: unchanged (visual modifications only)
-- Performance: negligible overhead (CSS-only enhancements)
+## Examples
 
----
+### Example 1: Build Complex Layouts With Clearer Highlighting
 
-## Advanced Options (Developers)
+A developer builds complex layouts with many nested elements. Toggle on **Enhanced Active Element Highlighting** and **Enhance Style Panel Visibility**. The active element and its style panel are easier to see, so the developer can navigate the structure quickly.
 
-The Bricks UI improvements module injects CSS and JS for editor enhancements.
+### Example 2: A Calmer Elements Panel
 
-**Hooks used:**
+A designer finds the element icons distracting. Toggle on **Hide Elements Icons** to remove the icons and show a cleaner element list, or **Compact Elements With Icons** to keep the icons but make the elements more compact.
 
-- `wp_enqueue_scripts` enqueues UI improvement assets via `cm_bricks_should_enqueue()`
-- `admin_enqueue_scripts` enqueues admin-side UI assets
+### Example 3: A Bottom Toolbar for a Different Workflow
 
-The highlight colors, border widths, and excluded elements are configured through the plugin settings UI, not via WordPress filters. CSS is injected inline via `wp_head` in `bricks-functions.php`.
-
+A user prefers the toolbar at the bottom. Toggle on **Move Bricks Toolbar to Bottom**. The toolbar moves to the bottom of the editor, which suits a different working style.
 
 ## Troubleshooting
 
-### The highlighting is not showing
+### The improvements do not appear
 
-**Cause:** The toggle is off, or a Bricks update changed the canvas rendering.
-**Fix:** Verify the toggle is on. Check for Bricks updates that may have changed the canvas structure. The highlighting uses CSS targeting specific Bricks classes.
+**Cause:** The toggle is off, or the editor is showing a cached view.
+**Fix:** Confirm the toggle is on, save, and refresh the Bricks editor.
 
-### The style panel looks wrong
+### The active element is not highlighted
 
-**Cause:** The enhancements conflict with a Bricks theme or plugin.
-**Fix:** Disable the style panel enhancements and test without them. Re-enable after a Bricks update if the issue is resolved.
+**Cause:** The enhancement toggle is off, or a Bricks update changed the editor classes.
+**Fix:** Confirm **Enhanced Active Element Highlighting** is on. Check for a Bricks update that may have changed the editor structure.
 
-### The setting indicators are not showing
+### The style panel looks the same
 
-**Cause:** The indicators are CSS-only and may be hidden by theme CSS.
-**Fix:** Check the browser's DevTools for CSS conflicts. Add a more specific selector if needed.
-
----
+**Cause:** The style panel enhancement is off.
+**Fix:** Confirm **Enhance Style Panel Visibility** is on and refresh the editor.
 
 ## Related Articles
 
-- [How to Use Bricks Builder UI Improvements in WordPress](bricks-ui-improvements.md)
+- [How to Complete the Bricks Initial Setup in WordPress](bricks-setup.md)
+- [How to Optimize Bricks Builder Performance in WordPress](bricks-optimization.md)
 - [How to Use Bricks AI Builder in WordPress](bricks-ai-builder.md)
-- [How to Use Live HTML to Bricks in WordPress](bricks-live-html.md)
+
+---
+
+*Written by Joy. Last updated August 4, 2026. Tested with WordPress 6.x and Classic Monks 2.1.0.*
+
+<!-- schema: Article, TechArticle -->
+<!-- schema: BreadcrumbList -->

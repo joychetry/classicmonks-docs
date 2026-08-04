@@ -1,79 +1,110 @@
 ---
-title: "How to Optimize Bricks Builder Performance in WordPress | CM"
-slug: bricks-optimization
-description: "Optimize Bricks Builder performance in Classic Monks. Disable frontend CSS/JS, enable CSS minification, and reduce page load times."
-last_updated: 2026-06-24
+title: "Optimize Bricks Builder Performance in WordPress: Speed Up"
+slug: "bricks-optimization"
+description: "Optimize Bricks Builder performance in Classic Monks. Disable Bricks frontend CSS and JS on non-Bricks pages and enable CSS minification for faster loading."
+last_updated: 2026-08-04
 author: Joy
 reading_time: 5 min
-canonical: https://classicmonks.com/docs/bricks-optimization/
+canonical: "https://classicmonks.com/docs/bricks-optimization/"
 ---
 
 # How to Optimize Bricks Builder Performance in WordPress
 
-> Bricks Optimization in Classic Monks reduces Bricks Builder's frontend asset loading. Disable CSS/JS on non-Bricks pages, enable CSS minification, and improve page speed.
+> If you use Bricks Builder for only some of your pages, its CSS and JavaScript still load on every page of your site. Classic Monks lets you disable Bricks frontend assets on non-Bricks pages and enable CSS minification so your site loads faster.
 
 ## Key Takeaways
 
-- Category overview of Bricks Builder features
-- Multiple features can be enabled independently
-- Each feature is a standalone toggle
-- Features appear in the Bricks editor after enabling
+- Disable Bricks frontend CSS and JavaScript on pages that do not use Bricks.
+- Enable CSS minification for the Bricks styles that do load.
+- Reduce page weight and HTTP requests on non-Bricks pages.
+- Each option is an independent toggle in the **Optimization** subtab.
 
-## What Is This Category?
+## What Is Bricks Optimization
 
-Bricks Optimization in Classic Monks reduces Bricks Builder's frontend asset loading. Disable CSS/JS on non-Bricks pages, enable CSS minification, and improve page speed. This is a category overview of all features in this group.
+Bricks Optimization is a group of options in the Classic Monks **Bricks** tab, **Optimization** subtab, that reduce the Bricks Builder frontend asset load. When you use Bricks for a landing page or a few templates but not the whole site, Bricks still enqueues its CSS and JavaScript on every page. These options stop that, so pages that do not use Bricks load lighter.
 
----
+## Recommendations Before Enabling
 
-## Optimization Options
+- **Confirm which pages use Bricks.** These options disable Bricks assets on pages that do not use Bricks, so verify your Bricks pages still load their styles.
+- **Test both Bricks and non-Bricks pages.** After enabling, check that Bricks pages look correct and non-Bricks pages load faster.
+- **Enable one at a time.** Turn on each option and test, so you can isolate any issue.
 
-The Optimization subtab has 3 features:
+## Optimize Bricks Asset Loading
 
-1. **Disable Bricks Frontend CSS**: Prevents Bricks CSS from loading on non-Bricks pages
-2. **Disable Bricks Frontend JS**: Prevents Bricks JavaScript from loading on non-Bricks pages
-3. **Enable Bricks CSS Minification**: Minifies Bricks CSS output for faster loading
+### Step 1: Open the Bricks Tab
 
-These features are critical for sites that use Bricks Builder for specific pages but not site-wide. Without them, Bricks CSS and JS load on every page, including blog posts and other non-Bricks content.
+In your WordPress dashboard, go to **Classic Monks**, then open the **Bricks** tab.
 
-## How to optimize
+### Step 2: Open the Optimization Subtab
 
-Enable each optimization feature and test your site:
+Click the **Optimization** subtab.
 
-1. **Disable Bricks Frontend CSS**: Safe to enable if you don't use Bricks styling on non-Bricks pages
-2. **Disable Bricks Frontend JS**: Safe to enable if you don't use Bricks JavaScript on non-Bricks pages
-3. **Enable Bricks CSS Minification**: Safe to enable on any site with Bricks
+### Step 3: Disable Bricks Frontend CSS
 
-After enabling, test both Bricks pages (to verify they still look correct) and non-Bricks pages (to verify they load faster).
+Toggle on **Disable Bricks frontend CSS on non-bricks pages**. This prevents the Bricks frontend stylesheet from loading on pages that do not use Bricks.
 
-## Performance impact
+### Step 4: Disable Bricks Frontend JS
 
-Disabling Bricks CSS/JS on non-Bricks pages can significantly reduce page load time:
+Toggle on **Disable Bricks frontend JS on non-bricks pages**. This prevents the Bricks frontend JavaScript from loading on pages that do not use Bricks.
 
-- **CSS savings**: 50-200KB of unused CSS removed per page
-- **JS savings**: 30-100KB of unused JavaScript removed per page
-- **HTTP requests**: 2-4 fewer requests per page
-- **PageSpeed impact**: 5-15 point improvement on PageSpeed Insights
+### Step 5: Enable CSS Minification
 
-These savings are significant for sites where only a few pages use Bricks Builder.
+Toggle on **Enable CSS minification for Bricks styles**. This minifies the Bricks CSS that does load, reducing its size.
+
+### Step 6: Save and Test
+
+Click **Save (⌘+S)**. Open both a Bricks page and a non-Bricks page to confirm the Bricks page still looks correct and the non-Bricks page loads without the extra assets.
+
+## Verify It Works
+
+After saving, verify the optimization:
+
+- A Bricks page still renders its styles and layouts correctly.
+- A non-Bricks page no longer loads the Bricks frontend CSS and JavaScript.
+- The page size and HTTP requests on non-Bricks pages are reduced.
+
+You can check the page source or use the browser's Network panel to confirm the Bricks assets are not enqueued on non-Bricks pages.
+
+## Examples
+
+### Example 1: Bricks Only on the Homepage
+
+A site builds only its homepage with Bricks and uses another theme for the rest. Toggle on **Disable Bricks frontend CSS on non-bricks pages** and **Disable Bricks frontend JS on non-bricks pages**. Blog posts and other pages load without the Bricks assets, making them faster.
+
+### Example 2: Minify Bricks Styles Site-Wide
+
+A site uses Bricks throughout and wants the CSS smaller. Toggle on **Enable CSS minification for Bricks styles**. The Bricks CSS that loads is minified, reducing its transferred size.
+
+### Example 3: A Mixed Bricks Site
+
+A site uses Bricks for a few templates but not all pages. Toggle on all three optimization options. Bricks pages keep their styles, and non-Bricks pages load lighter and faster.
+
+## Troubleshooting
+
+### A Bricks page loses its styling
+
+**Cause:** The frontend CSS is disabled on a page that actually uses Bricks.
+**Fix:** Confirm the page uses Bricks, or keep the CSS disable off for that section. The option only targets non-Bricks pages.
+
+### Non-Bricks pages still load Bricks assets
+
+**Cause:** The option is off, or a caching plugin is serving the old page.
+**Fix:** Confirm the toggle is on and clear the page cache.
+
+### The minified CSS is not applied
+
+**Cause:** The option is off, or Bricks is not using the minified style.
+**Fix:** Confirm the toggle is on and clear the Bricks and page caches.
 
 ## Related Articles
 
-- [How to Set Up the Bricks Integration in WordPress](bricks-setup.md)
+- [How to Complete the Bricks Initial Setup in WordPress](bricks-setup.md)
 - [How to Use Bricks Builder UI Improvements in WordPress](bricks-ui-improvements.md)
 - [How to Check Bricks Builder Status in WordPress](bricks-status.md)
 
+---
 
-### Developer integration
+*Written by Joy. Last updated August 4, 2026. Tested with WordPress 6.x and Classic Monks 2.1.0.*
 
-The Bricks optimization module conditionally loads assets.
-
-**Utility function:**
-
-- `cm_bricks_should_enqueue()` returns true only on pages using Bricks Builder
-
-**Hooks used:**
-
-- `wp_enqueue_scripts` conditionally dequeues Bricks assets on non-Bricks pages
-- `init` enables CSS minification via `bricks/assets/minify_css` filter (conditional)
-- `wp_sitemaps_post_types` excludes Bricks templates from sitemaps (conditional)
-- `wp_head` and `admin_head` inject inline CSS for builder modifications
+<!-- schema: Article, TechArticle -->
+<!-- schema: BreadcrumbList -->

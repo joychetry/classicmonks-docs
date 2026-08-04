@@ -1,8 +1,8 @@
 ---
 title: "How to Use the Bricks Tab in Classic Monks: Feature Index | CM"
 slug: bricks
-description: "Index of all Bricks tab features in Classic Monks. 300+ features across 8 subtabs covering setup, elements, dynamic data, conditions, interactions, and optimization."
-last_updated: 2026-06-24
+description: "Index of all Bricks tab features in Classic Monks. 300+ features across 8 subtabs covering setup, the AI builder, elements, dynamic data, and conditions."
+last_updated: 2026-08-04
 author: Joy
 reading_time: 3 min
 canonical: https://classicmonks.com/docs/bricks/
@@ -15,7 +15,7 @@ canonical: https://classicmonks.com/docs/bricks/
 ## Key Takeaways
 
 - 300+ features across 8 subtabs
-- 10 documentation files covering all categories
+- 11 documentation files covering all categories
 - Prerequisites: Bricks Theme + Bricks Builder plugin
 - Each feature is an independent toggle
 
@@ -35,6 +35,14 @@ The Setup subtab configures the Bricks integration. 2 docs.
 |---------|-------------|-------|
 | Setup Overview | Complete setup guide. | [View guide](bricks/bricks-setup.md) |
 | UI Improvements | Enhanced editor interface. | [View guide](bricks/bricks-ui-improvements.md) |
+
+## AI Builder
+
+The AI Builder converts HTML and natural language into Bricks sections. 1 doc.
+
+| Feature | Description | Guide |
+|---------|-------------|-------|
+| AI Builder | Convert HTML into Bricks elements with AI. | [View guide](bricks/bricks-ai-builder.md) |
 
 ## Elements
 

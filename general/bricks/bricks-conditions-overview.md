@@ -1,114 +1,117 @@
 ---
-title: "How to Use Bricks Conditions in WordPress | CM"
-slug: bricks-conditions
-description: "Overview of all conditional display rules in Classic Monks. 80 conditions for showing/hiding elements based on post, user, content, and WooCommerce data."
-last_updated: 2026-06-24
+title: "Use Bricks Conditions in WordPress: Show or Hide Elements"
+slug: "bricks-conditions"
+description: "Enable Bricks conditional display rules in Classic Monks. Show or hide elements based on post, user, content, and WooCommerce data with 80+ conditions."
+last_updated: 2026-08-04
 author: Joy
-reading_time: 5 min
-canonical: https://classicmonks.com/docs/bricks-conditions/
+reading_time: 6 min
+canonical: "https://classicmonks.com/docs/bricks-conditions/"
 ---
 
 # How to Use Bricks Conditions in WordPress
 
-> Classic Monks adds 80 conditional display rules to Bricks Builder. Show or hide elements based on post data, user data, content analysis, and WooCommerce conditions.
+> The Bricks Builder conditional logic lets you show or hide elements based on data. Classic Monks adds more condition types to Bricks, so you can display content based on post data, user data, content analysis, and WooCommerce conditions.
 
 ## Key Takeaways
 
-- Category overview of Bricks Builder features
-- Multiple features can be enabled independently
-- Each feature is a standalone toggle
-- Features appear in the Bricks editor after enabling
+- Enable condition types in the **Bricks** tab, **Conditions** subtab.
+- Each condition is an independent toggle.
+- Use conditions to show or hide elements in the Bricks editor.
+- Conditions cover post, user, content, taxonomy, image, and WooCommerce data.
 
-## What Is This Category?
+## What Are Bricks Conditions
 
-Classic Monks adds 80 conditional display rules to Bricks Builder. Show or hide elements based on post data, user data, content analysis, and WooCommerce conditions. This is a category overview of all features in this group.
+Bricks Conditions are the rules that the Bricks Builder uses to decide whether to show or hide an element. Classic Monks adds a wide set of condition types to Bricks, organized in the **Conditions** subtab. Once you enable them, they appear in the Bricks editor's conditional logic panel, where you can pick a condition and a value to control when an element is visible.
 
----
+## Recommendations Before Enabling
 
-## Post Conditions
+- **Enable the conditions you use.** Each condition is independent, so enable only the ones your layouts need.
+- **Test on a live page.** After enabling and configuring a condition, check the frontend to confirm the element shows or hides as expected.
+- **Combine with the right data.** Some conditions need supporting data, such as WooCommerce or user data, so confirm the data is available on the page.
 
-- **Post Views Count**: Show element based on view count
-- **Post Word Count**: Show/hide based on word count
-- **Reading Time**: Show/hide based on estimated reading time
-- **Images Count**: Show/hide based on number of images
-- **Links Count**: Show/hide based on number of links
-- **Current Year**: Show/hide based on current year
-- **Parent Title**: Show/hide based on parent page title
-- **Post Class**: Show/hide based on CSS classes
-- **Post Year**: Show/hide based on post publication year
-- **Loop Counter**: Show/hide based on loop iteration
-- **Author Posts Count**: Show/hide based on author's post count
-- **Author Comments Count**: Show/hide based on author's comment count
-- **Comment Status**: Show/hide based on comment status
-- **Ping Status**: Show/hide based on ping status
-- **Is Password Protected**: Show/hide password-protected content
+## Enable Bricks Conditions
 
-## User and Visitor Conditions
+### Step 1: Open the Bricks Tab
 
-- **Visitor Type**: Show/hide for guests vs. logged-in users
-- **Days Since Registration**: Show/hide based on user registration date
-- **User Role Level**: Show/hide based on user role
+In your WordPress dashboard, go to **Classic Monks**, then open the **Bricks** tab.
 
-## Content Analysis Conditions
+### Step 2: Open the Conditions Subtab
 
-- **Headings Count**: Show/hide based on heading count
-- **Paragraphs Count**: Show/hide based on paragraph count
-- **Lists Count**: Show/hide based on list count
-- **Tables Count**: Show/hide based on table count
-- **External Links**: Show/hide based on external link count
-- **Shortcodes Count**: Show/hide based on shortcode count
-- **Blocks Count**: Show/hide based on block count
-- **Media Count**: Show/hide based on media count
+Click the **Conditions** subtab.
 
-## Taxonomy Conditions
+### Step 3: Enable the Conditions You Need
 
-- **Taxonomy Depth**: Show/hide based on taxonomy nesting depth
-- **Posts in Taxonomy Count**: Show/hide based on posts in taxonomy
-- **Child Terms Count**: Show/hide based on child term count
-- **Has Parent Term**: Show/hide based on parent term existence
-- **Is Hierarchical**: Show/hide based on taxonomy hierarchy
-- **Is Public**: Show/hide based on taxonomy visibility
+Toggle on the condition types you want to use. The conditions are grouped by data source:
 
-## Image Conditions
+- **Post conditions**: views, word count, reading time, date, author, comments, and more.
+- **User and visitor conditions**: visitor type, days since registration, and user role.
+- **Content analysis conditions**: headings, paragraphs, lists, tables, and media counts.
+- **Taxonomy conditions**: taxonomy depth, child terms, and hierarchy.
+- **Image conditions**: image attributes like ID, URL, alt, and caption.
+- **WooCommerce conditions**: cart, product, customer, order, and checkout conditions.
 
-- **Image HTML/ID/URL/Title/Alt/Caption/Description**: Show/hide based on image attributes
+### Step 4: Save
 
-## WooCommerce Conditions
+Click **Save (⌘+S)**.
 
-- **Cart Weight/Items Count/Categories Count/Subtotal/Total**: Cart-based conditions
-- **Product Sales/Reviews/Gallery Count**: Product-based conditions
-- **Customer Orders Count/Reviews Count/Last Order Days/Average Order Value**: Customer-based conditions
-- **Order Tax Total/Status Count**: Order-based conditions
-- **Cross Sells/Upsells Count**: Cross-sell/upsell conditions
-- **Product Type/Stock Quantity/Shipping Class**: Product attribute conditions
-- **Sale Start/End Date**: Sale period conditions
-- **Product Total Sales/Total Reviews/Average Rating**: Product statistics
-- **Customer Total Orders/Total Spent**: Customer statistics
-- **Product Dimensions/Weight/Purchase Note**: Product details
-- **Tax Status/Class/Download Limit/Expiry**: Tax and download conditions
-- **Average Order Interval/Last Purchased Date**: Customer timing conditions
-- **Is Checkout Page/Thank You Page**: Page type conditions
-- **Payment Gateway/Order Status**: Checkout conditions
+### Step 5: Use a Condition in the Editor
 
-## How to use conditions
+Open a page in the Bricks editor, select an element, and add a condition in the conditional logic panel. Choose one of the enabled condition types and set its value.
 
-All conditions can be enabled in the Bricks > Conditions subtab. Once enabled, they appear as condition types in the Bricks editor's conditional logic panel. Use them to show or hide elements based on any of the available data sources.
+## Verify It Works
+
+After enabling and configuring a condition, verify it:
+
+- Open the page in the Bricks editor and set a condition on an element.
+- View the page on the frontend and confirm the element shows or hides as the condition requires.
+- Check that the condition appears in the conditional logic panel.
+
+If a condition does not appear, confirm its toggle is on and the editor was refreshed.
+
+## Common Use Cases
+
+### Show a callout only to logged-in users
+
+Use the **Visitor Type** condition to show a callout only to logged-in users, and hide it from guests. This is useful for member-only content or account prompts.
+
+### Hide a banner based on reading time
+
+Use a **Reading Time** condition to hide a side banner on very short articles where it would not fit. The banner shows only on longer posts.
+
+### Show a WooCommerce notice based on sale status
+
+Use a **Sale Start Date** or **Sale End Date** condition to show a sale notice only during the sale period. The notice appears when the product is on sale.
+
+### Show a thank-you message after checkout
+
+Use the **Thank You Page** condition to show a message only on the checkout thank-you page. The message appears after a successful order.
+
+## Troubleshooting
+
+### A condition does not appear in the editor
+
+**Cause:** The condition toggle is off, or the Bricks editor is showing a cached view.
+**Fix:** Confirm the condition is enabled in the **Conditions** subtab and refresh the Bricks editor.
+
+### The element does not show or hide as expected
+
+**Cause:** The condition value is wrong, or the supporting data is not available.
+**Fix:** Review the condition and its value, and confirm the data (such as WooCommerce or user data) exists on the page.
+
+### A WooCommerce condition does not work
+
+**Cause:** The WooCommerce data is not present, or the condition needs a product context.
+**Fix:** Confirm WooCommerce is active and the condition is used on a relevant page or loop.
 
 ## Related Articles
 
-- [How to Set Up the Bricks Integration in WordPress](bricks-setup.md)
-- [How to Use Bricks Builder UI Improvements in WordPress](bricks-ui-improvements.md)
-- [How to Check Bricks Builder Status in WordPress](bricks-status.md)
+- [How to Use Bricks Dynamic Data in WordPress](bricks-dynamic-data-overview.md)
+- [How to Use Bricks Interactions in WordPress](bricks-interactions-overview.md)
+- [How to Complete the Bricks Initial Setup in WordPress](bricks-setup.md)
 
+---
 
-### Developer integration
+*Written by Joy. Last updated August 4, 2026. Tested with WordPress 6.x and Classic Monks 2.1.0.*
 
-The Bricks conditions system extends Bricks' native condition API.
-
-**Bricks filters used:**
-
-- `bricks/conditions/groups` adds custom condition groups
-- `bricks/conditions/options` adds custom condition options
-- `bricks/conditions/result` modifies condition evaluation
-
-Custom conditions are registered by extending the conditions manager class in `conditions-manager.php`.
+<!-- schema: Article, TechArticle -->
+<!-- schema: BreadcrumbList -->

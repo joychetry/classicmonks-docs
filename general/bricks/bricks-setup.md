@@ -1,7 +1,7 @@
 ---
 title: "How to Set Up the Bricks Integration in WordPress | CM"
 slug: bricks-setup
-description: "Set up the Classic Monks Bricks Builder integration. Import theme styles, global settings, templates, and enable builder enhancements for an optimized Bricks workflow."
+description: "Set up the Classic Monks Bricks Builder integration. Import theme styles, global settings, and templates, and enable builder enhancements for your workflow."
 last_updated: 2026-06-24
 author: Joy
 reading_time: 10 min
@@ -379,3 +379,10 @@ The Bricks setup system uses core WordPress utility functions.
 - [How to Use Bricks Builder UI Improvements in WordPress](bricks-ui-improvements.md)
 - [How to Use Bricks Elements in WordPress](bricks-elements-overview.md)
 - [How to Optimize Bricks Builder Performance in WordPress](bricks-optimization.md)
+
+---
+
+*Written by Joy. Last updated August 4, 2026. Tested with WordPress 6.x and Classic Monks 2.1.0.*
+
+<!-- schema: Article, TechArticle -->
+<!-- schema: BreadcrumbList -->

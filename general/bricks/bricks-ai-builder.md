@@ -1,7 +1,7 @@
 ---
 title: "How to Use Bricks AI Builder in Classic Monks: HTML to Bricks | CM"
 slug: bricks-ai-builder
-description: Use Bricks AI Builder in Classic Monks to convert HTML into Bricks Builder elements. Generates sections, classes, components, and JavaScript from natural language.
+description: "Use Bricks AI Builder in Classic Monks to convert HTML into Bricks Builder elements. Generates components, classes, and JavaScript from natural language."
 last_updated: 2026-06-24
 author: Joy
 reading_time: 9 min
@@ -245,3 +245,10 @@ The AI mode is destructive on confirmation. The Live HTML to Bricks panel shows 
 - [How to Configure the Vision / Image Provider in Classic Monks](../ai/vision-image-provider.md)
 - [How to Configure AI Advanced Settings in Classic Monks](../ai/ai-advanced.md)
 - [How to Use the AI Agent in Classic Monks](../ai/ai-agent.md)
+
+---
+
+*Written by Joy. Last updated August 4, 2026. Tested with WordPress 6.x and Classic Monks 2.1.0.*
+
+<!-- schema: Article, TechArticle -->
+<!-- schema: BreadcrumbList -->

@@ -1,120 +1,116 @@
 ---
-title: "How to Use Bricks Dynamic Data in WordPress | CM"
-slug: bricks-dynamic-data
-description: "Overview of all dynamic data sources in Classic Monks. 81 data sources covering post, user, content, taxonomy, WooCommerce, and custom data."
-last_updated: 2026-06-24
+title: "Use Bricks Dynamic Data in WordPress: Display Dynamic Content"
+slug: "bricks-dynamic-data"
+description: "Enable Bricks dynamic data sources in Classic Monks. Display post, user, content, taxonomy, and WooCommerce data with dynamic data tags in the Bricks editor."
+last_updated: 2026-08-04
 author: Joy
-reading_time: 5 min
-canonical: https://classicmonks.com/docs/bricks-dynamic-data/
+reading_time: 6 min
+canonical: "https://classicmonks.com/docs/bricks-dynamic-data/"
 ---
 
 # How to Use Bricks Dynamic Data in WordPress
 
-> Classic Monks adds 81 dynamic data sources to Bricks Builder. Use these data tags to display dynamic content from WordPress, WooCommerce, and custom sources.
+> Dynamic data lets you pull live values into your Bricks layouts, such as the current year, a post's reading time, or a product's price. Classic Monks adds more dynamic data sources to Bricks, so you can display post, user, content, taxonomy, and WooCommerce data.
 
 ## Key Takeaways
 
-- Category overview of Bricks Builder features
-- Multiple features can be enabled independently
-- Each feature is a standalone toggle
-- Features appear in the Bricks editor after enabling
+- Enable dynamic data sources in the **Bricks** tab, **Dynamic Data** subtab.
+- Each data source is an independent toggle.
+- Use the data tags in text fields, attributes, and conditional logic.
+- Sources cover post, user, content, taxonomy, and WooCommerce data.
 
-## What Is This Category?
+## What Are Bricks Dynamic Data Sources
 
-Classic Monks adds 81 dynamic data sources to Bricks Builder. Use these data tags to display dynamic content from WordPress, WooCommerce, and custom sources. This is a category overview of all features in this group.
+Bricks Dynamic Data sources in Classic Monks are the data tags that the Bricks Builder uses to display live values. They are organized in the **Dynamic Data** subtab as independent toggles. Once you enable a source, it appears as a data tag in the Bricks editor's dynamic data panel, and you can insert it into any text field, attribute, or conditional logic.
 
----
+## Recommendations Before Enabling
 
-## Post and Author Data
+- **Enable the data sources you use.** Each source is independent, so enable the ones your layouts need.
+- **Test on a live page.** After adding a data tag, check the frontend to confirm it shows the expected value.
+- **Confirm the data is available.** Some sources need supporting data, such as WooCommerce or user data, so confirm it exists on the page.
 
-- **Current Year**: The current year
-- **Parent Title**: Title of the parent post/page
-- **Post Class**: CSS classes for the current post
-- **Post Year**: Year the post was published
-- **Loop Counter**: Current iteration number in a loop
-- **Author Posts Count**: Number of posts by the current author
-- **Author Comments Count**: Number of comments by the current author
-- **Comment Status**: Whether comments are open or closed
-- **Ping Status**: Whether pingbacks are open or closed
-- **Is Password Protected**: Whether the post is password-protected
-- **Published Time Ago**: Time since publication (e.g., "3 days ago")
-- **Updated Time Ago**: Time since last update
-- **Post Views Count**: Number of times the post has been viewed
-- **Post Word Count**: Word count of the post content
-- **Reading Time**: Estimated reading time in minutes
-- **Images in Post Count**: Number of images in the post
-- **Links in Post Count**: Number of links in the post
-- **Comments Allowed**: Whether comments are allowed on the post
-- **Is Sticky Post**: Whether the post is sticky
-- **Is Scheduled Post**: Whether the post is scheduled for future publishing
+## Enable Bricks Dynamic Data
 
-## Image and Media Data
+### Step 1: Open the Bricks Tab
 
-- **Image HTML**: Raw HTML of the image element
-- **Image ID**: WordPress media attachment ID
-- **Image URL**: URL of the image file
-- **Image Title**: Title attribute of the image
-- **Image Alt**: Alt text of the image
-- **Image Caption**: Caption text of the image
-- **Image Description**: Description field of the image
+In your WordPress dashboard, go to **Classic Monks**, then open the **Bricks** tab.
 
-## Content Analysis
+### Step 2: Open the Dynamic Data Subtab
 
-- **Headings Count**: Number of headings in the content
-- **Paragraphs Count**: Number of paragraphs in the content
-- **Lists Count**: Number of lists in the content
-- **Tables Count**: Number of tables in the content
-- **External Links Count**: Number of external links in the content
-- **Shortcodes Count**: Number of shortcodes in the content
-- **Blocks Count**: Number of Gutenberg blocks in the content
-- **Media Count**: Number of media items in the content
+Click the **Dynamic Data** subtab.
 
-## Taxonomy Data
+### Step 3: Enable the Data Sources You Need
 
-- **Taxonomy Depth**: Nesting depth of the current taxonomy term
-- **Taxonomy Children Count**: Number of child terms
-- **Taxonomy Has Parent**: Whether the term has a parent
-- **Taxonomy Is Hierarchical**: Whether the taxonomy supports hierarchy
-- **Taxonomy Is Public**: Whether the taxonomy is public
+Toggle on the data sources you want. The sources are grouped by type:
 
-## WooCommerce Data
+- **Post and author**: current year, parent title, post class, post year, loop counter, author stats, comment and ping status, password protection, published and updated time, post views, word count, reading time, and more.
+- **Image and media**: image HTML, ID, URL, title, alt, caption, and description.
+- **Content analysis**: headings, paragraphs, lists, tables, external links, shortcodes, blocks, and media counts.
+- **Taxonomy**: taxonomy depth, children count, parent, hierarchy, and visibility.
+- **WooCommerce**: product type, stock, cart data, shipping class, sale dates, total sales, reviews, ratings, customer stats, product details, tax and download, and order data.
 
-- **Product Type**: Type of the product (simple, variable, etc.)
-- **Stock Quantity**: Current stock quantity
-- **Cart Counter**: Number of items in the cart
-- **Cart Item Subtotal**: Subtotal of the current cart item
-- **Cart Subtotal**: Total cart subtotal
-- **Cart Total**: Cart total including taxes
-- **Shipping Class**: Product's shipping class
-- **Sale Start/End Date**: Sale period dates
-- **Total Sales**: Total sales count
-- **Total Reviews**: Total review count
-- **Average Rating**: Average star rating
-- **Customer Total Orders**: Customer's total order count
-- **Customer Total Spent**: Customer's total spending
-- **Product Dimensions**: Product dimensions (L x W x H)
-- **Product Weight**: Product weight
-- **Purchase Note**: Custom note for the product
-- **Tax Status/Class**: Tax configuration
-- **Download Limit/Expiry**: Download restrictions
-- **Average Order Interval**: Average time between customer orders
-- **Last Purchased Date**: When the customer last purchased
-- **Cart Weight**: Total weight of cart items
-- **Cart Categories Count**: Number of categories in the cart
-- **Order Tax Total**: Total tax on an order
-- **Orders Status Count**: Count of orders by status
-- **Product Gallery Images Count**: Number of gallery images
-- **Cross Sells/Upsells Count**: Number of cross-sell and upsell products
-- **Customer Reviews Count**: Customer's review count
-- **Days Since Last Order**: Time since customer's last order
-- **Customer Average Order Value**: Average order value for the customer
+### Step 4: Save
 
-## How to use dynamic data
+Click **Save (⌘+S)**.
 
-All dynamic data sources can be enabled in the Bricks > Dynamic Data subtab. Once enabled, they appear as data tags in the Bricks editor's dynamic data panel. Use them in any text field, attribute, or conditional logic.
+### Step 5: Use a Data Source in the Editor
+
+Open a page in the Bricks editor, select a text field or attribute, and insert a data tag from the dynamic data panel.
+
+## Verify It Works
+
+After enabling a data source, verify it:
+
+- Open the Bricks editor and insert the data tag into a field.
+- View the page on the frontend and confirm it shows the expected value.
+- Confirm the data tag appears in the dynamic data panel.
+
+If a data source does not appear, confirm its toggle is on and the editor was refreshed.
+
+## Common Use Cases
+
+### Show the current year in a footer
+
+Enable the **Current Year** data source and insert it into a footer text field. The footer always shows the current year without updating it manually.
+
+### Show a reading time badge
+
+Enable the **Reading Time** data source and add it to a post template. Each post shows its estimated reading time.
+
+### Show a product's average rating
+
+Enable the **Average Rating** data source and add it to a product template. The template shows the product's average star rating.
+
+### Show a sale start date
+
+Enable the **Sale Start Date** data source and add it to a product template. The template shows when the product's sale begins.
+
+## Troubleshooting
+
+### A data source does not appear in the editor
+
+**Cause:** The source toggle is off, or the Bricks editor is showing a cached view.
+**Fix:** Confirm the source is enabled in the **Dynamic Data** subtab and refresh the Bricks editor.
+
+### A data tag shows empty on the frontend
+
+**Cause:** The supporting data is not available on the page.
+**Fix:** Confirm the data exists, such as WooCommerce or user data, and that the tag is used in the right context.
+
+### A WooCommerce data source does not work
+
+**Cause:** WooCommerce is not active, or the source needs a product context.
+**Fix:** Confirm WooCommerce is active and the tag is used on a relevant page or loop.
 
 ## Related Articles
 
-- [How to Set Up the Bricks Integration in WordPress](bricks-setup.md)
-- [How to Use Bricks Builder UI Improvements in WordPress](bricks-ui-improvements.md)
-- [How to Check Bricks Builder Status in WordPress](bricks-status.md)
+- [How to Use Bricks Elements in WordPress](bricks-elements-overview.md)
+- [How to Use Bricks Conditions in WordPress](bricks-conditions-overview.md)
+- [How to Complete the Bricks Initial Setup in WordPress](bricks-setup.md)
+
+---
+
+*Written by Joy. Last updated August 4, 2026. Tested with WordPress 6.x and Classic Monks 2.1.0.*
+
+<!-- schema: Article, TechArticle -->
+<!-- schema: BreadcrumbList -->
