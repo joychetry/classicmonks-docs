@@ -1,141 +1,168 @@
 ---
-title: "How to Customize the Login Page in WordPress | CM"
-slug: wl-login-customization
-description: "Customize the WordPress login page in Classic Monks. Change the logo, background, form styling, video settings, and more."
-last_updated: 2026-07-28
+title: "Customize the WordPress Login Page: Logo, Background, Form"
+slug: "login-customization"
+description: "Customize the WordPress login page in Classic Monks. Change the logo, background image or video, form styling, and navigation links to match your brand."
+last_updated: 2026-08-04
 author: Joy
-reading_time: 4 min
-canonical: https://classicmonks.com/docs/wl-login-customization/
+reading_time: 7 min
+canonical: "https://classicmonks.com/docs/login-customization/"
 merged_docs: "How to Loop the Login Video in WordPress, How to Mute the Login Video in WordPress"
 ---
 
-# How to Customize the Login Page in WordPress
+# How to Customize the WordPress Login Page
 
-> Customize the WordPress login page in Classic Monks. Change the logo, background, form styling, video settings, and more.
+> The default WordPress login page is plain and unbranded. Classic Monks lets you replace the logo, set a background image or video, style the login form, and control the navigation links so the login page matches your brand.
 
 ## Key Takeaways
 
-- Customize login page background with colors, images, or videos
-- Control video behavior (loop, mute) for dynamic backgrounds
-- Quick admin customization with one click
-- Does not affect frontend functionality
-- Reversible (disable to restore default)
+- Replace the default WordPress logo with your own, and control its size, position, and appearance.
+- Set the login background to a color, an image, or a video, with layout options for split backgrounds.
+- Style the login form with colors, padding, border, and shadow.
+- Customize or hide the navigation links and style error, success, and info notices.
+- Disable the "Lost your password?" link and the language dropdown for a cleaner login page.
 
-## Why You Need It
+## What Is Login Page Customization
 
-The default WordPress login page is plain and unbranded. Customizing it creates a professional first impression for clients.
+Login Page Customization is a group of options in the Classic Monks **White Label** tab that change the appearance of the WordPress login page. It is the first thing a client or user sees when they log in, so making it match your brand leaves a professional impression. The feature covers the logo, the background (color, image, or video), the login form, the navigation links, and the notices.
 
----
+It is one of the white-label features in Classic Monks. The related features are **Custom Login Logo**, **Login Form Styling**, **Navigation Links Styling**, and **Notices & Messages Styling**, which group under the **Login Page Customization** master toggle.
 
-## How to Enable this Feature
+## Recommendations Before Enabling
 
-### Step 1: Navigate to Settings
+- **Use a high-quality background image.** The search result guidance for background images applies here: use a sharp, brand-aligned image. Compress it so the login page loads fast.
+- **Mute background videos.** Browsers block videos with audio from autoplaying. If you use a video background, keep **Mute Video** on so it plays automatically.
+- **Test on a staging site.** Login page changes affect everyone who logs in, so verify on a test environment before applying to production.
 
-Click into the **Classic Monks** plugin settings, then the **White Label** tab.
+## Enable Login Page Customization
 
-### Step 2: Enable the Feature
+### Step 1: Open the White Label Tab
 
-Toggle on **Login Page Customization**.
+In your WordPress dashboard, go to **Classic Monks** and open the **White Label** tab, then the **Login Page** subtab.
 
-### Step 3: Configure Video Settings (Optional)
+![Classic Monks White Label tab](../../images/white-label/login-customization/login-settings.png)
 
-If using a video background:
+### Step 2: Turn On Login Page Customization
 
-- **Login Video Loop**: Toggle on to make the background video play continuously instead of stopping after one cycle.
-- **Login Video Muted**: Toggle on to prevent the background video from playing audio. This ensures a silent, professional experience.
+In the **Login Page** subtab, toggle on **Login Page Customization**. This reveals the logo, background, and form styling options.
 
-### Step 4: Save and Test
+### Step 3: Add a Custom Logo
 
-Click **Save Changes**. Check the login page to verify the customization appears correctly.
+Toggle on **Custom Login Logo**, then either upload a logo with the **Upload Logo** button or paste a logo URL into the **Login Logo URL** field. Set the logo width, height, max width, and max height in pixels. Use **Center Logo** to keep the logo horizontally centered, and set the padding, margin, border radius, and background color as needed.
 
----
+### Step 4: Set the Background
 
-## Configuration Options
+Choose a **Background Type** from **Color**, **Image**, or **Video**.
 
-| Option | Description | Default |
-|--------|-------------|---------|
-| **Login Page Customization** | Master toggle. Enables custom login page styling. | Off |
-| **Login Video Loop** | Makes the background video play continuously. | Off |
-| **Login Video Muted** | Prevents the background video from playing audio. | Off |
+- **Color**: pick a background color for the login page.
+- **Image**: upload a background image and set its repeat, position, and size. Use **Layout Position** to choose **Default (Full Background)**, **Left Background / Right Form**, or **Right Background / Left Form** for a split layout.
+- **Video**: upload a background video and set its size to **Auto**, **Cover**, or **Contain**. Toggle **Mute Video** and **Loop Video** to control playback.
 
----
+### Step 5: Style the Login Form
 
-## Common Use Cases
+Toggle on **Login Form Styling** to change the form appearance. Set the form background color, text color, border radius, and padding. Set the input border color, and the button background and text colors. Under **Form Border**, set the width, style, and color. Toggle **Enable Form Shadow** and set the shadow color for a subtle depth effect.
 
-### Client white-labeling
+### Step 6: Save and Test
 
-For agencies that build WordPress sites for clients, white-labeling the admin creates a branded experience. The client sees your agency's branding instead of WordPress.
+Click **Save (⌘+S)**. Open the login page in a private browser window to confirm the logo, background, and form styling appear correctly.
 
-### Brand consistency
+## Configure Navigation Links and Notices
 
-For companies that use WordPress as their CMS, white-labeling ensures the admin matches the company's brand guidelines.
+### Navigation Links Styling
 
-### Multi-site management
+Toggle on **Navigation Links Styling** to control the links below the login form. Toggle **Hide "Back to Site" Link** to remove the link back to your site, and set the **Link Color** and **Link Hover Color** to match your brand.
 
-For companies managing multiple WordPress sites, consistent white-labeling across all sites creates a unified admin experience.
+### Notices & Messages Styling
 
-### Dynamic video backgrounds
+Toggle on **Notices & Messages Styling** to style the messages that appear on the login page. Set the background, text, and border colors for **Error Notices**, **Success Notices**, and **Info Messages**.
 
-For companies that want a modern, dynamic login page, video backgrounds with looping and muted settings create a professional first impression without audio distraction.
+### Disable "Lost your password?"
 
----
+Toggle on **Disable "Lost your password?"** to hide the password recovery link and prevent the password reset flow on the login page.
+
+### Disable Language Dropdown
+
+Toggle on **Disable Language Dropdown on Login Page** to remove the language switcher from the login page for a cleaner appearance.
+
+## Verify It Works
+
+After saving, open the login page in a private browser window and confirm:
+
+- The custom logo appears in place of the default WordPress logo.
+- The background color, image, or video displays correctly.
+- The login form uses your chosen colors, padding, border, and shadow.
+- The navigation links and notices match your styling.
+- The "Lost your password?" link and language dropdown are hidden if you disabled them.
+
+If a change does not appear, clear any page cache and reload.
+
+## Examples
+
+### Example 1: Brand the Login Page for a Client
+
+An agency builds a client site and wants the login page to match the client's brand. Toggle on **Login Page Customization**, upload the client's logo, set **Background Type** to **Image** with a brand-colored image, and style the form with the client's colors. Toggle on **Navigation Links Styling** and hide the "Back to Site" link for a clean look. The client sees a branded login page instead of the default WordPress one.
+
+### Example 2: Use a Video Background for a Modern Look
+
+A product company wants a modern login page. Set **Background Type** to **Video**, upload a short brand video, and keep **Mute Video** and **Loop Video** on so it plays automatically and continuously. Set the video size to **Cover** so it fills the screen. The login page now has a dynamic, on-brand background.
+
+### Example 3: Split Layout With Form on the Right
+
+A site wants a split login layout. Set **Background Type** to **Image**, upload a background image, and choose **Layout Position** of **Left Background / Right Form**. The image fills the left side and the login form sits on the right, which works well on desktop and collapses on mobile.
 
 ## Troubleshooting
 
-### The feature is not taking effect
+### The background video does not play
 
-**Cause:** The toggle is off, or a caching plugin is serving the old page.
-**Fix:** Verify the toggle is on. Clear the admin page cache.
+**Cause:** The video has audio, and browsers block autoplay with sound.
+**Fix:** Toggle on **Mute Video** so the video plays automatically. Verify the video URL is correct.
 
-### The feature breaks the admin
+### The custom logo does not appear
 
-**Cause:** The white-label feature may conflict with another admin customization plugin.
-**Fix:** Disable other admin customization plugins to find the conflict.
+**Cause:** The logo URL is empty, or the logo toggle is off.
+**Fix:** Confirm **Custom Login Logo** is on and the **Login Logo URL** field has a valid image URL. Clear any page cache.
 
-### The video background is not playing
+### The form changes do not apply
 
-**Cause:** The video file path is incorrect, or the browser blocks autoplay.
-**Fix:** Verify the video URL is correct. Ensure the video is muted (browsers block autoplay with audio). Enable the Login Video Muted toggle.
+**Cause:** **Login Form Styling** is off, or the values are not saved.
+**Fix:** Confirm **Login Form Styling** is on, set the values, and click **Save (⌘+S)**.
 
-### The video plays with audio
+### The "Lost your password?" link still shows
 
-**Cause:** The Login Video Muted toggle is off.
-**Fix:** Enable the Login Video Muted toggle to prevent audio playback.
+**Cause:** The **Disable "Lost your password?"** toggle is off.
+**Fix:** Toggle it on and save. The link hides and the password reset flow is disabled.
 
----
+## Frequently Asked Questions
+
+### How do I customize the WordPress login page?
+
+Open **Classic Monks**, go to the **White Label** tab, then the **Login Page** subtab. Toggle on **Login Page Customization** to reveal the logo, background, and form styling options, then make your changes and save.
+
+### How do I change the logo on the login page?
+
+Toggle on **Custom Login Logo** and upload a logo with the **Upload Logo** button or paste a logo URL into the **Login Logo URL** field. Set the logo size and position, then save.
+
+### How do I add a background image to the WordPress login page?
+
+Set **Background Type** to **Image**, upload a background image, and set its repeat, position, and size. Use **Layout Position** to choose a full or split background layout.
+
+### Can I use a video as the WordPress login background?
+
+Yes. Set **Background Type** to **Video**, upload a background video, and set its size, mute, and loop options. Keep **Mute Video** on so browsers allow autoplay.
+
+### How do I hide the "Lost your password?" link?
+
+Toggle on **Disable "Lost your password?"** in the **Login Page** subtab. This hides the recovery link and disables the password reset flow on the login page.
 
 ## Related Articles
 
-- [How to Use Content Management in WordPress](../core/core-content-management.md)
-- [How to Use the Admin Menu Manager in WordPress](../interface/interface-admin-menu-manager.md)
 - [How to Add a Custom Login Logo in WordPress](white-label-wl-login-logo.md)
+- [How to Style the Login Form in WordPress](white-label-wl-login-form-styling.md)
+- [How to Use the White Label Tab in Classic Monks: Feature Index](../white-label.md)
 
 ---
 
-## Developer Notes
+*Written by Joy. Last updated August 4, 2026. Tested with WordPress 6.x and Classic Monks 2.1.0.*
 
-This feature registers hooks in `custom-login-page.php`:
-
-**Actions:**
-
-- `login_enqueue_scripts` calls `cm_custom_login_page_style()` (injects CSS for login page background, form, navigation; priority 10)
-- `login_footer` calls `cm_custom_login_video()` (adds video background to login page; priority 10)
-- `login_message` calls `cm_custom_login_message()` (displays custom message on login page; priority 10)
-
-```php
-// Hooked in custom-login-page.php
-add_action( 'login_enqueue_scripts', 'cm_custom_login_page_style' );
-```
-
-The feature modifies WordPress admin output by registering hooks. Disabling it reverses those changes.
-
-### Before you enable this feature
-
-White-label features modify the WordPress admin. Consider:
-
-1. **Client expectations** (white-labeling hides WordPress branding, which may confuse clients)
-2. **Brand guidelines** (match the customizations to your brand)
-3. **Testing on all admin pages** (some customizations may look wrong on certain pages)
-4. **Documentation** (record which customizations are enabled for future reference)
-
-White-label features are designed to be safe, but they modify the admin HTML output. Test on all admin pages before enabling on production.
+<!-- schema: Article, TechArticle, HowTo -->
+<!-- schema: FAQPage -->
+<!-- schema: BreadcrumbList -->

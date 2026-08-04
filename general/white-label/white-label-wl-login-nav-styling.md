@@ -1,119 +1,113 @@
 ---
-title: "How to Style Navigation Links in WordPress | CM"
-slug: wl-login-nav-styling
-description: "Customize the navigation link styling on the login page in Classic Monks. Change the \"Lost your password?\" and \"Back to Site\" link styles."
-last_updated: 2026-06-24
+title: "Style Login Navigation Links in WordPress: Back to Site"
+slug: "login-nav-styling"
+description: "Customize the WordPress login page navigation links in Classic Monks. Change the link color and hover color, or hide the Back to Site link completely."
+last_updated: 2026-08-04
 author: Joy
-reading_time: 3 min
-canonical: "https://classicmonks.com/docs/white-label/wl-login-nav-styling/"
+reading_time: 4 min
+canonical: "https://classicmonks.com/docs/login-nav-styling/"
 ---
 
-# How to Style Navigation Links in WordPress
+# How to Style Navigation Links on the WordPress Login Page
 
-> Customize the navigation link styling on the login page in Classic Monks. Change the "Lost your password?" and "Back to Site" link styles.
+> The links below the WordPress login form, including the "Back to Site" link, can be styled to match your brand. Classic Monks lets you change the link color and hover color, or hide the link entirely.
 
 ## Key Takeaways
 
-- Single toggle, no nested options
-- Quick admin customization with one click
-- Does not affect frontend functionality
-- Reversible (disable to restore default)
+- Change the color and hover color of the "Back to Site" link on the login page.
+- Hide the link entirely for a cleaner login page.
+- Works independently, without the **Login Page Customization** master toggle.
+- Applied by the same login page style hook as the other login styling options.
 
-## Why You Need It
+## What Is Navigation Links Styling
 
-The default navigation links on the login page may not match your brand. Customizing them creates a consistent look.
+Navigation Links Styling is a white-label option in the Classic Monks **White Label** tab that controls the links below the login form. It is an independent option: it works on its own, without the **Login Page Customization** master toggle. It changes the color of the "Back to Site" link, its hover color, or hides the link entirely.
 
----
+It is separate from the **Login Form Styling** and **Login Page Customization** options. This guide covers the navigation links below the login form.
 
-## How to Enable this Feature
+## Recommendations Before Enabling
 
-### Step 1: Navigate to Settings
+- **Use a readable link color.** The link sits below the login form, often on a colored background. Ensure the color contrasts with that background.
+- **Keep the hover color distinct.** Choose a hover color that is clearly different from the base link color so users notice the interaction.
+- **Only hide the link when it makes sense.** The "Back to Site" link helps users return to your site. Hide it only when a better navigation path exists on the login page.
 
-Click into the **Classic Monks** plugin settings, then the **White Label** tab.
+## Style the Navigation Links
 
-### Step 2: Enable the Feature
+### Step 1: Open the Login Page Settings
 
-Toggle on the feature.
+In your WordPress dashboard, go to **Classic Monks**, open the **White Label** tab, then the **Login Page** subtab.
 
-### Step 3: Save and Test
+![Classic Monks login navigation settings](../../images/white-label/login-nav-styling/nav-settings.png)
 
-Click **Save Changes**. Check the admin to verify the change.
+### Step 2: Turn On Navigation Links Styling
 
----
+In the **Navigation Links Styling** section, toggle on **Navigation Links Styling**. This option works on its own; you do not need the **Login Page Customization** master toggle.
 
-## Common Use Cases
+### Step 3: Set the Link Colors
 
-### Client white-labeling
+Use the color pickers to set:
 
-For agencies that build WordPress sites for clients, white-labeling the admin creates a branded experience. The client sees your agency's branding instead of WordPress.
+- **Link Color**: the color of the "Back to Site" link, default `#555555`.
+- **Link Hover Color**: the color when the user hovers over the link, default `#00a0d2`.
 
-### Brand consistency
+### Step 4: Hide the Link (Optional)
 
-For companies that use WordPress as their CMS, white-labeling ensures the admin matches the company's brand guidelines.
+Toggle on **Hide "Back to Site" Link** to hide the link below the login form.
 
-### Multi-site management
+### Step 5: Save and Test
 
-For companies managing multiple WordPress sites, consistent white-labeling across all sites creates a unified admin experience.
+Click **Save (⌘+S)**. Open the login page in a private browser window to confirm the link styling and visibility.
 
----
+## Verify It Works
+
+After saving, open the login page and confirm:
+
+- The "Back to Site" link uses the color you set.
+- The link changes to the hover color when you hover over it.
+- The link is hidden when **Hide "Back to Site" Link** is on.
+
+If the link styling does not apply, confirm **Navigation Links Styling** is on and the changes were saved.
+
+## Examples
+
+### Example 1: Match the Link to Your Brand
+
+A site wants the "Back to Site" link to match its brand colors. Set **Link Color** to the brand's primary color and **Link Hover Color** to a darker shade. The link now blends with the brand.
+
+### Example 2: Hide the Link for a Clean Login
+
+An agency wants a minimal login page for a client. Toggle on **Hide "Back to Site" Link**. The link disappears, leaving a cleaner login form.
+
+### Example 3: A Subtle Hover Effect
+
+A site wants a subtle interaction. Set the **Link Color** to a muted gray and **Link Hover Color** to a bright accent color. The link is subtle until the user hovers, then it stands out.
 
 ## Troubleshooting
 
-### The feature is not taking effect
+### The link color does not change
 
-**Cause:** The toggle is off, or a caching plugin is serving the old page.
-**Fix:** Verify the toggle is on. Clear the admin page cache.
+**Cause:** **Navigation Links Styling** is off, or the change was not saved.
+**Fix:** Confirm the toggle is on, set the colors, and click **Save (⌘+S)**.
 
-### The feature breaks the admin
+### The link is hidden but I still see it
 
-**Cause:** The white-label feature may conflict with another admin customization plugin.
-**Fix:** Disable other admin customization plugins to find the conflict.
+**Cause:** **Hide "Back to Site" Link** is off, or another plugin is rendering its own link.
+**Fix:** Confirm **Hide "Back to Site" Link** is on and save. Disable other login customization plugins to find a conflict.
 
----
+### The hover color does not apply
+
+**Cause:** The hover color is not set, or a plugin overrides it.
+**Fix:** Set the **Link Hover Color** and save. Check for conflicting plugins.
 
 ## Related Articles
 
-- [How to Use Content Management in WordPress](../core/core-content-management.md)
-- [How to Use the Admin Menu Manager in WordPress](../interface/interface-admin-menu-manager.md)
-- [How to Use the Login Page Customization in WordPress](white-label/wl-login-customization.md)
+- [How to Customize the WordPress Login Page](white-label-wl-login-customization.md)
+- [How to Style Login Notices in WordPress](white-label-wl-login-notices-styling.md)
+- [How to Use the White Label Tab in Classic Monks: Feature Index](../white-label.md)
 
+---
 
-### Developer integration
+*Written by Joy. Last updated August 4, 2026. Tested with WordPress 6.x and Classic Monks 2.1.0.*
 
-This feature registers 1 WordPress hook in `custom-login-page.php`:
-
-**Actions:**
-
-- `login_enqueue_scripts` calls `cm_custom_login_page_style()` (Injects CSS for navigation link styling (priority 10))
-
-```php
-// Hooked in custom-login-page.php
-add_action( 'login_enqueue_scripts', 'cm_custom_login_page_style' );
-```
-
-The feature modifies WordPress admin output by registering hooks. Disabling it reverses those changes.
-
-### Before you enable this feature
-
-White-label features modify the WordPress admin. Consider:
-
-1. **Client expectations** (white-labeling hides WordPress branding, which may confuse clients)
-2. **Brand guidelines** (match the customizations to your brand)
-3. **Testing on all admin pages** (some customizations may look wrong on certain pages)
-4. **Documentation** (record which customizations are enabled for future reference)
-
-White-label features are designed to be safe, but they modify the admin HTML output. Test on all admin pages before enabling on production.
-
-### How it works under the hood
-
-This feature modifies WordPress behavior by adding or removing hooks (filters and actions) in the WordPress execution pipeline. When enabled, the feature's PHP code runs during the WordPress initialization phase, registering the necessary hooks before the page renders.
-
-The modification is non-destructive. Disabling the feature removes the hooks, and WordPress returns to its default behavior. No database changes are made; the feature state is stored in the `wp_options` table as a simple boolean value.
-
-**Performance impact**: The feature's PHP code runs on every page load. The overhead is negligible (typically under 1ms) because the code only registers hooks, which are lightweight operations. The actual performance benefit comes from the hook behavior (e.g., removing a script, preventing a query), which can save 10-50ms per page load depending on the feature.
-
-**Compatibility**: The feature is designed to be compatible with all standard WordPress plugins and themes. However, plugins that rely on the disabled functionality may break. Always test with your specific plugin stack before enabling on production.
-
-**Security**: The feature does not introduce any new security risks. It only modifies the WordPress hook system, which is a well-documented and secure API. The feature does not process user input, make external requests, or modify database records beyond the feature state.
-
-**Accessibility**: This feature does not affect the site's accessibility. It only modifies server-side behavior (hooks, queries, script loading). The frontend HTML, CSS, and JavaScript are unchanged (except for the specific feature behavior, which is documented in each feature's description).
+<!-- schema: Article, TechArticle, HowTo -->
+<!-- schema: BreadcrumbList -->

@@ -1,121 +1,140 @@
 ---
-title: "How to Style the Login Form in WordPress | CM"
-slug: wl-login-form-styling
-description: "Customize the WordPress login form styling in Classic Monks. Change colors, borders, shadows, and layout."
-last_updated: 2026-07-28
+title: "Style the Login Form in WordPress: Colors, Border, Shadow"
+slug: "login-form-styling"
+description: "Customize the WordPress login form in Classic Monks. Change the background, text, button, and input colors, plus border radius, padding, border, and shadow."
+last_updated: 2026-08-04
 author: Joy
-reading_time: 4 min
-canonical: https://classicmonks.com/docs/wl-login-form-styling/
+reading_time: 6 min
+canonical: "https://classicmonks.com/docs/login-form-styling/"
 merged_docs: "How to Enable Login Form Shadow in WordPress"
 ---
 
 # How to Style the Login Form in WordPress
 
-> Customize the WordPress login form styling in Classic Monks. Change colors, borders, shadows, and layout.
+> The default WordPress login form is plain. Classic Monks lets you change the form background, text, and button colors, plus the border radius, padding, border, and shadow, so the login form matches your brand.
 
 ## Key Takeaways
 
-- Customize login form colors, borders, and layout
-- Optional shadow effect for depth and visual hierarchy
-- Quick admin customization with one click
-- Does not affect frontend functionality
-- Reversible (disable to restore default)
+- Customize the login form background, text, input, and button colors.
+- Set the form border radius and padding for a tailored shape.
+- Add a border with a custom width, style, and color.
+- Add a soft shadow to lift the form off the background.
+- All changes are part of the **Login Page Customization** group.
 
-## Why You Need It
+## What Is Login Form Styling
 
-The default WordPress login form is plain. Customizing its styling creates a professional, branded login experience. Adding a shadow effect makes the form stand out from the background.
+Login Form Styling is a white-label option in the Classic Monks **White Label** tab that changes the appearance of the login form on the login page. It is part of the **Login Page Customization** group. It controls the form's background, text, input, and button colors, plus the border radius, padding, border, and shadow.
 
----
+It is separate from the **Custom Login Logo** and **Navigation Links Styling** options. This guide covers the login form itself.
 
-## How to Enable this Feature
+## Recommendations Before Enabling
 
-### Step 1: Navigate to Settings
+- **Match the button color to your brand.** The login button is the primary action, so use a brand color that stands out from the form background.
+- **Keep text readable.** Ensure the text color contrasts with the form background color, especially for the submit button.
+- **Test on mobile.** Check that the form padding and border radius look right on a phone screen.
 
-Click into the **Classic Monks** plugin settings, then the **White Label** tab.
+## Style the Login Form
 
-### Step 2: Enable the Feature
+### Step 1: Open the Login Page Settings
 
-Toggle on **Login Form Styling**.
+In your WordPress dashboard, go to **Classic Monks**, open the **White Label** tab, then the **Login Page** subtab. Toggle on **Login Page Customization** to reveal the form styling options.
 
-### Step 3: Enable Shadow (Optional)
+![Classic Monks login form settings](../../images/white-label/login-form-styling/form-settings.png)
 
-Toggle on **Login Form Shadow** to add a shadow effect to the login form. This creates depth and visual hierarchy.
+### Step 2: Turn On Login Form Styling
 
-### Step 4: Save and Test
+In the **Login Form Styling** section, toggle on **Login Form Styling**.
 
-Click **Save Changes**. Check the login page to verify the styling appears correctly.
+### Step 3: Set the Form Colors
 
----
+Use the color pickers to set:
 
-## Configuration Options
+- **Form Background Color**: the login form background, default `rgba(255, 255, 255, 0.8)`.
+- **Form Text Color**: the text inside the form, default `#333333`.
+- **Input Border Color**: the border of the username and password fields, default `#dddddd`.
+- **Button Background Color**: the login button background, default `#0085ba`.
+- **Button Text Color**: the text on the login button, default `#ffffff`.
 
-| Option | Description | Default |
-|--------|-------------|---------|
-| **Login Form Styling** | Master toggle. Enables custom form styling. | Off |
-| **Login Form Shadow** | Adds a shadow effect to the login form. | Off |
+### Step 4: Set the Form Shape
 
----
+- **Form Border Radius (px)**: rounds the form corners, default 4.
+- **Form Padding (px)**: space inside the form around its content, default 20.
 
-## Common Use Cases
+### Step 5: Set the Form Border
 
-### Client white-labeling
+Under **Form Border**, set the border width, style, and color:
 
-For agencies that build WordPress sites for clients, white-labeling the admin creates a branded experience. The client sees your agency's branding instead of WordPress.
+- **Border Width (px)**: the border thickness, default 1.
+- **Border Style**: **None**, **Solid**, **Dashed**, or **Dotted**.
+- **Border Color**: the border color, default `#dddddd`.
 
-### Brand consistency
+Select **None** for the border style to remove the border entirely.
 
-For companies that use WordPress as their CMS, white-labeling ensures the admin matches the company's brand guidelines.
+### Step 6: Add a Form Shadow
 
-### Multi-site management
+Toggle on **Enable Form Shadow** to add a shadow, then set the **Shadow Color** (default `rgba(0,0,0,0.1)`). The shadow lifts the form off the background for a subtle depth effect.
 
-For companies managing multiple WordPress sites, consistent white-labeling across all sites creates a unified admin experience.
+### Step 7: Save and Test
 
----
+Click **Save (⌘+S)**. Open the login page in a private browser window to confirm the form styling appears.
+
+## Verify It Works
+
+After saving, open the login page and confirm:
+
+- The form uses the background, text, input, and button colors you set.
+- The border radius and padding match your values.
+- The border width, style, and color apply.
+- The form shadow appears when enabled.
+- The styling is consistent across the login page.
+
+If the form changes do not apply, confirm **Login Form Styling** is on and you clicked **Save (⌘+S)**.
+
+## Examples
+
+### Example 1: Brand the Login Form for a Client
+
+An agency wants the login form to match the client's brand. Set the **Form Background Color** to white, the **Button Background Color** to the client's brand color, and the button text to white. Increase the border radius to 8px for a modern look. The login form now matches the brand.
+
+### Example 2: A Subtle Shadow for Depth
+
+A site wants the login form to stand out from the background. Toggle on **Enable Form Shadow** and set the shadow color to a soft gray. The form lifts off the background with a subtle depth effect.
+
+### Example 3: A Borderless Minimal Form
+
+A minimalist site wants a clean login form. Under **Form Border**, set the **Border Style** to **None** and set the padding to 24px. The form has no border and a generous inner space.
 
 ## Troubleshooting
 
-### The feature is not taking effect
+### The form changes do not apply
 
-**Cause:** The toggle is off, or a caching plugin is serving the old page.
-**Fix:** Verify the toggle is on. Clear the admin page cache.
+**Cause:** **Login Form Styling** is off, or the changes were not saved.
+**Fix:** Confirm the toggle is on and click **Save (⌘+S)**. Clear any page cache.
 
-### The feature breaks the admin
+### The form border does not disappear
 
-**Cause:** The white-label feature may conflict with another admin customization plugin.
-**Fix:** Disable other admin customization plugins to find the conflict.
+**Cause:** The **Border Style** is set to a value other than **None**.
+**Fix:** Set **Border Style** to **None** and save.
 
----
+### The shadow is too strong
+
+**Cause:** The **Shadow Color** is too dark or has too much opacity.
+**Fix:** Use a lighter shadow color or reduce the opacity, then save.
+
+### The button color does not match
+
+**Cause:** The **Button Background Color** or **Button Text Color** is not set as expected.
+**Fix:** Re-check both color pickers and save.
 
 ## Related Articles
 
-- [How to Use Content Management in WordPress](../core/core-content-management.md)
-- [How to Use the Admin Menu Manager in WordPress](../interface/interface-admin-menu-manager.md)
-- [How to Use the Login Page Customization in WordPress](white-label-wl-login-customization.md)
+- [How to Customize the WordPress Login Page](white-label-wl-login-customization.md)
+- [How to Add a Custom Login Logo in WordPress](white-label-wl-login-logo.md)
+- [How to Use the White Label Tab in Classic Monks: Feature Index](../white-label.md)
 
 ---
 
-## Developer Notes
+*Written by Joy. Last updated August 4, 2026. Tested with WordPress 6.x and Classic Monks 2.1.0.*
 
-This feature registers hooks in `custom-login-page.php`:
-
-**Actions:**
-
-- `login_enqueue_scripts` calls `cm_custom_login_page_style()` (injects CSS for login form styling and shadow; priority 10)
-
-```php
-// Hooked in custom-login-page.php
-add_action( 'login_enqueue_scripts', 'cm_custom_login_page_style' );
-```
-
-The feature modifies WordPress admin output by registering hooks. Disabling it reverses those changes.
-
-### Before you enable this feature
-
-White-label features modify the WordPress admin. Consider:
-
-1. **Client expectations** (white-labeling hides WordPress branding, which may confuse clients)
-2. **Brand guidelines** (match the customizations to your brand)
-3. **Testing on all admin pages** (some customizations may look wrong on certain pages)
-4. **Documentation** (record which customizations are enabled for future reference)
-
-White-label features are designed to be safe, but they modify the admin HTML output. Test on all admin pages before enabling on production.
+<!-- schema: Article, TechArticle, HowTo -->
+<!-- schema: BreadcrumbList -->

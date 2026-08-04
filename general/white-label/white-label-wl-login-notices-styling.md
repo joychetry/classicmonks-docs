@@ -1,119 +1,114 @@
 ---
-title: "How to Style Login Notices in WordPress | CM"
-slug: wl-login-notices-styling
-description: "Customize the styling of login notices (error messages, success messages) in Classic Monks. Matches your brand colors."
-last_updated: 2026-06-24
+title: "Style Login Notices in WordPress: Error, Success, Info"
+slug: "login-notices-styling"
+description: "Customize the WordPress login page notice styling in Classic Monks. Set the background, text, and border colors for error, success, and info messages."
+last_updated: 2026-08-04
 author: Joy
-reading_time: 3 min
-canonical: https://classicmonks.com/docs/wl-login-notices-styling/
+reading_time: 4 min
+canonical: "https://classicmonks.com/docs/login-notices-styling/"
 ---
 
 # How to Style Login Notices in WordPress
 
-> Customize the styling of login notices (error messages, success messages) in Classic Monks. Matches your brand colors.
+> The messages that appear on the WordPress login page, such as errors for a wrong password or success messages after a reset, can be styled to match your brand. Classic Monks lets you set the background, text, and border colors for error, success, and info notices.
 
 ## Key Takeaways
 
-- Single toggle, no nested options
-- Quick admin customization with one click
-- Does not affect frontend functionality
-- Reversible (disable to restore default)
+- Style error, success, and info notices on the login page with brand colors.
+- Set the background, text, and border color for each notice type.
+- Works independently, without the **Login Page Customization** master toggle.
+- Notices keep their clear visual distinction between error, success, and info.
 
-## Why You Need It
+## What Is Notices & Messages Styling
 
-The default login notice styling may not match your brand. Customizing it creates a consistent login experience.
+Notices & Messages Styling is a white-label option in the Classic Monks **White Label** tab that styles the messages on the login page. It is an independent option: it works on its own, without the **Login Page Customization** master toggle. It controls the background, text, and border colors of three notice types: **Error Notices**, **Success Notices**, and **Info Messages**.
 
----
+It is separate from **Login Form Styling** and **Navigation Links Styling**. This guide covers the login page notices.
 
-## How to Enable this Feature
+## Recommendations Before Enabling
 
-### Step 1: Navigate to Settings
+- **Keep the notice colors distinct.** Error, success, and info notices should stay visually different so users can tell them apart at a glance.
+- **Use accessible contrast.** Ensure the text color contrasts with the notice background so the message is readable.
+- **Match your brand without breaking meaning.** You can use brand colors, but keep errors red, success green, and info blue for clarity.
 
-Click into the **Classic Monks** plugin settings, then the **White Label** tab.
+## Style the Login Notices
 
-### Step 2: Enable the Feature
+### Step 1: Open the Login Page Settings
 
-Toggle on the feature.
+In your WordPress dashboard, go to **Classic Monks**, open the **White Label** tab, then the **Login Page** subtab.
 
-### Step 3: Save and Test
+![Classic Monks login notices settings](../../images/white-label/login-notices-styling/notices-settings.png)
 
-Click **Save Changes**. Check the admin to verify the change.
+### Step 2: Turn On Notices & Messages Styling
 
----
+In the **Notices & Messages Styling** section, toggle on **Notices & Messages Styling**. This option works on its own; you do not need the **Login Page Customization** master toggle.
 
-## Common Use Cases
+### Step 3: Style Error Notices
 
-### Client white-labeling
+Under **Error Notices**, set the background, text, and border colors for error messages. Defaults are a light red background (`#fbeaea`), red text (`#dc3232`), and red border (`#dc3232`).
 
-For agencies that build WordPress sites for clients, white-labeling the admin creates a branded experience. The client sees your agency's branding instead of WordPress.
+### Step 4: Style Success Notices
 
-### Brand consistency
+Under **Success Notices**, set the background, text, and border colors for success messages. Defaults are a light green background (`#edfaef`), green text (`#46b450`), and green border (`#46b450`).
 
-For companies that use WordPress as their CMS, white-labeling ensures the admin matches the company's brand guidelines.
+### Step 5: Style Info Messages
 
-### Multi-site management
+Under **Info Messages**, set the background, text, and border colors for info messages. Defaults are a light blue background (`#f0f6fc`), blue text (`#2271b1`), and blue border (`#2271b1`).
 
-For companies managing multiple WordPress sites, consistent white-labeling across all sites creates a unified admin experience.
+### Step 6: Save and Test
 
----
+Click **Save (⌘+S)**. Test the login page by entering a wrong password (to see an error notice) and resetting a password (to see a success or info notice).
+
+## Verify It Works
+
+After saving, trigger each notice type on the login page and confirm:
+
+- Entering a wrong password shows an error notice with your error colors.
+- A successful password reset shows a success notice with your success colors.
+- Other messages show the info colors.
+
+If a notice does not use your colors, confirm **Notices & Messages Styling** is on and the changes were saved.
+
+## Examples
+
+### Example 1: Match Notices to Your Brand
+
+A site wants its login notices to blend with the brand. Set the error, success, and info colors to muted versions of the brand palette while keeping each type distinct. The login page stays on-brand while obvious.
+
+### Example 2: High-Contrast Errors
+
+A security-conscious site wants errors to stand out. Set the **Error Notices** background to a bright red and text to white. Errors are unmissable, which helps users notice a failed login.
+
+### Example 3: Soft, Rounded Success Notices
+
+A friendly brand wants a softer success look. Set the success notice background to a pastel green and text to a dark green. Success messages feel calm and positive.
 
 ## Troubleshooting
 
-### The feature is not taking effect
+### The notice colors do not change
 
-**Cause:** The toggle is off, or a caching plugin is serving the old page.
-**Fix:** Verify the toggle is on. Clear the admin page cache.
+**Cause:** **Notices & Messages Styling** is off, or the changes were not saved.
+**Fix:** Confirm the toggle is on, set the colors, and click **Save (⌘+S)**.
 
-### The feature breaks the admin
+### Error and success notices look the same
 
-**Cause:** The white-label feature may conflict with another admin customization plugin.
-**Fix:** Disable other admin customization plugins to find the conflict.
+**Cause:** The colors for the two notice types are too similar.
+**Fix:** Set clearly different colors for error and success notices, then save.
 
----
+### A notice uses the default color
+
+**Cause:** The specific notice type (error, success, or info) was not changed.
+**Fix:** Set the colors for that notice type under its section and save.
 
 ## Related Articles
 
-- [How to Use Content Management in WordPress](../core/core-content-management.md)
-- [How to Use the Admin Menu Manager in WordPress](../interface/interface-admin-menu-manager.md)
-- [How to Use the Login Page Customization in WordPress](white-label/wl-login-customization.md)
+- [How to Customize the WordPress Login Page](white-label-wl-login-customization.md)
+- [How to Style Navigation Links on the WordPress Login Page](white-label-wl-login-nav-styling.md)
+- [How to Use the White Label Tab in Classic Monks: Feature Index](../white-label.md)
 
+---
 
-### Developer integration
+*Written by Joy. Last updated August 4, 2026. Tested with WordPress 6.x and Classic Monks 2.1.0.*
 
-This feature registers 1 WordPress hook in `custom-login-page.php`:
-
-**Actions:**
-
-- `login_enqueue_scripts` calls `cm_custom_login_page_style()` (Injects CSS for login notice styling (priority 10))
-
-```php
-// Hooked in custom-login-page.php
-add_action( 'login_enqueue_scripts', 'cm_custom_login_page_style' );
-```
-
-The feature modifies WordPress admin output by registering hooks. Disabling it reverses those changes.
-
-### Before you enable this feature
-
-White-label features modify the WordPress admin. Consider:
-
-1. **Client expectations** (white-labeling hides WordPress branding, which may confuse clients)
-2. **Brand guidelines** (match the customizations to your brand)
-3. **Testing on all admin pages** (some customizations may look wrong on certain pages)
-4. **Documentation** (record which customizations are enabled for future reference)
-
-White-label features are designed to be safe, but they modify the admin HTML output. Test on all admin pages before enabling on production.
-
-### How it works under the hood
-
-This feature modifies WordPress behavior by adding or removing hooks (filters and actions) in the WordPress execution pipeline. When enabled, the feature's PHP code runs during the WordPress initialization phase, registering the necessary hooks before the page renders.
-
-The modification is non-destructive. Disabling the feature removes the hooks, and WordPress returns to its default behavior. No database changes are made; the feature state is stored in the `wp_options` table as a simple boolean value.
-
-**Performance impact**: The feature's PHP code runs on every page load. The overhead is negligible (typically under 1ms) because the code only registers hooks, which are lightweight operations. The actual performance benefit comes from the hook behavior (e.g., removing a script, preventing a query), which can save 10-50ms per page load depending on the feature.
-
-**Compatibility**: The feature is designed to be compatible with all standard WordPress plugins and themes. However, plugins that rely on the disabled functionality may break. Always test with your specific plugin stack before enabling on production.
-
-**Security**: The feature does not introduce any new security risks. It only modifies the WordPress hook system, which is a well-documented and secure API. The feature does not process user input, make external requests, or modify database records beyond the feature state.
-
-**Accessibility**: This feature does not affect the site's accessibility. It only modifies server-side behavior (hooks, queries, script loading). The frontend HTML, CSS, and JavaScript are unchanged (except for the specific feature behavior, which is documented in each feature's description).
+<!-- schema: Article, TechArticle, HowTo -->
+<!-- schema: BreadcrumbList -->

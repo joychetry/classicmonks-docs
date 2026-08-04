@@ -1,121 +1,132 @@
 ---
-title: "How to Add a Custom Login Logo in WordPress | CM"
-slug: wl-login-logo
-description: "Replace the WordPress logo on the login page with your own logo in Classic Monks. Creates a branded login experience with centering options."
-last_updated: 2026-07-28
+title: "Add a Custom Login Logo in WordPress: White Label"
+slug: "login-logo"
+description: "Replace the default WordPress login logo with your own in Classic Monks. Set the logo URL, size, padding, margin, and centering to match your brand colors."
+last_updated: 2026-08-04
 author: Joy
-reading_time: 4 min
-canonical: https://classicmonks.com/docs/wl-login-logo/
+reading_time: 5 min
+canonical: "https://classicmonks.com/docs/login-logo/"
 merged_docs: "How to Center the Login Logo in WordPress"
 ---
 
 # How to Add a Custom Login Logo in WordPress
 
-> Replace the WordPress logo on the login page with your own logo in Classic Monks. Creates a branded login experience with optional centering.
+> The default WordPress login page shows the WordPress logo. Classic Monks lets you replace it with your own logo and control its size, position, padding, and background so the login page matches your brand.
 
 ## Key Takeaways
 
-- Replace the default WordPress logo with your own custom logo
-- Optional centering for a balanced, professional layout
-- Quick admin customization with one click
-- Does not affect frontend functionality
-- Reversible (disable to restore default)
+- Replace the default WordPress logo with your own image on the login page.
+- Set the logo width, height, max dimensions, padding, and margin in pixels.
+- Center the logo horizontally with one toggle.
+- Add a border radius and background color to match your brand.
+- The login logo also links to your site and shows your site name.
 
-## Why You Need It
+## What Is the Custom Login Logo
 
-The WordPress logo on the login page identifies the platform. Replacing it with your brand logo creates a white-label experience. Centering the logo provides a more balanced and professional layout.
+The Custom Login Logo is a white-label option in the Classic Monks **White Label** tab that replaces the default WordPress logo on the login page with your own image. It is part of the **Login Page Customization** group. When you set a custom logo, the login logo also links to your site instead of wordpress.org, and the title shows your site name instead of WordPress.
 
----
+It is separate from the **Custom Login Logo** for the admin bar and dashboard. This guide covers the login page logo only.
 
-## How to Enable this Feature
+## Recommendations Before Enabling
 
-### Step 1: Navigate to Settings
+- **Use a transparent PNG** so the logo blends with the login background. A square or wide logo works best at the default 80px size.
+- **Keep the file size small.** The login page should load fast. Compress the logo before uploading.
+- **Test on all devices.** Check that the logo is not cut off on mobile screens.
 
-Click into the **Classic Monks** plugin settings, then the **White Label** tab.
+## Add a Custom Login Logo
 
-### Step 2: Enable the Feature
+### Step 1: Open the Login Page Settings
 
-Toggle on **Custom Login Logo**.
+In your WordPress dashboard, go to **Classic Monks**, open the **White Label** tab, then the **Login Page** subtab. Toggle on **Login Page Customization** to reveal the logo options.
 
-### Step 3: Center the Logo (Optional)
+![Classic Monks login logo settings](../../images/white-label/login-logo/logo-settings.png)
 
-Toggle on **Center Login Logo** to center the logo horizontally on the login page. This is a separate toggle under the same settings section.
+### Step 2: Turn On Custom Login Logo
 
-### Step 4: Save and Test
+In the **Custom Login Logo** section, toggle on **Custom Login Logo**.
 
-Click **Save Changes**. Check the login page to verify the logo appears correctly.
+### Step 3: Add Your Logo
 
----
+Either click **Upload Logo** and pick an image from your media library, or paste an image URL into the **Login Logo URL** field. A preview appears in the **Login Logo Preview** area.
 
-## Configuration Options
+### Step 4: Set the Logo Size
 
-| Option | Description | Default |
-|--------|-------------|---------|
-| **Custom Login Logo** | Master toggle. Enables custom logo upload. | Off |
-| **Center Login Logo** | Centers the logo horizontally on the login page. | Off |
+Use the number fields to control the logo dimensions:
 
----
+- **Logo Width (px)**: the logo width, default 80.
+- **Logo Height (px)**: the logo height, default 80.
+- **Max Width (px)**: the maximum width the logo can display at, default 80.
+- **Max Height (px)**: the maximum height the logo can display at, default 80.
 
-## Common Use Cases
+### Step 5: Position and Style the Logo
 
-### Client white-labeling
+- **Center Logo**: toggle on to keep the logo horizontally centered. When off, the margin applies on all sides; when on, the horizontal margin is automatic to center it.
+- **Padding (px)**: space between the logo edge and its border, default 0.
+- **Margin (px)**: space around the logo, default 0.
+- **Border Radius (px)**: rounds the logo corners, default 0.
+- **Background Color**: a color behind the logo (accepts hex values), useful for logos that need a contrasting tile.
 
-For agencies that build WordPress sites for clients, white-labeling the admin creates a branded experience. The client sees your agency's branding instead of WordPress.
+### Step 6: Save and Test
 
-### Brand consistency
+Click **Save (⌘+S)**. Open the login page in a private browser window to confirm the logo appears and links to your site.
 
-For companies that use WordPress as their CMS, white-labeling ensures the admin matches the company's brand guidelines.
+## Verify It Works
 
-### Multi-site management
+After saving, open the login page and confirm:
 
-For companies managing multiple WordPress sites, consistent white-labeling across all sites creates a unified admin experience.
+- Your logo appears in place of the default WordPress logo.
+- The logo uses the width, height, padding, and margin you set.
+- The logo is centered when **Center Logo** is on.
+- The logo border radius and background color apply.
+- Clicking the logo goes to your site, not wordpress.org.
 
----
+If the logo does not appear, confirm **Custom Login Logo** is on, the logo URL is valid, and the image file loads.
+
+## Examples
+
+### Example 1: Brand a Client Login Page
+
+An agency wants the client's login page to show the client's logo. Upload the client's transparent PNG, set the width and height to 120px, and toggle on **Center Logo**. The client sees a branded login page instead of the WordPress logo.
+
+### Example 2: A Logo With a Rounded Tile
+
+A company wants its logo on a rounded colored tile. Set **Background Color** to the brand color, **Border Radius** to 8px, and the logo width and height to 64px. The logo appears as a branded tile above the login form.
+
+### Example 3: Keep the Logo Small and Left-Aligned
+
+A site wants a small, left-aligned logo. Set the width and height to 60px, leave **Center Logo** off, and set the margin to 20px. The logo sits on the left with breathing room around it.
 
 ## Troubleshooting
 
-### The feature is not taking effect
+### The logo does not appear
 
-**Cause:** The toggle is off, or a caching plugin is serving the old page.
-**Fix:** Verify the toggle is on. Clear the admin page cache.
+**Cause:** **Custom Login Logo** is off, the logo URL is empty, or the image file fails to load.
+**Fix:** Confirm the toggle is on, paste a valid image URL, and verify the image file loads in a browser.
 
-### The feature breaks the admin
+### The logo is cut off
 
-**Cause:** The white-label feature may conflict with another admin customization plugin.
-**Fix:** Disable other admin customization plugins to find the conflict.
+**Cause:** The max width or max height is smaller than the logo file's natural size.
+**Fix:** Increase **Max Width (px)** and **Max Height (px)**, or use a smaller logo file.
 
----
+### The logo is not centered
+
+**Cause:** **Center Logo** is off.
+**Fix:** Toggle on **Center Logo** and save.
+
+### Clicking the logo goes to wordpress.org
+
+**Cause:** The logo URL or title filters are overridden by another plugin.
+**Fix:** Disable other login customization plugins to find the conflict.
 
 ## Related Articles
 
-- [How to Use Content Management in WordPress](../core/core-content-management.md)
-- [How to Use the Admin Menu Manager in WordPress](../interface/interface-admin-menu-manager.md)
-- [How to Use the Login Page Customization in WordPress](white-label-wl-login-customization.md)
+- [How to Customize the WordPress Login Page](white-label-wl-login-customization.md)
+- [How to Style the Login Form in WordPress](white-label-wl-login-form-styling.md)
+- [How to Use the White Label Tab in Classic Monks: Feature Index](../white-label.md)
 
 ---
 
-## Developer Notes
+*Written by Joy. Last updated August 4, 2026. Tested with WordPress 6.x and Classic Monks 2.1.0.*
 
-This feature registers hooks in `custom-login-logo.php`:
-
-**Actions:**
-
-- `login_enqueue_scripts` calls `cm_custom_login_logo()` (injects CSS for custom login logo and optional centering; priority 10)
-
-```php
-// Hooked in custom-login-logo.php
-add_action( 'login_enqueue_scripts', 'cm_custom_login_logo' );
-```
-
-The feature modifies WordPress admin output by registering hooks. Disabling it reverses those changes.
-
-### Before you enable this feature
-
-White-label features modify the WordPress admin. Consider:
-
-1. **Client expectations** (white-labeling hides WordPress branding, which may confuse clients)
-2. **Brand guidelines** (match the customizations to your brand)
-3. **Testing on all admin pages** (some customizations may look wrong on certain pages)
-4. **Documentation** (record which customizations are enabled for future reference)
-
-White-label features are designed to be safe, but they modify the admin HTML output. Test on all admin pages before enabling on production.
+<!-- schema: Article, TechArticle, HowTo -->
+<!-- schema: BreadcrumbList -->
