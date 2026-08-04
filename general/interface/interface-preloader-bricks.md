@@ -1,151 +1,105 @@
 ---
-title: "How to Disable Preloader Inside Bricks Builder in WordPress | CM"
-slug: interface-preloader-bricks
-description: "Disable the preloader when editing pages in Bricks Builder in Classic Monks. Prevents the preloader from appearing during the Bricks editor, which would interfere with editing."
-last_updated: 2026-06-24
+title: "Disable the Preloader in the Bricks Builder in WordPress"
+slug: "interface-preloader-bricks"
+description: "Turn off the preloader while editing in the Bricks Builder in Classic Monks. Prevent the loading animation from interfering with your design workflow."
+last_updated: 2026-08-04
 author: Joy
 reading_time: 3 min
-canonical: https://classicmonks.com/docs/interface-preloader-bricks/
+canonical: "https://classicmonks.com/docs/interface-preloader-bricks/"
 ---
 
-# How to Disable Preloader Inside Bricks Builder in WordPress
+# How to Disable the Preloader in the Bricks Builder
 
-> Disable Preloader in Bricks Builder in Classic Monks prevents the preloader from appearing when editing pages in the Bricks Builder editor. Prevents interference with the visual editor.
+> The preloader shows a loading animation while a page loads. When you design a page in the Bricks Builder, that animation can get in the way of your work. Classic Monks lets you turn off the preloader while you are editing in the Bricks Builder.
 
 ## Key Takeaways
 
-- Single toggle, no nested options
-- Disable Preloader inside Bricks Builder is the master switch
-- Works with most WordPress themes
-- Configurable loading animation
-- Does not affect page load time (visual only)
+- Turn off the preloader while editing in the Bricks Builder.
+- The preloader still works for visitors on the frontend.
+- A single toggle in the **Preloader** subtab.
+- Works alongside the **Enable Preloader** master toggle.
 
-## What Is the Disable Preloader inside Bricks Builder feature?
+## What Is Disable Preloader in the Bricks Builder
 
-The Disable Preloader inside Bricks Builder feature in Classic Monks adds a loading animation to your WordPress site. When a visitor navigates to a new page, the preloader shows while the page loads, then fades out when the page is ready.
+Disable Preloader in the Bricks Builder is an option in the Classic Monks **Interface** tab, **Preloader** subtab. When the preloader is enabled and you are editing a page in the Bricks Builder, the preloader can appear and interfere with the visual editor. This toggle stops the preloader from showing while you work in the Bricks Builder, while leaving it active for visitors on the frontend.
 
-This is a visual enhancement only. It does not affect the actual load time; it only changes how the load time is perceived.
+## Recommendations Before Using
 
-## Why You Need It
+- **Enable the preloader first.** This option only works when **Enable Preloader** is on, so turn the preloader on before you use it.
+- **Understand the scope.** The toggle affects only the Bricks Builder editor, not the frontend. Visitors still see the preloader.
+- **Test in the editor.** After enabling, open the Bricks Builder to confirm the preloader no longer appears while you edit.
 
-For sites where visual impression matters:
+## Disable the Preloader in the Bricks Builder
 
-- **Perceived performance**: A preloader makes the site feel faster
-- **Brand consistency**: The preloader can match your brand colors and style
-- **User engagement**: Visitors are more patient when they see a loading animation
-- **Content protection**: Prevents users from seeing partially loaded content
+### Step 1: Open the Interface Tab
 
-For most content-heavy sites, a preloader improves the user experience.
+In your WordPress dashboard, go to **Classic Monks**, then open the **Interface** tab.
 
----
+### Step 2: Open the Preloader Subtab
 
-## How to Use Disable Preloader inside Bricks Builder in WordPress
+Click the **Preloader** subtab.
 
-### Step 1: Navigate to Settings
+### Step 3: Enable the Preloader
 
-Click into the **Classic Monks** plugin settings in your WordPress dashboard.
+Toggle on **Enable Preloader** so the preloader is active.
 
-### Step 2: Go to the Interface Tab
+### Step 4: Disable It in the Bricks Builder
 
-Click on the **Interface** menu, then click the **Preloader** subtab.
+Toggle on **Disable Preloader inside Bricks Builder**. The preloader will no longer show while you edit in the Bricks Builder.
 
-### Step 3: Enable Disable Preloader inside Bricks Builder
+### Step 5: Save and Test
 
-Scroll to **Disable Preloader inside Bricks Builder** and toggle on.
+Click **Save (⌘+S)**. Open a page in the Bricks Builder and confirm the preloader does not appear, then check the frontend to confirm visitors still see it.
 
-### Step 4: Save Changes
+## Verify It Works
 
-Click **Save Changes**.
+After saving, verify the change:
 
-### Step 5: Test
+- Open a page in the Bricks Builder and confirm the preloader does not appear.
+- View the site on the frontend and confirm the preloader still shows for visitors.
+- Confirm the **Enable Preloader** toggle is on.
 
-Visit your site on the frontend. The preloader should appear on page navigation.
-
----
-
-## Configuration Options
-
-| Option | Description | Default |
-|--------|-------------|---------|
-| **Disable Preloader inside Bricks Builder** | Master toggle. | Off |
-
-The preloader animation style, color, and speed are configured via CSS and filters (see Advanced Options).
-
----
-
-## What Gets Affected
-
-- The frontend: preloader appears during page navigation
-- The page load: the preloader shows while the page loads
-- The user experience: smoother perceived performance
-
-## What Does NOT Get Affected
-
-- The actual load time: unchanged (visual only)
-- The page content: unchanged
-- The search engine indexing: unchanged
-- The accessibility: unchanged (screen readers ignore the preloader)
-
----
-
-### Developer integration
-
-This feature registers 1 WordPress hook in `preloader.php`:
-
-**Actions:**
-
-- `wp` calls `cm_init_preloader()` (Initializes preloader with Bricks Builder detection)
-
-```php
-// Hooked in preloader.php
-add_action( 'wp', 'cm_init_preloader' );
-```
-
-The feature modifies WordPress behavior by registering or removing hooks. Disabling it reverses those changes.
+If the preloader still appears in the editor, confirm both toggles are set correctly and the page was refreshed.
 
 ## Common Use Cases
 
-### Bricks Builder users
+### Design without the preloader interrupting
 
-If you use Bricks Builder for page design, the preloader should not appear during editing. This option disables it in the editor context.
+A designer builds a page in the Bricks Builder and finds the preloader flashes on every reload. They toggle on **Disable Preloader inside Bricks Builder**. The editor is clean and the design workflow is uninterrupted, while visitors still see the preloader.
 
-### Visual editor workflows
+### Test the preloader only on the frontend
 
-Designers need to see the page without loading animations. Disabling the preloader in the editor provides a clean design environment.
+A developer wants to verify the preloader behavior without it interfering in the editor. They disable it in the Bricks Builder and check the frontend. The preloader works for visitors and stays out of the way during editing.
 
-### Debugging preloader issues
+### Keep the preloader for the live site
 
-When troubleshooting preloader behavior, disabling it in the editor lets you compare the page with and without the preloader.
+A site uses a preloader for its brand experience, but the developer does not want it to interfere while editing. They disable it in the Bricks Builder. The live site keeps its branded preloader, and the editor stays clean for the developer.
 
----
+### A clean editing environment for a team
+
+A team that builds and edits pages in the Bricks Builder does not want the preloader to flash during their work. They disable it in the Bricks Builder for the whole team. The editors get a clean environment, and visitors still see the preloader on the live site.
 
 ## Troubleshooting
 
-### The preloader is not showing
+### The preloader still shows in the Bricks Builder
 
-**Cause:** The toggle is off, or the JavaScript is not loading.
-**Fix:** Verify the toggle is on. Check the browser console for errors. The preloader requires JavaScript to function.
+**Cause:** The toggle is off, or the editor is showing a cached view.
+**Fix:** Confirm **Disable Preloader inside Bricks Builder** is on, save, and reload the Bricks Builder.
 
-### The preloader never disappears
+### The preloader is gone for visitors too
 
-**Cause:** The page load is very slow, or the preloader timeout is not set.
-**Fix:** The preloader should auto-hide after the page loads. If it doesn't, check the browser console for JavaScript errors. The preloader auto-hides after the page loads. If it doesn't, check the browser console for JavaScript errors.
-
-### The preloader is showing on every page load (including back/forward)
-
-**Cause:** The preloader is configured to show on all navigations.
-**Fix:** This is the default behavior. Configure excluded pages in the plugin settings under Interface > Preloader.
-
-### The preloader conflicts with Bricks Builder
-
-**Cause:** The preloader is showing in the Bricks Builder editor.
-**Fix:** Disable the preloader inside Bricks Builder using the subtab option.
-
----
+**Cause:** The **Enable Preloader** toggle may be off, which disables the preloader everywhere.
+**Fix:** Confirm **Enable Preloader** is on. This option only affects the Bricks Builder, not the frontend.
 
 ## Related Articles
 
 - [How to Use Laser Loader in WordPress](interface-laser-loader.md)
-- [How to Use Page Transitions in WordPress](interface-page-transitions.md)
-- [How to Use the Admin Notices Manager in WordPress](interface-admin-notices-manager.md)
-- [How to Use Form Desk in WordPress](interface-form-desk.md)
+- [How to Use the Preloader in WordPress](interface-preloader.md)
+- [How to Use the Interface Tab in Classic Monks: Feature Index](../interface.md)
+
+---
+
+*Written by Joy. Last updated August 4, 2026. Tested with WordPress 6.x and Classic Monks 2.1.0.*
+
+<!-- schema: Article, TechArticle -->
+<!-- schema: BreadcrumbList -->

@@ -1,150 +1,101 @@
 ---
-title: "How to Disable Laser Loader Inside Bricks Builder in WordPress | CM"
-slug: interface-laser-loader-bricks
-description: "Disable the laser loader when editing in Bricks Builder in Classic Monks. Prevents the progress bar from appearing during the visual editor."
-last_updated: 2026-06-24
+title: "Disable the Laser Loader in the Bricks Builder in WordPress"
+slug: "interface-laser-loader-bricks"
+description: "Turn off the laser loader while editing in the Bricks Builder in Classic Monks. Prevent the loading progress bar from interfering with your design workflow."
+last_updated: 2026-08-04
 author: Joy
 reading_time: 3 min
-canonical: https://classicmonks.com/docs/interface-laser-loader-bricks/
+canonical: "https://classicmonks.com/docs/interface-laser-loader-bricks/"
 ---
 
-# How to Disable Laser Loader Inside Bricks Builder in WordPress
+# How to Disable the Laser Loader in the Bricks Builder
 
-> Disable Laser Loader in Bricks Builder prevents the laser-style progress bar from appearing when editing in the Bricks Builder editor.
+> The laser loader shows a thin progress bar at the top of the page while it loads. When you design a page in the Bricks Builder, that progress bar can get in the way of your work. Classic Monks lets you turn it off while you are editing in the Bricks Builder.
 
 ## Key Takeaways
 
-- Single toggle, no nested options
-- Works with [Laser Loader](interface-laser-loader.md) (must be enabled first)
-- Configurable per page or per context
-- Does not affect page load time (visual only)
+- Turn off the laser loader while editing in the Bricks Builder.
+- The laser loader still works for visitors on the frontend.
+- A single toggle in the **Laser Loader** subtab.
+- Works alongside the **Enable Laser Loader** master toggle.
 
-## What Is this feature?
+## What Is Disable Laser Loader in the Bricks Builder
 
-This feature is part of the Laser Loader system in Classic Monks. It modifies how the laser-style progress bar behaves or appears on your site. The Laser Loader must be enabled first (see [Laser Loader](interface-laser-loader.md)).
+Disable Laser Loader in the Bricks Builder is an option in the Classic Monks **Interface** tab, **Laser Loader** subtab. When the laser loader is enabled and you are editing a page in the Bricks Builder, the progress bar can appear and interfere with the visual editor. This toggle stops the laser loader from showing while you work in the Bricks Builder, while leaving it active for visitors on the frontend.
 
-## Why You Need It
+## Recommendations Before Using
 
-Customizing the laser loader behavior allows you to:
+- **Enable the laser loader first.** This option only works when **Enable Laser Loader** is on, so turn the laser loader on before you use it.
+- **Understand the scope.** The toggle affects only the Bricks Builder editor, not the frontend. Visitors still see the progress bar.
+- **Test in the editor.** After enabling, open the Bricks Builder to confirm the laser loader no longer appears while you edit.
 
-- Match the loader to your site's design (color, animation, speed)
-- Optimize the loader for different devices (desktop vs mobile)
-- Create a more professional or branded loading experience
+## Disable the Laser Loader in the Bricks Builder
 
----
+### Step 1: Open the Interface Tab
 
-## How to Configure this Feature
+In your WordPress dashboard, go to **Classic Monks**, then open the **Interface** tab.
 
-### Step 1: Enable Laser Loader
+### Step 2: Open the Laser Loader Subtab
 
-First, enable the Laser Loader master toggle in the Laser Loader subtab.
+Click the **Laser Loader** subtab.
 
-### Step 2: Navigate to Settings
+### Step 3: Enable the Laser Loader
 
-Click into the **Classic Monks** plugin settings, then the **Interface** tab, **Laser Loader** subtab.
+Toggle on **Enable Laser Loader** so the progress bar is active.
 
-### Step 3: Enable the Feature
+### Step 4: Disable It in the Bricks Builder
 
-Toggle on this feature.
+Toggle on **Disable Laser Loader inside Bricks Builder**. The progress bar will no longer show while you edit in the Bricks Builder.
 
-### Step 4: Save Changes
+### Step 5: Save and Test
 
-Click **Save Changes**.
+Click **Save (⌘+S)**. Open a page in the Bricks Builder and confirm the laser loader does not appear, then check the frontend to confirm visitors still see it.
 
-### Step 5: Test
+## Verify It Works
 
-Visit the frontend and navigate between pages. Verify the laser loader behavior matches your configuration.
+After saving, verify the change:
 
----
+- Open a page in the Bricks Builder and confirm the laser loader does not appear.
+- View the site on the frontend and confirm the progress bar still shows for visitors.
+- Confirm the **Enable Laser Loader** toggle is on.
 
-## Configuration Options
-
-| Option | Description | Default |
-|--------|-------------|---------|
-| This feature | Master toggle. | Off |
-
----
-
-## What Gets Affected
-
-- The laser loader behavior: modified per this feature
-- The page load: unchanged (visual only)
-- The user experience: modified for the configured context
-
-## What Does NOT Get Affected
-
-- The actual page load time: unchanged
-- The page content: unchanged
-- The search engine indexing: unchanged
-
----
+If the laser loader still appears in the editor, confirm both toggles are set correctly and the page was refreshed.
 
 ## Common Use Cases
 
-### Bricks Builder users
+### Design without the progress bar interrupting
 
-The laser loader should not appear when designing pages in the Bricks Builder editor, as it interferes with the design workflow.
+A designer builds a page in the Bricks Builder and finds the laser loader flashes on every reload. They toggle on **Disable Laser Loader inside Bricks Builder**. The editor is clean and the design workflow is uninterrupted, while visitors still see the progress bar.
 
-### Visual editor workflows
+### Test the laser loader only on the frontend
 
-Designers need to see the page without loading animations. Disabling the laser loader in the editor provides a clean design environment.
+A developer wants to verify the laser loader behavior without it interfering in the editor. They disable it in the Bricks Builder and check the frontend. The progress bar works for visitors and stays out of the way during editing.
 
----
+### Keep the laser loader for the live site
 
+A site uses a laser loader for a modern loading experience, but the developer does not want the progress bar while editing. They disable it in the Bricks Builder. The live site keeps the progress bar, and the editor stays clean for the developer.
 
-
-### Design workflow
-
-When designing pages in Bricks Builder, the designer needs to see the page as it will appear to visitors. The laser loader would interfere with this by showing during every page change in the editor. Disabling it in the editor provides a clean, unobstructed design environment.
-
-### Testing the loader behavior
-
-To test the laser loader behavior, designers need to see the page both with and without the loader. Disabling it in the editor allows for easy comparison: design without the loader, then view the frontend with the loader active.
 ## Troubleshooting
 
-### The feature is not taking effect
+### The laser loader still shows in the Bricks Builder
 
-**Cause:** The Laser Loader master toggle is not enabled, or a page caching plugin is serving old content.
-**Fix:** Verify both toggles are on. Clear all caching layers.
+**Cause:** The toggle is off, or the editor is showing a cached view.
+**Fix:** Confirm **Disable Laser Loader inside Bricks Builder** is on, save, and reload the Bricks Builder.
 
-### The laser loader shows on pages where it shouldn't
+### The laser loader is gone for visitors too
 
-**Cause:** The laser loader is showing on all pages by default.
-**Fix:** Use the `cm_laser_loader_excluded_pages` filter to exclude specific pages.
-
----
+**Cause:** The **Enable Laser Loader** toggle may be off, which disables the laser loader everywhere.
+**Fix:** Confirm **Enable Laser Loader** is on. This option only affects the Bricks Builder, not the frontend.
 
 ## Related Articles
 
+- [How to Use the Preloader in WordPress](interface-preloader.md)
 - [How to Use Laser Loader in WordPress](interface-laser-loader.md)
-- [How to Use Preloader in WordPress](interface-preloader.md)
-- [How to Use Page Transitions in WordPress](interface-page-transitions.md)
+- [How to Use the Interface Tab in Classic Monks: Feature Index](../interface.md)
 
+---
 
-### Elementor and other page builders
+*Written by Joy. Last updated August 4, 2026. Tested with WordPress 6.x and Classic Monks 2.1.0.*
 
-While this specific feature targets Bricks Builder, the concept applies to any visual page builder. If you use Elementor, Divi, or another builder, the same principle applies: disable the laser loader in the editor to avoid visual interference.
-
-### Live preview workflow
-
-When designing in Bricks Builder, the designer toggles between the editor and the live preview. Disabling the laser loader in the editor ensures the editor view is clean, while the live preview shows the loader as visitors would see it.
-### Developer integration
-
-This feature registers 1 WordPress hook in `laser-loader.php`:
-
-**Actions:**
-
-- `init` calls `cm_init_laser_loader()` (Initializes laser loader with Bricks Builder detection)
-
-```php
-// Hooked in laser-loader.php
-add_action( 'init', 'cm_init_laser_loader' );
-```
-
-The feature modifies WordPress behavior by registering or removing hooks. Disabling it reverses those changes.
-
-### Testing and development workflow
-
-When developing with Bricks Builder, you can test the laser loader by viewing the page in a separate browser tab (not the Bricks preview). The Bricks preview disables the loader, but the live frontend shows it. This dual-view approach lets you design without the loader interfering, then check the final result.
-
-The Bricks detection is based on the page URL, not the browser state. If you open the same page in a new tab (not the Bricks editor), the laser loader will appear normally. This ensures the loader is only disabled in the actual Bricks editor context.
+<!-- schema: Article, TechArticle -->
+<!-- schema: BreadcrumbList -->
