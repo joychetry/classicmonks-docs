@@ -25,7 +25,7 @@ The Folders subtab adds a complete media folder management system. 8 features.
 
 | Feature | Description | Guide |
 |---------|-------------|-------|
-| **Folder Manager** | Organize media into virtual folders. 3 sub-options. | [View guide](interface/interface-folder-manager.md) |
+| **Folder Manager** | Organize media and post types into virtual folders, with CPT filtering and folder-aware media modals. | [View guide](interface/interface-folder-manager.md) |
 | **Folder Download (ZIP)** | Download folder contents as ZIP archives. | [View guide](interface/interface-folder-download.md) |
 | **Folder Duplication** | Duplicate folder structures. | [View guide](interface/interface-folder-duplication.md) |
 | **Gallery Shortcode** | `[cm_gallery]` shortcode for folder-based galleries. | [View guide](interface/interface-gallery-shortcode.md) |
