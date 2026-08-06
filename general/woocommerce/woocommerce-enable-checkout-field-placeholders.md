@@ -1,142 +1,136 @@
 ---
-title: "How to Enable Checkout Field Placeholders in WordPress | CM"
+title: "How to Add Placeholders to WooCommerce Checkout Fields"
 slug: enable-checkout-field-placeholders
-description: "Add placeholder text inside WooCommerce checkout form fields in Classic Monks. Improves form usability and guides customer input."
-last_updated: 2026-06-24
+description: "Add placeholder text inside WooCommerce checkout fields to guide customers. Auto-fill common billing and address fields with sample input in Classic Monks."
+last_updated: 2026-08-06
 author: Joy
 reading_time: 3 min
 canonical: https://classicmonks.com/docs/enable-checkout-field-placeholders/
 ---
 
-# How to Enable Checkout Field Placeholders in WordPress
+# How to Add Placeholders to WooCommerce Checkout Fields
 
-> Enable Checkout Field Placeholders adds placeholder text inside WooCommerce checkout form fields. Improves form usability by showing example input in empty fields.
+> Add placeholder text inside WooCommerce checkout fields so customers see example input before they type. Classic Monks automatically fills the common billing and address fields with useful placeholder text.
 
 ## Key Takeaways
 
-- Single toggle, no nested options
-- Adds placeholder text to all checkout fields (first name, last name, address, etc.)
-- Improves form completion rates (clearer input expectations)
-- Customizable in the plugin settings
-- Works with all WooCommerce themes and most checkout customizations
+- Add placeholder text to the standard billing fields
+- Add placeholder text to the default address fields
+- Requires no per-field setup: the default placeholders apply automatically
+- Works with both the checkout billing form and the address fields
+- Improves clarity on the checkout form
 
-## What Is the Enable Checkout Field Placeholders feature?
+## What Does the Feature Do?
 
-By default, WooCommerce checkout fields show only the field label (e.g., "First name", "Email address"). The field is empty until the customer types.
+WooCommerce checkout fields often show only a label, with the input empty until the customer types. The **Enable Checkout Field Placeholders** feature adds placeholder text inside the common fields so customers see what to enter.
 
-The Enable Checkout Field Placeholders feature adds placeholder text inside each field, showing example input. For example:
-
-- First name field: "John" (as placeholder)
-- Email field: "you@example.com"
-- Phone field: "555-123-4567"
-- Address field: "123 Main Street"
-
-The placeholder disappears when the customer starts typing.
+It applies placeholders to billing fields such as first name, last name, phone, email, city, and postcode, and to the default address fields such as first name, last name, state, postcode, and city.
 
 ## Why You Need It
 
-Placeholder text improves checkout usability:
+Placeholder text guides input without adding labels or fields:
 
-- **Clearer input expectations**: Customers know what format is expected (e.g., "MM/DD/YYYY" vs "DD/MM/YYYY")
-- **Higher completion rates**: Less confusion = more completed checkouts
-- **Better mobile experience**: Placeholders show even when the field is collapsed (which is common on mobile keyboards)
-
-For most checkout forms, placeholder text is a standard UX improvement.
+- Customers see the expected value before typing (for example, "Email" or "Phone Number")
+- The form feels clearer and reduces guesswork
+- Short placeholder hints keep the checkout compact
+- No template edits are needed; the placeholders apply from the settings
 
 ---
 
-## How to Enable Checkout Field Placeholders in WordPress
+## How to Add Placeholders to WooCommerce Checkout Fields
 
-### Step 1: Navigate to Settings
+### Step 1: Enable the Feature
 
-Click into the **Classic Monks** plugin settings in your WordPress dashboard.
+1. In WordPress admin, open **Classic Monks > WooCommerce**.
+2. Open the **Checkout** settings area.
+3. Toggle on **Enable Checkout Field Placeholders**.
 
-### Step 2: Go to the WooCommerce Tab
+### Step 2: Save and Test
 
-Click on the **WooCommerce** menu, then click the **Checkout** subtab.
-
-### Step 3: Enable Checkout Field Placeholders
-
-Toggle on **Enable Checkout Field Placeholders**.
-
-### Step 4: Save Changes
-
-Click **Save Changes**.
-
-### Step 5: Test
-
-Visit the checkout page. Empty fields should show placeholder text. The placeholder disappears when the customer types.
+Click **Save Changes**. Visit the checkout page and confirm the billing and address fields show placeholder text when empty.
 
 ---
 
 ## Configuration Options
 
-| Option | Description | Default |
-|--------|-------------|---------|
-| **Enable Checkout Field Placeholders** | Master toggle. | Off |
+| Option | Default |
+|--------|---------|
+| **Enable Checkout Field Placeholders** | Off |
 
-The default placeholder text is provided by Classic Monks. To customize the placeholder text per field, use the plugin settings (see Advanced Options).
+The placeholder text is set by the feature (for example, `First Name`, `Email`, `Phone Number`, `City`, `Pincode`). There are no per-field configuration fields; the placeholders apply to the standard checkout and address fields automatically.
 
 ---
 
 ## What Gets Affected
 
-- All standard WooCommerce checkout fields: first name, last name, company, email, phone, address, city, postcode, country, state
-- The placeholder is shown when the field is empty and focused
-- The placeholder disappears when the customer types
+- Standard checkout billing fields: first name, last name, phone, email, city, postcode
+- Default address fields: first name, last name, state, postcode, city
+- Empty inputs: display the placeholder until a value is entered
 
 ## What Does NOT Get Affected
 
-- The field labels (still shown above the field)
-- The validation messages (still shown when validation fails)
-- Custom fields added by other plugins (those plugins handle their own placeholders)
-- The order review section (placeholders are not used in review)
-- The cart page (placeholders are only on the checkout form)
+- Field labels: these remain visible above the inputs
+- Field validation: validation messages still appear as normal
+- Custom fields added by other plugins: those are handled by their own plugins
+- Saved customer data: the feature only affects empty field placeholder text
 
 ---
 
 ## Advanced Options (Developers)
 
-This feature registers 2 WordPress hooks in `woocommerce-functions.php`:
-
-**Filters:**
-
-- `woocommerce_checkout_fields` calls `cm_add_checkout_placeholders()` (Adds placeholders to checkout fields)
-- `woocommerce_default_address_fields` calls `cm_add_address_placeholders()` (Adds placeholders to address fields)
+The feature registers its hooks in `functions/woocommerce/woocommerce-functions.php`:
 
 ```php
-// Hooked in woocommerce-functions.php
 add_filter( 'woocommerce_checkout_fields', 'cm_add_checkout_placeholders' );
+add_filter( 'woocommerce_default_address_fields', 'cm_add_address_placeholders' );
 ```
 
-The feature modifies WooCommerce behavior by registering or removing hooks. Disabling it reverses those changes.
+- **`woocommerce_checkout_fields`** calls `cm_add_checkout_placeholders()` to set placeholders on the standard billing fields (first name, last name, phone, email, city, postcode).
+- **`woocommerce_default_address_fields`** calls `cm_add_address_placeholders()` to set placeholders on the default address fields (first name, last name, state, postcode, city).
+
+---
 
 ## Troubleshooting
 
 ### Placeholders are not showing
 
-**Cause:** The toggle is off, or a caching plugin is serving the old page.
-**Fix:** Verify the toggle is on. Clear all caching layers. Placeholders are rendered server-side, so caching is the most common cause.
+**Cause:** The feature toggle is off, or caching is serving the old form.
+**Fix:** Confirm **Enable Checkout Field Placeholders** is on and clear caches. The placeholders are added through the checkout field filters, so a fresh checkout render should show them.
 
-### Placeholders are showing but the field labels are missing
+### Only some fields have placeholders
 
-**Cause:** The placeholder is replacing the label, not supplementing it. This is usually a theme issue.
-**Fix:** Verify the theme's checkout template includes both the label and the input. Some themes show the label as a placeholder by default (without this feature). Use a child theme to fix.
+**Cause:** The feature targets the standard billing and address fields, not every possible checkout field.
+**Fix:** Review which fields the feature covers. Fields added by other plugins or custom checkout builders are outside this feature's scope.
 
-### The placeholder is in the wrong language
+### The placeholder and label look redundant
 
-**Cause:** The default placeholder text is in English. Your store may be in a different language.
-**Fix:** Configure in the plugin settings to customize the placeholder text per language. Or use a translation plugin (WPML, Polylang) to provide translated placeholders.
+**Cause:** Some themes render the label as a placeholder in addition to the added placeholder text.
+**Fix:** If your theme shows a label inside the field, the two texts may overlap. Check the theme's checkout styling, and keep the added placeholder for fields where it improves clarity.
 
-### The placeholder overlaps the field label
+---
 
-**Cause:** Some themes render the label as a placeholder, then this feature adds another placeholder, creating visual confusion.
-**Fix:** Disable the theme's label-as-placeholder behavior (usually a theme option) or hide the labels with CSS.
+## Frequently Asked Questions
+
+### What fields get placeholders?
+
+The standard billing fields (first name, last name, phone, email, city, postcode) and the default address fields (first name, last name, state, postcode, city) receive placeholder text.
+
+### Can I change the placeholder text?
+
+Not through individual settings. The feature applies its default placeholder text to the coverage fields. To use custom wording, extend the checkout field filters in the plugin's developer hooks.
+
+### Does this replace the field labels?
+
+No. Labels remain visible above the inputs. The placeholder is additional example text shown inside an empty field.
+
+### Which field gets the "Pincode" placeholder?
+
+The postcode field in billing and address forms uses the default placeholder text, which in the feature is set as `Pincode`. Adjust the wording via the developer filter if you prefer a different term.
 
 ---
 
 ## Related Articles
 
-- [How to Enable Inline Checkout Field Validation in WordPress](woocommerce-enable-inline-checkout-field-validation.md)
-- [How to Remove the Company Field from WooCommerce Checkout in WordPress](woocommerce-remove-company-field.md)
-- [How to Use Content Management in WordPress](../core/core-content-management.md)
+- [How to Remove the Company Field from WooCommerce Checkout](woocommerce-remove-company-field.md)
+- [How to Remove Order Notes from WooCommerce Checkout](woocommerce-remove-order-notes.md)
+- [How to Show Product Images in the WooCommerce Checkout](woocommerce-show-product-images-checkout.md)

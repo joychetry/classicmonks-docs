@@ -1,134 +1,143 @@
 ---
-title: "How to Remove Order Notes from WooCommerce Checkout in WordPress | CM"
+title: "How to Remove Order Notes from WooCommerce Checkout"
 slug: remove-order-notes
-description: "Remove the optional order notes field from the WooCommerce checkout form in Classic Monks. Streamlines the checkout experience by reducing form fields."
-last_updated: 2026-06-24
+description: "Remove the order notes text area from the WooCommerce checkout form. Shorten the checkout for stores that do not collect order instructions with Classic Monks."
+last_updated: 2026-08-06
 author: Joy
 reading_time: 3 min
 canonical: https://classicmonks.com/docs/remove-order-notes/
 ---
 
-# How to Remove Order Notes from WooCommerce Checkout in WordPress
+# How to Remove Order Notes from WooCommerce Checkout
 
-> Remove Order Notes strips the optional order notes text area from the WooCommerce checkout form. Streamlines the checkout experience by reducing form fields.
+> Remove the order notes text area from the WooCommerce checkout form so customers cannot leave a note, coming, or instruction at checkout. Classic Monks strips the field when you need a shorter form.
 
 ## Key Takeaways
 
-- Single toggle, no nested options
-- Removes the order notes text area from checkout
-- The customer cannot leave special instructions at checkout
-- Order notes are still stored in the admin (if you add them manually)
-- Streamlines the checkout flow for stores that don't need order notes
+- Remove the order notes text area from the checkout form
+- One toggle, no nested options
+- Shortens the checkout for stores that do not need order instructions
+- Does not delete previously saved order notes
+- Admin order notes remain available
 
-## What Is the Remove Order Notes Field feature?
+## What Does the Feature Do?
 
-By default, WooCommerce's checkout form includes an "Order notes" text area where customers can leave special instructions (e.g., "Please leave at the front door", "Gift wrap this order"). The field is optional and doesn't affect most orders.
+WooCommerce shows an optional order notes text area on the checkout form where customers can leave instructions. The **Remove Order Notes** feature removes that text area from the form when enabled.
 
-The Remove Order Notes Field feature removes this text area from the checkout form. The customer's saved order notes (if any were entered before the toggle was enabled) are preserved in the database.
+Existing order notes already saved in the database are not deleted. The feature only stops the checkout from presenting the field, so new customers cannot add an order note at checkout.
 
 ## Why You Need It
 
-For most e-commerce stores, the order notes field is rarely used:
+For many stores the order notes field adds length without value:
 
-- Most customers don't add notes
-- The field adds visual clutter to a long checkout form
-- For digital products or services, the field is completely irrelevant
-
-For stores where the order notes field is critical (e.g., custom gifts, delivery instructions), keep the field enabled. For most other stores, removing it is a small UX win.
+- Most customers leave it blank
+- A text area lengthens the checkout form
+- Digital, service, and delivery-on-standard stores rarely need instructions
+- Admin order notes are still available even when the customer field is removed
 
 ---
 
-## How to Remove Order Notes from WooCommerce Checkout in WordPress
+## How to Remove Order Notes from WooCommerce Checkout
 
-### Step 1: Navigate to Settings
+### Step 1: Enable the Feature
 
-Click into the **Classic Monks** plugin settings in your WordPress dashboard.
+1. In WordPress admin, open **Classic Monks > WooCommerce**.
+2. Open the **Checkout** settings area.
+3. Toggle on **Remove Order Notes**.
 
-### Step 2: Go to the WooCommerce Tab
+### Step 2: Save and Test
 
-Click on the **WooCommerce** menu, then click the **Checkout** subtab.
-
-### Step 3: Enable Remove Order Notes
-
-Toggle on **Remove Order Notes**.
-
-### Step 4: Save Changes
-
-Click **Save Changes**.
-
-### Step 5: Test
-
-Visit the checkout page. The order notes text area should not appear.
+Click **Save Changes**. Visit the checkout page and confirm the order notes text area no longer appears.
 
 ---
 
 ## Configuration Options
 
-| Option | Description | Default |
-|--------|-------------|---------|
-| **Remove Order Notes** | Master toggle. | Off |
+| Option | Default |
+|--------|---------|
+| **Remove Order Notes** | Off |
 
-No nested options.
+There are no nested options. The feature is a single on/off control.
+
+---
+
+## Common Use Cases
+
+**Digital and service stores.** Stores that sell downloadable products, course access, or services usually do not need delivery instructions, so removing the field shortens the form.
+
+**Standard delivery routes.** Fulfillment flows with fixed shipping rules rarely need a customer-provided note, making the field unnecessary overhead.
+
+**Simpler checkout.** Any store aiming for a shorter, cleaner checkout can remove the field while keeping admin order notes for internal use.
 
 ---
 
 ## What Gets Affected
 
 - The checkout form: the order notes text area is removed
-- The customer's saved addresses (if any had notes): the notes are still stored in the database
-- The order confirmation email: the order notes are not included (since the customer couldn't enter them)
-- The admin order details: the notes field is still shown in the admin (for manually-entered notes)
+- New orders: customers can no longer add an order note at checkout
 
 ## What Does NOT Get Affected
 
-- The customer's saved order notes (if they had any before the toggle was enabled)
-- The order notes field in the admin (you can still add notes manually)
-- Custom fields added by other plugins
-- The checkout form's other fields
+- Previously saved order notes: existing data stays in the database
+- Admin order notes: the admin order screen can still hold notes you add there
+- Other checkout fields: only the order notes area is removed
+- Saved address data: unrelated to this feature
 
 ---
 
 ## Advanced Options (Developers)
 
-This feature registers 1 WordPress hook in `woocommerce-functions.php`:
-
-**Filters:**
-
-- `woocommerce_checkout_fields` calls `cm_remove_order_notes()` (Removes order notes field from checkout)
+The feature registers one hook in `functions/woocommerce/woocommerce-functions.php`:
 
 ```php
-// Hooked in woocommerce-functions.php
 add_filter( 'woocommerce_checkout_fields', 'cm_remove_order_notes' );
 ```
 
-The feature modifies WooCommerce behavior by registering or removing hooks. Disabling it reverses those changes.
+**`woocommerce_checkout_fields`** calls `cm_remove_order_notes()` to remove the order notes field from the checkout form when the feature is enabled.
+
+---
 
 ## Troubleshooting
 
 ### The order notes field is still showing
 
-**Cause:** The toggle is off, or a caching plugin is serving the old page.
-**Fix:** Verify the toggle is on. Clear all caching layers.
+**Cause:** The feature toggle is off, the checkout is cached, or a theme re-adds the field.
+**Fix:** Confirm **Remove Order Notes** is on and clear caches. If a theme or custom checkout builder re-registers the order notes field, it renders despite the removal.
 
-### The order notes field is missing but I want it for some customers
+### I still want to see order notes in the admin
 
-**Cause:** The toggle is global.
-**Fix:** Configure in the plugin settings to exclude specific roles. For example, keep the field for wholesale customers but hide it for retail customers.
+**Cause:** Removing the customer field does not remove admin order notes.
+**Fix:** The feature only hides the checkout field. Admin order notes added in the order editor remain available.
 
-### The customer's saved notes are not showing in the admin
+### Previously entered notes are gone
 
-**Cause:** The notes are stored in the order meta, not as a separate field. The admin order details page should show them under "Order notes".
-**Fix:** Verify the notes are in the order meta by exporting the order as CSV. The toggle doesn't delete notes; it only hides the form field.
+**Cause:** The feature removed the input for new orders but should not delete stored notes.
+**Fix:** Verify notes were entered before the change and are stored on the order. The feature does not delete order note data; it only removes the checkout input.
 
-### I want a different type of field instead (e.g., a delivery date picker)
+---
 
-**Cause:** The toggle only controls the standard order notes field.
-**Fix:** Disable the toggle and use a custom checkout field plugin to add a different field. Or use the `woocommerce_checkout_fields` filter to add a custom field after disabling the standard one.
+## Frequently Asked Questions
+
+### Do customers lose the ability to leave a note?
+
+Yes, when the feature is on, customers can no longer enter an order note at checkout because the field is removed from the form.
+
+### Are old order notes deleted?
+
+No. Order notes already stored on existing orders remain in the database. The feature only removes the checkout input for new orders.
+
+### Can staff still add order notes?
+
+Yes. Admin order notes in the order editor are separate from the customer-facing checkout field and remain available.
+
+### Will this affect shipping or billing fields?
+
+No. Only the order notes text area is removed. The rest of the checkout form is unchanged.
 
 ---
 
 ## Related Articles
 
-- [How to Enable Checkout Field Placeholders in WordPress](woocommerce-enable-checkout-field-placeholders.md)
-- [How to Remove the Company Field from WooCommerce Checkout in WordPress](woocommerce-remove-company-field.md)
-- [How to Use Content Management in WordPress](../core/core-content-management.md)
+- [How to Remove the Company Field from WooCommerce Checkout](woocommerce-remove-company-field.md)
+- [How to Add Placeholders to WooCommerce Checkout Fields](woocommerce-enable-checkout-field-placeholders.md)
+- [How to Customize the Place Order Button in WooCommerce](woocommerce-custom-place-order-button.md)

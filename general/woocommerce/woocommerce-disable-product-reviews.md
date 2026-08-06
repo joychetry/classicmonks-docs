@@ -142,5 +142,5 @@ The feature modifies WooCommerce behavior by registering or removing hooks. Disa
 ## Related Articles
 
 - [How to Allow Duplicate Reviews in WordPress](woocommerce-allow-duplicate-reviews.md)
-- [How to Customize the Add to Cart Button in WordPress](woocommerce-customize-add-to-cart-button.md)
+- [How to Customize the Add to Cart Button Text in WooCommerce](woocommerce-customize-add-to-cart-button.md)
 - [How to Use Content Management in WordPress](../core/core-content-management.md)

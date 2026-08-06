@@ -1,152 +1,164 @@
 ---
-title: "How to Customize the Place Order Button in WordPress | CM"
+title: "How to Customize the Place Order Button in WooCommerce"
 slug: custom-place-order-button
-description: "Customize the Place Order button text and icon on the WooCommerce checkout page in Classic Monks. Configurable text, icon, and icon position."
-last_updated: 2026-06-24
+description: "Change the place order button text and add an icon image on the WooCommerce checkout page. Set the text, an optional image, and its position in Classic Monks."
+last_updated: 2026-08-06
 author: Joy
-reading_time: 3 min
+reading_time: 4 min
 canonical: https://classicmonks.com/docs/custom-place-order-button/
 ---
 
-# How to Customize the Place Order Button in WordPress
+# How to Customize the Place Order Button in WooCommerce
 
-> Custom Place Order Button replaces the default "Place Order" button text on the WooCommerce checkout page. Add an icon, customize the position, and align with your store's branding.
+> Change the WooCommerce place order button on the checkout so it uses your own text and an optional icon image. Set the button text, add an image, and choose whether the image sits before or after the text.
 
 ## Key Takeaways
 
-- Customizable button text (default "Place order")
-- Optional icon (cart, check, lock, etc.)
-- Configurable icon position (left or right of the text)
-- Improves conversion with action-oriented language
-- Persists across checkout updates
+- Replace the default "Place Order" text with your own wording
+- Add an optional icon image to the button
+- Choose the icon position: before or after the text
+- Requires checkout admin screens in WordPress
+- The button still completes the order normally; only its appearance changes
 
-## What Is the Custom Place Order Button feature?
+## What Does the Feature Do?
 
-The default WooCommerce "Place Order" button is functional but generic. The Custom Place Order Button feature lets you:
+The **Custom Place Order Button** feature changes the wording and appearance of the checkout button that submits an order. It replaces the button text with your chosen label, and optionally adds an icon image beside the text.
 
-- Change the button text (e.g., "Complete Purchase", "Confirm Order", "Pay Now")
-- Add an icon next to the text (e.g., a lock icon for security, a cart icon for clarity)
-- Position the icon (left or right of the text)
-
-The button still triggers the standard WooCommerce checkout completion; only the appearance changes.
+When you set an icon, the feature inserts the image into the button at the position you choose. The button keeps its normal checkout behavior; only the label and image change.
 
 ## Why You Need It
 
-The Place Order button is the most important button in the entire checkout flow. It's the moment the customer commits to the purchase:
+The place order button is the final action in the checkout flow:
 
-- **Action-oriented language**: "Complete Purchase" is more decisive than "Place Order"
-- **Security messaging**: A lock icon reassures customers about payment security
-- **Brand consistency**: Match the button to your store's voice and design
-
-For most stores, the default is fine. For stores that optimize the checkout flow, this is a small but high-impact change.
+- Action-oriented text ("Complete Purchase", "Pay Now", "Confirm Order") can feel more decisive than the default
+- A small icon, like a shopping cart or lock, adds visual context
+- Matching the button to your store's voice improves brand consistency
+- It is a small change with a clear effect on the checkout
 
 ---
 
-## How to Customize the Place Order Button in WordPress
+## How to Customize the Place Order Button in WooCommerce
 
-### Step 1: Navigate to Settings
+### Step 1: Enable the Feature
 
-Click into the **Classic Monks** plugin settings in your WordPress dashboard.
+1. In WordPress admin, open **Classic Monks > WooCommerce**.
+2. Open the **Checkout** settings area.
+3. Toggle on **Custom Place Order Button**. The nested options expand below the toggle.
 
-### Step 2: Go to the WooCommerce Tab
+### Step 2: Set the Button Text
 
-Click on the **WooCommerce** menu, then click the **Checkout** subtab.
+In **Button Text**, enter the label for the place order button. If you leave it blank, the feature falls back to `Pay Now`.
 
-### Step 3: Enable Custom Place Order Button
+### Step 3: Add an Icon Image (Optional)
 
-Toggle on **Custom Place Order Button**. Nested options expand.
+In **Button Icon**, enter the URL of the image to show on the button. The field accepts an uploaded image URL, which is rendered inside the button. Leave it blank for text only.
 
-### Step 4: Configure Button Settings
+### Step 4: Set the Icon Position
 
-The 3 sub-options include:
+Use **Icon Position** to place the icon before or after the text. The default is **Before**.
 
-- **Button Text**: The button label (default "Place order")
-- **Button Icon**: Optional icon (cart, check, lock, or empty for no icon)
-- **Icon Position**: Left or right of the text
+### Step 5: Save and Test
 
-### Step 5: Save Changes
-
-Click **Save Changes**.
-
-### Step 6: Test
-
-Visit the checkout page. The Place Order button should show your custom text and icon.
+Click **Save Changes**. Visit the checkout page and confirm the place order button shows your text and (if set) the icon in the chosen position.
 
 ---
 
 ## Configuration Options
 
-| Option | Description | Default |
-|--------|-------------|---------|
+| Option | Behavior | Default |
+|--------|----------|---------|
 | **Custom Place Order Button** | Master toggle. | Off |
-| **Button Text** | The button label. | "Place order" |
-| **Button Icon** | Optional icon (cart, check, lock). | (empty) |
-| **Icon Position** | Left or right. | Right |
-
-The icon is a Themify icon name (e.g., "ti-shopping-cart", "ti-check", "ti-lock"). The available icons are bundled with Classic Monks; see the Themify Icons documentation for the full list.
+| **Button Text** | Label on the place order button; blank falls back to `Pay Now`. | Blank (uses "Pay Now") |
+| **Button Icon** | Image URL shown on the button. | Blank (no icon) |
+| **Icon Position** | Before or after the button text. | Before |
 
 ---
 
 ## What Gets Affected
 
-- The checkout page: the Place Order button text and icon
-- The "Thank you" order confirmation page: may also use this button (depending on the theme)
+- The checkout page: the place order button text and optional image
+- The button markup: an image is inserted when an icon URL is set
 
 ## What Does NOT Get Affected
 
-- The cart page (different button, "Proceed to Checkout")
-- The order details in the customer's account
-- The admin order details
-- The checkout process itself (only the button appearance changes)
+- The checkout process: the button still submits the order normally
+- The cart page: this feature targets the checkout place order button
+- Payment processing: no change to the order or payment flow
+- The button styling beyond the inserted image: theme CSS still applies
 
 ---
 
 ## Advanced Options (Developers)
 
-This feature registers 3 WordPress hooks in `woocommerce-functions.php`:
-
-**Actions:**
-
-- `wp_footer` calls `cm_checkout_place_order_button_js()` (Injects checkout button JS (priority 999))
-
-**Filters:**
-
-- `woocommerce_order_button_text` calls `cm_custom_place_order_button_text()` (Customizes place order button text)
-- `woocommerce_order_button_html` calls `cm_custom_place_order_button_html()` (Customizes place order button HTML)
+The feature registers hooks in `functions/woocommerce/woocommerce-functions.php`:
 
 ```php
-// Hooked in woocommerce-functions.php
 add_filter( 'woocommerce_order_button_text', 'cm_custom_place_order_button_text' );
+add_filter( 'woocommerce_order_button_html', 'cm_custom_place_order_button_html' );
+add_action( 'wp_footer', 'cm_checkout_place_order_button_js', 999 );
 ```
 
-The feature modifies WooCommerce behavior by registering or removing hooks. Disabling it reverses those changes.
+- **`woocommerce_order_button_text`** sets the button label. If **Button Text** is empty, it returns `Pay Now`.
+- **`woocommerce_order_button_html`** inserts the icon image. When an icon URL is set, it renders an `<img>` inside the button, positioned before or after the button text according to **Icon Position**.
+- **`wp_footer`** (priority 999) injects the small jQuery handler that applies the icon to the `#place_order` button on the checkout page for three-digit-safe display when the button is not replaced by the HTML filter.
+
+---
 
 ## Troubleshooting
 
-### The button is not changing
+### The button text is not changing
 
-**Cause:** The toggle is off, or a caching plugin is serving the old page.
-**Fix:** Verify the toggle is on. Clear all caching layers.
+**Cause:** The feature toggle is off, or the checkout is cached.
+**Fix:** Confirm **Custom Place Order Button** is on and clear caches. The button text is applied through the WooCommerce order button text filter.
 
-### The button text changes but the icon doesn't show
+### The button shows "Pay Now" unexpectedly
 
-**Cause:** The icon name is misspelled or not a valid Themify icon.
-**Fix:** Use a valid icon name (e.g., "ti-shopping-cart" for cart, "ti-check" for check, "ti-lock" for lock). See the Themify Icons documentation for the full list.
+**Cause:** **Button Text** is blank, so the fallback `Pay Now` is used.
+**Fix:** Enter the exact label you want in **Button Text**. The feature falls back to `Pay Now` when the field is empty.
 
-### The button looks different in different themes
+### The icon is not showing
 
-**Cause:** The theme's CSS is styling the button differently.
-**Fix:** Customize the button with the `cm_custom_place_order_button_html` filter to add specific CSS classes. Then style those classes in your theme's CSS.
+**Cause:** **Button Icon** is blank, or the URL does not point to a valid image.
+**Fix:** Set **Button Icon** to a valid image URL. Confirm the URL loads a real image. The icon is inserted only when a URL is provided.
 
-### The button is duplicated (showing two buttons)
+### The icon appears on the wrong side
 
-**Cause:** A custom theme is also rendering the Place Order button, creating a duplicate.
-**Fix:** Disable the custom place order button in the theme (via the theme's settings or a child theme). Keep the Classic Monks version.
+**Cause:** **Icon Position** is not set to what you expect.
+**Fix:** Set **Icon Position** to Before to place the image ahead of the text, or After to place it after.
+
+### The icon shows but the text is misaligned
+
+**Cause:** The inserted image may need matching to your theme's button spacing.
+**Fix:** The feature applies a standard vertical alignment to the image. Adjust spacing with theme CSS targeting the button's inserted image element.
+
+---
+
+## Frequently Asked Questions
+
+### What happens if I leave the button text blank?
+
+The feature falls back to `Pay Now` when **Button Text** is empty.
+
+### How do I add an icon?
+
+Set **Button Icon** to the URL of an image you want on the button. The field accepts an uploaded or hosted image URL and renders it inside the button.
+
+### Can I place the icon before or after the text?
+
+Yes. **Icon Position** offers Before (default) and After.
+
+### Does this change how the order is processed?
+
+No. Only the button's text and optional image change. The order submits exactly as before.
+
+### Is the icon a font icon?
+
+No. The **Button Icon** field takes an image URL, and the feature renders it as an image inside the button. It does not accept a Themify icon name.
 
 ---
 
 ## Related Articles
 
-- [How to Customize the Order Review Heading in WordPress](woocommerce-custom-order-review-heading.md)
-- [How to Show Product Images in WooCommerce Checkout in WordPress](woocommerce-show-product-images-checkout.md)
-- [How to Use Content Management in WordPress](../core/core-content-management.md)
+- [How to Customize the Order Review Heading in WooCommerce](woocommerce-custom-order-review-heading.md)
+- [How to Show Product Images in the WooCommerce Checkout](woocommerce-show-product-images-checkout.md)
+- [How to Customize the Add to Cart Button Text in WooCommerce](woocommerce-customize-add-to-cart-button.md)

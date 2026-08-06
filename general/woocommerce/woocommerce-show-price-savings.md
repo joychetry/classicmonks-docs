@@ -156,4 +156,4 @@ No. Price savings and percentage off are product-display shortcodes only. They d
 
 - [How to Show Percentage Off in WooCommerce](woocommerce-show-percentage-off.md)
 - [How to Show Product Price History on Your Store](woocommerce-product-price-history.md)
-- [How to Customize the Add to Cart Button in WordPress](woocommerce-customize-add-to-cart-button.md)
+- [How to Customize the Add to Cart Button Text in WooCommerce](woocommerce-customize-add-to-cart-button.md)

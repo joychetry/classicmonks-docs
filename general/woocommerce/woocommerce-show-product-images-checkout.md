@@ -1,146 +1,154 @@
 ---
-title: "How to Show Product Images in WooCommerce Checkout in WordPress | CM"
+title: "How to Show Product Images in the WooCommerce Checkout"
 slug: show-product-images-checkout
-description: "Display product images on the WooCommerce checkout page in Classic Monks. Configurable size, style, and dimensions for visual purchase confirmation."
-last_updated: 2026-06-24
+description: "Show product thumbnails against each product in the WooCommerce checkout so customers confirm the order. Set the image size and style in Classic Monks."
+last_updated: 2026-08-06
 author: Joy
 reading_time: 4 min
 canonical: https://classicmonks.com/docs/show-product-images-checkout/
 ---
 
-# How to Show Product Images in WooCommerce Checkout in WordPress
+# How to Show Product Images in the WooCommerce Checkout
 
-> Show Product Images in Checkout displays product images on the WooCommerce checkout page next to product names. Configurable size, style, and dimensions for visual purchase confirmation.
+> Show product images next to product names in the WooCommerce checkout so customers can confirm what they are buying. Control the image size, style, and dimensions with Classic Monks.
 
 ## Key Takeaways
 
-- Display product images next to product names in checkout
-- Configurable image size (thumbnail, medium, large, custom)
-- Configurable style (rounded, square, circle, hidden border, etc.)
-- Custom width and height options
-- Improves customer confidence through visual confirmation
+- Show product thumbnails next to product names at checkout
+- Choose a preset image size or use custom width and height
+- Pick a style: square, rounded, or circle
+- Adds visual confirmation in the order review section
+- Works through WooCommerce's cart item name filter
 
-## What Is the Show Product Images in Checkout feature?
+## What Does the Feature Do?
 
-By default, the WooCommerce checkout page shows the product name and quantity, but no product image. Customers see "Product Name × 2" in the order review, but no visual representation.
+By default, the WooCommerce checkout order review shows the product name and quantity but no image. The **Show Product Images in Checkout** feature adds a product thumbnail beside each product name in the checkout, giving customers a visual confirmation of what they are buying.
 
-The Show Product Images in Checkout feature adds the product image next to the product name in the checkout. The image appears in the order review section.
+The thumbnail follows your image size and style settings, so you can match it to your design.
 
 ## Why You Need It
 
-Showing product images at checkout improves the customer experience:
+A visual confirmation at checkout reduces doubt and mistakes:
 
-- **Visual confirmation**: Customers see what they're buying, reducing "wait, what did I order?" anxiety
-- **Reduces cart abandonment**: Visual reinforcement at the critical conversion moment
-- **Better mobile experience**: On mobile, the small product thumbnails help customers verify their order
-- **Reduces order errors**: Customers can catch a mistake (wrong size, wrong product) before completing checkout
-
-For most e-commerce stores, this is a small but high-impact UX improvement.
+- Customers see the exact item they are buying, not just text
+- They can catch a wrong product or variant before completing the order
+- It strengthens confidence at the most sensitive step of the purchase
+- On mobile, a small thumbnail helps verify the order quickly
 
 ---
 
-## How to Show Product Images in WooCommerce Checkout in WordPress
+## How to Show Product Images in the WooCommerce Checkout
 
-### Step 1: Navigate to Settings
+### Step 1: Enable the Feature
 
-Click into the **Classic Monks** plugin settings in your WordPress dashboard.
+1. In WordPress admin, open **Classic Monks > WooCommerce**.
+2. Open the **Checkout** settings area.
+3. Toggle on **Show Product Images in Checkout**. The nested options expand below the toggle.
 
-### Step 2: Go to the WooCommerce Tab
+### Step 2: Choose the Image Size
 
-Click on the **WooCommerce** menu, then click the **Checkout** subtab.
+Use **Image Size** to select a preset:
 
-### Step 3: Enable Show Product Images in Checkout
+- **Small**, **Medium** (default), or **Large**
 
-Toggle on **Show Product Images in Checkout**. Nested options expand.
+Or choose **Custom** and set **Custom Width (px)** and **Custom Height (px)**. Defaults for custom width and height are **72px** each.
 
-### Step 4: Configure Image Settings
+### Step 3: Choose the Image Style
 
-The 4 sub-options include:
+Use **Image Style** to set the thumbnail shape:
 
-- **Image Width**: Custom pixel width (default 50px)
-- **Image Height**: Custom pixel height (default 50px)
-- **Image Size**: Thumbnail, medium, large, or full (uses the WordPress image sizes)
-- **Image Style**: Rounded corners, square, circle, hidden border, etc.
+- **Square** (default)
+- **Rounded**
+- **Circle**
 
-### Step 5: Save Changes
+### Step 4: Save and Test
 
-Click **Save Changes**.
-
-### Step 6: Test
-
-Add a product to cart and proceed to checkout. The product image should appear in the order review section.
+Click **Save Changes**. Add a product to the cart and open the checkout. Confirm the thumbnail appears beside each product name with the size and style you chose.
 
 ---
 
 ## Configuration Options
 
-| Option | Description | Default |
-|--------|-------------|---------|
+| Option | Behavior | Default |
+|--------|----------|---------|
 | **Show Product Images in Checkout** | Master toggle. | Off |
-| **Image Width** | Custom pixel width. | 50px |
-| **Image Height** | Custom pixel height. | 50px |
-| **Image Size** | Thumbnail, medium, large, or full. | Thumbnail |
-| **Image Style** | Rounded, square, circle, hidden border. | Square |
+| **Image Size** | Small, Medium, Large, or Custom. | Medium |
+| **Custom Width (px)** | Custom thumbnail width (shown when Image Size is Custom). | 72 |
+| **Custom Height (px)** | Custom thumbnail height (shown when Image Size is Custom). | 72 |
+| **Image Style** | Square, Rounded, or Circle. | Square |
 
 ---
 
 ## What Gets Affected
 
-- The order review section on the checkout page: product images appear next to product names
-- The "Thank you" order confirmation page: product images also appear (depending on the theme)
-- The email order confirmation: product images appear in the order summary (depending on the email template)
-- The CSS class on the image: based on the Image Style option (used for theme-specific styling)
+- The checkout order review: product thumbnails appear next to product names
+- The cart item display in the checkout, per your size and style settings
 
 ## What Does NOT Get Affected
 
-- The product image in the cart page (separate feature, may need additional customization)
-- The product image in the order review on the order confirmation page (theme-dependent)
-- The product image in the admin order details
-- The product's actual image data (WooCommerce standard image handling)
+- The product's actual image data: WooCommerce continues to manage product images normally
+- The cart page: this feature targets the checkout display
+- Order totals and totals: only the product name content changes
+- Admin order details: unaffected by the front-end checkout image
 
 ---
 
-## Advanced Options (Developers)
+## How the Thumbnail Is Added
 
-This feature registers 1 WordPress hook in `woocommerce-functions.php`:
+The feature hooks into WooCommerce's cart item name filter, so the thumbnail is prepended to the product name in the checkout. The image is rendered using the product's image and styled according to your size and style settings, with inline dimensions applied for custom sizes.
 
-**Filters:**
-
-- `woocommerce_cart_item_name` calls `cm_add_checkout_product_thumbnail()` (Adds product thumbnail to checkout (priority 10))
-
-```php
-// Hooked in woocommerce-functions.php
-add_filter( 'woocommerce_cart_item_name', 'cm_add_checkout_product_thumbnail' );
-```
-
-The feature modifies WooCommerce behavior by registering or removing hooks. Disabling it reverses those changes.
+---
 
 ## Troubleshooting
 
 ### Product images are not showing
 
-**Cause:** The toggle is off, or the theme is not displaying the order review section in a compatible way.
-**Fix:** Verify the toggle is on. Check that the theme's checkout template uses WooCommerce's standard `woocommerce_checkout_order_review` action (most themes do).
+**Cause:** The feature toggle is off, the checkout is cached, or the theme renders product names in a way that bypasses the cart item name filter.
+**Fix:** Confirm **Show Product Images in Checkout** is on and clear caches. If the theme uses a custom checkout summary, ensure it renders product names through the WooCommerce cart item name filter.
 
 ### The images are too small or too large
 
-**Cause:** The Image Width and Image Height settings may not match the theme's container.
-**Fix:** Adjust the Width and Height values. The default 50x50 works for most themes, but some themes may need different values.
+**Cause:** The **Image Size** preset or the custom dimensions do not match the layout.
+**Fix:** Choose a different preset, or set **Image Size** to Custom and adjust **Custom Width (px)** and **Custom Height (px)**.
 
 ### The image style is not applying
 
-**Cause:** The theme's CSS is overriding the Custom Monks styles.
-**Fix:** Inspect the rendered image in the browser's DevTools. Verify the class is present. If it is but the styles don't apply, your theme has higher-specificity CSS. Add `!important` to the theme's CSS (as a last resort).
+**Cause:** The theme's CSS may override the thumbnail corners, or a cached stylesheet is served.
+**Fix:** Confirm the style setting and clear caches. If a theme forces its own image styling, match the corners with additional CSS in the theme.
 
-### The image is showing for virtual products (where it shouldn't)
+### Images appear for a variant but not the base product
 
-**Cause:** The default behavior shows the image for all product types.
-**Fix:** Configure in the plugin settings to hide the image for specific product types (e.g., virtual, downloadable).
+**Cause:** The thumbnail uses the product's image. If the variant has its own image, that is shown; otherwise the parent image is used.
+**Fix:** Confirm the product has an image set. For variations, set an image on the variation when you want a distinct thumbnail.
+
+---
+
+## Frequently Asked Questions
+
+### Where do the images appear?
+
+They appear next to product names in the checkout order review section.
+
+### What image sizes can I use?
+
+You can choose a preset size (Small, Medium, or Large) or set Custom width and height in pixels. The default preset is Medium, with 72px used for custom dimensions.
+
+### Can I make the images rounded or circular?
+
+Yes. **Image Style** offers Square, Rounded, and Circle shapes.
+
+### Does this change the product's real image?
+
+No. The feature only controls how the product's existing image is shown at checkout.
+
+### Does it affect the cart page?
+
+No. This feature targets the checkout display. Cart page images are handled separately by your theme.
 
 ---
 
 ## Related Articles
 
-- [How to Customize the Order Review Heading in WordPress](woocommerce-custom-order-review-heading.md)
-- [How to Customize the Place Order Button in WordPress](woocommerce-custom-place-order-button.md)
-- [How to Use Content Management in WordPress](../core/core-content-management.md)
+- [How to Customize the Order Review Heading in WooCommerce](woocommerce-custom-order-review-heading.md)
+- [How to Customize the Place Order Button in WooCommerce](woocommerce-custom-place-order-button.md)
+- [How to Set Up WooCommerce Coupon Auto-Apply in WordPress](woocommerce-enable-auto-apply-coupons.md)

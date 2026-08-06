@@ -1,135 +1,146 @@
 ---
-title: "How to Remove the Company Field from WooCommerce Checkout in WordPress | CM"
+title: "How to Remove the Company Field from WooCommerce Checkout"
 slug: remove-company-field
-description: "Remove the company name field from the WooCommerce checkout form in Classic Monks. Streamlines checkout for B2C customers and reduces form abandonment."
-last_updated: 2026-06-24
+description: "Remove the company field from the WooCommerce checkout billing form to shorten it. Ideal for consumer stores that want a faster, cleaner checkout form."
+last_updated: 2026-08-06
 author: Joy
 reading_time: 3 min
 canonical: https://classicmonks.com/docs/remove-company-field/
 ---
 
-# How to Remove the Company Field from WooCommerce Checkout in WordPress
+# How to Remove the Company Field from WooCommerce Checkout
 
-> Remove Company Field strips the company name input from the WooCommerce billing and shipping checkout forms. Streamlines checkout for B2C stores and reduces form abandonment.
+> Remove the company name field from the WooCommerce billing form. Classic Monks strips the field from the checkout, leaving a shorter form for stores that do not collect company names.
 
 ## Key Takeaways
 
-- Single toggle, no nested options
-- Removes the company field from billing and shipping checkout forms
-- Useful for B2C stores where company information is not needed
-- Reduces form fields and checkout abandonment
-- Does not affect WooCommerce's B2B mode (that's a separate plugin)
+- Remove the company name input from the checkout billing form
+- One toggle, no nested options
+- Shortens the checkout form for consumer stores
+- Leaves existing order and address data intact
+- Does not affect any saved company values already in the database
 
-## What Is the Remove Company Field feature?
+## What Does the Feature Do?
 
-By default, WooCommerce's billing and shipping checkout forms include a "Company name" field. This field is optional, but it adds visual clutter and a small amount of friction.
+WooCommerce's billing form includes a company name field by default. The **Remove Company Field** feature removes that input from the checkout form, so customers no longer see or fill in a company name.
 
-The Remove Company Field feature removes the company field from both billing and shipping forms. The customer's saved addresses (if any) are unaffected.
+The existing data is untouched: orders placed before or after still store whatever company value exists. The feature only stops the field from being shown and collected at checkout.
 
 ## Why You Need It
 
-The company field is useful for B2B stores (businesses selling to other businesses) where the customer's company name is relevant for invoicing and reporting. For B2C stores (businesses selling to consumers), it's noise:
+The company field is aimed at B2B invoicing. For consumer-facing stores it is often unnecessary:
 
-- Most B2C customers don't have a "company" to enter
-- The field adds visual clutter to a long checkout form
-- Removing it reduces form abandonment (one less field = higher conversion)
-
-For most consumer e-commerce stores, removing the company field is a small win.
+- Few retail customers enter a company name
+- An unused field adds length to the checkout form
+- Removing it shortens the form and focuses customers on what matters
+- B2B stores that need the field can keep it off
 
 ---
 
-## How to Remove the Company Field from WooCommerce Checkout in WordPress
+## How to Remove the Company Field from WooCommerce Checkout
 
-### Step 1: Navigate to Settings
+### Step 1: Enable the Feature
 
-Click into the **Classic Monks** plugin settings in your WordPress dashboard.
+1. In WordPress admin, open **Classic Monks > WooCommerce**.
+2. Open the **Checkout** settings area.
+3. Toggle on **Remove Company Field**.
 
-### Step 2: Go to the WooCommerce Tab
+### Step 2: Save and Test
 
-Click on the **WooCommerce** menu, then click the **Checkout** subtab.
-
-### Step 3: Enable Remove Company Field
-
-Toggle on **Remove Company Field**.
-
-### Step 4: Save Changes
-
-Click **Save Changes**.
-
-### Step 5: Test
-
-Visit the checkout page. The company field should not appear in the billing or shipping forms.
+Click **Save Changes**. Visit the checkout page and confirm the company name field no longer appears in the billing form.
 
 ---
 
 ## Configuration Options
 
-| Option | Description | Default |
-|--------|-------------|---------|
-| **Remove Company Field** | Master toggle. | Off |
+| Option | Default |
+|--------|---------|
+| **Remove Company Field** | Off |
 
-No nested options.
+There are no nested options. The feature is a single on/off control.
+
+---
+
+## Common Use Cases
+
+**Consumer stores.** Retail and consumer checkouts rarely need a company name, so removing the field shortens the form.
+
+**Faster mobile checkout.** Fewer fields make the form quicker to complete on a phone.
+
+**B2B invoicing elsewhere.** If company data matters, capture it through invoicing or order details rather than a checkout field.
 
 ---
 
 ## What Gets Affected
 
-- Billing checkout form: the company field is removed
-- Shipping checkout form: the company field is removed
-- The customer's saved addresses (in My Account): the company field is still stored (for compatibility with old data), but not displayed in the form
-- The order confirmation email: the company name is no longer included
-- The admin order details: the company name is still stored in the database (for legacy orders)
+- The checkout billing form: the company name field is removed
+- The checkout experience: customers no longer see or enter a company name
 
 ## What Does NOT Get Affected
 
-- WooCommerce's B2B mode (a separate plugin, not Classic Monks)
-- Custom checkout fields added by other plugins
-- The customer's saved addresses (the data is preserved)
-- The order in the admin (the company name is stored if it was provided)
+- Existing saved company values: data already in the database is preserved
+- Order records: any company value captured previously remains stored
+- Custom checkout fields from other plugins: those are separate
+- Billing and shipping address fields other than company: these stay in place
 
 ---
 
 ## Advanced Options (Developers)
 
-This feature registers 1 WordPress hook in `woocommerce-functions.php`:
-
-**Filters:**
-
-- `woocommerce_checkout_fields` calls `anonymous()` (Removes company field from checkout)
+The feature is wired in `functions/woocommerce/woocommerce-functions.php`:
 
 ```php
-// Hooked in woocommerce-functions.php
-add_filter( 'woocommerce_checkout_fields', 'anonymous' );
+add_filter( 'woocommerce_checkout_fields', function($fields) {
+    unset( $fields['billing']['billing_company'] );
+    return $fields;
+} );
 ```
 
-The feature modifies WooCommerce behavior by registering or removing hooks. Disabling it reverses those changes.
+**`woocommerce_checkout_fields`** runs an inline filter that unsets `billing_company` from the billing fields, so the input is no longer rendered at checkout.
+
+---
 
 ## Troubleshooting
 
 ### The company field is still showing
 
-**Cause:** The toggle is off, or a caching plugin is serving the old page.
-**Fix:** Verify the toggle is on. Clear all caching layers (page cache, object cache, CDN). The checkout page is a critical conversion path; cache it correctly.
+**Cause:** The feature toggle is off, the checkout is cached, or a theme re-adds the field.
+**Fix:** Confirm **Remove Company Field** is on and clear caches. If a theme or custom checkout builder re-registers a company field, it will render even with the default one removed.
 
-### The field is gone but checkout validation fails
+### Only the billing company field disappears but not another
 
-**Cause:** The company field was marked as required in some configurations. Removing it shouldn't cause validation issues, but if your checkout was relying on it, you may need to update.
-**Fix:** Verify the checkout validation works without the field. The company field is optional by default, so this is rare.
+**Cause:** The feature removes the standard billing company field. A duplicate added by another plugin is separate.
+**Fix:** Identify the source of the remaining field. The built-in field is removed by the feature's checkout-field filter.
 
-### I want to hide the field for guest users but show it for logged-in wholesale customers
+### Existing orders still show a company name
 
-**Cause:** The toggle is global.
-**Fix:** Disable the toggle globally. Configure in the plugin settings to exclude wholesale roles. This way, the field is hidden by default but shows for wholesale customers.
+**Cause:** The feature hides the field going forward; it does not delete stored data.
+**Fix:** This is expected. Historical orders keep whatever company value they were saved with.
 
-### The field is gone but the order data still has company info
+---
 
-**Cause:** This is expected. The toggle hides the form field. Orders placed before the toggle was enabled retain their company data in the database.
-**Fix:** No action needed. The toggle doesn't delete existing data. If you want to clean up old data, do it via the database or a custom migration script.
+## Frequently Asked Questions
+
+### Does this delete company names from existing orders?
+
+No. The feature only removes the field from the checkout form. Company values already stored with prior orders remain in the database.
+
+### Will new customers still be able to enter a company name?
+
+No. With the field removed, customers no longer see or fill in a company name at checkout.
+
+### Does it remove the field from the shipping form too?
+
+The feature removes the company field from the billing checkout fields. If the shipping form also exposes a company field from another source, removal would target that field separately.
+
+### Is this the same as hiding it for certain customers?
+
+No. The toggle removes the field for everyone at checkout. It does not selectively show or hide based on customer role or order type.
 
 ---
 
 ## Related Articles
 
-- [How to Enable Checkout Field Placeholders in WordPress](woocommerce-enable-checkout-field-placeholders.md)
-- [How to Use Content Management in WordPress](../core/core-content-management.md)
-- [How to Configure SMTP Settings in WordPress](../email/email-smtp-settings.md)
+- [How to Add Placeholders to WooCommerce Checkout Fields](woocommerce-enable-checkout-field-placeholders.md)
+- [How to Remove Order Notes from WooCommerce Checkout](woocommerce-remove-order-notes.md)
+- [How to Customize the Place Order Button in WooCommerce](woocommerce-custom-place-order-button.md)

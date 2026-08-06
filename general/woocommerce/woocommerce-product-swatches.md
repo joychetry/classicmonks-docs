@@ -184,6 +184,6 @@ Disabling **Enable Product Swatches** stops the `replace_dropdown_with_swatches`
 
 ## Related Articles
 
-- [How to Disable Out of Stock Variations in WordPress](woocommerce-disable-out-of-stock-variations.md)
-- [How to Customize the Add to Cart Button in WordPress](woocommerce-customize-add-to-cart-button.md)
-- [How to Auto Select the First Variation in WordPress](woocommerce-auto-select-first-variation.md)
+- [How to Disable Out of Stock Variations in WooCommerce](woocommerce-disable-out-of-stock-variations.md)
+- [How to Customize the Add to Cart Button Text in WooCommerce](woocommerce-customize-add-to-cart-button.md)
+- [How to Auto-Select the First Variation in WooCommerce](woocommerce-auto-select-first-variation.md)
