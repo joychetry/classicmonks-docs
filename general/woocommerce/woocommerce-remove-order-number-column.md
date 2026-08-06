@@ -130,5 +130,5 @@ The feature modifies WooCommerce behavior by registering or removing hooks. Disa
 ## Related Articles
 
 - [How to Remove Display Name from Account Settings in WordPress](woocommerce-remove-woocommerce-display-name-option.md)
-- [How to Enable Custom Order Columns in WordPress](woocommerce-enable-custom-order-columns.md)
+- [How to Add Custom Columns to the WooCommerce Orders Table](woocommerce-enable-custom-order-columns.md)
 - [How to Use Content Management in WordPress](../core/core-content-management.md)

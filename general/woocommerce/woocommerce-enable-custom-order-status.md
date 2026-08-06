@@ -167,7 +167,7 @@ No. Changing an order to a custom status is manual, using the **Status** dropdow
 
 ## Related Articles
 
-- [How to Enable Custom Order Columns in WordPress](woocommerce-enable-custom-order-columns.md)
+- [How to Add Custom Columns to the WooCommerce Orders Table](woocommerce-enable-custom-order-columns.md)
 - [How to Enable Thank You Page Link in Orders in WordPress](woocommerce-enable-thank-you-page-link-orders.md)
 - [How to Enable Auto-Completion for Virtual/Downloadable Orders in WordPress](woocommerce-enable-woocommerce-auto-completion.md)
 

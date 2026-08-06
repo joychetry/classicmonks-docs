@@ -1,195 +1,181 @@
 ---
-title: "How to Enable Custom Order Columns in WordPress | CM"
+title: "How to Add Custom Columns to the WooCommerce Orders Table"
 slug: enable-custom-order-columns
-description: "Add additional columns to the WooCommerce orders table in Classic Monks. Includes 19 column options like payment method, shipping details, customer info, and more."
-last_updated: 2026-06-24
+description: "Add extra columns to the WooCommerce admin orders table with Classic Monks. Enable discounts, shipping, customer, payment, tax, and product data at a glance."
+last_updated: 2026-08-06
 author: Joy
-reading_time: 7 min
+reading_time: 6 min
 canonical: https://classicmonks.com/docs/enable-custom-order-columns/
 ---
 
-# How to Enable Custom Order Columns in WordPress
+# How to Add Custom Columns to the WooCommerce Orders Table
 
-> Enable Custom Order Columns adds 19 additional columns to the WooCommerce admin orders table. Configure which columns to show from payment method, shipping details, customer info, order totals, and more.
+> Add extra columns to the WooCommerce admin orders table so payment, shipping, customer, discount, tax, and product data is visible without opening each order. Enable any of 19 optional columns in Classic Monks.
 
 ## Key Takeaways
 
-- Single toggle, master switch for the 19 column options
-- 19 column options: payment method, shipping details, customer info, order totals, and more
-- Each column is independently enabled
-- Columns appear in the orders table after the default columns
-- Improves order management efficiency at a glance
+- Add up to 19 optional columns to the WooCommerce admin orders table
+- Enable each column independently from the Classic Monks Orders settings
+- Columns are inserted after the order number in a fixed order
+- Most columns are sortable from the column headers
+- Simplifies customer service, fulfillment, finance, and reporting scans
 
-## What Is the Enable Custom Order Columns feature?
+## What Does the Feature Do?
 
-The default WooCommerce admin orders table shows: order number, date, status, customer, total, items, actions. The Enable Custom Order Columns feature adds the ability to show 19 additional columns:
+The default WooCommerce admin orders table shows order number, date, status, and customer basics. The **Enable Custom Order Columns** feature adds optional columns so more data is visible at a glance. You turn on the columns you want, and each one appears in the orders list showing live order data.
 
-- **Discount columns**: Total Discount, Total Items
-- **Address columns**: City, Postcode/ZIP, Country, State/County
-- **Customer columns**: Username, Customer Email, Customer Type, Customer Since
-- **Payment columns**: Payment Method
-- **Order notes**: Order Notes
-- **Shipping columns**: Shipping Method, Shipping Total
-- **Tax**: Tax Total
-- **Status history**: Status History
-- **Product categories**: Product Categories
-- **Downloadable items**: Downloadable Items
-- **Virtual items**: Virtual Items
+The full set of available columns covers discounts, item counts, billing address, customer identity, payment, notes, shipping, tax, status history, categories, and downloadable or virtual item counts.
 
-Each column is a sub-option that can be independently enabled. The master toggle controls whether ANY custom columns are shown.
+## When to Enable It
 
-## Why You Need It
+Enable Custom Order Columns when you process enough orders that opening each one to check payment, shipping, or customer details wastes time:
 
-The default orders table is functional but minimal. For stores that process many orders, having the right columns visible at a glance saves time:
+- Customer service teams that need billing email and addresses visible on the list
+- Fulfillment teams that want shipping method and shipping total at a glance
+- Finance and accounting work that uses payment method, discount, and tax columns
+- Reporting needs that benefit from a visual scan across many orders
 
-- **Customer service**: See customer details (email, since, type) without opening each order
-- **Fulfillment**: See shipping method and address without opening each order
-- **Finance**: See payment method and discount without opening each order
-- **Reporting**: Quick visual scan of patterns (which payment method, which customer type, etc.)
-
-For most stores, custom columns are a small but measurable efficiency improvement.
+Keep it off if the default columns already give your team what it needs.
 
 ---
 
-## How to Enable Custom Order Columns in WordPress
+## How to Add Custom Columns to the WooCommerce Orders Table
 
-### Step 1: Navigate to Settings
+### Step 1: Enable the Feature
 
-Click into the **Classic Monks** plugin settings in your WordPress dashboard.
+1. In WordPress admin, open **Classic Monks > WooCommerce**.
+2. Open the **Orders** settings area.
+3. Toggle on **Enable Custom Order Columns**. The column toggles expand below it.
 
-### Step 2: Go to the WooCommerce Tab
+### Step 2: Turn On the Columns You Want
 
-Click on the **WooCommerce** menu, then click the **Orders** subtab.
+Enable the individual toggles for the columns you need. Each column is independent, so you can show only the data that matters to your team. For example: enable **Payment Method**, **Shipping Method**, and **Shipping Total** for fulfillment, or **Customer Email** and **Customer Type** for support.
 
-### Step 3: Enable Custom Order Columns
+### Step 3: Save and Verify
 
-Scroll to **Enable Custom Order Columns**. Toggle on to enable the column system. Nested options expand with the 19 column toggles.
-
-### Step 4: Select Columns
-
-Toggle on the columns you want to display. Each column is independent.
-
-### Step 5: Save Changes
-
-Click **Save Changes**.
-
-### Step 6: Test
-
-Go to **WooCommerce > Orders** in the WordPress admin. The selected columns should appear in the orders table.
+Click **Save Changes**, then open **WooCommerce > Orders**. The enabled columns appear in the orders table after the order number. Use the sortable column headers to reorder rows by values such as total discount, shipping total, or customer email.
 
 ---
 
 ## Available Columns
 
-The 19 available columns are:
+Each of these is an independent toggle under **Enable Custom Order Columns**:
 
-| Column | Description |
-|--------|-------------|
-| **Total Discount** | Total discount amount applied to each order. |
-| **Total Items** | Total number of items in each order. |
-| **City** | Customer's billing city. |
-| **Postcode/ZIP** | Customer's billing postcode. |
-| **Country** | Customer's billing country. |
-| **State/County** | Customer's billing state. |
-| **Username** | Customer's WordPress username. |
-| **Payment Method** | Payment method used (Stripe, PayPal, etc.). |
-| **Order Notes** | Latest order note for each order. |
-| **Shipping Method** | Shipping method selected. |
-| **Shipping Total** | Shipping cost for the order. |
-| **Tax Total** | Tax amount for the order. |
-| **Status History** | Number of status changes (click for full history). |
-| **Customer Email** | Customer's email address. |
-| **Customer Type** | New vs. returning customer. |
-| **Customer Since** | Date the customer registered. |
-| **Product Categories** | Comma-separated list of categories. |
-| **Downloadable Items** | Whether the order contains downloadable products. |
-| **Virtual Items** | Whether the order contains virtual products. |
+| Column | Data it shows |
+|--------|---------------|
+| **Discount** | Total discount applied to the order. |
+| **Items** | Total item count for the order. |
+| **City** | Billing city. |
+| **Postcode** | Billing postcode/ZIP. |
+| **Country** | Billing country. |
+| **State** | Billing state/county. |
+| **Username** | Customer's username, or "Guest" for guest orders. |
+| **Payment** | Payment method title (for example, Stripe or PayPal). |
+| **Notes** | The last three order notes, trimmed to a short preview. |
+| **Shipping Method** | Shipping method used. |
+| **Shipping Total** | Shipping cost shown as a price. |
+| **Tax Total** | Total tax shown as a price. |
+| **Status History** | The last three status changes with dates. |
+| **Email** | Customer's billing email. |
+| **Customer Type** | Registered or Guest. |
+| **Customer Since** | Date of the customer's first order. |
+| **Categories** | Product categories across the order, as links. |
+| **Downloads** | Count of downloadable item quantities in the order. |
+| **Virtual** | Count of virtual item quantities in the order. |
 
 ---
 
 ## Configuration Options
 
-| Option | Description | Default |
-|--------|-------------|---------|
-| **Enable Custom Order Columns** | Master toggle. | Off |
-| **Total Discount** | Toggle for this column. | Off |
-| **Total Items** | Toggle for this column. | Off |
-| **City** | Toggle for this column. | Off |
-| **Postcode/ZIP** | Toggle for this column. | Off |
-| **Country** | Toggle for this column. | Off |
-| **State/County** | Toggle for this column. | Off |
-| **Username** | Toggle for this column. | Off |
-| **Payment Method** | Toggle for this column. | Off |
-| **Order Notes** | Toggle for this column. | Off |
-| **Shipping Method** | Toggle for this column. | Off |
-| **Shipping Total** | Toggle for this column. | Off |
-| **Tax Total** | Toggle for this column. | Off |
-| **Status History** | Toggle for this column. | Off |
-| **Customer Email** | Toggle for this column. | Off |
-| **Customer Type** | Toggle for this column. | Off |
-| **Customer Since** | Toggle for this column. | Off |
-| **Product Categories** | Toggle for this column. | Off |
-| **Downloadable Items** | Toggle for this column. | Off |
-| **Virtual Items** | Toggle for this column. | Off |
+| Option | Default |
+|--------|---------|
+| **Enable Custom Order Columns** (master) | Off |
+| **Discount / Items / City / Postcode / Country / State / Username / Payment / Notes / Shipping Method / Shipping Total / Tax Total / Status History / Email / Customer Type / Customer Since / Categories / Downloads / Virtual** (19 individual toggles) | Off |
+
+Each column is enabled by turning on its toggle. All 19 columns, plus the default WooCommerce columns, are registered when the feature is on; only the enabled ones are inserted into the orders table.
 
 ---
 
 ## What Gets Affected
 
-- The admin orders table: selected columns appear after the default columns
-- The column sort order: follows the toggle order in the settings (you can rearrange by changing the toggle order)
-- The export (CSV): selected columns are included
+- The admin orders table: enabled columns appear after the order number
+- Sorting: most numeric and text columns are sortable from their headers
+- The orders list becomes more informative at a glance for enabled data
 
 ## What Does NOT Get Affected
 
-- The customer-facing order summary
-- The order detail page in the admin
-- The order emails
-- The WooCommerce REST API for orders (returns the same data regardless of column toggles)
+- The default WooCommerce columns: these stay in place
+- The order detail page and order editor: custom columns are list-only
+- Customer-facing pages: the feature is admin-only; order emails and the account page are unchanged
+- The WooCommerce REST API: order data returned by the API is unchanged by the column toggles
 
 ---
 
 ## Advanced Options (Developers)
 
-This feature registers 3 WordPress hooks in `woo-orders.php`:
-
-**Actions:**
-
-- `manage_shop_order_posts_custom_column` calls `cm_custom_order_column_content()` (Displays custom column content)
-
-**Filters:**
-
-- `manage_edit-shop_order_columns` calls `cm_register_custom_order_columns()` (Adds custom columns to order list)
-- `manage_edit-shop_order_sortable_columns` calls `cm_custom_order_column_sorting()` (Makes custom columns sortable)
+The feature registers four hooks in `functions/woocommerce/woo-orders.php`:
 
 ```php
-// Hooked in woo-orders.php
 add_filter( 'manage_edit-shop_order_columns', 'cm_register_custom_order_columns' );
+add_action( 'manage_shop_order_posts_custom_column', 'cm_custom_order_column_content' );
+add_filter( 'manage_edit-shop_order_sortable_columns', 'cm_custom_order_column_sorting' );
+add_action( 'pre_get_posts', 'cm_custom_order_column_orderby' );
 ```
 
-The feature modifies WooCommerce behavior by registering or removing hooks. Disabling it reverses those changes.
+- **`manage_edit-shop_order_columns`** calls `cm_register_custom_order_columns()`, which inserts the enabled columns immediately after the order number.
+- **`manage_shop_order_posts_custom_column`** calls `cm_custom_order_column_content()`, which populates each column from the order data.
+- **`manage_edit-shop_order_sortable_columns`** calls `cm_custom_order_column_sorting()`, making the numeric and text columns sortable. Sortable columns include discount, items, city, postcode, country, state, username, payment, shipping total, tax total, email, customer type, and customer since. Notes, status history, categories, downloads, and virtual are registered for display but not made sortable.
+- **`pre_get_posts`** calls `cm_custom_order_column_orderby()`, which maps the sortable column to the underlying order meta (for example, shipping total sorts by `_order_shipping`).
+
+The registration and sorting functions gate on the **Enable Custom Order Columns** toggle. If it is off, the columns are not added and sorting is unchanged.
+
+---
 
 ## Troubleshooting
 
 ### A column is not showing
 
-**Cause:** The column toggle is off, or a caching plugin is serving the old page.
-**Fix:** Verify the column toggle is on. Clear all caching layers (page cache, object cache, CDN).
+**Cause:** The column toggle is off, or the feature toggle is off.
+**Fix:** Confirm **Enable Custom Order Columns** is on, then turn on the specific column you expect to see. Save and reload the orders page.
 
-### The column is showing but with empty data
+### A column shows empty data
 
-**Cause:** The order doesn't have the relevant data (e.g., a guest order doesn't have a username).
-**Fix:** This is expected. The column is shown for all orders, but the data may be empty for orders that don't have the relevant info.
+**Cause:** The order does not have that data. A guest order has no username (shows "Guest"), and an order with no tax or shipping shows nothing in those columns.
+**Fix:** This is expected per order. The column applies to all rows, but its value can be blank for orders without the relevant data.
 
-### The column is in the wrong position
+### A column is in an unexpected position
 
-**Cause:** The columns are shown in the order they appear in the settings (you toggle them on in a specific order).
-**Fix:** Toggle the columns off and on again in the order you want them to appear. The order in the table reflects the order of the toggles.
+**Cause:** Enabled columns are inserted after the order number in a fixed code order, not in the order you turned them on.
+**Fix:** This is by design. Column position follows the plugin's fixed insertion order; it is not controlled by toggle order.
 
-### The column is showing in the table but not in the CSV export
+### A column is not sortable
 
-**Cause:** The CSV export uses a different column list (typically the default WooCommerce columns plus the custom ones, but the order may vary).
-**Fix:** Configure in the plugin settings to customize the CSV export columns. The default export includes all visible columns.
+**Cause:** Notes, status history, categories, downloads, and virtual columns are display-only and are not registered as sortable.
+**Fix:** This is by design. For data you must sort, use one of the sortable columns (such as discount, shipping total, or customer email).
+
+---
+
+## Frequently Asked Questions
+
+### How many columns can I add to the orders table?
+
+Up to 19. All of them are optional toggles, so you can add a single column or the entire set depending on what your team needs to see.
+
+### Where do the custom columns appear?
+
+They are inserted immediately after the order number in the orders table. They do not replace the default WooCommerce columns.
+
+### Can I sort orders by the custom columns?
+
+Most numeric and text columns are sortable, including discount, items, city, postcode, country, state, username, payment, shipping total, tax total, email, customer type, and customer since. Notes, status history, categories, downloads, and virtual are display-only.
+
+### Do customers see these columns?
+
+No. The custom columns appear only in the WordPress admin orders table. Customer-facing order emails and the My Account order view are unaffected.
+
+### Will the columns change the order data or exports?
+
+No. The columns only change what is displayed in the admin list. The underlying order data and the WooCommerce REST API responses are unchanged.
 
 ---
 
@@ -197,4 +183,6 @@ The feature modifies WooCommerce behavior by registering or removing hooks. Disa
 
 - [How to Enable Thank You Page Link in Orders in WordPress](woocommerce-enable-thank-you-page-link-orders.md)
 - [How to Create Custom Order Statuses in WooCommerce](woocommerce-enable-custom-order-status.md)
-- [How to Use Content Management in WordPress](../core/core-content-management.md)
+- [How to Remove Order Number Column from Admin Orders Page in WordPress](woocommerce-remove-order-number-column.md)
+
+
