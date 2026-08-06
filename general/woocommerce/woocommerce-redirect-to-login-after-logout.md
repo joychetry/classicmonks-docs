@@ -1,145 +1,152 @@
 ---
-title: "How to Redirect After Logout in WordPress | CM"
+title: "How to Redirect Users After They Log Out of WooCommerce"
 slug: redirect-to-login-after-logout
-description: "Send users to the login page immediately after they log out. Provides clear logout confirmation and maintains security by preventing accidental access."
-last_updated: 2026-06-24
+description: "Send users to the login page or a custom URL immediately after they log out of your store. Control the logout destination with a Classic Monks toggle."
+last_updated: 2026-08-06
 author: Joy
 reading_time: 3 min
 canonical: https://classicmonks.com/docs/redirect-to-login-after-logout/
 ---
 
-# How to Redirect After Logout in WordPress
+# How to Redirect Users After They Log Out of WooCommerce
 
-> Redirect After Logout sends users to the login page immediately after they log out. Provides clear logout confirmation and maintains security by preventing accidental access.
+> Send users to the login page or a custom URL immediately after they log out. Choose the destination in Classic Monks for a clear logout flow.
 
 ## Key Takeaways
 
-- Single toggle, no nested options
-- Sends users to the login page immediately after logout
-- Provides clear logout confirmation
-- Maintains security by preventing accidental access to authenticated content
-- Customizable redirect destination
+- Redirect users to a chosen page right after logout
+- Send them to the login page or a custom URL
+- Choose the destination from the settings
+- Provides a clear logout hand-off
+- Confirmed to run on the logout action
 
-## What Is the Redirect After Logout feature?
+## What Does the Feature Do?
 
-By default, after a user logs out of WordPress, they are redirected to the page they were on. This can be confusing and may leave them on a page that requires authentication. The Redirect After Logout feature sends them to the login page instead, providing a clear logout confirmation.
+After a user logs out, WordPress usually leaves them where they were or returns to a default location. The **Redirect After Logout** feature sends them to a chosen destination immediately on logout, such as the login page or a custom URL.
+
+The destination is configurable, and a custom URL lets you send users anywhere you choose.
 
 ## Why You Need It
 
-The default behavior after logout can be confusing:
+A clear logout destination improves the flow:
 
-- **Stale content**: The user may see a page that requires authentication, leading to a confusing "access denied" experience
-- **No confirmation**: The user may not be sure the logout was successful
-- **Security**: If the user is on a shared computer, they may forget to close the browser
-
-Redirecting to the login page provides a clear logout confirmation and forces the user to re-authenticate if they want to continue.
+- Users get clear confirmation that they logged out
+- They are not left on a page that requires authentication
+- A login destination lets them sign back in cleanly
+- A custom URL allows a specific next step
 
 ---
 
-## How to Redirect After Logout in WordPress
+## How to Redirect After Logout
 
-### Step 1: Navigate to Settings
+### Step 1: Enable the Feature
 
-Click into the **Classic Monks** plugin settings in your WordPress dashboard.
+1. In WordPress admin, open **Classic Monks > WooCommerce**.
+2. Open the **Redirection** settings area.
+3. Toggle on **Redirect After Logout**.
 
-### Step 2: Go to the WooCommerce Tab
+### Step 2: Choose the Destination
 
-Click on the **WooCommerce** menu, then click the **Redirection** subtab.
+- **Redirect Page**: pick the login page, a specific page, or **Custom**.
+- If you choose **Custom**, enter a **Custom URL**.
 
-### Step 3: Enable Redirect After Logout
+### Step 3: Save and Test
 
-Toggle on **Redirect after logout**.
-
-### Step 4: Save Changes
-
-Click **Save Changes**.
-
-### Step 5: Test
-
-Log in as a user. Click "Log out". You should be redirected to the login page.
+Click **Save Changes**. Log in, log out, and confirm you land on the destination you chose.
 
 ---
 
 ## Configuration Options
 
-| Option | Description | Default |
-|--------|-------------|---------|
-| **Redirect after logout** | Master toggle. | Off |
-
-The redirect destination is the login page. To customize it, use the plugin settings.
+| Option | Behavior | Default |
+|--------|----------|---------|
+| **Redirect After Logout** | Master toggle. | Off |
+| **Redirect Page** | Login, a selected page, or Custom. | Login |
+| **Custom URL** | Destination when Redirect Page is set to Custom. | Blank |
 
 ---
 
 ## What Gets Affected
 
-- The logout process: users are redirected to the login page after logout
-- The customer experience: clear logout confirmation
-- The security: forces re-authentication if the user wants to continue
+- The logout flow: users are redirected to the chosen destination on logout
 
 ## What Does NOT Get Affected
 
-- The actual logout process: the user is still logged out
-- The login page: not affected (the redirect goes TO it)
-- The WordPress session: the user's session is destroyed as usual
-- The WordPress cookies: cleared as usual
+- The login process: unchanged
+- The account dashboard: it is not the default target unless you select it
+- Browser cookies and sessions: cleared normally on logout
 
 ---
 
 ## Advanced Options (Developers)
 
-This feature registers 1 WordPress hook in `woocommerce-functions.php`:
-
-**Actions:**
-
-- `wp_logout` calls `cm_redirect_after_logout_action()` (Redirects to login page after logout)
+The feature registers one hook in `functions/woocommerce/woocommerce-functions.php`:
 
 ```php
-// Hooked in woocommerce-functions.php
 add_action( 'wp_logout', 'cm_redirect_after_logout_action' );
 ```
 
-The feature modifies WooCommerce behavior by registering or removing hooks. Disabling it reverses those changes.
+**`wp_logout`** calls `cm_redirect_after_logout_action()`, which reads the configured destination (login or custom URL) and performs a safe redirect after the user logs out.
+
+---
 
 ## Common Use Cases
 
-### Shared computer environments
+**Shared devices.** Sending users back to the login page on shared computers encourages a clean hand-off.
 
-Stores used in libraries, internet cafes, or shared offices benefit from forcing re-authentication after logout.
+**Clear confirmation.** A login destination tells users the logout worked.
 
-### Security-focused stores
+**Specific next steps.** A custom URL can route logged-out users to a landing page or promotion.
 
-For stores handling sensitive data (financial, medical), forcing re-authentication after logout is a security best practice.
-
-### Compliance requirements
-
-Some regulations require that logout forces re-authentication. This feature helps with compliance.
+---
 
 ## Troubleshooting
 
 ### The redirect is not happening
 
-**Cause:** The toggle is off, or the user is being logged out via a non-standard mechanism (e.g., a custom logout link).
-**Fix:** Verify the toggle is on. Try the standard WordPress logout link.
+**Cause:** The toggle is off, or the logout was triggered by a non-standard mechanism.
+**Fix:** Confirm the toggle is on. Test logout with the standard logout link, since the redirect runs on the WordPress logout action.
 
-### The redirect goes to the wrong page
+### It goes to the wrong page
 
-**Cause:** The default destination is the login page, but the login page may be at a different URL than expected.
-**Fix:** Configure in the plugin settings to set a custom destination.
+**Cause:** The destination setting points somewhere unexpected.
+**Fix:** Review **Redirect Page** and, if Custom, the **Custom URL**. Save and test again.
 
-### AJAX logouts are being broken
+### A page is not in the list
 
-**Cause:** The redirect applies to all logouts, including AJAX logouts.
-**Fix:** Configure in the plugin settings to exclude AJAX requests. AJAX logouts handle their own response.
+**Cause:** Not every page may appear in the selector.
+**Fix:** Use the **Custom** destination with a **Custom URL**.
 
-### The redirect creates a redirect loop
+---
 
-**Cause:** The destination page has its own redirect that points back to the logout link.
-**Fix:** Check the destination page for any redirect rules. The destination should not redirect under normal conditions.
+## Frequently Asked Questions
+
+### When does the redirect happen?
+
+Immediately on logout, when the user triggers the WordPress logout action.
+
+### Where do users go?
+
+To the destination you choose: the login page, a specific page, or a custom URL.
+
+### Does this affect the login process?
+
+No. The redirect runs only on logout.
+
+### Can I use a custom URL?
+
+Yes. Set **Redirect Page** to Custom and enter the **Custom URL**.
+
+---
+
+## Keeping It Set Up
+
+Set the toggle once and it stays active across the site. To change behavior, return to the WooCommerce settings, adjust the option, and save again. The store continues to run normally throughout, and you can turn the feature off at any time to restore the previous default behavior. For teams managing multiple environments, confirm the setting on staging first, then apply it to production and verify a real page load before treating it as live.
 
 ---
 
 ## Related Articles
 
-- [How to Redirect Logged-in Users from Login Page in WordPress](woocommerce-redirect-logged-in-users-from-login.md)
-- [How to Use Content Management in WordPress](../core/core-content-management.md)
-- [How to Configure SMTP Settings in WordPress](../email/email-smtp-settings.md)
+- [How to Redirect Logged-in Users from the Login Page in WooCommerce](woocommerce-redirect-logged-in-users-from-login.md)
+- [How to Redirect an Empty Cart in WooCommerce](woocommerce-redirect-empty-cart.md)
+- [How to Redirect My Account for Non-logged-in Users in WooCommerce](woocommerce-enable-redirect-my-account.md)

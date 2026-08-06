@@ -1,145 +1,154 @@
 ---
-title: "How to Redirect Logged-in Users from Login Page in WordPress | CM"
+title: "How to Send Logged-in Users Away From the Login Page"
 slug: redirect-logged-in-users-from-login
-description: "Automatically redirect users who are already logged in away from the login page. Prevents confusion and improves the user experience for already-authenticated users."
-last_updated: 2026-06-24
+description: "Send users who are already logged in away from the WordPress login page to My Account or to a custom URL you choose. Pick the destination in Classic Monks."
+last_updated: 2026-08-06
 author: Joy
 reading_time: 3 min
 canonical: https://classicmonks.com/docs/redirect-logged-in-users-from-login/
 ---
 
-# How to Redirect Logged-in Users from Login Page in WordPress
+# How to Send Logged-in Users Away From the Login Page
 
-> Redirect Logged-in Users from Login Page automatically sends users who are already logged in to their account dashboard. Prevents confusion and provides logical navigation for authenticated users.
+> Send users who are already logged in away from the login page, since showing them a login form is pointless. Choose the destination with Classic Monks.
 
-## Key Takeaks
+## Key Takeaways
 
-- Single toggle, no nested options
-- Sends logged-in users to the My Account page when they try to access the login page
-- Prevents confusion (no point in showing a login form to a logged-in user)
-- Customizable redirect destination
-- Improves the user experience for already-authenticated users
+- Redirect logged-in users who try to open the login page
+- Send them to My Account or a custom URL
+- Choose the destination from the settings
+- Avoids the pointless login form for authenticated users
+- Uses WooCommerce's template redirect hook
 
-## What Is the Redirect Logged-in Users from Login Page feature?
+## What Does the Feature Do?
 
-When a logged-in user tries to access the WordPress login page, they see the login form again. This is confusing and provides no useful action. The Redirect Logged-in Users from Login Page feature automatically sends them to the My Account page instead.
+When a logged-in user visits the WordPress login page, they see a login form they do not need. The **Redirect Logged-in Users from Login Page** feature sends them to a useful destination instead, such as the My Account page or a custom URL.
+
+The destination is configurable, and a custom URL lets you send users anywhere you choose.
 
 ## Why You Need It
 
-For most sites, showing a login form to a logged-in user is bad UX:
+Showing a login form to an authenticated user is poor UX:
 
-- **Confusion**: Users may wonder why they're seeing a login form when they're already logged in
-- **Wasted click**: Users may try to log in again, which could log them out of another session
-- **No logical flow**: The login page should only show to users who need to log in
-
-Redirecting logged-in users to their account dashboard provides a logical flow.
+- Users may wonder why they are asked to log in again
+- The login form is a dead end for someone already signed in
+- Redirecting provides a logical next step for authenticated users
+- A custom URL lets you control the exact destination
 
 ---
 
-## How to Redirect Logged-in Users from Login Page in WordPress
+## How to Redirect Logged-in Users from the Login Page
 
-### Step 1: Navigate to Settings
+### Step 1: Enable the Feature
 
-Click into the **Classic Monks** plugin settings in your WordPress dashboard.
+1. In WordPress admin, open **Classic Monks > WooCommerce**.
+2. Open the **Redirection** settings area.
+3. Toggle on **Redirect Logged-in Users from Login Page**.
 
-### Step 2: Go to the WooCommerce Tab
+### Step 2: Choose the Destination
 
-Click on the **WooCommerce** menu, then click the **Redirection** subtab.
+- **Redirect Page**: pick the My Account page, a specific page, or **Custom**.
+- If you choose **Custom**, enter a **Custom URL**.
 
-### Step 3: Enable Redirect Logged-in Users
+### Step 3: Save and Test
 
-Toggle on **Redirect logged-in users from login page**.
-
-### Step 4: Save Changes
-
-Click **Save Changes**.
-
-### Step 5: Test
-
-Log in as a user. Try to access the WordPress login page (e.g., `/wp-login.php`). You should be redirected to the My Account page.
+Click **Save Changes**. Log in, open the login page, and confirm you are redirected to your chosen destination.
 
 ---
 
 ## Configuration Options
 
-| Option | Description | Default |
-|--------|-------------|---------|
-| **Redirect logged-in users from login page** | Master toggle. | Off |
-
-The redirect destination is the My Account page. To customize it, use the plugin settings.
+| Option | Behavior | Default |
+|--------|----------|---------|
+| **Redirect Logged-in Users from Login Page** | Master toggle. | Off |
+| **Redirect Page** | My Account, a selected page, or Custom. | My Account |
+| **Custom URL** | Destination when Redirect Page is set to Custom. | Blank |
 
 ---
 
 ## What Gets Affected
 
-- The WordPress login page: logged-in users are redirected to My Account
-- The WooCommerce login page (my-account area): same behavior
-- The customer experience: no more seeing a login form when already logged in
+- The login page for logged-in users: they are redirected away from it
+- The destination page: receives the redirected user
 
 ## What Does NOT Get Affected
 
-- The WordPress logout: works as usual
-- The actual login process: users who are not logged in see the login form normally
-- The My Account page: not affected (the redirect goes TO it)
-- Password reset flow: separate pages, not affected
+- The login process for guests: users who are not logged in still see the login form
+- Logout: works normally
+- Password reset: separate from this redirect
+- The account dashboard: it is a redirect target, not altered
 
 ---
 
 ## Advanced Options (Developers)
 
-This feature registers 1 WordPress hook in `woocommerce-functions.php`:
-
-**Actions:**
-
-- `template_redirect` calls `cm_redirect_logged_in_users_from_login()` (Redirects logged-in users from login page)
+The feature registers one hook in `functions/woocommerce/woocommerce-functions.php`:
 
 ```php
-// Hooked in woocommerce-functions.php
 add_action( 'template_redirect', 'cm_redirect_logged_in_users_from_login' );
 ```
 
-The feature modifies WooCommerce behavior by registering or removing hooks. Disabling it reverses those changes.
+**`template_redirect`** calls `cm_redirect_logged_in_users_from_login()` to detect the login page and redirect authenticated users to the configured destination.
+
+---
 
 ## Common Use Cases
 
-### B2B stores
+**Frequent users.** Authenticated customers get sent to their account instead of a login form.
 
-Wholesale customers are usually logged in. Sending them to My Account (instead of the login form) is a better experience.
+**Membership stores.** Members who are always logged in avoid the redundant login screen.
 
-### Membership sites
+**B2B and wholesale.** Wholesale accounts land directly on their account or dashboard.
 
-Members are always logged in. Sending them to My Account provides a direct path to their account.
-
-### Frequent return customers
-
-For customers who log in frequently, the My Account page is a more useful landing than the login form.
+---
 
 ## Troubleshooting
 
 ### The redirect is not happening
 
-**Cause:** The toggle is off, or the user is not actually logged in (e.g., session expired).
-**Fix:** Verify the toggle is on. Log in as a test user and try again.
+**Cause:** The toggle is off, or the user is not actually recognized as logged in.
+**Fix:** Confirm the toggle is on and that the visitor has an active logged-in session. Test as a logged-in user.
 
-### The redirect goes to the wrong page
+### It redirects to the wrong page
 
-**Cause:** The default destination is the My Account page, but the My Account page may be at a different URL than expected.
-**Fix:** Configure in the plugin settings to set a custom destination.
+**Cause:** The destination setting points somewhere unexpected.
+**Fix:** Review **Redirect Page** and, if Custom, the **Custom URL**. Save and test again.
 
-### Logged-in admins are being redirected
+### A page is not in the list
 
-**Cause:** The redirect applies to all users.
-**Fix:** Configure in the plugin settings to exclude admins. Admins may need to access the login page for testing (e.g., to log in as another user).
+**Cause:** Not every page may appear in the selector.
+**Fix:** Use the **Custom** destination with a **Custom URL** to send users to any page.
 
-### The redirect creates a redirect loop
+---
 
-**Cause:** The destination page has its own redirect that points back to the login page.
-**Fix:** Check the destination page for any redirect rules. The destination should not redirect under normal conditions.
+## Frequently Asked Questions
+
+### Who gets redirected?
+
+Users who are already logged in when they open the login page.
+
+### Where do they go?
+
+To the destination you choose: My Account, a specific page, or a custom URL.
+
+### Do guests still see the login form?
+
+Yes. Users who are not logged in see the login form normally.
+
+### Can I use a custom URL?
+
+Yes. Set **Redirect Page** to Custom and enter the **Custom URL**.
+
+---
+
+## Keeping It Set Up
+
+Set the toggle once and it stays active across the site. To change behavior, return to the WooCommerce settings, adjust the option, and save again. The store continues to run normally throughout, and you can turn the feature off at any time to restore the previous default behavior. For teams managing multiple environments, confirm the setting on staging first, then apply it to production and verify a real page load before treating it as live.
 
 ---
 
 ## Related Articles
 
-- [How to Redirect if Cart is Empty in WordPress](woocommerce-redirect-empty-cart.md)
-- [How to Use Content Management in WordPress](../core/core-content-management.md)
-- [How to Configure SMTP Settings in WordPress](../email/email-smtp-settings.md)
+- [How to Redirect an Empty Cart in WooCommerce](woocommerce-redirect-empty-cart.md)
+- [How to Redirect After Logout in WooCommerce](woocommerce-redirect-to-login-after-logout.md)
+- [How to Redirect My Account for Non-logged-in Users in WooCommerce](woocommerce-enable-redirect-my-account.md)

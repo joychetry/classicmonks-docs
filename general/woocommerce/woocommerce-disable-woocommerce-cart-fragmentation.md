@@ -1,153 +1,143 @@
 ---
-title: "How to Disable WooCommerce Cart Fragmentation in WordPress | CM"
+title: "How to Disable the WooCommerce Cart Fragments Script"
 slug: disable-woocommerce-cart-fragmentation
-description: "Prevent WooCommerce from fragmenting the cart for caching. Improves compatibility with caching plugins and enhances site performance."
-last_updated: 2026-06-24
+description: "Disable WooCommerce cart fragments so the cart contents do not refresh over AJAX on every page. Reduce extraneous requests and improve load performance."
+last_updated: 2026-08-06
 author: Joy
 reading_time: 3 min
 canonical: https://classicmonks.com/docs/disable-woocommerce-cart-fragmentation/
 ---
 
-# How to Disable WooCommerce Cart Fragmentation in WordPress
+# How to Disable the WooCommerce Cart Fragments Script
 
-> Disable WooCommerce cart fragmentation to improve caching compatibility and avoid performance issues with cached pages.
+> Turn off WooCommerce cart fragments so the cart no longer refreshes its contents over AJAX across the site. This removes a frequent background request and lightens the page load.
 
 ## Key Takeaways
 
-- Single toggle, no nested options
-- Full-page caching works correctly (cart widget is cached)
-- Faster page load times for cached pages
-- Reduced server load (fewer AJAX requests)
+- Dequeue the WooCommerce cart-fragments script
+- Stop the cart from silently re-fetching contents on every page
+- Reduce a common extraneous AJAX request
+- One toggle, no nested options
+- Ideal when the mini cart is not used or causes extra load
 
-## What Is the Disable WooCommerce cart fragmentation feature?
+## What Does the Feature Do?
 
-WooCommerce uses AJAX endpoints (called 'cart fragments') to update the cart widget and other dynamic content on every page load. While this provides real-time cart updates, it can interfere with caching plugins (since each AJAX request is uncached). This feature disables the cart fragment script, allowing the cart widget to be cached.
+WooCommerce's **cart fragments** feature lets the mini cart and cart count update without a full page reload. It does this by loading the `wc-cart-fragments.js` script and re-fetching the cart contents over AJAX when the page changes. That background request runs site-wide, even on pages where the cart is never shown.
+
+The **Disable WooCommerce Cart Fragmentation** feature dequeues that script, so the cart no longer refreshes asynchronously. The store's cart data is unchanged; only the auto-refresh behavior is removed.
 
 ## Why You Need It
 
-Cart fragmentation prevents effective caching of pages that show the cart widget. For most stores, the cart widget is acceptable to show with a slight delay (when the user adds an item and refreshes, or when the page is re-cached). Disabling cart fragmentation allows full-page caching, which is a major performance win.
+Cart fragmentation adds a request to nearly every page:
+
+- It deletes the need for a global background fetch when no mini cart is shown
+- It reduces one round-trip per page load
+- It avoids the "recalculate cart" churn that fragments can trigger
+- It cleans up performance on content-heavy and non-checkout pages
 
 ---
 
-## How to Disable WooCommerce Cart Fragmentation in WordPress
+## How to Disable WooCommerce Cart Fragmentation
 
-### Step 1: Navigate to Settings
+### Step 1: Enable the Feature
 
-Click into the **Classic Monks** plugin settings in your WordPress dashboard.
+1. In WordPress admin, open **Classic Monks > WooCommerce**.
+2. Open the **Optimization** settings area.
+3. Toggle on **Disable WooCommerce Cart Fragmentation**.
 
-### Step 2: Go to the WooCommerce Tab
+### Step 2: Save and Test
 
-Click on the **WooCommerce** menu, then click the **Optimization** subtab.
-
-### Step 3: Enable the Feature
-
-Toggle on **Disable WooCommerce cart fragmentation**.
-
-### Step 4: Save Changes
-
-Click **Save Changes**.
-
-### Step 5: Test
-
-View the cart widget on a non-cart page. The cart should still show the correct item count (after a refresh or page reload).
+Click **Save Changes**. Load a page and check that the `wc-cart-fragments` script is no longer enqueued. Note that a mini cart that relied on live AJAX updates will no longer refresh that way.
 
 ---
 
 ## Configuration Options
 
-| Option | Description | Default |
-|--------|-------------|---------|
-| **Disable WooCommerce cart fragmentation** | Master toggle. | Off |
+| Option | Default |
+|--------|---------|
+| **Disable WooCommerce Cart Fragmentation** | Off |
 
-No nested options.
+There are no nested options. The feature is a single on/off control.
 
 ---
 
 ## What Gets Affected
 
-- Cart fragment AJAX requests are disabled on non-cart pages
-- The cart widget is cached (no AJAX updates)
-- Caching plugins can fully cache pages with the cart widget
+- The `wc-cart-fragments` script: no longer enqueued on the front end
+- Automatic mini cart and cart count refreshes: no longer happen over AJAX
 
 ## What Does NOT Get Affected
 
-- The cart widget still shows the correct count (when the page is reloaded)
-- Add to cart functionality (the cart updates on page reload, not via AJAX)
-- Cart and checkout functionality
+- The cart data and contents: these remain stored in the session
+- The cart and checkout pages: the main cart functionality works normally
+- Page loads on shop and checkout pages: these still work with the refresh gone
+- Manually refreshed cart actions: add to cart still works as usual
 
 ---
 
 ## Advanced Options (Developers)
 
-This feature registers 1 WordPress hook in `woocommerce-functions.php`:
-
-**Actions:**
-
-- `wp_enqueue_scripts` calls `cm_disable_woocommerce_cart_fragmentation()` (Disables cart fragmentation AJAX for performance (priority 99))
+The feature registers one hook in `functions/woocommerce/woocommerce-functions.php`:
 
 ```php
-// Hooked in woocommerce-functions.php
-add_action( 'wp_enqueue_scripts', 'cm_disable_woocommerce_cart_fragmentation' );
+add_action( 'wp_enqueue_scripts', 'cm_disable_woocommerce_cart_fragmentation', 99 );
 ```
 
-The feature modifies WooCommerce behavior by registering or removing hooks. Disabling it reverses those changes.
+**`wp_enqueue_scripts`** (priority 99) calls `cm_disable_woocommerce_cart_fragmentation()`, which dequeues `wc-cart-fragments` so the script does not load site-wide.
+
+---
 
 ## Common Use Cases
 
-### Redis or Memcached Object Cache
+**Mini cart not used.** If the theme does not rely on a live mini cart, the fragments script is pure overhead.
 
-Stores using a high-performance object cache (Redis, Memcached) can disable cart fragmentation to reduce cache misses. The cart fragment AJAX request was designed for sites without object cache, where the cart count needs to be fresh on every page load. With object cache, the cart count can be cached briefly (5-10 seconds) without a noticeable difference in UX.
+**Performance tuning.** Removing a background request is a small, safe win on every page.
 
-### WooCommerce hosting
+**Cache-friendly sites.** Static or cached pages gain from not triggering cart re-fetches.
 
-On managed WooCommerce hosting (Kinsta, Pressable), caching is already handled at the server level. Disabling cart fragmentation reduces unnecessary AJAX traffic.
-
-### Server resource constraints
-
-AJAX cart fragment requests can add up on busy sites. Disabling them reduces server load.
-
-### Static-site cache plugins
-
-Static-site cache plugins (WP Static Cache, Simply Static) work better when there's no dynamic AJAX to invalidate the cache.
-
-### Cache-heavy stores
-
-Stores with aggressive caching benefit from disabling cart fragmentation. The cart widget is fully cached instead of updating via AJAX on every page load.
-
-### Low-traffic stores
-
-For stores with low traffic, the AJAX overhead of cart fragmentation is unnecessary. Disabling it saves server resources.
-
-### Mobile-optimized stores
-
-Cart fragment AJAX requests can be expensive on mobile networks. Disabling them improves mobile performance.
+---
 
 ## Troubleshooting
 
-### The feature is not taking effect
+### The mini cart no longer updates live
 
-**Cause:** The toggle is off, or a caching plugin is serving the old page.
-**Fix:** Verify the toggle is on. Clear all caching layers (page cache, object cache, CDN).
+**Cause:** Cart fragments are what make the mini cart refresh without a reload.
+**Fix:** If you need a live mini cart, leave the feature off. If you only avoid extraneous loads, keep it on and update the cart through the cart page.
 
-### I want the feature to apply only to specific pages
+### The fragments script still loads
 
-**Cause:** The toggle is global.
-**Fix:** Use a small custom plugin that checks the current page and conditionally enables the feature (e.g., via the filter above).
+**Cause:** The toggle is off, or a theme or plugin enqueues the script directly.
+**Fix:** Confirm the toggle is on. If another plugin re-adds `wc-cart-fragments`, that plugin is loading it independently.
 
-### A third-party plugin is breaking after enabling
+### A count badge does not update after adding to cart
 
-**Cause:** Some plugins depend on the disabled feature.
-**Fix:** Disable the toggle and find an alternative (e.g., conditional loading via a performance plugin).
+**Cause:** The count was refreshed by fragments, which are now disabled.
+**Fix:** Keep the feature off if a header cart count must update automatically. Otherwise, the count updates on page load.
 
-### The change is not visible to customers
+---
 
-**Cause:** The feature is admin-only or affects specific page types that the customer doesn't visit.
-**Fix:** Verify the feature is working in the appropriate context (e.g., admin pages, non-WooCommerce pages, etc.).
+## Frequently Asked Questions
+
+### What are cart fragments?
+
+They are the WooCommerce mechanism that refreshes the mini cart and cart count without reloading the page, via the `wc-cart-fragments` script and background AJAX.
+
+### Does disabling them break the cart?
+
+No. The cart and checkout still work. Only the automatic background refresh is removed, so a mini cart that relied on it no longer updates live.
+
+### Why is this a performance win?
+
+The fragments script triggers an AJAX request site-wide. Removing it eliminates that request on pages that do not need a live cart.
+
+### Can I re-enable it?
+
+Yes. Turn the toggle off to restore the fragments script and live mini cart updates.
 
 ---
 
 ## Related Articles
 
-- [How to Configure SMTP Settings in WordPress](../email/email-smtp-settings.md)
-- [How to Use Content Management in WordPress](../core/core-content-management.md)
-- [How to Use Logs in WordPress](../core/core-logs.md)
+- [How to Disable WooCommerce Scripts and Styles on Non-WooCommerce Pages](woocommerce-disable-woocommerce-scripts.md)
+- [How to Disable WooCommerce Admin Features](woocommerce-disable-woocommerce-admin-features.md)
+- [How to Disable All WooCommerce Widgets](woocommerce-disable-woocommerce-widgets.md)

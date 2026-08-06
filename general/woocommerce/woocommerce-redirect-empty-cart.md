@@ -1,148 +1,147 @@
 ---
-title: "How to Redirect Empty Cart in WordPress | CM"
+title: "How to Redirect Visitors From an Empty Cart in WooCommerce"
 slug: redirect-empty-cart
-description: "Automatically redirect customers to the shop page when they try to access an empty cart page. Improves the user experience by preventing dead-end pages."
-last_updated: 2026-06-24
+description: "Redirect customers away from an empty WooCommerce cart to the shop page or a custom page you choose. Avoid a dead end and keep them shopping in your store."
+last_updated: 2026-08-06
 author: Joy
 reading_time: 3 min
 canonical: https://classicmonks.com/docs/redirect-empty-cart/
 ---
 
-# How to Redirect Empty Cart in WordPress
+# How to Redirect Visitors From an Empty Cart in WooCommerce
 
-> Redirect Empty Cart automatically redirects customers to the shop page when they try to access an empty cart. Prevents dead-end pages and guides customers back to shopping.
+> Redirect customers away from a WooCommerce cart page when the cart is empty. Choose between the shop page and a custom page so visitors do not hit a dead end.
 
 ## Key Takeaways
 
-- Single toggle, no nested options
-- Automatically redirects customers from the cart page to the shop page when the cart is empty
-- Prevents dead-end pages and improves the user experience
-- Customizable redirect destination (via filter)
-- Useful for stores where the empty cart page is not useful
+- Redirect visitors when they open an empty cart
+- Send them to the shop page or a custom URL
+- Control the destination from the settings
+- Keeps customers moving instead of showing an empty cart
+- Uses WooCommerce's template redirect hook
 
-## What Is the Redirect Empty Cart feature?
+## What Does the Feature Do?
 
-By default, the WooCommerce cart page shows a "Your cart is currently empty" message when the cart is empty. While functional, this is a dead end for customers who expected to see their cart. The Redirect Empty Cart feature automatically redirects them to the shop page instead.
+When the cart is empty, the WooCommerce cart page shows a message and offers little to do. The **Redirect Empty Cart** feature sends the visitor to a useful destination instead of showing the empty cart page.
+
+The destination is configurable: visitors can go to the shop page or a custom URL you provide.
 
 ## Why You Need It
 
-The empty cart page is a dead end:
+An empty cart is a dead end for a visitor:
 
-- Customers can't add products from the cart page
-- The message "Your cart is currently empty" provides no path forward
-- Customers may leave the site rather than navigate to the shop
-
-Redirecting to the shop page gives customers an immediate next step.
+- They cannot add anything from inside the cart page
+- The empty message gives no path forward
+- Redirecting keeps them moving toward your products or a specific page
+- A custom URL lets you control the exact landing page
 
 ---
 
-## How to Redirect Empty Cart in WordPress
+## How to Redirect an Empty Cart in WooCommerce
 
-### Step 1: Navigate to Settings
+### Step 1: Enable the Feature
 
-Click into the **Classic Monks** plugin settings in your WordPress dashboard.
+1. In WordPress admin, open **Classic Monks > WooCommerce**.
+2. Open the **Redirection** settings area.
+3. Toggle on **Redirect if Cart is Empty**.
 
-### Step 2: Go to the WooCommerce Tab
+### Step 2: Choose the Destination
 
-Click on the **WooCommerce** menu, then click the **Redirection** subtab.
+- **Redirect Page**: pick the shop page, a specific site page, or **Custom**.
+- If you choose **Custom**, enter a **Custom URL** to send visitors to.
 
-### Step 3: Enable Redirect Empty Cart
+### Step 3: Save and Test
 
-Toggle on **Redirect if cart is empty**.
-
-### Step 4: Save Changes
-
-Click **Save Changes**.
-
-### Step 5: Test
-
-Visit the cart page when the cart is empty. The page should redirect to the shop page.
+Click **Save Changes**. Open the cart page with an empty cart and confirm you are redirected to the destination you chose. When the cart has items, the cart page shows normally.
 
 ---
 
 ## Configuration Options
 
-| Option | Description | Default |
-|--------|-------------|---------|
-| **Redirect if cart is empty** | Master toggle. | Off |
-
-The redirect destination is the shop page. To customize it, use the plugin settings.
+| Option | Behavior | Default |
+|--------|----------|---------|
+| **Redirect if Cart is Empty** | Master toggle. | Off |
+| **Redirect Page** | Shop, a selected page, or Custom. | Shop |
+| **Custom URL** | Destination when Redirect Page is set to Custom. | Blank |
 
 ---
 
 ## What Gets Affected
 
-- The cart page: customers are redirected to the shop page when the cart is empty
-- The customer flow: no dead-end pages
+- The cart page when the cart is empty: visitors are redirected
+- The destination page: receives the redirected visitor
 
 ## What Does NOT Get Affected
 
 - The cart page when the cart has items: shows normally
-- The shop page: not affected
-- The checkout page: not affected
-- The customer's saved items: not affected
+- The selected destination page's own content: unchanged
+- Saved carts and customer data: unaffected
 
 ---
 
 ## Advanced Options (Developers)
 
-This feature registers 1 WordPress hook in `woocommerce-functions.php`:
-
-**Actions:**
-
-- `template_redirect` calls `cm_redirect_empty_cart()` (Redirects empty cart to shop page)
+The feature registers one hook in `functions/woocommerce/woocommerce-functions.php`:
 
 ```php
-// Hooked in woocommerce-functions.php
 add_action( 'template_redirect', 'cm_redirect_empty_cart' );
 ```
 
-The feature modifies WooCommerce behavior by registering or removing hooks. Disabling it reverses those changes.
+**`template_redirect`** calls `cm_redirect_empty_cart()` to check the cart state on the cart page and redirect empty carts to the configured destination.
+
+---
 
 ## Common Use Cases
 
-### Multi-page stores
+**Keep visitors shopping.** Send empty-cart visitors back to the shop so they continue browsing.
 
-Stores with a multi-page checkout may want the cart page to redirect to the checkout instead of the shop. Customize in the plugin settings.
+**Direct to a sale landing page.** Use a custom URL to route empty-cart traffic to a specific promotion or collection.
 
-### Conversion-focused stores
+**Mobile experience.** On phones, a redirect to a browsable page is more useful than an empty cart message.
 
-Redirecting to the shop page keeps customers shopping. The empty cart page is a dead end for conversions.
-
-### Stores with many product categories
-
-If your shop has many categories, the shop page provides a path to products. The empty cart page provides nothing.
-
-### Mobile-optimized stores
-
-On mobile, the empty cart page is especially dead-end. Redirecting to the shop (which is mobile-optimized) is better UX.
+---
 
 ## Troubleshooting
 
 ### The redirect is not happening
 
 **Cause:** The toggle is off, or the cart is not actually empty.
-**Fix:** Verify the toggle is on. Clear the cart manually and try again.
+**Fix:** Confirm the toggle is on and that the cart has no items. Clear the cart and test again.
 
-### The redirect goes to the wrong page
+### It redirects to the wrong page
 
-**Cause:** The default destination is the shop page, but the shop page may be a different URL than expected.
-**Fix:** Configure in the plugin settings to set a custom destination.
+**Cause:** The destination setting points somewhere unexpected.
+**Fix:** Review **Redirect Page** and, if Custom, the **Custom URL**. Save and test again.
 
-### Logged-in admins are being redirected
+### A page I want is not in the list
 
-**Cause:** The redirect applies to all visitors.
-**Fix:** Configure in the plugin settings to exclude admins. The default behavior for logged-in admins is to show the empty cart page (they may need to see it for testing).
+**Cause:** Not every page may appear in the selector.
+**Fix:** Use the **Custom** destination with a **Custom URL** to direct visitors to any page.
 
-### The redirect creates a redirect loop
+---
 
-**Cause:** The destination page has its own redirect that points back to the cart.
-**Fix:** Check the destination page for any redirect rules. The destination should not redirect under normal conditions.
+## Frequently Asked Questions
+
+### When does the redirect happen?
+
+It happens when a visitor opens the cart page while the cart is empty. With items in the cart, the page renders normally.
+
+### Where do visitors go?
+
+To the destination you choose: the shop page, a specific page, or a custom URL.
+
+### Does it clear or change the cart?
+
+No. The cart data is untouched. The feature only redirects the visitor away from the empty cart display.
+
+### Can I use a custom URL?
+
+Yes. Set **Redirect Page** to Custom and enter the **Custom URL**.
 
 ---
 
 ## Related Articles
 
-- [How to Redirect Logged-in Users from Login Page in WordPress](woocommerce-redirect-logged-in-users-from-login.md)
-- [How to Use Content Management in WordPress](../core/core-content-management.md)
-- [How to Use Logs in WordPress](../core/core-logs.md)
+- [How to Redirect Logged-in Users from the Login Page in WooCommerce](woocommerce-redirect-logged-in-users-from-login.md)
+- [How to Redirect After Logout in WooCommerce](woocommerce-redirect-to-login-after-logout.md)
+- [How to Redirect My Account for Non-logged-in Users in WooCommerce](woocommerce-enable-redirect-my-account.md)

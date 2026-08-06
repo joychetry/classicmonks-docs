@@ -1,157 +1,146 @@
 ---
-title: "How to Disable Marketplace Suggestions in WordPress | CM"
+title: "How to Turn Off WooCommerce Marketplace Suggestions"
 slug: disable-marketplace-suggestions
-description: "Remove WooCommerce marketplace suggestions from the admin interface. Reduces clutter for stores that don't need the marketplace recommendations."
-last_updated: 2026-06-24
+description: "Stop WooCommerce from showing marketplace extension suggestions in the admin. Remove the promotional prompts you do not need with a Classic Monks toggle."
+last_updated: 2026-08-06
 author: Joy
-reading_time: 2 min
+reading_time: 3 min
 canonical: https://classicmonks.com/docs/disable-marketplace-suggestions/
 ---
 
-# How to Disable Marketplace Suggestions in WordPress
+# How to Turn Off WooCommerce Marketplace Suggestions
 
-> Disable marketplace suggestions and promotional content from the WooCommerce admin interface for a cleaner admin experience.
+> Stop WooCommerce from showing marketplace extension suggestions in the admin dashboard. Classic Monks turns off the promotional suggestions so the admin stays focused.
 
 ## Key Takeaways
 
-- Single toggle, no nested options
-- Cleaner WooCommerce admin interface
-- Reduced visual clutter from promotional content
-- Faster admin page loads (less content to render)
+- Disable WooCommerce marketplace suggestions
+- Hide the extension recommendation prompts in the admin
+- One toggle, no nested options
+- Does not affect the store or its extensions
+- Reduce admin clutter from promotional suggestions
 
-## What Is the Disable marketplace suggestions feature?
+## What Does the Feature Do?
 
-WooCommerce's admin interface includes marketplace suggestions and promotional content (e.g., extension recommendations, theme suggestions, service promotions). For stores that don't need these recommendations, this feature removes them from the admin, providing a cleaner interface.
+WooCommerce recommends extensions from its marketplace through in-admin suggestions. The **Disable Marketplace Suggestions** feature suppresses those recommendations, so the admin no longer shows the promotional suggestion prompts.
+
+Existing extensions and Marketplace access are unaffected. The feature only hides the suggestion prompts WooCommerce would otherwise display.
 
 ## Why You Need It
 
-WooCommerce's marketplace suggestions are designed to help new store owners discover extensions and services. For established stores with their own stack, the suggestions are noise. Disabling them simplifies the admin interface and removes distracting promotional content.
+Marketplace suggestions can be an unwelcome distraction:
+
+- Promotional prompts add noise to the admin
+- Not every store plans to extend through the marketplace
+- Removing them keeps staff focused on orders and products
+- The marketplace connection remains available if you want it later
 
 ---
 
-## How to Disable Marketplace Suggestions in WordPress
+## How to Disable Marketplace Suggestions
 
-### Step 1: Navigate to Settings
+### Step 1: Enable the Feature
 
-Click into the **Classic Monks** plugin settings in your WordPress dashboard.
+1. In WordPress admin, open **Classic Monks > WooCommerce**.
+2. Open the **Optimization** settings area.
+3. Toggle on **Disable Marketplace Suggestions**.
 
-### Step 2: Go to the WooCommerce Tab
+### Step 2: Save and Test
 
-Click on the **WooCommerce** menu, then click the **Optimization** subtab.
-
-### Step 3: Enable the Feature
-
-Toggle on **Disable marketplace suggestions**.
-
-### Step 4: Save Changes
-
-Click **Save Changes**.
-
-### Step 5: Test
-
-Go to the WooCommerce admin. The marketplace suggestions should not be visible.
+Click **Save Changes**. Reload the WooCommerce admin and confirm the marketplace suggestion prompts no longer appear.
 
 ---
 
 ## Configuration Options
 
-| Option | Description | Default |
-|--------|-------------|---------|
-| **Disable marketplace suggestions** | Master toggle. | Off |
+| Option | Default |
+|--------|---------|
+| **Disable Marketplace Suggestions** | Off |
 
-No nested options.
+There are no nested options. The feature is a single on/off control.
 
 ---
 
 ## What Gets Affected
 
-- Marketplace suggestions and promotional content are removed
-- The WooCommerce admin interface is cleaner
-- Admin pages load slightly faster
+- The admin: WooCommerce marketplace suggestions are suppressed
 
 ## What Does NOT Get Affected
 
-- WooCommerce's core functionality (orders, products, etc.)
-- The ability to install extensions manually (via Plugins > Add New)
-- The WooCommerce data and settings
+- Installed WooCommerce extensions: these remain active
+- The Marketplace connection: still available in the admin
+- Products, orders, and shop functions: unchanged
 
 ---
 
 ## Advanced Options (Developers)
 
-This feature registers 1 WordPress hook in `woocommerce-functions.php`:
-
-**Filters:**
-
-- `woocommerce_allow_marketplace_suggestions` calls `__return_false()` (Disables WooCommerce marketplace suggestions (priority 999))
+The feature registers one hook in `functions/woocommerce/woocommerce-functions.php`:
 
 ```php
-// Hooked in woocommerce-functions.php
-add_filter( 'woocommerce_allow_marketplace_suggestions', '__return_false' );
+add_filter( 'woocommerce_allow_marketplace_suggestions', '__return_false', 999 );
 ```
 
-The feature modifies WooCommerce behavior by registering or removing hooks. Disabling it reverses those changes.
+**`woocommerce_allow_marketplace_suggestions`** returns false at priority 999 when the feature is enabled, which disables the marketplace suggestion prompts.
+
+---
 
 ## Common Use Cases
 
-### Multi-Author Content Sites
+**Focused admin.** Stores that do not plan marketplace extensions benefit from a quieter admin.
 
-For sites that have a large content team (multi-author blogs with a shop section), the marketplace suggestions appear for every author. Removing them keeps the author experience focused on content creation. The shop managers can re-enable the suggestions on their own admin views via a small custom plugin if needed.
+**Lean teams.** Teams managing the store through orders and products skip the promotional prompts.
 
-### Multi-store Networks
+**Custom tooling.** When the stack is built from a specific set of extensions, suggestion prompts are irrelevant.
 
-If you run a WordPress network (multisite) with multiple WooCommerce stores, the marketplace suggestions appear on every store's admin. Disabling the suggestions on the network level (via a small custom plugin) provides a cleaner admin experience for the network administrators. The suggestions can be re-enabled per-store if needed for new stores that want to discover extensions.
-
-### Multi-language stores
-
-For stores that serve customers in multiple languages via WPML or Polylang, the marketplace suggestions add noise to the localized admin experience. Disabling them keeps the admin focused on the localized workflow.
-
-### Independent brands
-
-Brands that want to control which extensions their customers see (rather than the WC marketplace recommendations) disable the suggestions for a cleaner admin.
-
-### White-label stores
-
-If you build sites for clients and the WC marketplace suggestions would distract from your client's own recommended tools, disable them.
-
-### Established stores
-
-Stores with a stable extension stack don't need marketplace recommendations. Disabling them reduces admin clutter.
-
-### Custom-built stores
-
-Stores with custom themes and custom plugins don't need suggestions for third-party extensions. Disabling them improves focus.
-
-### High-volume admin users
-
-For staff processing many orders per day, every admin interaction counts. Removing marketplace suggestions speeds up the admin workflow.
+---
 
 ## Troubleshooting
 
-### The feature is not taking effect
+### Suggestions are still showing
 
-**Cause:** The toggle is off, or a caching plugin is serving the old page.
-**Fix:** Verify the toggle is on. Clear all caching layers (page cache, object cache, CDN).
+**Cause:** The toggle is off, or a WooCommerce update re-enables suggestion prompts by another path.
+**Fix:** Confirm the toggle is on and clear caches. If suggestions are shown from a different source (for example, a themes or extensions promo), check that source separately.
 
-### I want the feature to apply only to specific pages
+### Installing extensions still works
 
-**Cause:** The toggle is global.
-**Fix:** Use a small custom plugin that checks the current page and conditionally enables the feature (e.g., via the filter above).
+**Cause:** Disabling suggestions does not block the marketplace.
+**Fix:** Confirm the toggle only hides prompts. Extensions can still be added manually or via the marketplace.
 
-### A third-party plugin is breaking after enabling
+---
 
-**Cause:** Some plugins depend on the disabled feature.
-**Fix:** Disable the toggle and find an alternative (e.g., conditional loading via a performance plugin).
+## Frequently Asked Questions
 
-### The change is not visible to customers
+### What exactly is suppressed?
 
-**Cause:** The feature is admin-only or affects specific page types that the customer doesn't visit.
-**Fix:** Verify the feature is working in the appropriate context (e.g., admin pages, non-WooCommerce pages, etc.).
+WooCommerce's in-admin marketplace suggestion prompts that recommend extensions are hidden when the feature is on.
+
+### Can I still add extensions?
+
+Yes. Disabling suggestions does not block installing extensions, either manually or from the marketplace.
+
+### Does this affect the store?
+
+No. Products, orders, and shop functions are unchanged.
+
+---
+
+## Keeping It Set Up
+
+Set the toggle once and it stays active across the site. To change behavior, return to the WooCommerce settings, adjust the option, and save again. The store continues to run normally throughout, and you can turn the feature off at any time to restore the previous default behavior. For teams managing multiple environments, confirm the setting on staging first, then apply it to production and verify a real page load before treating it as live.
+
+---
+
+## Market Place Access Still Available
+
+The toggle only hides the suggestion prompts. You can still open the WooCommerce marketplace, install extensions, and manage your existing plugins at any time. The feature does not block any part of the marketplace itself, so nothing is lost by turning suggestions off. If you later decide to see suggestions again, switch the toggle back on and they return. For a store that has already chosen its extension stack, keeping this on removes a source of admin noise without affecting functionality.
+
+---**Compare before changing.** The feature affects only the suggestion prompts, so there is no functional downside to enabling it on a store that already has its extensions chosen. Teams that prefer a strictly promotional-free admin often keep this on permanently. A quick test on a staging site confirms that the marketplace and installed extensions continue to work, which is useful before applying the change to a production environment.
 
 ---
 
 ## Related Articles
 
-- [How to Configure SMTP Settings in WordPress](../email/email-smtp-settings.md)
-- [How to Use Content Management in WordPress](../core/core-content-management.md)
-- [How to Use Logs in WordPress](../core/core-logs.md)
+- [How to Disable WooCommerce Admin Features](woocommerce-disable-woocommerce-admin-features.md)
+- [How to Remove All WooCommerce Notices](woocommerce-remove-all-woocommerce-notices.md)
+- [How to Disable WooCommerce Scripts and Styles on Non-WooCommerce Pages](woocommerce-disable-woocommerce-scripts.md)

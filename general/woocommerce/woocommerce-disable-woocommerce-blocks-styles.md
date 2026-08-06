@@ -1,153 +1,144 @@
 ---
-title: "How to Disable WooCommerce Gutenberg Blocks Styles in WordPress | CM"
+title: "How to Disable WooCommerce Block Styles You Do Not Use"
 slug: disable-woocommerce-blocks-styles
-description: "Prevent WooCommerce Gutenberg blocks CSS from loading when blocks aren't used. Improves frontend performance on sites that don't use WooCommerce blocks."
-last_updated: 2026-06-24
+description: "Remove the WooCommerce Gutenberg block styles when your store does not use block layouts. Trim unused block CSS and requests with a single Classic Monks toggle."
+last_updated: 2026-08-06
 author: Joy
-reading_time: 2 min
+reading_time: 3 min
 canonical: https://classicmonks.com/docs/disable-woocommerce-blocks-styles/
 ---
 
-# How to Disable WooCommerce Gutenberg Blocks Styles in WordPress
+# How to Disable WooCommerce Block Styles You Do Not Use
 
-> Disable WooCommerce Gutenberg blocks styles to improve frontend performance on sites that don't use the WooCommerce block editor.
+> Remove the WooCommerce Gutenberg block styles from your pages when you do not use the block-based layouts. Classic Monks dequeues the block CSS you do not need.
 
 ## Key Takeaways
 
-- Single toggle, no nested options
-- Reduced unused CSS on pages without WooCommerce blocks
-- Faster page load times on classic-editor pages
-- Better PageSpeed and Core Web Vitals scores
+- Dequeue WooCommerce block editor styles
+- Remove the registered `wc-blocks-*` style handles
+- Trim unused block CSS from the front end
+- Uses WooCommerce's registered block style handles
+- Keeps the store functional while removing unused block styles
 
-## What Is the Disable WooCommerce Gutenberg blocks styles feature?
+## What Does the Feature Do?
 
-WooCommerce registers Gutenberg blocks for products, cart, checkout, etc. When these blocks are used on a page, WooCommerce loads its blocks CSS. This feature prevents the CSS from loading when the blocks are not used on the page, reducing unused CSS.
+WooCommerce registers a set of block styles (the `wc-blocks-*` style handles) for its Gutenberg block layouts. The **Disable WooCommerce Blocks Styles** feature dequeues those registered styles from the front end when you are not using the block-based WooCommerce layouts.
+
+Removing them trims unnecessary CSS without affecting the core shop, which uses its own product and checkout templates.
 
 ## Why You Need It
 
-WooCommerce's blocks CSS is a small but unnecessary load for pages that don't use WooCommerce blocks. For most stores using the classic editor or third-party page builders, the blocks CSS is dead weight. Disabling it improves frontend performance without affecting pages that do use the blocks.
+Block styles add CSS that may not be used:
+
+- A classic-theme store does not render WooCommerce block layouts
+- Dropping the registered block styles reduces CSS weight and requests
+- It cleans up the front end for non-block store designs
+- It applies to the specific handles WooCommerce registers for its blocks
 
 ---
 
-## How to Disable WooCommerce Gutenberg Blocks Styles in WordPress
+## How to Disable WooCommerce Gutenberg Blocks Styles
 
-### Step 1: Navigate to Settings
+### Step 1: Enable the Feature
 
-Click into the **Classic Monks** plugin settings in your WordPress dashboard.
+1. In WordPress admin, open **Classic Monks > WooCommerce**.
+2. Open the **Optimization** settings area.
+3. Toggle on **Disable WooCommerce Blocks Styles**.
 
-### Step 2: Go to the WooCommerce Tab
+### Step 2: Save and Test
 
-Click on the **WooCommerce** menu, then click the **Optimization** subtab.
-
-### Step 3: Enable the Feature
-
-Toggle on **Disable WooCommerce Gutenberg blocks styles**.
-
-### Step 4: Save Changes
-
-Click **Save Changes**.
-
-### Step 5: Test
-
-View a page that uses the classic editor (not Gutenberg blocks). The WooCommerce blocks CSS should not be loaded.
+Click **Save Changes**. Load a WooCommerce page and confirm the block styles are no longer enqueued. The shop and checkout still work normally.
 
 ---
 
 ## Configuration Options
 
-| Option | Description | Default |
-|--------|-------------|---------|
-| **Disable WooCommerce Gutenberg blocks styles** | Master toggle. | Off |
+| Option | Default |
+|--------|---------|
+| **Disable WooCommerce Blocks Styles** | Off |
 
-No nested options.
+There are no nested options. The feature is a single on/off control.
 
 ---
 
 ## What Gets Affected
 
-- WooCommerce blocks CSS is not loaded on pages without blocks
-- Pages that do use WooCommerce blocks still load the CSS
-- Reduced overall CSS size on most pages
+- The front end: WooCommerce block styles are dequeued
+- Page CSS: the registered `wc-blocks-*` style handles no longer load
 
 ## What Does NOT Get Affected
 
-- Pages that use WooCommerce Gutenberg blocks (the CSS still loads for them)
-- The WooCommerce blocks themselves (they're still available in the block editor)
-- The customer-facing shop functionality
+- The core shop, product, and checkout templates: these keep their own styles
+- WooCommerce functionality: products, cart, checkout work normally
+- Block layouts you actively use: if you rely on block layouts, leave the feature off
 
 ---
 
 ## Advanced Options (Developers)
 
-This feature registers 1 WordPress hook in `woocommerce-functions.php`:
-
-**Actions:**
-
-- `wp_enqueue_scripts` calls `cm_disable_woocommerce_scripts()` (Dequeues WooCommerce blocks styles (priority 99))
+The feature registers its logic in `functions/woocommerce/woocommerce-functions.php`:
 
 ```php
-// Hooked in woocommerce-functions.php
-add_action( 'wp_enqueue_scripts', 'cm_disable_woocommerce_scripts' );
+add_action( 'wp_enqueue_scripts', 'cm_disable_gutenberg_blocks_styles' );
 ```
 
-The feature modifies WooCommerce behavior by registering or removing hooks. Disabling it reverses those changes.
+**`wp_enqueue_scripts`** calls `cm_disable_gutenberg_blocks_styles()`. When enabled, it dequeues the registered WooCommerce block style handles, which include the `wc-blocks-*` styles for the various product and checkout blocks.
+
+---
 
 ## Common Use Cases
 
-### PageSpeed Insights and Core Web Vitals
+**Classic themes.** Stores on classic product and checkout templates do not render block layouts, so the block styles are unused CSS.
 
-The WooCommerce blocks CSS adds approximately 30-50KB of unused CSS to pages that don't use blocks. For stores targeting the green score on PageSpeed Insights, removing this CSS contributes to better LCP and CLS scores. The fix is especially valuable for blog posts and content pages that don't have any WC content.
+**Performance tuning.** Removing unused block CSS reduces page weight on WooCommerce pages.
 
-### Custom product templates
+**Lightweight stores.** Any store that wants a leaner front end without block layout CSS benefits from this toggle.
 
-Stores that have their own product page templates via Elementor Pro or Bricks don't need the WC blocks CSS. Disabling it removes the dead weight from those pages.
-
-### PageSpeed optimization
-
-PageSpeed Insights flags unused CSS as a warning. Removing the WC blocks CSS improves the score on pages without blocks.
-
-### Themed product pages
-
-If your theme handles product page layouts via templates, the WC blocks CSS is unused. Disabling it removes the dead weight.
-
-### Classic editor stores
-
-Stores that use the classic editor for all pages and posts don't need WooCommerce blocks CSS.
-
-### Third-party page builder stores
-
-Stores using Elementor, Bricks, or Oxygen for all product pages don't need WooCommerce blocks.
-
-### Performance-focused stores
-
-Every kilobyte of CSS counts for PageSpeed scores. Removing unused WooCommerce blocks CSS is a quick win.
+---
 
 ## Troubleshooting
 
-### The feature is not taking effect
+### The block styles are still loading
 
-**Cause:** The toggle is off, or a caching plugin is serving the old page.
-**Fix:** Verify the toggle is on. Clear all caching layers (page cache, object cache, CDN).
+**Cause:** The toggle is off, or a block layout is actively enqueuing its styles.
+**Fix:** Confirm the toggle is on. If a page uses a WooCommerce block, it may enqueue the needed style independently of this toggle.
 
-### I want the feature to apply only to specific pages
+### A block layout does not look right
 
-**Cause:** The toggle is global.
-**Fix:** Use a small custom plugin that checks the current page and conditionally enables the feature (e.g., via the filter above).
+**Cause:** The block styles were removed, so a block layout renders without its intended styling.
+**Fix:** If you use block layouts, keep the feature off so the registered block styles load.
 
-### A third-party plugin is breaking after enabling
+### The shop still works
 
-**Cause:** Some plugins depend on the disabled feature.
-**Fix:** Disable the toggle and find an alternative (e.g., conditional loading via a performance plugin).
+**Cause:** This is expected. The feature removes block layout styles, not the core shop templates.
+**Fix:** No action needed.
 
-### The change is not visible to customers
+---
 
-**Cause:** The feature is admin-only or affects specific page types that the customer doesn't visit.
-**Fix:** Verify the feature is working in the appropriate context (e.g., admin pages, non-WooCommerce pages, etc.).
+## Frequently Asked Questions
+
+### What styles get removed?
+
+The registered WooCommerce block styles, identified by the `wc-blocks-*` handles. These style the WooCommerce Gutenberg block layouts.
+
+### Does it affect the shop and checkout?
+
+The core shop and checkout keep their own styles and work normally. Only the block layout styles are dequeued.
+
+### Should I use this with block themes?
+
+If your store relies on WooCommerce block layouts, keep the feature off. It is intended for stores that do not use the block-based layouts.
+
+---
+
+## Keeping It Set Up
+
+Set the toggle once and it stays active across the site. To change behavior, return to the WooCommerce settings, adjust the option, and save again. The store continues to run normally throughout, and you can turn the feature off at any time to restore the previous default behavior. For teams managing multiple environments, confirm the setting on staging first, then apply it to production and verify a real page load before treating it as live.
 
 ---
 
 ## Related Articles
 
-- [How to Configure SMTP Settings in WordPress](../email/email-smtp-settings.md)
-- [How to Use Content Management in WordPress](../core/core-content-management.md)
-- [How to Use Logs in WordPress](../core/core-logs.md)
+- [How to Disable WooCommerce Scripts and Styles on Non-WooCommerce Pages](woocommerce-disable-woocommerce-scripts.md)
+- [How to Disable All WooCommerce Widgets](woocommerce-disable-woocommerce-widgets.md)
+- [How to Disable WooCommerce Admin Features](woocommerce-disable-woocommerce-admin-features.md)

@@ -1,145 +1,144 @@
 ---
-title: "How to Disable WooCommerce Scripts and Styles on Non-WooCommerce Pages in WordPress | CM"
+title: "How to Disable WooCommerce Assets on Non-Shop Pages"
 slug: disable-woocommerce-scripts
-description: "Prevent WooCommerce CSS and JavaScript files from loading on pages that don't need WooCommerce functionality. Improves site performance by reducing unnecessary asset loading."
-last_updated: 2026-06-24
+description: "Prevent WooCommerce CSS and JavaScript from loading on pages that do not use the shop. Reduce the extraneous requests on those pages to improve load times."
+last_updated: 2026-08-06
 author: Joy
 reading_time: 3 min
 canonical: https://classicmonks.com/docs/disable-woocommerce-scripts/
 ---
 
-# How to Disable WooCommerce Scripts and Styles on Non-WooCommerce Pages in WordPress
+# How to Disable WooCommerce Assets on Non-Shop Pages
 
-> Disable WooCommerce scripts and styles on non-WooCommerce pages to improve site performance by reducing unnecessary asset loading.
+> Stop WooCommerce CSS and JavaScript from loading on pages that do not display store content, so blog posts and standard pages load faster with fewer requests. Classic Monks removes the plugin's assets outside the shop.
 
 ## Key Takeaways
 
-- Single toggle, no nested options
-- Faster page load times on non-WooCommerce pages (blog, regular pages)
-- Reduced bandwidth usage and fewer HTTP requests
-- Improved Core Web Vitals (LCP, CLS) on non-shop pages
+- Dequeue WooCommerce scripts and styles on non-WooCommerce pages
+- Keep the assets on shop, cart, checkout, and account pages
+- Reduce external requests and page weight on content pages
+- One toggle, no nested options
+- Improves performance on blogs, landing pages, and standard pages
 
-## What Is the Disable WooCommerce scripts and styles on non-WooCommerce pages feature?
+## What Does the Feature Do?
 
-By default, WooCommerce loads its CSS and JavaScript files on every page of the site, including pages that don't need them (e.g., blog posts, regular pages). This feature prevents the WooCommerce assets from loading on non-WooCommerce pages, reducing page load time and improving performance.
+WooCommerce loads its styles and scripts on every page by default, including pages that show no store content. The **Disable WooCommerce Scripts and Styles on Non-WooCommerce Pages** feature removes those assets on non-shop pages, so the browser does not download files the page does not need.
+
+Shop pages and WooCommerce endpoints keep their assets, so the store still works normally. Only pages outside the shop skip the unnecessary files.
 
 ## Why You Need It
 
-WooCommerce's default behavior loads its full CSS and JavaScript on every page, even pages that don't display any WooCommerce content. For content-heavy sites, this can be a significant performance hit. By preventing the WooCommerce assets from loading on non-WooCommerce pages, you reduce page load time, decrease bandwidth usage, and improve the user experience on your blog and other non-shop pages.
+Loading files a page never uses is wasted performance:
+
+- Fewer CSS and JavaScript requests on blog posts and landing pages
+- Lower page weight on content pages
+- Faster load times and a lighter page footprint where WooCommerce is not visible
+- Cleaner delivery for sites where the shop is only one section
 
 ---
 
-## How to Disable WooCommerce Scripts and Styles on Non-WooCommerce Pages in WordPress
+## How to Disable WooCommerce Scripts and Styles on Non-WooCommerce Pages
 
-### Step 1: Navigate to Settings
+### Step 1: Enable the Feature
 
-Click into the **Classic Monks** plugin settings in your WordPress dashboard.
+1. In WordPress admin, open **Classic Monks > WooCommerce**.
+2. Open the **Optimization** settings area.
+3. Toggle on **Disable WooCommerce Scripts and Styles on Non-WooCommerce Pages**.
 
-### Step 2: Go to the WooCommerce Tab
+### Step 2: Save and Test
 
-Click on the **WooCommerce** menu, then click the **Optimization** subtab.
-
-### Step 3: Enable the Feature
-
-Toggle on **Disable WooCommerce scripts and styles on non-WooCommerce pages**.
-
-### Step 4: Save Changes
-
-Click **Save Changes**.
-
-### Step 5: Test
-
-View source on a non-WooCommerce page (e.g., a blog post). The WooCommerce CSS and JS files should not be loaded.
+Click **Save Changes**. Open a non-WooCommerce page (for example, a blog post) and view its source. The WooCommerce CSS and JavaScript files should not be loaded, while shop and checkout pages keep them.
 
 ---
 
 ## Configuration Options
 
-| Option | Description | Default |
-|--------|-------------|---------|
-| **Disable WooCommerce scripts and styles on non-WooCommerce pages** | Master toggle. | Off |
+| Option | Default |
+|--------|---------|
+| **Disable WooCommerce Scripts and Styles on Non-WooCommerce Pages** | Off |
 
-No nested options.
+There are no nested options. The feature is a single on/off control.
 
 ---
 
 ## What Gets Affected
 
-- Non-WooCommerce pages: WooCommerce assets are not loaded
-- WooCommerce pages (shop, cart, checkout, account): assets still load normally
-- The total number of HTTP requests on non-WooCommerce pages is reduced
+- Non-WooCommerce pages: WooCommerce styles and scripts are not loaded
+- Page performance: fewer requests and less weight on content pages
 
 ## What Does NOT Get Affected
 
-- WooCommerce pages still load all necessary assets
-- The cart functionality (the cart widget may still load on non-WooCommerce pages)
-- WooCommerce data and settings (orders, products, etc.)
+- Shop pages, cart, checkout, and account endpoints: these keep their assets
+- WooCommerce data, orders, and products: unaffected
+- Active WooCommerce functionality on the pages that use it
 
 ---
 
 ## Advanced Options (Developers)
 
-This feature registers 1 WordPress hook in `woocommerce-functions.php`:
-
-**Actions:**
-
-- `wp_enqueue_scripts` calls `cm_disable_woocommerce_scripts()` (Dequeues WooCommerce scripts on specific pages (priority 99))
+The feature registers one hook in `functions/woocommerce/woocommerce-functions.php`:
 
 ```php
-// Hooked in woocommerce-functions.php
-add_action( 'wp_enqueue_scripts', 'cm_disable_woocommerce_scripts' );
+add_action( 'wp_enqueue_scripts', 'cm_disable_woocommerce_scripts', 99 );
 ```
 
-The feature modifies WooCommerce behavior by registering or removing hooks. Disabling it reverses those changes.
+**`wp_enqueue_scripts`** (priority 99) calls `cm_disable_woocommerce_scripts()`, which dequeues WooCommerce's registered scripts and styles on non-WooCommerce pages. The shop context checks keep the assets loading where the store needs them.
+
+---
 
 ## Common Use Cases
 
-### Multi-page checkout flows
+**Content-heavy sites.** Blogs with many articles benefit when WooCommerce assets do not load on every post.
 
-If you use a multi-page checkout (vs. the default one-page), the WC assets on non-checkout pages are unused. Disabling them improves landing page performance.
+**Landing pages.** Targeting specific sales or signup pages, the store files are unnecessary and add weight.
 
-### Headless frontend with WP backend
+**Stores where the shop is a small part.** If the catalog is a minor section, there is no reason to load shop assets across the whole site.
 
-Stores that use WordPress as a backend for a custom React/Vue frontend don't need WC assets on WordPress pages.
+**Optimized delivery.** Reducing requests on content pages improves their load profile without touching the store itself.
 
-### Content-heavy blogs
-
-Stores that have a large blog or content section benefit from not loading WooCommerce assets on blog posts and pages.
-
-### Portfolio sites with a small shop
-
-Sites where the shop is a minor feature don't need WooCommerce assets on every page.
-
-### Landing page stores
-
-Custom landing pages (sales pages, opt-in pages) don't need WooCommerce assets. Disabling them improves landing page performance.
+---
 
 ## Troubleshooting
 
-### The feature is not taking effect
+### The feature has no effect
 
-**Cause:** The toggle is off, or a caching plugin is serving the old page.
-**Fix:** Verify the toggle is on. Clear all caching layers (page cache, object cache, CDN).
+**Cause:** The toggle is off, or the page being tested is treated as a shop page.
+**Fix:** Confirm the toggle is on and test a page outside the WooCommerce context. Shop, cart, checkout, and account pages keep their assets by design.
 
-### I want the feature to apply only to specific pages
+### Store styles disappear on shop pages
 
-**Cause:** The toggle is global.
-**Fix:** Use a small custom plugin that checks the current page and conditionally enables the feature (e.g., via the filter above).
+**Cause:** The feature removes assets only on non-shop pages. If a shop page is missing styles, check for another source.
+**Fix:** Confirm the page is recognized as a WooCommerce page. If a custom template does not register as a shop page, it may be treated as non-WooCommerce.
 
-### A third-party plugin is breaking after enabling
+### A plugin breaks after enabling
 
-**Cause:** Some plugins depend on the disabled feature.
-**Fix:** Disable the toggle and find an alternative (e.g., conditional loading via a performance plugin).
+**Cause:** The plugin may rely on WooCommerce assets loading globally.
+**Fix:** Disable the toggle for that setup, or load the required WooCommerce asset conditionally from the affected plugin.
 
-### The change is not visible to customers
+---
 
-**Cause:** The feature is admin-only or affects specific page types that the customer doesn't visit.
-**Fix:** Verify the feature is working in the appropriate context (e.g., admin pages, non-WooCommerce pages, etc.).
+## Frequently Asked Questions
+
+### Which pages keep their WooCommerce assets?
+
+Shop pages, the cart, checkout, and account endpoints retain their scripts and styles. Only pages outside the WooCommerce context lose the assets.
+
+### Does this change how the store works?
+
+No. The store and its pages are unaffected. The change only removes unnecessary assets on non-shop pages.
+
+### Is it a large performance win?
+
+It depends on the site. Sites with many blog or landing pages see the most benefit, as each non-shop page avoids several WooCommerce requests.
+
+### Can I undo it easily?
+
+Yes. Turn the toggle off and the assets load everywhere again.
 
 ---
 
 ## Related Articles
 
-- [How to Configure SMTP Settings in WordPress](../email/email-smtp-settings.md)
-- [How to Use Content Management in WordPress](../core/core-content-management.md)
-- [How to Use Logs in WordPress](../core/core-logs.md)
+- [How to Disable WooCommerce Cart Fragmentation](./woocommerce-disable-woocommerce-cart-fragmentation.md)
+- [How to Disable WooCommerce Admin Features](./woocommerce-disable-woocommerce-admin-features.md)
+- [How to Disable All WooCommerce Widgets](./woocommerce-disable-woocommerce-widgets.md)
