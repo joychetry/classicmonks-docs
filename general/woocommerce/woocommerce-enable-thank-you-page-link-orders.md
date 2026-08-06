@@ -130,6 +130,6 @@ The feature modifies WooCommerce behavior by registering or removing hooks. Disa
 
 ## Related Articles
 
-- [How to Enable Custom Order Status in WordPress](woocommerce-enable-custom-order-status.md)
+- [How to Create Custom Order Statuses in WooCommerce](woocommerce-enable-custom-order-status.md)
 - [How to Enable Custom Order Columns in WordPress](woocommerce-enable-custom-order-columns.md)
 - [How to Use Content Management in WordPress](../core/core-content-management.md)

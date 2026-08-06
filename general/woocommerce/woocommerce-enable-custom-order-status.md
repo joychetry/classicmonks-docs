@@ -1,149 +1,174 @@
 ---
-title: "How to Enable Custom Order Status in WordPress | CM"
+title: "How to Create Custom Order Statuses in WooCommerce"
 slug: enable-custom-order-status
-description: "Add and manage custom order statuses in WooCommerce through Classic Monks. Provides more granular order management beyond the default WooCommerce statuses."
-last_updated: 2026-06-24
+description: "Add and manage custom order statuses in WooCommerce with Classic Monks. Define statuses with labels and keys to track your order workflow beyond the defaults."
+last_updated: 2026-08-06
 author: Joy
-reading_time: 3 min
+reading_time: 4 min
 canonical: https://classicmonks.com/docs/enable-custom-order-status/
 ---
 
-# How to Enable Custom Order Status in WordPress
+# How to Create Custom Order Statuses in WooCommerce
 
-> Enable Custom Order Status adds the ability to create and manage custom order statuses in WooCommerce. Provides more granular order management beyond the default WooCommerce statuses (pending, processing, completed, etc.).
+> Create custom order statuses in WooCommerce to track steps that the default statuses do not cover, such as "Awaiting Materials", "In Production", or "Pending Approval". Define each status with a label and key in the Classic Monks Orders settings.
 
 ## Key Takeaways
 
-- Single toggle, no nested options
-- Adds the ability to create custom order statuses
-- Custom statuses integrate with WooCommerce's order workflow
-- Useful for stores with non-standard fulfillment processes
-- No effect on existing orders or default statuses
+- Add unlimited custom order statuses to the WooCommerce order workflow
+- Create each status with a display label and a lowercase, hyphenated key
+- Registered statuses appear in the order Status dropdown and the orders list
+- Removes statuses you no longer need from the saved list
+- Built into the standard WooCommerce order workflow, not a separate system
 
-## What Is the Enable Custom Order Status feature?
+## What Does Custom Order Status Do?
 
-WooCommerce's default order statuses (pending, processing, on-hold, completed, cancelled, refunded, failed) cover most e-commerce scenarios. But some stores need custom statuses for:
+WooCommerce ships with a fixed set of order statuses: pending payment, processing, on hold, completed, cancelled, refunded, and failed. For many businesses that is not granular enough. A furniture maker tracks orders through "Awaiting Materials", "In Production", and "Quality Check". A service business needs "Scheduled" and "In Progress". A B2B workflow wants "Pending Approval" and "Invoiced".
 
-- Manufacturing or custom production workflows
-- Multi-stage fulfillment (e.g., "Awaiting Materials", "In Production", "Quality Check")
-- Service businesses (e.g., "Scheduled", "In Progress", "Completed")
-- B2B workflows (e.g., "Pending Approval", "Awaiting PO", "Invoiced")
+The Classic Monks **Enable Custom Order Status** feature lets you define your own statuses. Each status is registered with WooCommerce so it appears wherever order statuses are used: the order edit screen, the orders list, and the status dropdown.
 
-The Enable Custom Order Status feature adds the ability to create and manage these custom statuses within WooCommerce's standard order workflow.
-
-## Why You Need It
-
-The default WooCommerce statuses are too generic for some businesses:
-
-- **Manufacturing**: A furniture maker needs "Awaiting Materials", "In Production", "Quality Check", not just "Processing"
-- **Services**: A consulting firm needs "Scheduled", "In Progress", "Completed", not "Shipped"
-- **B2B**: An enterprise sales process needs approval workflows, "Pending Approval", "PO Received", "Invoiced"
-
-Custom statuses provide better tracking and reporting, and they integrate with WooCommerce's standard order workflow (emails, reports, etc.).
+Custom statuses work within the standard WooCommerce order workflow rather than as a separate system, so they integrate with how you already manage orders.
 
 ---
 
-## How to Enable Custom Order Status in WordPress
+## When to Enable It
 
-### Step 1: Navigate to Settings
+Enable Custom Order Status when the default statuses do not match how your store actually fulfills orders:
 
-Click into the **Classic Monks** plugin settings in your WordPress dashboard.
+- Manufacturing and production workflows that need staging steps
+- Service and appointment businesses that track scheduling and progress
+- B2B flows with approval or invoicing milestones
+- Any workflow where "Processing" and "Completed" are too coarse
 
-### Step 2: Go to the WooCommerce Tab
-
-Click on the **WooCommerce** menu, then click the **Orders** subtab.
-
-### Step 3: Enable Custom Order Status
-
-Toggle on **Enable Custom Order Status**.
-
-### Step 4: Save Changes
-
-Click **Save Changes**.
-
-### Step 5: Add Custom Statuses
-
-Go to **WooCommerce > Settings > Custom Order Statuses** (or the equivalent location added by the feature). Add your custom statuses with their slugs, labels, and colors.
-
-### Step 6: Use Custom Statuses
-
-When editing an order, the new statuses appear in the Status dropdown. You can change an order's status to any of the custom statuses.
+Keep it off if the default WooCommerce statuses already cover your process.
 
 ---
 
-## Configuration Options
+## How to Add Custom Order Statuses in WooCommerce
 
-| Option | Description | Default |
-|--------|-------------|---------|
+### Step 1: Enable the Feature
+
+1. In WordPress admin, open **Classic Monks > WooCommerce**.
+2. Open the **Orders** settings area.
+3. Toggle on **Enable Custom Order Status**. The nested add-status form expands below the toggle.
+
+### Step 2: Add a Status
+
+1. In **Status Label**, enter the name that appears in the orders list (for example, `In Production`).
+2. In **Status Key**, enter a lowercase, hyphenated identifier (for example, `in-production`).
+3. Click **Add Status**.
+
+The status is saved to the Custom Order Statuses list and registered with WooCommerce.
+
+### Step 3: Use the Status
+
+Edit an order and open the **Status** dropdown. Your custom status appears there alongside the defaults. Select it and the order moves to the new status.
+
+### Step 4: Remove a Status
+
+In the Custom Order Statuses list, click the remove button next to a status to delete it. The status is removed from the saved list and no longer registered.
+
+---
+
+## Configuration Details
+
+| Item | What it controls | Default |
+|------|------------------|---------|
 | **Enable Custom Order Status** | Master toggle. | Off |
+| **Status Label** | The name shown in the orders list and status dropdown (for example, `In Production`). | Blank |
+| **Status Key** | Lowercase, hyphenated identifier registered with WooCommerce (for example, `in-production`). | Blank |
 
-No nested options. The custom statuses themselves are configured in the WooCommerce settings after the feature is enabled.
+- The **Status Key** must use lowercase letters and hyphens only.
+- Each saved status stores a label and is registered as a `wc-<key>` status.
+- The add form lives in the Classic Monks **Orders** settings; there is no separate page.
 
 ---
 
 ## What Gets Affected
 
-- The order edit page: the Status dropdown now includes your custom statuses
-- The orders list: custom statuses are shown in the Status column
-- The order reports: custom statuses are included
-- The WooCommerce REST API: custom statuses are exposed
-- The order emails: custom statuses can trigger custom emails (requires additional setup)
+- The order edit screen: **Status** dropdown includes your custom statuses
+- The orders list: custom statuses are shown and filterable in the **Status** column
+- Order reports and admin lists: registered statuses appear in status counts
+- The saved custom-status list: shows every currently configured status
 
 ## What Does NOT Get Affected
 
-- The default WooCommerce statuses (pending, processing, etc.) are unchanged
-- Existing orders' statuses (changing the feature doesn't reassign orders)
-- The customer-facing order status display (this is admin-only)
-- Other plugins' order management (e.g., custom order plugins that have their own status system)
+- The default WooCommerce statuses: these stay unchanged
+- Existing orders: enabling the feature does not reassign any order
+- Customer-facing order displays: custom statuses are registered admin-side; extending them to customer-facing emails or pages requires additional template or hook work
+- Other plugins' status systems: the feature adds statuses into WooCommerce's own statuses; plugins with separate status systems are unaffected
 
 ---
 
 ## Advanced Options (Developers)
 
-This feature registers 3 WordPress hooks in `woo-orders.php`:
-
-**Actions:**
-
-- `init` calls `cm_register_custom_status_with_wc()` (Registers custom status with WooCommerce)
-
-**Filters:**
-
-- `woocommerce_register_shop_order_post_statuses` calls `cm_register_custom_order_status()` (Registers custom order status)
-- `wc_order_statuses` calls `cm_add_custom_order_status_dropdown()` (Adds custom status to order status dropdown)
+The feature registers its statuses and hooks in `functions/woocommerce/woo-orders.php`:
 
 ```php
-// Hooked in woo-orders.php
 add_filter( 'woocommerce_register_shop_order_post_statuses', 'cm_register_custom_order_status' );
+add_filter( 'wc_order_statuses', 'cm_add_custom_order_status_dropdown' );
+add_action( 'init', 'cm_register_custom_status_with_wc' );
 ```
 
-The feature modifies WooCommerce behavior by registering or removing hooks. Disabling it reverses those changes.
+- **`woocommerce_register_shop_order_post_statuses`** calls `cm_register_custom_order_status()` to add each saved status to WooCommerce's registered order statuses. Each entry is registered with `public => true`, `show_in_admin_all_list => true`, and `show_in_admin_status_list => true`.
+- **`wc_order_statuses`** calls `cm_add_custom_order_status_dropdown()` to add the custom status labels to the status dropdown.
+- **`init`** calls `cm_register_custom_status_with_wc()`, which runs `register_post_status('wc-<key>', ...)` for each saved status so it is fully recognized by WordPress and WooCommerce.
+
+All three functions gate on the **Enable Custom Order Status** toggle and the saved `cm_custom_order_statuses` option. If either is empty, they return unchanged.
+
+---
 
 ## Troubleshooting
 
-### Custom statuses are not showing in the order edit page
+### A custom status is not showing in the order edit page
 
-**Cause:** The toggle is off, or the custom status was not registered correctly.
-**Fix:** Verify the toggle is on. Check the WooCommerce settings for the custom statuses. Verify the status is registered with `show_in_admin_status_list => true`.
+**Cause:** The master toggle is off, the status is not in the saved list, or the status key is invalid.
+**Fix:** Confirm **Enable Custom Order Status** is on and the status appears in the **Custom Order Statuses** list. Verify the **Status Key** uses lowercase letters and hyphens only (for example, `in-production`), then re-add the status.
 
-### The custom status is showing but cannot be selected
+### A status is missing from the orders list
 
-**Cause:** The status was registered as `public => false` but should be true for admin visibility.
-**Fix:** Re-register the status with the correct arguments. The `register_post_status` function requires `public` or `internal` set appropriately.
+**Cause:** The status was removed from the saved list, or the toggle is off so it is not registered.
+**Fix:** Re-add the status in the Orders settings and confirm the toggle is on. Registered statuses honor `show_in_admin_status_list => true`, so a present status should appear.
 
-### The custom status is changing but no email is sent
+### The status dropdown cuts off or loses a status
 
-**Cause:** Custom statuses don't automatically send emails; you need to register an action hook for each status.
-**Fix:** Use the `woocommerce_order_status_{slug}` action hook to send custom emails for each status. See the Advanced Options example.
+**Cause:** A status was deleted, or the key does not match what you expect.
+**Fix:** Open the **Custom Order Statuses** list and add the status again with a clean, lowercase, hyphenated key. Remove any duplicate keys.
 
-### The custom status is showing in the admin but not in the customer-facing order
+### Orders do not change automatically to a custom status
 
-**Cause:** Custom statuses are admin-only by default. The customer-facing order uses the default WooCommerce statuses.
-**Fix:** Configure in the plugin settings to display custom statuses in the customer-facing order summary, or add a custom email template that includes the custom status.
+**Cause:** Custom statuses are applied manually through the order's **Status** dropdown; no automatic transition is configured.
+**Fix:** Select the custom status in the order editor when moving an order. If you want an automatic trigger, handle it with a hook (for example, `woocommerce_order_status_<key>`) rather than relying on the feature.
+
+---
+
+## Frequently Asked Questions
+
+### Can I create as many custom order statuses as I want?
+
+Yes. There is no fixed limit. Each status you add is saved to the Custom Order Statuses list and registered with WooCommerce using a unique lowercase, hyphenated key.
+
+### What should the status key look like?
+
+The key uses lowercase letters and hyphens only, for example `in-production` or `awaiting-materials`. It becomes the `wc-<key>` identifier that WooCommerce and any hooks use to reference the status.
+
+### Do custom statuses affect the default WooCommerce statuses?
+
+No. Enabling the feature adds new statuses; it does not change or remove the defaults. Existing orders keep whatever status they already have.
+
+### Can customers see custom order statuses?
+
+Custom statuses are registered admin-side and appear in the order editor and orders list. Showing them in customer-facing views (order emails or the account order page) requires extending those templates or hooks yourself.
+
+### Do custom statuses auto-transition orders?
+
+No. Changing an order to a custom status is manual, using the **Status** dropdown on the order edit screen. The feature registers the statuses; it does not define automatic status transitions.
 
 ---
 
 ## Related Articles
 
-- [How to Enable Thank You Page Link in Orders in WordPress](woocommerce-enable-thank-you-page-link-orders.md)
 - [How to Enable Custom Order Columns in WordPress](woocommerce-enable-custom-order-columns.md)
-- [How to Use Content Management in WordPress](../core/core-content-management.md)
+- [How to Enable Thank You Page Link in Orders in WordPress](woocommerce-enable-thank-you-page-link-orders.md)
+- [How to Enable Auto-Completion for Virtual/Downloadable Orders in WordPress](woocommerce-enable-woocommerce-auto-completion.md)
+
+
