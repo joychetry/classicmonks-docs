@@ -1,141 +1,137 @@
 ---
-title: "How to Auto-select First Variation in WordPress | CM"
+title: "How to Auto-Select the First Variation in WooCommerce"
 slug: auto-select-first-variation
-description: "Automatically select the first available product variation in Classic Monks when customers visit variable product pages. Speeds up the purchase decision."
-last_updated: 2026-06-24
+description: "Auto-select the first available variation on WooCommerce variable product pages. Reduce the steps a customer needs before they can add an item to cart."
+last_updated: 2026-08-06
 author: Joy
 reading_time: 3 min
 canonical: https://classicmonks.com/docs/auto-select-first-variation/
 ---
 
-# How to Auto-select First Variation in WordPress
+# How to Auto-Select the First Variation in WooCommerce
 
-> Auto-select First Variation automatically selects the first available product variation when customers visit variable product pages. Removes the need to manually choose a variation before adding to cart.
+> Auto-select the first variation on a WooCommerce variable product so a purchase starts with an option already chosen. This removes one manual step before the add to cart action becomes available.
 
 ## Key Takeaways
 
-- Single toggle, no nested options
-- First available variation is auto-selected on page load
-- Works for variable products with multiple variations
-- Speeds up the purchase decision (one less click)
-- Can be confusing for customers who want to see all options first
+- Preselect the first variation option on variable product pages
+- Reduces the clicks a customer needs before adding to cart
+- Applies when a variation dropdown has options to choose from
+- Simple on/off toggle, no nested options
 
-## What Is the Auto-select First Variation feature?
+## What Does the Feature Do?
 
-By default, when a customer visits a variable product page, no variation is pre-selected. The customer must click a variation (size, color, etc.) before the "Add to Cart" button becomes active.
+On a variable product page, WooCommerce leaves every variation unselected until the customer picks one. That is one extra step before the add to cart action can be used. The **Auto-Select First Variation** feature preselects the first option in each variation dropdown as soon as the page renders.
 
-The Auto-select First Variation feature pre-selects the first available variation, so the customer can immediately add to cart without first selecting a variation.
+It works through the dropdown argument filter, so when a dropdown has options, the first one is set as the selected value.
 
 ## Why You Need It
 
-For stores with many variations, the default behavior forces customers to make a choice before they can purchase:
+Preselecting the first variation removes friction:
 
-- For fashion: "Small, Medium, or Large?" before they can add to cart
-- For electronics: "Black, Silver, or Gold?" before they can add to cart
-- For services: "Basic, Pro, or Enterprise?" before they can add to cart
-
-This adds friction. Auto-selecting the first variation:
-
-- Reduces friction (one less click)
-- Speeds up the purchase decision
-- Defaults to the most common option (if the first variation is the most popular)
-- Can be confusing if the customer wants to see all options first
-
-For most e-commerce stores, the trade-off favors auto-selection.
+- Customers reach the add to cart action faster
+- The default option is already chosen, so the price and selection state render immediately
+- Stores with the most popular option listed first give new customers a sensible default
+- The customer can still change the selection to any other variation
 
 ---
 
-## How to Use Auto-select First Variation in WordPress
+## How to Auto-Select the First Variation in WooCommerce
 
-### Step 1: Navigate to Settings
+### Step 1: Enable the Feature
 
-Click into the **Classic Monks** plugin settings in your WordPress dashboard.
+1. In WordPress admin, open **Classic Monks > WooCommerce**.
+2. Open the **Single Product** settings area.
+3. Toggle on **Auto-Select First Variation**.
 
-### Step 2: Go to the WooCommerce Tab
+### Step 2: Save and Test
 
-Click on the **WooCommerce** menu, then click the **Single Product** subtab.
-
-### Step 3: Enable Auto-select First Variation
-
-Scroll to **Auto-select First Variation** and toggle on.
-
-### Step 4: Save Changes
-
-Click **Save Changes**.
-
-### Step 5: Test
-
-Visit a variable product on the front-end. The first variation should be pre-selected, and the price/image should reflect that variation.
+Click **Save Changes**. Visit a variable product on the front end. The first option in each variation dropdown should be preselected, and the customer can still pick another variation.
 
 ---
 
 ## Configuration Options
 
-| Option | Description | Default |
-|--------|-------------|---------|
-| **Auto-select First Variation** | Master toggle. | Off |
+| Option | Default |
+|--------|---------|
+| **Auto-Select First Variation** | Off |
 
-No nested options.
+There are no nested options. The feature is a single on/off control.
 
 ---
 
 ## What Gets Affected
 
-- Variable product pages: the first variation is pre-selected on page load
-- The variation price: shown immediately (instead of showing a price range)
-- The variation image: shown immediately (instead of showing the default product image)
-- The Add to Cart button: enabled immediately (instead of being disabled until a selection is made)
+- Variable product pages: the first option in each variation dropdown is preselected on load
+- The selection state: a variation is chosen as soon as the page renders
 
 ## What Does NOT Get Affected
 
-- The variation selection area (dropdowns, swatches): still shows all options for the customer to change
-- The variation data: still loaded for all variations, just one is pre-selected
-- The cart: still requires a variation selection (just pre-selected now)
-- The single product pages of non-variable products: not affected (the feature only applies to variable products)
+- The variation choices themselves: all options remain available to change
+- The product data and prices: these are unchanged
+- Non-variable products: the feature only applies to variable products with dropdown options
+- The cart: the feature preselects an option; it does not add anything to the cart
 
 ---
 
 ## Advanced Options (Developers)
 
-This feature registers 1 WordPress hook in `variation-display.php`:
-
-**Filters:**
-
-- `woocommerce_dropdown_variation_attribute_options_args` calls `auto-select()` (Auto-selects first available variation option)
+The feature registers its logic in `functions/woocommerce/variation-display.php`, gated on the **Auto-Select First Variation** option:
 
 ```php
-// Hooked in variation-display.php
-add_filter( 'woocommerce_dropdown_variation_attribute_options_args', 'auto-select' );
+add_filter( 'woocommerce_dropdown_variation_attribute_options_args', function($args) {
+    if (count($args['options']) > 0) {
+        $args['selected'] = $args['options'][0];
+    }
+    return $args;
+});
 ```
 
-The feature modifies WooCommerce behavior by registering or removing hooks. Disabling it reverses those changes.
+**`woocommerce_dropdown_variation_attribute_options_args`** modifies the dropdown options before rendering. When the dropdown has at least one option, the first one is set as the `selected` value.
+
+---
 
 ## Troubleshooting
 
-### The first variation is not pre-selected
+### The first variation is not preselected
 
-**Cause:** The toggle is off, or the product is not a variable product.
-**Fix:** Verify the toggle is on. Verify the product is set as "Variable product" in the product data panel.
+**Cause:** The feature toggle is off, or the dropdown has no options available to select from.
+**Fix:** Confirm **Auto-Select First Variation** is on. Check that the variable product is configured with variations for its attributes, and that the dropdown has options to choose from.
 
-### The pre-selected variation is out of stock
+### The preselected option is not one the customer wants
 
-**Cause:** The default behavior pre-selects the first variation in the product data order, regardless of stock.
-**Fix:** Configure in the plugin settings to pre-select an in-stock variation instead (see Advanced Options).
+**Cause:** The first option in the dropdown is preselected; the customer can change it.
+**Fix:** Reorder the variations in the product's Variations tab if you want a different default. The customer can still select any other option after the page loads.
 
-### The variation image is wrong
+### It has no effect on my theme's dropdown
 
-**Cause:** The first variation's image is being shown, but the customer expected a different image.
-**Fix:** Reorder the variations in the product data (Variations tab in the product edit screen). The first variation in the data order is the one pre-selected.
+**Cause:** A theme or plugin may build variation attributes outside WooCommerce's standard dropdown filter.
+**Fix:** Confirm the dropdown renders through the standard WooCommerce variation attribute options. Custom dropdown markup that bypasses this filter will not be affected.
 
-### The Add to Cart button is still disabled
+---
 
-**Cause:** A theme or plugin conflict is preventing the variation auto-select from enabling the Add to Cart button.
-**Fix:** Check the browser console for errors. Verify the variation was actually selected (the price/image should reflect it). Some themes need the variation form to be submitted before the Add to Cart is enabled.
+## Frequently Asked Questions
+
+### Which variation gets selected?
+
+The first option in each variation dropdown is preselected when the dropdown has options. The customer can change it to any other listed variation.
+
+### Does this add an item to the cart?
+
+No. It only preselects a variation on the product page. Adding to cart still requires the customer to use the add to cart action.
+
+### Can the customer still choose a different variation?
+
+Yes. The selected option is just a default. All variations remain selectable after the page renders.
+
+### Does it affect single attribute or multiple attribute products?
+
+It applies to any variable product that uses dropdown attribute selection. Each dropdown gets its first option preselected when options exist.
 
 ---
 
 ## Related Articles
 
-- [How to Remove the Clear Variation Link in WordPress](woocommerce-remove-clear-variation-link.md)
-- [How to Update Price on Variation Selection in WordPress](woocommerce-update-price-on-variation.md)
-- [How to Use Product Swatches in WordPress](woocommerce-product-swatches.md)
+- [How to Update Price on Variation Selection in WooCommerce](woocommerce-update-price-on-variation.md)
+- [How to Hide the Default Variation Price in WooCommerce](woocommerce-hide-default-variation-price.md)
+- [How to Disable Out of Stock Variations in WooCommerce](woocommerce-disable-out-of-stock-variations.md)

@@ -1,177 +1,168 @@
 ---
-title: "How to Customize the Add to Cart Button in WordPress | CM"
+title: "How to Customize the Add to Cart Button Text in WooCommerce"
 slug: customize-add-to-cart-button
-description: "Customize the Add to Cart button text in Classic Monks for different product types, user roles, and stock states. Includes dynamic and personalized messaging variants."
-last_updated: 2026-06-24
+description: "Change the WooCommerce add to cart button text per product type. Set wording for simple, variable, grouped, and external products, and choose where it applies."
+last_updated: 2026-08-06
 author: Joy
-reading_time: 5 min
+reading_time: 4 min
 canonical: https://classicmonks.com/docs/customize-add-to-cart-button/
 ---
 
-# How to Customize the Add to Cart Button in WordPress
+# How to Customize the Add to Cart Button Text in WooCommerce
 
-> Customize the Add to Cart button text in Classic Monks for different product types (simple, variable, grouped, external), user roles (guest, logged-in, returning), stock states (low stock, high demand), and per-category rules.
+> Change the WooCommerce add to cart button text for each product type. Set distinct wording for simple, variable, grouped, and external products, and control whether the custom text applies on single product pages, product loops, or both.
 
 ## Key Takeaways
 
-- Customize the Add to Cart button text per product type (simple, variable, grouped, external)
-- Dynamic text based on stock levels (e.g., "Only 3 left!")
-- Personalized text for different user types (guest, logged-in, returning customer)
-- Per-category rules (e.g., "Download Now" for digital products)
-- Applies to both product loops (shop pages) and single product pages
+- Set custom add to cart text per product type: simple, variable, grouped, and external
+- Control where it applies: single product pages, loops, or both
+- Leave a field blank to fall back to that product type's default text
+- Uses WooCommerce's standard text filters, so cart and checkout buttons are unchanged
 
-## What Is the Customize Add to Cart Button Text feature?
+## What Does the Feature Do?
 
-The default "Add to Cart" button text is fine for most sites, but some use cases benefit from customized text:
+The default add to cart button says "Add to Cart" everywhere, which does not always fit the product type. A variable product with options works better with "Select Options", a grouped product with "View Products", and an external or affiliate product with "Buy Product".
 
-- **Digital products**: "Download Now" or "Get Instant Access" instead of "Add to Cart"
-- **Low stock urgency**: "Only 3 left!" or "Hurry, selling fast"
-- **Returning customers**: "Add to Cart Again" or "Welcome Back"
-- **Per-product-type**: Different text for simple, variable, grouped, and external products
-
-The feature includes 15 sub-options for fine-tuning the button text per context.
+The **Customize Add to Cart Button Text** feature lets you set text per product type. It hooks into WooCommerce's add-to-cart text filters on both single product pages and product loops, replacing the default wording with your own when a field is filled in.
 
 ## Why You Need It
 
-The default "Add to Cart" button is generic. Customized button text can:
+Clear, context-appropriate button text improves the purchase path:
 
-- **Increase conversions**: Urgency messaging ("Only 3 left!") drives purchases
-- **Reduce bounce rate**: Clear, contextual text ("Download Now" vs "Add to Cart") reduces confusion
-- **Personalize experience**: Returning customer messaging ("Welcome Back, John") feels different from guest messaging
-- **Match product type**: Digital products need different CTAs than physical products
-
-For most sites, the default text works fine. For sites that want conversion optimization, this feature provides the building blocks.
+- Digital products can use "Download Now" or "Get Instant Access"
+- Variable products can use "Select Options" to signal choices come first
+- Grouped products can use "View Products" to set expectations
+- External or affiliate items can use "Buy Product" instead of a misleading cart label
+- Consistent messaging across shop, category, and product pages builds trust
 
 ---
 
-## How to Customize the Add to Cart Button in WordPress
+## How to Customize the Add to Cart Button Text in WooCommerce
 
-### Step 1: Navigate to Settings
+### Step 1: Enable the Feature
 
-Click into the **Classic Monks** plugin settings in your WordPress dashboard.
+1. In WordPress admin, open **Classic Monks > WooCommerce**.
+2. Open the **Single Product** settings area.
+3. Toggle on **Customize Add to Cart Button Text**. The nested fields expand below the toggle.
 
-### Step 2: Go to the WooCommerce Tab
+### Step 2: Set the Text per Product Type
 
-Click on the **WooCommerce** menu, then click the **Single Product** subtab.
+Fill in the button text for the product types you want to customize:
 
-### Step 3: Enable Customize Add to Cart Button Text
+- **Simple Products Button Text**: text for simple products (default `Add to Cart`).
+- **Variable Products Button Text**: text for variable products (default `Select Options`).
+- **Grouped Products Button Text**: text for grouped products (default `View Products`).
+- **External Products Button Text**: text for external/affiliate products (default `Buy Product`).
 
-Scroll to **Customize Add to Cart Button Text** and toggle on. Nested options expand.
+Leave a field blank to keep WooCommerce's default text for that product type.
 
-### Step 4: Configure Product Type Text
+### Step 3: Choose Where It Applies
 
-Set the button text for each product type:
+- **Apply to Product Loops** (on by default) applies the custom text to shop, category, and archive pages.
+- **Apply to Single Product Pages** (on by default) applies it to individual product pages.
 
-- **Simple Products Button Text**: Default "Add to Cart"
-- **Variable Products Button Text**: Default "Select Options" (often better for variable products)
-- **Grouped Products Button Text**: Default "View Products"
-- **External Products Button Text**: Default "Buy Product" (for affiliate/external products)
+Turn each on or off to control the scope.
 
-### Step 5: Configure Display Scopes
+### Step 4: Save and Test
 
-Choose where the custom text applies:
-
-- **Apply to Product Loops**: Shop, category, archive pages
-- **Apply to Single Product Pages**: Individual product detail pages
-
-### Step 6: Configure Advanced Options
-
-The 15 sub-options include:
-
-- **Dynamic Text Based on Stock**: Low stock threshold + custom message template
-- **Personalized Button Text**: Different text for guest, logged-in, returning customers
-- **Category-Specific Rules**: Use slug:text format for per-category custom text
-
-### Step 7: Save Changes
-
-Click **Save Changes**.
-
-### Step 8: Test
-
-Visit a product on the front-end as both a guest and a logged-in user. Verify the button text matches your configuration.
+Click **Save Changes**. Visit a single product page and a shop page, and confirm the button text matches what you set for each product type. Products whose type field is blank keep their default text.
 
 ---
 
 ## Configuration Options
 
-| Option | Description | Default |
-|--------|-------------|---------|
+| Option | Behavior | Default |
+|--------|----------|---------|
 | **Customize Add to Cart Button Text** | Master toggle. | Off |
-| **Simple Products Button Text** | Button text for simple products. | "Add to Cart" |
-| **Variable Products Button Text** | Button text for variable products. | "Select Options" |
-| **Grouped Products Button Text** | Button text for grouped products. | "View Products" |
-| **External Products Button Text** | Button text for external/affiliate products. | "Buy Product" |
-| **Apply to Product Loops** | Use custom text on archive pages. | Off |
-| **Apply to Single Product Pages** | Use custom text on detail pages. | On |
-| **Dynamic Text Based on Stock** | Show low-stock or high-demand text. | Off |
-| **Low Stock Threshold** | Stock level considered "low" (1-100). | 10 |
-| **Personalized Button Text** | Different text for different user types. | Off |
-| **Category-Specific Button Text** | Per-category text using slug:text format. | Off |
+| **Simple Products Button Text** | Text for simple products; blank uses default. | `Add to Cart` |
+| **Variable Products Button Text** | Text for variable products; blank uses default. | `Select Options` |
+| **Grouped Products Button Text** | Text for grouped products; blank uses default. | `View Products` |
+| **External Products Button Text** | Text for external/affiliate products; blank uses default. | `Buy Product` |
+| **Apply to Product Loops** | Use custom text on shop, category, and archive pages. | On |
+| **Apply to Single Product Pages** | Use custom text on single product pages. | On |
 
 ---
 
 ## What Gets Affected
 
-- All WooCommerce product pages (loops and single)
-- The Add to Cart button text only (not the icon, not the styling, not the AJAX behavior)
-- Product types: simple, variable, grouped, external
-- User roles: guest, logged-in, returning customer (when personalization is enabled)
+- The add to cart button on single product pages and product loops, per the scope toggles
+- Product types with filled-in fields: simple, variable, grouped, and external
 
 ## What Does NOT Get Affected
 
-- Cart and checkout pages (different buttons: "View Cart", "Proceed to Checkout")
-- The AJAX add-to-cart behavior
-- Quick view / quick add-to-cart modals from other plugins
-- Cart and checkout buttons in the cart widget
+- The cart and checkout buttons: those use separate WooCommerce buttons ("View cart", "Checkout")
+- Button styling, icons, and AJAX add-to-cart behavior: only the text changes
+- Product types with blank fields: these keep the default text
+- Quick view modals or cart widget buttons from other plugins
 
 ---
 
 ## Advanced Options (Developers)
 
-This feature registers 1 WordPress hook in `woocommerce-functions.php`:
-
-**Filters:**
-
-- `woocommerce_product_single_add_to_cart_text` calls `cm_custom_add_to_cart_text()` (Customizes single product add to cart text (priority 10))
+The feature registers hooks in `functions/woocommerce/woocommerce-functions.php`, gated on the **Customize Add to Cart Button Text** toggle and scope options:
 
 ```php
-// Hooked in woocommerce-functions.php
-add_filter( 'woocommerce_product_single_add_to_cart_text', 'cm_custom_add_to_cart_text' );
+add_filter( 'woocommerce_product_single_add_to_cart_text', 'cm_custom_add_to_cart_text', 10, 2 );
+add_filter( 'woocommerce_product_add_to_cart_text', 'cm_custom_add_to_cart_text', 10, 2 );
 ```
 
-The feature modifies WooCommerce behavior by registering or removing hooks. Disabling it reverses those changes.
+- **`woocommerce_product_single_add_to_cart_text`** is applied when **Apply to Single Product Pages** is on.
+- **`woocommerce_product_add_to_cart_text`** is applied when **Apply to Product Loops** is on.
+
+Both call `cm_custom_add_to_cart_text()` with priority 10 and two arguments. The function returns the configured text for the product type, or the default when the field is blank.
+
+---
 
 ## Troubleshooting
 
-### The custom button text is not showing
+### The custom text is not showing
 
-**Cause:** The toggle is off, or the cache is serving the old button text.
-**Fix:** Verify the toggle is on. Clear all caching layers (page cache, object cache, CDN). The button text is generated server-side per request, so caching is the most common cause.
+**Cause:** The feature toggle is off, the product type's field is blank, or the relevant scope toggle (single or loop) is off.
+**Fix:** Confirm **Customize Add to Cart Button Text** is on. Fill in the field for the product type you are testing, and make sure the scope (single or loop) that matches your page is enabled. Clear caches if a till-now-unchanged page shows old text.
 
-### The dynamic stock text always shows "in stock"
+### The text changes only on the product page, not loops
 
-**Cause:** The "Enable Dynamic Text Based on Stock" toggle is off, or the stock threshold is not met.
-**Fix:** Verify the toggle is on. Verify the product's stock is below the Low Stock Threshold. Note that for variable products, the stock is per-variation, not per-product.
+**Cause:** **Apply to Product Loops** is off.
+**Fix:** Turn on **Apply to Product Loops** so the custom text also renders on shop, category, and archive pages.
 
-### The personalized text doesn't show for returning customers
+### Variable products still say "Add to Cart"
 
-**Cause:** "Returning customer" detection requires the user to have placed a previous order. New logged-in users without order history are treated as "logged-in" not "returning".
-**Fix:** Verify the test user has a completed order in the past. Check the user role (some custom roles may not match the detection logic).
+**Cause:** The **Variable Products Button Text** field is blank.
+**Fix:** Enter text in the **Variable Products Button Text** field (for example, `Select Options`). A blank field falls back to WooCommerce's default.
 
-### The category-specific text doesn't work
+### The cart button is changing
 
-**Cause:** The format is wrong. The correct format is `slug:text` (one per line, slug is the category slug without the `pa_` prefix).
-**Fix:** Use the correct format. For example, for a category with slug "downloads" and text "Download Now", enter `downloads:Download Now` on one line.
+**Cause:** A theme or another plugin may reuse the add-to-cart text on the cart page.
+**Fix:** The feature targets WooCommerce's product add-to-cart text filters. If a cart button reflects your text, confirm the change originates from this customization and not a theme that mirrors the product button label.
 
-### The button text appears truncated
+---
 
-**Cause:** The text field has a character limit (typically 50 characters).
-**Fix:** Use a shorter button text. If the message is too long, use the category-specific rules or a filter to add the longer text.
+## Frequently Asked Questions
+
+### Can I set a different text for each product type?
+
+Yes. Simple, variable, grouped, and external products each have their own text field under the feature, so you can tailor the wording per product type.
+
+### What happens if I leave a text field blank?
+
+The product type uses WooCommerce's default add to cart text. Each field is optional, so you can customize just the types that need it.
+
+### Does this change the cart or checkout buttons?
+
+No. The feature uses WooCommerce's product add-to-cart text filters, which only affect the add-to-cart button. The cart and checkout buttons are separate.
+
+### Both scope options are on by default, is that right?
+
+Yes. **Apply to Product Loops** and **Apply to Single Product Pages** both default to on, so your text is consistent across the shop and product pages. Turn an option off if you want the text only on one context.
+
+### Do grouped or external products need special handling?
+
+Grouped products often work best with "View Products" and external products with "Buy Product". Set their fields accordingly; leaving them blank keeps the defaults.
 
 ---
 
 ## Related Articles
 
-- [How to Customize the Out of Stock Button in WordPress](woocommerce-customize-out-of-stock-button.md)
-- [How to Use Product Swatches in WordPress](woocommerce-product-swatches.md)
-- [How to Use Content Management in WordPress](../core/core-content-management.md)
+- [How to Customize the Out of Stock Button in WooCommerce](woocommerce-customize-out-of-stock-button.md)
+- [How to Add Variation Swatches to WooCommerce in WordPress](woocommerce-product-swatches.md)
+- [How to Customize the Place Order Button in WooCommerce](woocommerce-custom-place-order-button.md)

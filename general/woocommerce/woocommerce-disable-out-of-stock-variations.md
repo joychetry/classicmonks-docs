@@ -1,158 +1,133 @@
 ---
-title: "How to Disable Out of Stock Variations in WordPress | CM"
+title: "How to Disable Out of Stock Variations in WooCommerce"
 slug: disable-out-of-stock-variations
-description: "Visually disable or hide out-of-stock product variations in Classic Monks. Choose between blur with cross, blur only, or completely hidden behavior."
-last_updated: 2026-06-24
+description: "Prevent customers from selecting out of stock variations in WooCommerce. Mark an out of stock variation as inactive so it is not offered in dropdowns."
+last_updated: 2026-08-06
 author: Joy
 reading_time: 3 min
 canonical: https://classicmonks.com/docs/disable-out-of-stock-variations/
 ---
 
-# How to Disable Out of Stock Variations in WordPress
+# How to Disable Out of Stock Variations in WooCommerce
 
-> Disable Out of Stock Variations visually disables or hides product variations that are out of stock. Choose between blur with cross, blur only, or completely hidden behavior.
+> Disable out of stock variations in WooCommerce so they are not offered as pickable options. When enabled, an out of stock variation is treated as inactive in variation dropdowns, guiding customers toward available choices.
 
-## Key Takeways
+## Key Takeaways
 
-- Single toggle, no nested options
-- Three behavior options: blur with cross, blur only, or hidden
-- Applies to all variation types (size, color, etc.)
-- Works with swatches and dropdowns
-- Prevents customer frustration with unavailable options
+- Mark out of stock variations as inactive in dropdowns
+- Uses WooCommerce's variation activity check so unavailable options are not selectable
+- Works with your existing variation dropdowns and product data
+- Simple on/off toggle, no nested options
+- Prevents checkout surprises from out of stock selections
 
-## What Is the Disable Out of Stock Variations feature?
+## What Does the Feature Do?
 
-By default, WooCommerce shows out-of-stock variations in the same way as in-stock variations. Customers can select an out-of-stock variation, add it to cart, and only discover it's unavailable at checkout.
+WooCommerce lets customers select any variation shown in a dropdown, even one that is out of stock. A customer can pick an unavailable size or color, add it to cart, and only learn it is unavailable later.
 
-The Disable Out of Stock Variations feature changes this by either:
-
-- **Blur with cross**: Show the variation but blur it and add a red X overlay
-- **Blur only**: Show the variation but blur it (no overlay)
-- **Hidden**: Completely remove the variation from the display
-
-The choice between "blur with cross" and "blur only" affects how clearly customers understand the variation is unavailable.
+The **Disable Out of Stock Variations** feature filters variation activity so out of stock variations are no longer valid pickable options. It hooks into WooCommerce's `woocommerce_variation_is_active` check, so a variation that is out of stock is treated as inactive and does not appear as an available choice.
 
 ## Why You Need It
 
-The default behavior creates a bad user experience:
+Disabling unavailable options prevents a common source of friction:
 
-- Customer selects "Medium" (out of stock)
-- Adds to cart
-- Goes to checkout
-- Discovers Medium is unavailable
-- Has to re-select a different size
-- Likely abandons the purchase
-
-Pre-disabling out-of-stock variations:
-
-- Prevents wasted checkout steps
-- Sets clear expectations (customer knows Medium is out before they add to cart)
-- Guides customers toward available options
-
-For most e-commerce stores, this is a high-ROI optimization.
+- Customers cannot add an out of stock variation and later discover it is gone
+- The dropdown only offers what can actually be purchased
+- Customers are guided toward available options instead of hitting dead ends
+- Checkout and cart avoid the "no longer in stock" error state
 
 ---
 
-## How to Disable Out of Stock Variations in WordPress
+## How to Disable Out of Stock Variations in WooCommerce
 
-### Step 1: Navigate to Settings
+### Step 1: Enable the Feature
 
-Click into the **Classic Monks** plugin settings in your WordPress dashboard.
+1. In WordPress admin, open **Classic Monks > WooCommerce**.
+2. Open the **Single Product** settings area.
+3. Toggle on **Disable Out of Stock Variations**.
 
-### Step 2: Go to the WooCommerce Tab
+### Step 2: Save and Test
 
-Click on the **WooCommerce** menu, then click the **Single Product** subtab.
-
-### Step 3: Enable Disable Out of Stock Variations
-
-Scroll to **Disable Out of Stock Variations** and toggle on.
-
-### Step 4: Configure the Behavior
-
-Set the **Disabled Swatch Behavior** dropdown (this is a related toggle for Product Swatches):
-
-- **Blur with Cross**: Blur the variation and add a red X overlay
-- **Blur**: Blur the variation only (no overlay)
-- **Hide**: Completely remove the variation from display
-
-### Step 5: Save Changes
-
-Click **Save Changes**.
-
-### Step 6: Test
-
-Set a variation to out of stock (Inventory > Stock status). Visit the product. The variation should appear blurred or hidden based on your configuration.
+Click **Save Changes**. On a variable product, set one variation to out of stock (Inventory > Stock status). Visit the product and confirm that variation is no longer offered as a selectable option, while in stock variations remain available.
 
 ---
 
 ## Configuration Options
 
-| Option | Description | Default |
-|--------|-------------|---------|
-| **Disable Out of Stock Variations** | Master toggle. | Off |
-| **Disabled Swatch Behavior** | Blur with Cross, Blur, or Hide. | Blur |
+| Option | Default |
+|--------|---------|
+| **Disable Out of Stock Variations** | Off |
 
-The "Disabled Swatch Behavior" is a related toggle in the Product Swatches subtab. The Disable Out of Stock Variations toggle is in the Single Product subtab.
+There are no nested options. The feature is a single on/off control.
 
 ---
 
 ## What Gets Affected
 
-- Variable product pages: out-of-stock variations are visually disabled or hidden
-- Product loops: if the variation is in the loop, it's disabled/hidden there too
-- AJAX variation selection: works normally with disabled variations
-- The cart: disabled variations cannot be added (the Add to Cart button won't enable for them)
+- Variable product dropdowns: out of stock variations are no longer active pickable options
+- The variation selection flow: WooCommerce will not validate an out of stock variation as a valid choice
 
 ## What Does NOT Get Affected
 
-- The product's stock status (managed in WooCommerce > Inventory)
-- The variation's data (it's still in the database, just not shown)
-- The variation's price (still displayed for in-stock variations)
-- The product's image (still shown, even if the selected variation is out of stock)
+- The variation's data and price: these stay in place
+- The product's stock management: inventory still works as normal in WooCommerce
+- In stock variations: these remain available as before
+- The variation attributes themselves: only the active/available state changes
 
 ---
 
 ## Advanced Options (Developers)
 
-This feature registers 1 WordPress hook in `variation-display.php`:
-
-**Filters:**
-
-- `woocommerce_variation_is_active` calls `cm_disable_out_of_stock_variations()` (Removes out of stock variations from dropdown (priority 10))
+The feature registers one hook in `functions/woocommerce/variation-display.php`:
 
 ```php
-// Hooked in variation-display.php
-add_filter( 'woocommerce_variation_is_active', 'cm_disable_out_of_stock_variations' );
+add_filter( 'woocommerce_variation_is_active', 'cm_disable_out_of_stock_variations', 10, 2 );
 ```
 
-The feature modifies WooCommerce behavior by registering or removing hooks. Disabling it reverses those changes.
+**`woocommerce_variation_is_active`** calls `cm_disable_out_of_stock_variations()` when the feature is enabled, so out of stock variations are reported as inactive. This is the standard WooCommerce hook that determines whether a variation can be selected.
+
+---
 
 ## Troubleshooting
 
-### Disabled variations are still showing as enabled
+### An out of stock variation is still selectable
 
-**Cause:** The toggle is off, or a caching plugin is serving the old page.
-**Fix:** Verify the toggle is on. Clear all caching layers. The disabled state is rendered server-side, so caching is the most common cause.
+**Cause:** The feature toggle is off, or the variation is not actually marked as out of stock in WooCommerce.
+**Fix:** Confirm **Disable Out of Stock Variations** is on. Open the product's Variations tab and verify the variation's Stock status is set to "Out of stock" (or its stock quantity is zero).
 
-### The blur effect is not working visually
+### The variation is disabled in the dropdown but still shown elsewhere
 
-**Cause:** The CSS for the blur effect is not loading, or a theme is overriding the styles.
-**Fix:** Check that the Classic Monks framework CSS is loading (View Source). If a custom theme has high-specificity CSS for variation dropdowns, it may override the blur.
+**Cause:** Dropdowns use the variation activity check, while other display areas may render the attribute differently.
+**Fix:** The feature targets variation activity. If a swatch or other custom element still shows the option, check that it respects WooCommerce's active-variation state or is theme-specific.
 
-### The Hide behavior is hiding the variation but customers want to see it as out of stock
+### In stock variations are also affected
 
-**Cause:** The Hide behavior is intentional (it completely removes the variation).
-**Fix:** Switch to Blur or Blur with Cross to keep the variation visible but disabled. This shows the customer that the variation exists but is out of stock.
+**Cause:** A theme or another plugin may apply its own variation filtering on top of this feature.
+**Fix:** Confirm the affected variation is actually out of stock. If an in stock variation is being hidden, review other variation plugins that also filter active variations.
 
-### The variation is enabled when it should be disabled
+---
 
-**Cause:** The variation's stock status is not set to "Out of stock" in the product data.
-**Fix:** Edit the product > Variations tab. For each variation, set Stock Status to "Out of stock" (or set the Stock quantity to 0). The Disable Out of Stock Variations feature only affects variations that are already marked as out of stock.
+## Frequently Asked Questions
+
+### How does WooCommerce decide a variation is available?
+
+This feature uses WooCommerce's `woocommerce_variation_is_active` filter. When the feature is on, an out of stock variation returns as inactive and is not offered as a pickable option.
+
+### Does this remove the variation from the product?
+
+No. The variation, its data, and its price remain on the product. Only its active/available state changes so customers cannot select an out of stock option.
+
+### Will it affect my inventory tracking?
+
+No. Stock management is unchanged. The feature only changes which variations are presented as available in the dropdown.
+
+### Does it work with swatches?
+
+If your swatches respect WooCommerce's active-variation state, they will reflect the disabled variations. The feature itself targets the variation dropdown activity check via WooCommerce's standard filter.
 
 ---
 
 ## Related Articles
 
-- [How to Customize the Out of Stock Button in WordPress](woocommerce-customize-out-of-stock-button.md)
-- [How to Use Product Swatches in WordPress](woocommerce-product-swatches.md)
-- [How to Use Content Management in WordPress](../core/core-content-management.md)
+- [How to Customize the Out of Stock Button in WooCommerce](woocommerce-customize-out-of-stock-button.md)
+- [How to Auto-Select the First Variation in WooCommerce](woocommerce-auto-select-first-variation.md)
+- [How to Add Variation Swatches to WooCommerce in WordPress](woocommerce-product-swatches.md)

@@ -1,136 +1,149 @@
 ---
-title: "How to Hide Default Variation Price in WordPress | CM"
+title: "How to Hide the Default Variation Price in WooCommerce"
 slug: hide-default-variation-price
-description: "Hide the default price display for variable WooCommerce products in Classic Monks. Shows price only when a specific variation is selected, reducing customer confusion."
-last_updated: 2026-06-24
+description: "Hide the default variation price on WooCommerce variable products so the price shows after a variation is selected. Target the price element in Classic Monks."
+last_updated: 2026-08-06
 author: Joy
 reading_time: 3 min
 canonical: https://classicmonks.com/docs/hide-default-variation-price/
 ---
 
-# How to Hide Default Variation Price in WordPress
+# How to Hide the Default Variation Price in WooCommerce
 
-> Hide Default Variation Price hides the default price range display for variable WooCommerce products. Shows the price only after a specific variation is selected, reducing customer confusion from the "from $X to $Y" range.
+> Hide the default price on a WooCommerce variable product so the price appears only after a variation is selected. Choose the CSS selector that targets the default price element with Classic Monks.
 
 ## Key Takeaways
 
-- Single toggle, no nested options
-- Hides the default "From $X" price range
-- Price appears after a variation is selected
-- Works with the Auto-select First Variation feature (price shows immediately)
-- Reduces confusion for products with many variations and wide price ranges
+- Hide the default variation price display until a variation is selected
+- Set the CSS selector for the price element to hide
+- Pairs with Update Price on Variation Selection for a clean experience
+- Reduce confusion from "From $X" or wide price ranges
+- One master toggle plus one target selector
 
-## What Is the Hide Default Variation Price feature?
+## What Does the Feature Do?
 
-By default, WooCommerce shows a price range for variable products: "From $X" or "$X - $Y" (depending on the variation prices). The Hide Default Variation Price feature hides this default display, so the price is only shown when a specific variation is selected.
+Variable products show a price range or a "From" price based on their variations. For products with many options across a wide range, that default display can confuse customers about the price they will actually pay.
+
+The **Hide Default Variation Price** feature hides the default price element until the customer selects a variation. Once a variation is chosen, the featured price shows for that specific selection, so the customer sees the exact price instead of a range.
 
 ## Why You Need It
 
-The default price range display can be confusing:
+The default range display is not always helpful:
 
-- "From $10" suggests the cheapest variation is $10, but the variation the customer wants might be $50
-- The range display doesn't help with purchase decisions (the customer can't tell which variation is at which price)
-- Some products have wide ranges ($10 to $200) that make the product feel unpredictable
+- "From $10" suggests the cheapest option, but the customer may want a $50 variation
+- A wide range makes a product look unpredictable
+- Customers cannot tell which variation is priced where until they select it
+- Showing the price only after selection makes the choice specific and clear
 
-Hiding the default price and showing it only after selection:
-
-- Eliminates the "From $X" confusion
-- Shows the exact price for the selected variation
-- Forces the customer to engage with the variation selection
-
-For most stores, this is a UX improvement. For stores where the price range is a key selling point (e.g., "From $5, our most affordable plan starts at..."), keep the default display.
+If the range itself is a selling point (for example, "From $5"), keep the default display and leave this off.
 
 ---
 
-## How to Hide Default Variation Price in WordPress
+## How to Hide the Default Variation Price in WooCommerce
 
-### Step 1: Navigate to Settings
+### Step 1: Enable the Feature
 
-Click into the **Classic Monks** plugin settings in your WordPress dashboard.
+1. In WordPress admin, open **Classic Monks > WooCommerce**.
+2. Open the **Single Product** settings area.
+3. Toggle on **Hide Default Variation Price**.
 
-### Step 2: Go to the WooCommerce Tab
+### Step 2: Set the Target Class
 
-Click on the **WooCommerce** menu, then click the **Single Product** subtab.
+In **Default Variation Price Class**, set the CSS selector that targets the default price element. The default is `.woocommerce-variation-price`, which matches most themes. Adjust it if your theme uses a different class for the variation price area.
 
-### Step 3: Enable Hide Default Variation Price
+### Step 3: Save and Test
 
-Scroll to **Hide Default Variation Price** and toggle on.
-
-### Step 4: Save Changes
-
-Click **Save Changes**.
-
-### Step 5: Test
-
-Visit a variable product on the front-end. Before selecting a variation, no price should appear. After selecting a variation, the price should appear.
+Click **Save Changes**. Open a variable product. Before selecting a variation, no default price should be shown. Select a variation and confirm the specific price appears.
 
 ---
 
 ## Configuration Options
 
-| Option | Description | Default |
-|--------|-------------|---------|
+| Option | Behavior | Default |
+|--------|----------|---------|
 | **Hide Default Variation Price** | Master toggle. | Off |
-
-No nested options.
+| **Default Variation Price Class** | CSS selector for the default price element to hide. | `.woocommerce-variation-price` |
 
 ---
 
 ## What Gets Affected
 
-- Variable product pages: the default "From $X" price range is hidden
-- The variation price: shown when a variation is selected (via AJAX)
-- Product loops: the price is hidden until variation is selected (if the loop shows variation dropdowns)
+- Variable product pages: the default price element is hidden until a variation is selected
+- The price element matched by **Default Variation Price Class**
 
 ## What Does NOT Get Affected
 
-- The variation's actual price (set in WooCommerce > Products > Variations)
-- The price on non-variable products
-- The price on variable products that have a single variation (no price range to hide)
-- The cart and checkout pages (price is final at that point)
+- The variation's actual price data: these are set in WooCommerce > Products > Variations
+- Simple products and non-variable products: unaffected
+- The selected variation's price: this still shows after selection
+- Cart and checkout: prices are final at that point
 
 ---
 
 ## Advanced Options (Developers)
 
-This feature registers 1 WordPress hook in `variation-display.php`:
-
-**Actions:**
-
-- `wp_head` calls `anonymous()` (Hides default variation price display via CSS)
+The feature registers its logic in `functions/woocommerce/variation-display.php`, gated on the **Hide Default Variation Price** option:
 
 ```php
-// Hooked in variation-display.php
-add_action( 'wp_head', 'anonymous' );
+add_action( 'wp_head', function() {
+    echo '<style>.woocommerce-variation-price { display: none !important; }</style>';
+} );
 ```
 
-The feature modifies WooCommerce behavior by registering or removing hooks. Disabling it reverses those changes.
+**`wp_head`** injects CSS that hides the default variation price element. The **Default Variation Price Class** option supplies the selector, defaulting to `.woocommerce-variation-price`. The same selector value is passed to the update-price-on-variation scripts so the behavior stays consistent.
+
+---
 
 ## Troubleshooting
 
-### The price is not showing at all (even after selecting a variation)
+### The default price is still showing
 
-**Cause:** A theme or plugin is preventing the AJAX variation response from rendering the price.
-**Fix:** Check the browser console for errors. Verify the variation form is being submitted. Disable other variation-related plugins to find the conflict.
+**Cause:** The feature toggle is off, the selector does not match your theme's price element, or caching serves old HTML.
+**Fix:** Confirm the toggle is on and that **Default Variation Price Class** matches the price element in your theme. Clear caches.
 
-### The "From $X" text is still showing
+### The price does not reappear after selecting a variation
 
-**Cause:** The toggle is off, or a caching plugin is serving the old page.
-**Fix:** Verify the toggle is on. Clear all caching layers.
+**Cause:** A theme or plugin blocks the variation price refresh after the default is hidden.
+**Fix:** Confirm the feature pairs with the Update Price on Variation Selection behavior, and check that the variation price container matches **Price Container Class** in that feature. Review the browser console for JS errors.
 
-### The price shows after selection but not before
+### It hides the price on a product with a single variation
 
-**Cause:** This is the expected behavior when the toggle is on. If the price doesn't show after selection, see the troubleshooting above.
+**Cause:** The selector matches a price element even when a product has effectively one price.
+**Fix:** This is expected if the element matches. For products you do not want hidden, adjust the selector or leave the single-price product unmanaged by this feature.
 
-### I want to show a "From $X" hint but not the full price range
+### Only part of the price is hidden
 
-**Cause:** The toggle is binary (show or hide). It doesn't support partial display.
-**Fix:** Configure in the plugin settings to show a custom message (e.g., "From $X" or "Select option for price"). This gives a hint without showing the full price.
+**Cause:** The default element contains nested price parts, and the selector matches only part of it.
+**Fix:** Use a selector that targets the full price container (for example, `.woocommerce-variation-price` rather than just the inner `.price`), or add a comma-separated list of classes if supported by your theme markup.
+
+---
+
+## Frequently Asked Questions
+
+### What exactly gets hidden?
+
+The element matched by **Default Variation Price Class** (default `.woocommerce-variation-price`), which holds the default variation price display. The selected variation's price appears after selection.
+
+### Why would I hide the default price?
+
+To avoid the confusion of a "From $" or wide range on variable products. Showing the price only after a selection makes the displayed amount specific to the chosen variation.
+
+### Does this work with Update Price on Variation Selection?
+
+Yes. The two features are designed to work together: the default price is hidden, and the update-price feature refreshes the displayed price when a variation is selected.
+
+### Can I hide the price on all my variable products?
+
+Yes, the toggle applies to variable product pages. Products whose price element matches the selector will have the default price hidden until a variation is selected.
+
+### Will this affect the cart or checkout?
+
+No. The feature only hides the default price display on product pages. The price at cart and checkout is unaffected.
 
 ---
 
 ## Related Articles
 
-- [How to Update Price on Variation Selection in WordPress](woocommerce-update-price-on-variation.md)
-- [How to Show Price Savings in WordPress](woocommerce-show-price-savings.md)
-- [How to Use Product Swatches in WordPress](woocommerce-product-swatches.md)
+- [How to Update Price on Variation Selection in WooCommerce](woocommerce-update-price-on-variation.md)
+- [How to Auto-Select the First Variation in WooCommerce](woocommerce-auto-select-first-variation.md)
+- [How to Show the Amount Saved on Sale Products in WooCommerce](woocommerce-show-price-savings.md)

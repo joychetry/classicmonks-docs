@@ -1,184 +1,186 @@
 ---
-title: "How to Customize the Out of Stock Button in WordPress | CM"
+title: "How to Customize the Out of Stock Button in WooCommerce"
 slug: customize-out-of-stock-button
-description: "Customize the out-of-stock button text and behavior in Classic Monks. Choose disabled, link-to-product, or hidden behavior, with optional CSS class and Gutenberg blocks compatibility."
-last_updated: 2026-06-24
+description: "Replace the WooCommerce out of stock button with your own text and behavior. Disable it, link to the product page, or hide it, and choose where it applies."
+last_updated: 2026-08-06
 author: Joy
 reading_time: 4 min
 canonical: https://classicmonks.com/docs/customize-out-of-stock-button/
 ---
 
-# How to Customize the Out of Stock Button in WordPress
+# How to Customize the Out of Stock Button in WooCommerce
 
-> Customize the out-of-stock button text and behavior in Classic Monks. Choose how the button appears for unavailable products (disabled, link to product page, or hidden) and customize the text for each product type.
+> Replace the default "Read More" button text for out of stock products with clearer messaging. Choose whether the button is disabled, links to the product page, or is hidden, and control which scopes and products it applies to.
 
 ## Key Takeaways
 
-- Three behavior options: disabled, link to product page, or hidden
-- Custom text per product type (simple, variable, grouped, external)
-- Optional custom CSS class for theme-specific styling
-- Gutenberg blocks compatibility for block-based themes
-- Optionally include variable products that are completely out of stock
+- Set custom out of stock button text (default "Out of Stock")
+- Choose the behavior: disabled, link to product page, or hidden
+- Apply to product loops and single product pages independently
+- Optionally include variable products when every variation is out of stock
+- Add a custom CSS class and Gutenberg blocks compatibility for theming
 
-## What Is the Customize Out of Stock Button Text feature?
+## What Does the Feature Do?
 
-The default WooCommerce behavior for out-of-stock products is to show a grayed-out "Read More" button (or similar, depending on the theme). This feature lets you customize:
+WooCommerce shows a "Read More" button for out of stock products, which is confusing because there is nothing to read into a purchase. The **Customize Out of Stock Button Text** feature replaces that with your own message and controls how the button behaves.
 
-- The button text (e.g., "Out of Stock", "Sold Out", "Notify When Available")
-- The button behavior (disabled, link to product page, or hidden)
-- The CSS class for theme-specific styling
-- Whether the customization applies to variable products that are completely out of stock
+For each out of stock product it applies your chosen text and style, scoped to loops, single pages, or both. Variable products can be included when all of their variations are out of stock.
 
 ## Why You Need It
 
-The default behavior is generic and inconsistent across themes:
+A clear out-of-stock message improves the purchase experience:
 
-- "Read More" is confusing for products that are clearly out of stock
-- Customers don't know if the product is coming back
-- Some themes show different text, some show no button at all
-- For digital products, "out of stock" doesn't apply (the feature still applies if you want consistent messaging)
-
-For most e-commerce sites, custom out-of-stock messaging improves the customer experience.
+- "Read More" tells customers nothing about whether the product returns
+- "Out of Stock" or "Sold Out" communicates stock status honestly
+- A disabled button prevents dead-end clicks, while a link to the product page lets customers see details or alternatives
+- Hiding the button entirely cleans up shop grids for permanently discontinued items
+- Consistent messaging across shop and product pages reduces confusion
 
 ---
 
-## How to Customize the Out of Stock Button in WordPress
+## How to Customize the Out of Stock Button in WooCommerce
 
-### Step 1: Navigate to Settings
+### Step 1: Enable the Feature
 
-Click into the **Classic Monks** plugin settings in your WordPress dashboard.
+1. In WordPress admin, open **Classic Monks > WooCommerce**.
+2. Open the **Single Product** settings area.
+3. Toggle on **Customize Out of Stock Button Text**. The nested options expand below the toggle.
 
-### Step 2: Go to the WooCommerce Tab
+### Step 2: Set the Button Text
 
-Click on the **WooCommerce** menu, then click the **Single Product** subtab.
+In **Button Text**, enter the message to show (default `Out of Stock`). Use wording that tells customers the product is unavailable, such as `Out of Stock`, `Sold Out`, or `Unavailable`.
 
-### Step 3: Enable Customize Out of Stock Button Text
+### Step 3: Choose the Button Style
 
-Scroll to **Customize Out of Stock Button Text** and toggle on. Nested options expand.
+Use **Button Style** to control how the button appears:
 
-### Step 4: Set the Button Text
+- **Disabled (Non-clickable)**: the button is visible but cannot be clicked.
+- **Link to Product Page**: the button links to the product page so customers can see details or alternatives.
+- **Hide Button Completely**: the button does not render at all.
 
-Set the button text for each product type:
+### Step 4: Choose the Scope
 
-- **Simple Products Button Text**: Default "Out of Stock"
-- **Variable Products Button Text**: Default "Out of Stock"
-- **Grouped Products Button Text**: Default "Out of Stock"
-- **External Products Button Text**: Default "Out of Stock"
+- **Apply to Product Loops** (on by default) applies to shop, category, and archive pages.
+- **Apply to Single Product Pages** (on by default) applies to individual product pages.
+- **Include Variable Products** (on by default) applies to variable products when all variations are out of stock.
 
-### Step 5: Choose the Button Behavior
+### Step 5: Configure Styling Options
 
-Select the **Out of Stock Button Style**:
+- **Gutenberg Blocks Compatibility** (off by default) enables support for WooCommerce Gutenberg blocks (requires additional CSS).
+- **Custom CSS Class** (default `out-of-stock-button`) adds the class to out of stock buttons for custom styling.
 
-- **Disabled**: Non-clickable, grayed out
-- **Link to Product Page**: Clickable, but links to the product page (lets customers see related products or waitlist)
-- **Hidden**: Button does not appear at all
+### Step 6: Save and Test
 
-### Step 6: Configure Advanced Options
-
-The 6 sub-options include:
-
-- **Apply to Product Loops**: Use the custom button on archive pages
-- **Apply to Single Product Pages**: Use the custom button on detail pages
-- **Include Variable Products**: Apply the customization to variable products that are completely out of stock (all variations)
-- **Gutenberg Blocks Compatibility**: Enable compatibility with WooCommerce Gutenberg blocks
-- **Custom CSS Class for Out of Stock**: Add a custom CSS class for theme styling
-- **Custom Button Text**: Override the per-product-type text with a single custom text
-
-### Step 7: Save Changes
-
-Click **Save Changes**.
-
-### Step 8: Test
-
-Set a product to out of stock (Inventory > Stock status). Visit the product on the front-end. Verify the button text and behavior match your configuration.
+Click **Save Changes**. Set a product to out of stock (Inventory > Stock status) and visit it on the front end. Verify the text, style, and scope match your configuration.
 
 ---
 
 ## Configuration Options
 
-| Option | Description | Default |
-|--------|-------------|---------|
+| Option | Behavior | Default |
+|--------|----------|---------|
 | **Customize Out of Stock Button Text** | Master toggle. | Off |
-| **Simple Products Button Text** | Text for simple products. | "Out of Stock" |
-| **Variable Products Button Text** | Text for variable products. | "Out of Stock" |
-| **Grouped Products Button Text** | Text for grouped products. | "Out of Stock" |
-| **External Products Button Text** | Text for external products. | "Out of Stock" |
-| **Apply to Product Loops** | Use on archive pages. | Off |
-| **Apply to Single Product Pages** | Use on detail pages. | On |
-| **Include Variable Products** | Apply when all variations are out of stock. | Off |
-| **Gutenberg Blocks Compatibility** | Enable for block-based themes. | Off |
-| **Custom CSS Class for Out of Stock** | Theme-specific class. | "out-of-stock-btn" |
-| **Out of Stock Button Style** | Disabled, Link, or Hidden. | Disabled |
+| **Button Text** | Message shown for out of stock products. | `Out of Stock` |
+| **Button Style** | Disabled (Non-clickable), Link to Product Page, or Hide Button Completely. | Disabled (Non-clickable) |
+| **Apply to Product Loops** | Apply to shop, category, and archive pages. | On |
+| **Apply to Single Product Pages** | Apply to individual product pages. | On |
+| **Include Variable Products** | Apply when all variations of a variable product are out of stock. | On |
+| **Gutenberg Blocks Compatibility** | Support WooCommerce Gutenberg blocks (requires extra CSS). | Off |
+| **Custom CSS Class** | CSS class added to out of stock buttons. | `out-of-stock-button` |
 
 ---
 
 ## What Gets Affected
 
-- All out-of-stock products on the site (per the configuration)
-- The button text and behavior on the front-end
-- The CSS class for theme-specific styling
-- The button visibility based on the Hidden style
+- Out of stock products on loops and single pages, per the scope toggles
+- The button text, style, and visibility for those products
+- Variable products whose variations are all out of stock, when **Include Variable Products** is on
+- Button styling through the custom CSS class and Gutenberg compatibility mode
 
 ## What Does NOT Get Affected
 
-- The "Add to Cart" button on in-stock products (use [Customize Add to Cart Button](woocommerce-customize-add-to-cart-button.md) for that)
-- The "Notify When Available" email subscription (that's a separate plugin)
-- The admin order details (the button is front-end only)
-- Stock display (the "Out of stock" badge or text in the product meta)
+- The add to cart button on in stock products (use Customize Add to Cart Button Text for that)
+- The in-stock badge, stock quantity, or product meta display
+- The admin order details: the button is front end only
+- Product data and inventory: the feature only changes the button, not stock status
 
 ---
 
 ## Advanced Options (Developers)
 
-This feature registers 3 WordPress hooks in `variation-display.php`:
-
-**Actions:**
-
-- `wp_head` calls `cm_add_out_of_stock_button_styles()` (Injects out of stock button CSS)
-
-**Filters:**
-
-- `woocommerce_product_add_to_cart_text` calls `cm_customize_out_of_stock_button_text()` (Customizes out of stock button text (priority 5))
-- `woocommerce_loop_add_to_cart_link` calls `cm_customize_out_of_stock_button_loop()` (Customizes out of stock loop button (priority 10))
+The feature registers its hooks in `functions/woocommerce/variation-display.php`:
 
 ```php
-// Hooked in variation-display.php
-add_filter( 'woocommerce_product_add_to_cart_text', 'cm_customize_out_of_stock_button_text' );
+add_filter( 'woocommerce_product_add_to_cart_text', 'cm_customize_out_of_stock_button_text', 5, 2 );
+add_filter( 'woocommerce_loop_add_to_cart_link', 'cm_customize_out_of_stock_button_loop', 10, 3 );
+add_action( 'wp_head', 'cm_add_out_of_stock_button_styles' );
+
+// When Gutenberg blocks compatibility is enabled:
+add_filter( 'woocommerce_blocks_product_grid_item_html', 'cm_customize_gutenberg_out_of_stock_button', 10, 3 );
 ```
 
-The feature modifies WooCommerce behavior by registering or removing hooks. Disabling it reverses those changes.
+- **`woocommerce_product_add_to_cart_text`** (priority 5) replaces the button text with your custom message.
+- **`woocommerce_loop_add_to_cart_link`** (priority 10) rebuilds the loop button according to the chosen style (disabled, link, or hidden).
+- **`wp_head`** injects the out of stock button styles and the custom CSS class.
+- **`woocommerce_blocks_product_grid_item_html`** is registered only when **Gutenberg Blocks Compatibility** is on.
+
+---
 
 ## Troubleshooting
 
-### The custom button text is not showing
+### The custom text is not showing
 
-**Cause:** The toggle is off, or caching is serving the old button text.
-**Fix:** Verify the toggle is on. Clear all caching layers. The button is rendered server-side, so caching is the most common cause.
+**Cause:** The feature toggle is off, the relevant scope (loop or single) is off, or caching is serving old HTML.
+**Fix:** Confirm **Customize Out of Stock Button Text** is on and that the page context (loop or single) matches an enabled scope. Clear caches if the page is unchanged.
 
-### The button is still clickable when the style is set to "Disabled"
+### The button is still clickable when set to Disabled
 
-**Cause:** A theme or plugin is overriding the `disabled` attribute via JavaScript.
-**Fix:** Check the rendered button HTML (View Source) to verify the `disabled` attribute is present. If a custom JavaScript is removing it, identify and disable that script.
+**Cause:** A theme or plugin re-enables the button with JavaScript.
+**Fix:** Inspect the rendered button HTML to confirm the disabled attribute is present. If custom script removes it, find and disable that script.
 
-### The customization doesn't apply to variable products
+### The customization does not apply to a variable product
 
-**Cause:** The "Include Variable Products" sub-option is off.
-**Fix:** Enable the sub-option. Variable products are only customized if all variations are out of stock (per-variation stock is checked).
+**Cause:** **Include Variable Products** is off, or not every variation is out of stock.
+**Fix:** Turn on **Include Variable Products**. The feature customizes a variable product only when all of its variations are out of stock; if any variation is in stock, the button stays a normal add-to-cart action.
 
-### The CSS class doesn't apply
+### I chose Hidden but the button still shows
 
-**Cause:** The theme's CSS specificity is overriding the custom class, or the class name is misspelled.
-**Fix:** Inspect the rendered button in the browser's DevTools. Verify the class is present. If it is but not styled, your theme's CSS has higher specificity. Add `!important` to the theme CSS rule (as a last resort) or use a more specific selector.
+**Cause:** The button style is set to Disabled or Link, or the scope is off for the page you are viewing.
+**Fix:** Confirm **Button Style** is set to **Hide Button Completely** and that the page context matches an enabled scope. Clear caches.
 
-### The button is hidden when it should be disabled
+### The custom CSS class has no effect
 
-**Cause:** The button style is set to "Hidden" but you wanted "Disabled".
-**Fix:** Check the Out of Stock Button Style setting. "Hidden" completely removes the button; "Disabled" keeps it visible but unclickable.
+**Cause:** The class name differs from the one you are styling, or a theme overrides it.
+**Fix:** Confirm the class in **Custom CSS Class** matches your stylesheet. Inspect the rendered button in DevTools to verify the class is present, and account for theme CSS specificity.
+
+---
+
+## Frequently Asked Questions
+
+### What does the out of stock button do by default?
+
+Without the feature, WooCommerce shows the theme's "Read More" style button for out of stock products. This feature replaces its text and controls whether it is disabled, links to the product page, or is hidden.
+
+### Can I keep the button visible but not clickable?
+
+Yes. Choose **Disabled (Non-clickable)**. The button remains in the layout for context but cannot be clicked.
+
+### Does it work for variable products?
+
+Yes, when **Include Variable Products** is on. It applies to a variable product only when every one of its variations is out of stock.
+
+### Will this affect in stock products?
+
+No. In stock products keep the normal add to cart button, which is controlled separately by the Customize Add to Cart Button Text feature.
+
+### How do the Gutenberg blocks get styled?
+
+Enable **Gutenberg Blocks Compatibility** and provide the additional CSS in **Custom CSS Class**. The feature registers a blocks filter to apply your button treatment to block-based product grids.
 
 ---
 
 ## Related Articles
 
-- [How to Customize the Add to Cart Button in WordPress](woocommerce-customize-add-to-cart-button.md)
-- [How to Use Product Swatches in WordPress](woocommerce-product-swatches.md)
-- [How to Use Content Management in WordPress](../core/core-content-management.md)
+- [How to Customize the Add to Cart Button Text in WooCommerce](woocommerce-customize-add-to-cart-button.md)
+- [How to Disable Out of Stock Variations in WooCommerce](woocommerce-disable-out-of-stock-variations.md)
+- [How to Add Variation Swatches to WooCommerce in WordPress](woocommerce-product-swatches.md)
