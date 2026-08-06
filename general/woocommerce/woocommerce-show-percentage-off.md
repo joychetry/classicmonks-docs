@@ -1,161 +1,156 @@
 ---
-title: "How to Show Percentage Off in WordPress | CM"
+title: "How to Show Percent Off on WooCommerce Sale Products"
 slug: show-percentage-off
-description: "Display the percentage discount on sale products in Classic Monks. Customizable prefix and suffix text, with optional display in product loops."
-last_updated: 2026-06-24
+description: "Display the discount percentage on WooCommerce sale products with the percentage_off shortcode. Customize the prefix and suffix text with Classic Monks."
+last_updated: 2026-08-06
 author: Joy
 reading_time: 4 min
 canonical: https://classicmonks.com/docs/show-percentage-off/
 ---
 
-# How to Show Percentage Off in WordPress
+# How to Show Percent Off on WooCommerce Sale Products
 
-> Show Percentage Off displays the percentage discount (e.g., "20% off") on sale WooCommerce products. Customize the prefix and suffix text, and optionally show the percentage in product loops.
+> Display the discount percentage on a WooCommerce sale product using the `[percentage_off]` shortcode. Customize the prefix and suffix text in Classic Monks, so a sale renders as something like "Flat 25.00% off".
 
 ## Key Takeaways
 
-- Display the percentage discount on sale products
-- Customizable prefix and suffix text
-- Optionally show in product loops (shop, category pages)
-- Works with the standard WooCommerce sale price system
-- Complements the "Show Price Savings" feature (dollar amount)
+- Show the percent saved on any sale product with `[percentage_off]`
+- Customize the prefix (default "Flat") and suffix (default "off")
+- Place the shortcode on the product page, in page builder content, or in a loop
+- Only renders when the current product is on sale
+- Works alongside `[price_savings]` to show both amount and percent
 
-## What Is the Show Percentage Off feature?
+## What Does the Feature Do?
 
-The Show Percentage Off feature adds the `[percentage_off]` shortcode for displaying the percentage discount on sale products. It works alongside WooCommerce's standard sale price mechanism.
+A crossed-out regular price tells a shopper the product is on sale but not how much they are saving in percentage terms. The **Show Percentage Off** feature adds a `[percentage_off]` shortcode that computes the discount percent from the product's regular and sale prices and prints it with customizable surrounding text.
 
-This is a separate feature from "Show Price Savings" (which shows the dollar amount). You can enable either or both:
-
-- **Show Price Savings**: Display "You save $20!"
-- **Show Percentage Off**: Display "20% off"
-
-Each has customizable prefix and suffix text.
+With the defaults, the output reads like "Flat 25.00% off". If the product is not on sale, the shortcode outputs nothing.
 
 ## Why You Need It
 
-Showing the percentage discount is a proven conversion driver:
+Percentages are often a clearer deal signal than a raw amount:
 
-- Creates urgency ("Save 20% if you buy today")
-- Highlights value perception
-- Provides instant context (no math required to figure out the discount)
-
-The shortcode-based approach gives you flexibility: place the percentage display wherever you want.
+- "25% off" is immediately understandable to most shoppers
+- It highlights the value of the discount without crowding the price line
+- It pairs with the saved amount for a complete savings message
+- The prefix and suffix let you match the wording to your store's voice
 
 ---
 
-## How to Use Show Percentage Off in WordPress
+## How to Show the Percentage Off on Sale Products in WooCommerce
 
-### Step 1: Navigate to Settings
+### Step 1: Enable the Feature
 
-Click into the **Classic Monks** plugin settings in your WordPress dashboard.
+1. In WordPress admin, open **Classic Monks > WooCommerce**.
+2. Open the **Single Product** settings area.
+3. Toggle on **Show Percentage Off**.
 
-### Step 2: Go to the WooCommerce Tab
+### Step 2: Set the Surrounding Text
 
-Click on the **WooCommerce** menu, then click the **Single Product** subtab.
+- **Prefix Text** appears before the percentage (default `Flat`).
+- **Suffix Text** appears after the percentage (default `off`).
 
-### Step 3: Enable Show Percentage Off
+Together, the default output reads like "Flat 25.00% off".
 
-Scroll to **Show Percentage Off** and toggle on.
+### Step 3: Place the Shortcode
 
-### Step 4: Configure Display Options
+Insert the shortcode where you want the percentage displayed:
 
-The sub-options include:
-
-- **Prefix Text**: Text before the percentage (e.g., "Save" or just empty for "20% off")
-- **Suffix Text**: Text after the percentage (default: "off")
-- **Show in Product Loops**: Display the percentage on archive pages (optional)
-
-### Step 5: Save Changes
-
-Click **Save Changes**.
-
-### Step 6: Add the Shortcode to Your Theme
-
-For single product pages:
-
-```php
-<?php echo do_shortcode('[percentage_off]'); ?>
+```
+[percentage_off]
 ```
 
-For product loops, enable the "Show in Product Loops" option and add the shortcode to your theme's loop template.
+This works on the single product page, in page-builder content, and in loop templates, as long as a product is in context. If you also enabled **Show Price Savings**, use `[price_savings]` for the saved amount.
 
-### Step 7: Use the Shortcode
+### Step 4: Save and Test
 
-The `[percentage_off]` shortcode accepts attributes:
-
-- `[percentage_off]`: Default display
-- `[percentage_off prefix="Save " suffix=" today"]`: Custom prefix/suffix
+Click **Save Changes**. Open a product that is on sale and confirm the percentage appears where you placed the shortcode. Products not on sale show nothing.
 
 ---
 
 ## Configuration Options
 
-| Option | Description | Default |
-|--------|-------------|---------|
-| **Show Percentage Off** | Master toggle. | Off |
-| **Prefix Text** | Text before the percentage. | "" (empty) |
-| **Suffix Text** | Text after the percentage. | "off" |
-| **Show in Product Loops** | Display in archive pages. | Off |
+| Option | Behavior | Default |
+|--------|----------|---------|
+| **Show Percentage Off** | Master toggle for the `[percentage_off]` shortcode. | Off |
+| **Prefix Text** | Text before the percentage. | `Flat` |
+| **Suffix Text** | Text after the percentage. | `off` |
+| **Show Price Savings** | Separate toggle for the `[price_savings]` shortcode. | Off |
 
 ---
 
 ## What Gets Affected
 
-- Single product pages: the percentage display appears (where the shortcode is rendered)
-- Product loops (with the option enabled): percentage display on shop, category, archive pages
-- Variable products: shows the percentage based on the active variation
-- Sale products only: non-sale products don't show the percentage display
+- Any page containing the `[percentage_off]` shortcode: the discount percent renders when the product is on sale
+- Customizable wording: prefix and suffix apply wherever the shortcode is used
 
 ## What Does NOT Get Affected
 
-- The sale price itself: WooCommerce's standard sale mechanism handles this
-- The savings dollar amount: that's a separate feature ([Show Price Savings](woocommerce-show-price-savings.md))
-- Cart or checkout pages: the display is product-page only
-- The product's HTML structure: the shortcode is added where you place it
+- The WooCommerce price display: regular and sale prices keep their normal formatting
+- Sale prices themselves: no prices are changed
+- Cart and checkout: the shortcode is for product display only
+- Products not on sale: these output nothing from the shortcode
 
 ---
 
-## Advanced Options (Developers)
+## How the Percentage Is Calculated
 
-This feature registers 1 WordPress hook in `woocommerce-functions.php`:
+The shortcode reads the current product's regular price and sale price, computes the discount as `regular price - sale price`, then divides by the regular price and multiplies by 100. The result is shown to two decimal places.
 
-**Actions:**
+For example, a product with a $100 regular price and a $75 sale price produces `((100 - 75) / 100) * 100 = 25.00`, rendered as "Flat 25.00% off". The shortcode returns empty when the current product is not on sale.
 
-- `init` calls `cm_init_product_display_features()` (Registers percentage_off shortcode)
-
-```php
-// Hooked in woocommerce-functions.php
-add_action( 'init', 'cm_init_product_display_features' );
-```
-
-The feature modifies WooCommerce behavior by registering or removing hooks. Disabling it reverses those changes.
+---
 
 ## Troubleshooting
 
-### The percentage display is not showing
+### The percentage is not showing
 
-**Cause:** The toggle is off, the product is not on sale, or the shortcode is not in the theme.
-**Fix:** Verify the toggle is on. Verify the product is on sale. Verify the shortcode is in the theme template where you want the display.
+**Cause:** The feature toggle is off, the product is not on sale, or the shortcode is not in a product context.
+**Fix:** Confirm **Show Percentage Off** is on. Verify the product has a sale price lower than its regular price, and place the shortcode where a product is in context.
 
-### The percentage shows 0%
+### The percentage looks wrong
 
-**Cause:** The product is on sale but the sale price equals the regular price (no actual discount).
-**Fix:** Verify the sale price is set correctly. The percentage is calculated as `((regular - sale) / regular) * 100`. If both prices are the same, the percentage is 0.
+**Cause:** The calculation divides the savings by the regular price, so an incorrect regular or sale price produces an incorrect percent.
+**Fix:** Check the product's regular and sale prices. If tax-inclusive prices are enabled, confirm the displayed values match what you expect.
 
-### The percentage is wrong (e.g., 30% for a 25% sale)
+### The number has too many or too few decimals
 
-**Cause:** The percentage is calculated from the regular and sale prices. If your store has tax or other pricing rules, the calculation may be off.
-**Fix:** Verify the regular and sale prices are set correctly. The calculation uses the values WooCommerce stores in the database, which may include or exclude tax depending on the settings.
+**Cause:** The shortcode always formats to two decimal places.
+**Fix:** This is by design. The percentage is shown to two decimals regardless of the store's general price precision.
 
-### The display is duplicating
+### Nothing appears on archive pages
 
-**Cause:** The shortcode is in the theme template AND the "Show in Product Loops" option is enabled. Both render the display.
-**Fix:** Remove the shortcode from one location. Use the option alone (which adds the display automatically via the product loop filter) or the shortcode alone (which requires manual placement), but not both.
+**Cause:** The shortcode only renders when a product is in context and on sale.
+**Fix:** Add the shortcode to the loop template or a page-builder loop block. Non-sale products in the loop show nothing, which is expected.
+
+---
+
+## Frequently Asked Questions
+
+### What does the `[percentage_off]` shortcode output?
+
+It prints the discount percent for a sale product, wrapped in your prefix and suffix. With the defaults that is something like "Flat 25.00% off". It renders nothing when the product is not on sale.
+
+### How is the percentage calculated?
+
+The shortcode subtracts the sale price from the regular price, divides by the regular price, and multiplies by 100, showing the result to two decimal places.
+
+### Where can I place the shortcode?
+
+Anywhere a product is in context: the single product page, a page-builder block, or a loop template. It reads the current product's prices from the global product object.
+
+### Can I show both the amount and the percentage?
+
+Yes. Enable **Show Price Savings** and **Show Percentage Off**, then use `[price_savings]` for the amount and `[percentage_off]` for the percent in the same page.
+
+### Does this change the sale price or cart total?
+
+No. The percentage shortcode is display-only. It does not alter prices or affect the cart or checkout totals.
 
 ---
 
 ## Related Articles
 
-- [How to Show Price Savings in WordPress](woocommerce-show-price-savings.md)
-- [How to Customize the Add to Cart Button in WordPress](woocommerce-customize-add-to-cart-button.md)
-- [How to Use Content Management in WordPress](../core/core-content-management.md)
+- [How to Show the Amount Saved on Sale Products in WooCommerce](woocommerce-show-price-savings.md)
+- [How to Show Product Price History on Your Store](woocommerce-product-price-history.md)
+- [How to Add Variation Swatches to WooCommerce in WordPress](woocommerce-product-swatches.md)
