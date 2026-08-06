@@ -1,246 +1,182 @@
 ---
-title: "How to Display Product Price History in WooCommerce | CM"
-slug: woocommerce-product-price-history
-description: "Track and display historical prices on WooCommerce sale products in Classic Monks. Configure lookback windows, lowest-price display, variable-product behavior, and EU Omnibus compliance."
-last_updated: 2026-07-28
+title: "How to Display WooCommerce Price History on Your Store"
+slug: product-price-history
+description: "Display the lowest WooCommerce product price from a configurable lookback window. Track price changes automatically and comply with the EU Omnibus Directive."
+last_updated: 2026-08-06
 author: Joy
-reading_time: 9 min
-canonical: https://classicmonks.com/docs/woocommerce-product-price-history/
+reading_time: 8 min
+canonical: https://classicmonks.com/docs/product-price-history/
 ---
 
-# How to Display Product Price History in WooCommerce
+# How to Display WooCommerce Price History on Your Store
 
-> Use the Classic Monks Product Price History feature to track WooCommerce price changes and display the lowest price in a configurable lookback window, including an EU Omnibus-compliant mode.
+> Product Price History tracks WooCommerce product and variation price changes in a dedicated table and displays the lowest price from a configurable lookback window on sale products. Use it for price transparency, consumer trust, and EU Omnibus Directive compliance.
 
 ## Key Takeaways
 
-- Tracks product and variation price history automatically on save
-- Displays the lowest price in a configurable lookback window
-- Supports an Omnibus-compliant sale-start calculation mode
-- Controls display type, fallback behavior, and where the lowest price appears
-- Exposes a shortcode and admin price-history meta box
-- Supports simple and variable products
+- Tracks product and variation price changes automatically whenever a price is saved
+- Displays the lowest price from a configurable lookback window (default 30 days)
+- Supports a sale-start calculation mode that satisfies EU Omnibus requirements
+- Choose regular, text, alternative, or shortcode-only display
+- Control variable-product behavior, display locations, and custom labels
+- Includes a product-edit history meta box, a shortcode, and a widget
 
-## What Product Price History Does
+## What Does Product Price History Do?
 
-Product Price History tracks WooCommerce price changes in a dedicated database table and shows the lowest recorded price during the configured lookback window. On sale products, this is useful for consumer transparency and EU Omnibus compliance.
+WooCommerce shows a sale price when a product is on sale, but it does not tell shoppers what the price was before. Product Price History closes that gap: whenever a product or variation is saved with a changed price, Classic Monks records the new price in a dedicated `cm_price_history` table. On the frontend, it looks up the lowest recorded price inside your configured window and, for sale products, renders that lowest price according to the display type and location you choose.
 
-The feature does not just show the current sale badge. It stores historical regular and sale prices, calculates the lowest price from a defined time window, and then renders that lowest price in the product display according to your chosen display type and location settings.
+The feature is built for the EU Omnibus Directive, which requires merchants to show the lowest price a product was presented at during the 30 days before a price reduction. Its **Calculation Mode** supports both a rolling window and a sale-start window to match that requirement.
 
 ---
 
 ## When to Enable It
 
-Enable Product Price History when:
+Enable Product Price History when you run regular sales and want the lowest recent price shown automatically, when you sell into EU markets and must disclose the lowest price from the 30 days before a reduction, or when you want an admin view of price changes on the product edit screen. Keep it off if the store never runs sales and has no price-disclosure requirement.
 
-- You run regular promotions and want to display the lowest recent price automatically.
-- You need EU Omnibus-compliant lowest-price disclosure.
-- You want an admin history view on the product edit screen.
-- You want a shortcode to place the lowest price anywhere on the site.
-
-Leave it off if the store never runs sales or never needs price-history disclosure.
+The feature requires WooCommerce to be active. If WooCommerce is not running, the loader bails out immediately and nothing is tracked or shown.
 
 ---
 
-## Before You Enable It
+## How to Configure WooCommerce Price History
 
-### Check WooCommerce first
+### Step 1: Enable Product Price History
 
-The feature requires WooCommerce. If WooCommerce is inactive, the Price History loader bails immediately.
+In WordPress admin, open **Classic Monks > WooCommerce**, open the **Single Product** settings area, and toggle on **Product Price History**. The nested options expand below the toggle.
 
-### Decide the compliance mode
+### Step 2: Choose the Calculation Mode
 
-If the store operates in EU markets and must satisfy Omnibus requirements, choose **From sale start** as the calculation mode.
+Use **Calculation Mode** to set where the lookback window starts:
 
-### Decide where the price appears
+- **From sale start (Omnibus-compliant)**: looks back from the product's sale start date. Choose this when EU Omnibus compliance is the goal.
+- **From current day (rolling window)**: uses a rolling window from today.
 
-You can limit display to the product page only, or extend it to shop, category, tag, and related-product loops. Choose the narrowest set you need.
+### Step 3: Set the Lookback Window
 
----
+Use **Number of Days** to define how far back the lowest-price search goes. The default is **30**, with a supported range of 1 to 365.
 
-## How to Configure Product Price History
+### Step 4: Decide the Fallback
 
-### Step 1: Open WooCommerce settings in Classic Monks
+Use **When No Lower Price Found** to control what happens when the history is empty or not lower than the current price: **Hide lowest price**, **Show current price as lowest**, or **Show custom text**. For custom text, set the wording in **Custom Fallback Text** and use the `{days}` placeholder for the lookback period.
 
-In WordPress admin, open **Classic Monks > WooCommerce**.
+### Step 5: Choose the Display Type
 
-Enable **Product Price History** under the **Single Product** settings area.
+Use **Display Type** to control how the lowest price renders:
 
-### Step 2: Choose the calculation mode
+- **Regular (Crossed-out lowest price + sale price)**: the classic sale treatment.
+- **Text (Separate lines with labels)**: clearly labels the current and lowest prices. The legally conservative option for EU Omnibus.
+- **Alternative (Below product meta)**: renders below the product meta block.
+- **Shortcodes only (Manual placement)**: disables automatic rendering; you place the lowest price manually with the shortcode.
 
-Use **Calculation Mode**:
+### Step 6: Set Variable Product Display
 
-- **From sale start (Omnibus-compliant)**: Looks back from the product's sale start date.
-- **From current day (rolling window)**: Uses a rolling lookback window from the current day.
+Use **Variable Product Display** to control variable product prices in shop and category loops: **Show price range (min-max)** or **Show minimum price only**.
 
-Choose **From sale start** when Omnibus compliance is the priority.
+### Step 7: Choose Display Locations
 
-### Step 3: Set the lookback window
+Use **Display Locations** to pick where the indicator appears: Product page, Shop page, Category pages, Tag pages, and Related / Upsell products. Enable only the locations you need. When **Display Type** is **Shortcodes only**, these are ignored and the lowest price appears only where you place the shortcode.
 
-Use **Number of Days** to define how far back the lowest price search goes.
+### Step 8: Set Custom Labels
 
-Default: **30**.
+Use **Custom "Lowest Price" Label** and **Custom "Current Price" Label** to override the default wording. The current-price label only appears in **Text** mode. Leave both blank to use the defaults.
 
-### Step 4: Decide what happens when no lower price is found
+### Step 9: Save and Verify
 
-Use **When No Lower Price Found**:
-
-- **Hide lowest price**
-- **Show current price as lowest**
-- **Show custom text**
-
-If you choose **Show custom text**, set the text in **Custom Fallback Text**. You can use the `{days}` placeholder.
-
-### Step 5: Choose the display type
-
-Use **Display Type**:
-
-- **Regular (Crossed-out lowest price + sale price)**
-- **Text (Separate lines with labels)**: This is the legally conservative Omnibus choice.
-- **Alternative (Below product meta)**
-- **Shortcodes only (Manual placement)**: Disables automatic rendering; you place the lowest price manually with the shortcode.
-
-### Step 6: Choose the variable-product display style
-
-Use **Variable Product Display**:
-
-- **Show price range (min-max)**
-- **Show minimum price only**
-
-This affects how variable product prices appear in loops such as the shop page.
-
-### Step 7: Choose display locations
-
-Use **Display Locations**:
-
-- Product page
-- Shop page
-- Category pages
-- Tag pages
-- Related / Upsell products
-
-Enable only the locations where the lowest-price indicator is required when using **Regular**, **Text**, or **Alternative** display types. When **Shortcodes only (Manual placement)** is selected, these location settings are ignored and the lowest price is shown only where you place the shortcode.
-
-### Step 8: Set custom labels
-
-Use the **Custom "Lowest Price" Label** and **Custom "Current Price" Label** fields when you want wording other than the default. Leave them blank to use the plugin defaults.
-
-### Step 9: Save and verify
-
-Click **Save Changes**. Visit a sale product on the frontend and confirm the lowest price appears where expected.
+Click **Save Changes**. Visit a sale product and confirm the lowest price appears where you selected, with the label and formatting matching your **Display Type**.
 
 ---
 
 ## Configuration Options
 
 | Option | What it controls | Source default |
-|---|---|---:|
+|---|---|---|
 | **Product Price History** | Master toggle for the feature. | Off |
-| **Calculation Mode** | Whether the lookback starts from the sale start date or uses a rolling window. | From sale start |
-| **Number of Days** | Lookback window in days. | 30 |
+| **Calculation Mode** | Whether the lookback starts from the sale start date or uses a rolling window from today. | From sale start |
+| **Number of Days** | Lookback window in days (1-365). | 30 |
 | **When No Lower Price Found** | Fallback behavior when the history is empty or not lower than the current price. | Hide lowest price |
-| **Custom Fallback Text** | Fallback text when custom fallback is selected. Supports `{days}`. | Price in the last {days} days is the same as current price |
-| **Display Type** | Regular, text, alternative, or shortcode-only lowest-price presentation. | Regular |
-| **Variable Product Display** | Price range or minimum price in loops. | Range |
-| **Display Locations** | Product page, shop page, category pages, tag pages, related/upsell products. Ignored in shortcode-only mode. | Product page and shop page |
-| **Custom "Lowest Price" Label** | Override the default lowest-price label. | Empty |
-| **Custom "Current Price" Label** | Override the default current-price label in text mode. | Empty |
+| **Custom Fallback Text** | Fallback wording when the custom-text fallback is selected. Supports the `{days}` placeholder. | `Price in the last {days} days is the same as current price` |
+| **Display Type** | Regular, Text, Alternative, or Shortcodes only. | Regular |
+| **Variable Product Display** | Price range (min-max) or minimum price in loops. | Range |
+| **Display Locations** | Product, shop, category, tag, and related/upsell. Ignored in shortcode-only mode. | Product page and shop page |
+| **Custom "Lowest Price" Label** | Override the default lowest-price label. | Blank (uses default) |
+| **Custom "Current Price" Label** | Override the default current-price label in text mode. | Blank (uses default) |
 
 ---
 
-## How the Price History Works
+## How Product Price History Works
 
-### Price tracking
+**Price tracking.** Whenever a product or variation is saved with a changed price, Classic Monks records a new row. A fractional-precision check skips unchanged prices so no spurious rows are created. Variable products are tracked at the variation level, so each variant's price changes are recorded and the parent display stays meaningful.
 
-Every time a product or variation is saved, Price History records a new history entry if the price has changed. The feature tracks both regular and sale prices.
+**Lowest-price lookup.** When WooCommerce renders price HTML, the feature reads the cached lowest price for the product (or variation) within the window. If it is lower than the current regular price it renders the lowest price per your display and location settings; otherwise it uses your fallback.
 
-For variable products, price tracking happens at the variation level rather than the parent product. This prevents the parent record from becoming meaningless when only one variant changes.
-
-### Lowest-price lookup
-
-When WooCommerce renders price HTML, the feature looks up the lowest recorded price within the configured window. If the calculated lowest price is lower than the current regular price, it shows that lowest price according to your display type and location settings.
-
-### Omnibus mode
-
-In **From sale start** mode, the lookback window is calculated from the product's sale start date. This is the recommended mode when the goal is to comply with the EU Omnibus requirement to disclose the lowest price applied during the 30-day period before the promotion.
-
-### Fallback behavior
-
-When the history is empty, stale, or no lower price exists, the feature follows your fallback setting:
-
-- **Hide lowest price**: No extra price indication is shown.
-- **Show current price as lowest**: The current price is shown as the lowest.
-- **Show custom text**: A custom message is shown instead.
-
----
-
-## Where the Lowest Price Appears
-
-Enable only the display locations you actually need:
-
-- **Product page**: Single product view
-- **Shop page**: Main WooCommerce shop loop
-- **Category pages**: Product category archives
-- **Tag pages**: Product tag archives
-- **Related / Upsell products**: Product recommendation loops
-
-If the lowest price appears where you do not want it, disable that display location instead of adjusting theme templates.
+**Omnibus mode.** In **From sale start** mode the window is anchored to the product's sale start date, which is the setup that satisfies the EU Omnibus requirement to disclose the lowest price from the 30 days before a reduction.
 
 ---
 
 ## Product Edit Screen Price History
 
-When the feature is active, the product edit screen includes a **Price history** meta box.
-
-This meta box is useful for:
-
-- Viewing recorded price history rows
-- Manually editing history entries when necessary
-- Applying an older price as the current product price
-- Deleting incorrect history entries
-
-Use the meta box for corrections or audits. Normal price tracking happens automatically when products or variations are saved.
+When the feature is active, the product edit screen includes a **Price history (N days)** meta box. For a variable product it also lists the variations' history entries. Use it to view recorded rows (sale price, regular price, since, until), edit an entry's values, apply an earlier price as the current product price, or delete an incorrect entry. Normal price tracking is automatic; the meta box is for corrections, audits, and manually reverting a price.
 
 ---
 
-## Shortcode
+## Shortcode and Widget
 
-Use the `cm_price_history` shortcode to display the lowest price for a product or variation.
+Use the `[cm_price_history]` shortcode to display the lowest price for a product or variation anywhere on the site, including page-builder content, promotional copy, or custom templates.
 
-Example usage:
+Examples:
 
-```markdown
-[cm_price_history id="694"]
+```
+[cm_price_history]                                             Current product, with currency symbol
+[cm_price_history id="3"]                                      Specific product by ID
+[cm_price_history id="3" variation_id="15"]                    Specific variation
+[cm_price_history id="3" show_currency="0"]                    Without currency symbol
 ```
 
-Use this when the lowest price must appear outside the normal display-location rules, such as in page builder content, promotional copy, or custom product templates.
+- `id` (default 0): product ID. When omitted, the current product in the loop is resolved automatically.
+- `variation_id` (default 0): a specific variation of a variable product.
+- `show_currency` (default 1): set 0 to return the raw number without the currency symbol.
+
+The feature also registers a **Price History** widget (`CM_Price_History_Widget`) through `widgets_init`, so a lowest-price line can be placed in any widget area.
 
 ---
 
 ## Verify the Result
 
-### Product page test
+- **Product page**: open a sale product and confirm the indicator appears, matching **Display Type**.
+- **Shop loop**: open the shop page and confirm the indicator (and **Variable Product Display** behavior for variable products).
+- **Omnibus**: use a product whose sale price is lower than the regular price but not the history low, and confirm the displayed lowest price reflects history, not just the sale badge.
+- **Meta box**: open the product edit screen, confirm the **Price history (N days)** box is present, and save a new price to see a new row.
 
-1. Open a sale product.
-2. Confirm the lowest price indicator appears if **Product page** is enabled.
-3. Check that the label, formatting, and position match the selected **Display Type**.
+---
 
-### Shop loop test
+## Developer Notes
 
-1. Open the main shop page if **Shop page** is enabled.
-2. Confirm the lowest-price indicator appears in the loop.
-3. If the product is variable, confirm the price presentation matches **Variable Product Display**.
+### Source and assets
 
-### Omnibus test
+- `functions/woocommerce/price-history.php`
+- Admin: `assets/css/cm-price-history.css`, `assets/js/cm-price-history-admin.js`
+- Frontend: `assets/js/cm-price-history.js`, `assets/js/cm-price-history.min.js`
 
-1. Use a product whose current sale price is lower than the regular price but not lower than the lowest price during the lookback window.
-2. Confirm the displayed lowest price reflects the correct historical comparison, not just the current sale badge.
+### Database
 
-### Meta box test
+- Custom table `{wpdb_prefix}cm_price_history` is created via `dbDelta` on demand, storing `price_history_id`, `product_id`, `regular_price`, `sale_price`, `timestamp`, `timestamp_end`. An open row (`timestamp_end = 0`) marks the currently active price.
+- Cached lowest price is kept in post meta `_cm_price_history` (no autoload).
+- Writes are wrapped in a transaction with row-id WHERE clauses so concurrent saves cannot duplicate the active row.
 
-1. Open the product edit screen.
-2. Confirm the price history meta box is present.
-3. Confirm that saving a new price creates a new history row.
+### Important hooks
+
+- Tracking: `woocommerce_update_product`, `woocommerce_update_product_variation`, `woocommerce_before_product_object_save`, `woocommerce_before_variation_object_save`
+- Frontend: `woocommerce_get_price_html` (filter, priority 1000), `woocommerce_product_meta_end` (alt mode), `wp_enqueue_scripts` (alt mode, product page)
+- Admin: `add_meta_boxes_product`, `admin_enqueue_scripts` (product screen), `widgets_init`
+- AJAX: `wp_ajax_cm_price_history_delete/apply/update`
+- Shortcode: `cm_price_history`
+
+Notes:
+
+- `cm_price_history_init()` gates on WooCommerce being active and the **Product Price History** toggle; otherwise it returns immediately.
+- Variable parents are skipped in tracking (per-variation rows are recorded instead), and a request-scoped guard prevents double tracking on a single save.
+- **Display Type** selects the frontend hooks: `regular`/`text` use `woocommerce_get_price_html`; `alt` uses `woocommerce_product_meta_end` plus the frontend script; `shortcode` registers no automatic render.
+
+The internal feature reference at `docs/features-docs/price-history/price-history.md` has the full schema and write-path details and is the resource for developer support work, not the public-facing article.
 
 ---
 
@@ -248,74 +184,64 @@ Use this when the lowest price must appear outside the normal display-location r
 
 ### The lowest price does not appear
 
-**Cause:** The feature is disabled, no sale is active, the selected display locations exclude the page being tested, or the history does not contain a lower price.
-**Fix:** Enable the feature, verify the product is on sale, check the enabled display locations, and confirm that the configured lookback window actually includes earlier price data.
+**Cause:** The feature is off, the product is not on sale, the active **Display Locations** exclude the page, or the history contains no lower price.
+**Fix:** Enable the feature, verify the product is on sale, check the enabled locations, and confirm the lookback window includes earlier price data.
 
 ### The lowest price looks wrong
 
-**Cause:** The calculation mode or lookback window is not set to what you expect.
-**Fix:** Confirm **Calculation Mode** and **Number of Days**. Use **From sale start** for Omnibus compliance and verify that the product has a saved sale start date.
+**Cause:** The **Calculation Mode** or **Number of Days** differs from what you expect.
+**Fix:** Review **Calculation Mode** and **Number of Days**. Use **From sale start** for Omnibus compliance and verify the product has a saved sale start date.
 
 ### The indicator shows on pages where it should not
 
-**Cause:** One or more display locations are enabled unexpectedly.
-**Fix:** Disable the unnecessary display locations under **Display Locations**.
+**Cause:** One or more **Display Locations** are enabled unexpectedly.
+**Fix:** Disable the unnecessary locations under **Display Locations**.
 
-### Variable products show inconsistent pricing in loops
+### Variable products look inconsistent in loops
 
-**Cause:** The variable display mode is set to range while you want only the minimum price, or vice versa.
+**Cause:** **Variable Product Display** is set to range while you want only the minimum, or vice versa.
 **Fix:** Change **Variable Product Display** to match the store's merchandising preference.
 
 ### The meta box is missing on a product
 
-**Cause:** Price History is disabled, or the screen is not a WooCommerce product edit screen.
+**Cause:** The feature is disabled, or the screen is not a WooCommerce product edit screen.
 **Fix:** Enable the master toggle and open the standard WooCommerce product editor.
 
-### The lowest price never changes after updates
+### The lowest price never updates
 
-**Cause:** The history is not being recorded because the sale price has not changed, or the product is a variable parent instead of a variation.
+**Cause:** The price has not changed (no new row is recorded), or the product is a variable parent instead of a variation.
 **Fix:** Edit a variation or adjust the product's sale price. For variable products, Price History tracks variations, not the parent.
+
+---
+
+## Frequently Asked Questions
+
+### What does the EU Omnibus Directive require for prices?
+
+When a merchant advertises a price reduction, the reference must generally be the lowest price the product was promoted at during at least the 30 days before the reduction. This feature's **From sale start** calculation mode implements that by anchoring the lookback to the product's sale start date.
+
+### How does Classic Monks record price history?
+
+Whenever a product or variation is saved with a changed price, Classic Monks writes a new row to its `cm_price_history` table, storing the regular price, the sale (working) price, and the time the price became active. An open row marks the currently active price.
+
+### Does this feature show historical prices on products that are not on sale?
+
+No. The indicator is rendered for sale products (when the display locations allow it). For products with no sale, the standard WooCommerce price is shown and no history line is added.
+
+### Can I place the lowest price anywhere on the site?
+
+Yes. Use the `[cm_price_history]` shortcode with `id`, `variation_id`, and `show_currency` attributes, or the **Price History** widget. Set **Display Type** to **Shortcodes only** to disable automatic rendering and rely entirely on manual placement.
+
+### How do I fix an incorrect price history entry?
+
+Open the product, use the **Price history (N days)** meta box, and delete the incorrect row or apply an earlier price as the current product price. Normal tracking resumes on the next price save.
 
 ---
 
 ## Related Articles
 
-- [How to Display Price Savings in WordPress](woocommerce-show-price-savings.md)
+- [How to Show Price Savings in WordPress](woocommerce-show-price-savings.md)
 - [How to Show Percentage Off in WordPress](woocommerce-show-percentage-off.md)
-- [How to Customize the Add to Cart Button in WordPress](woocommerce-customize-add-to-cart-button.md)
+- [How to Update Price on Variation Selection in WordPress](woocommerce-update-price-on-variation.md)
 
----
 
-## Developer Notes
-
-### Source files
-
-- `functions/woocommerce/price-history.php`
-- Admin assets: `assets/css/cm-price-history.css`, `assets/js/cm-price-history-admin.js`
-- Frontend assets: `assets/js/cm-price-history.min.js`
-
-### Database
-
-- Custom table: `{wpdb_prefix}cm_price_history`
-- Cached lowest price meta key: `_cm_price_history`
-
-### Important hooks
-
-- `init` via `cm_price_history_init()`
-- `woocommerce_update_product`
-- `woocommerce_update_product_variation`
-- `woocommerce_before_product_object_save`
-- `woocommerce_before_variation_object_save`
-- `woocommerce_get_price_html`
-- `woocommerce_product_meta_end`
-- `add_meta_boxes_product`
-- `admin_enqueue_scripts`
-- `widgets_init`
-- `wp_ajax_cm_price_history_delete`
-- `wp_ajax_cm_price_history_apply`
-- `wp_ajax_cm_price_history_update`
-- `shortcode: cm_price_history`
-
-### Recommended implementation reference
-
-The internal feature reference at `docs/features-docs/price-history/price-history.md` is useful for schema details, write-path behavior, and hook mapping. Use it for developer support work, not for the public-facing article.
