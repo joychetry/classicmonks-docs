@@ -1,16 +1,16 @@
 ---
-title: "How to Use Product Swatches in WordPress | CM"
+title: "How to Add Variation Swatches to WooCommerce in WordPress"
 slug: product-swatches
-description: "Transform WooCommerce product attributes into visual swatches (colors, images, labels) in Classic Monks. Set up swatch types, sizes, layout, tooltips, and filters."
+description: "Add color, image, and label variation swatches to WooCommerce with Classic Monks. Set swatch type, size, layout, tooltips, and archive filters."
 last_updated: 2026-08-06
 author: Joy
 reading_time: 7 min
 canonical: https://classicmonks.com/docs/product-swatches/
 ---
 
-# How to Use Product Swatches in WordPress
+# How to Add Variation Swatches to WooCommerce in WordPress
 
-> Product Swatches replaces text-based WooCommerce attribute dropdowns with visual swatches (colors, images, or labels) on the product page, archive pages, and layered navigation filters. Configure swatch types per attribute, then adjust size, layout, tooltip, and out-of-stock behavior.
+> Variation swatches replace WooCommerce's text-based attribute dropdowns with clickable color, image, and label swatches on the product page, archive pages, and layered navigation filters. Configure each swatch type per attribute, then adjust size, layout, tooltip, and out-of-stock behavior.
 
 ## Key Takeaways
 
