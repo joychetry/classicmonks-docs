@@ -1,154 +1,198 @@
 ---
-title: "How to Enable URL Coupons in WordPress | CM"
+title: "How to Apply WooCommerce Coupons from a URL in WordPress"
 slug: enable-url-coupons
-description: "Apply WooCommerce coupons via shareable URL parameters in Classic Monks. Supports UTM tracking, source attribution, and customizable redirect destinations."
-last_updated: 2026-06-24
+description: "Share WooCommerce coupon links that auto-apply a discount from a URL. Configure redirects, track sources, and preserve UTM parameters with Classic Monks."
+last_updated: 2026-08-06
 author: Joy
-reading_time: 4 min
+reading_time: 5 min
 canonical: https://classicmonks.com/docs/enable-url-coupons/
 ---
 
-# How to Enable URL Coupons in WordPress
+# How to Apply WooCommerce Coupons from a URL in WordPress
 
-> Enable URL Coupons lets customers apply coupons via a shareable URL parameter. Perfect for email campaigns, affiliate links, and marketing automation with UTM tracking and source attribution.
+> A WooCommerce URL coupon applies a discount automatically when a customer visits a link that carries the coupon in its URL parameter. Configure a custom parameter name, choose where to redirect, and keep UTM and source tracking intact.
 
 ## Key Takeaways
 
-- Single toggle, master switch for the feature
-- 2 sub-options: track source, support UTM parameters
-- URL format: `?coupon=CODE` automatically applies the coupon
-- Supports UTM tracking (`?utm_source=email`) for marketing attribution
-- Customizable redirect destination (cart, checkout, or shop page)
+- Auto-apply a coupon by appending a parameter to any link, for example `?coupon=SAVE20`
+- Choose the parameter name (default `coupon`) and the redirect destination (none, cart, checkout, or shop)
+- Track which source a URL coupon came from for analytics
+- Preserve UTM parameters on the redirect for campaign attribution
+- Uses a shareable link, so it fits email, social, and affiliate promotion
 
-## What Is the Enable URL Coupons feature?
+## What Is a WooCommerce URL Coupon?
 
-By default, customers must enter a coupon code at checkout manually. The Enable URL Coupons feature lets customers receive a URL with the coupon code as a parameter, which is automatically applied when they visit:
+WooCommerce normally requires a customer to enter a coupon code at cart or checkout. A **URL coupon** moves that code into the URL itself. When a customer visits a link like `yoursite.com/shop/?coupon=SAVE20`, the coupon is applied to their cart automatically, no typing required.
 
-`https://yoursite.com/cart/?coupon=SUMMER10`
-
-The feature also supports UTM parameters for marketing attribution, so the URL `https://yoursite.com/cart/?coupon=SUMMER10&utm_source=email&utm_campaign=july4` applies the coupon and tracks the source as "email / july4".
+The Classic Monks **Enable URL Coupons** feature lets you control the URL parameter name, decide where visitors land after the coupon is applied, and attach source and UTM tracking to every shareable link.
 
 ## Why You Need It
 
-URL-based coupons are a powerful marketing tool:
+URL coupons turn any marketing asset into a one-click discount:
 
-- **Email campaigns**: Include the URL in emails for one-click discount application
-- **Affiliate links**: Affiliates can share URLs that auto-apply their custom coupons
-- **Social media**: Share URLs on social platforms that auto-apply the coupon
-- **QR codes**: Physical marketing materials with QR codes for in-store promotions
-
-For most stores, URL coupons are a small but high-ROI feature.
+- **Email campaigns.** Drop a `?coupon=` link behind the "Shop the offer" button so subscribers get the discount immediately.
+- **Affiliate and influencer links.** Hand partners a link that auto-applies their code, and track the source of every click.
+- **Social media.** Share a discount link on social that applies the coupon on arrival.
+- **QR codes and print.** A printed QR code can lead straight to a coupon-applied page.
+- **Campaign attribution.** Because UTM parameters can be preserved, you can tell exactly which campaign drove the redeemed coupon.
 
 ---
 
-## How to Enable URL Coupons in WordPress
+## How to Apply WooCommerce Coupons from a URL in WordPress
 
-### Step 1: Navigate to Settings
+### Step 1: Enable the Feature
 
-Click into the **Classic Monks** plugin settings in your WordPress dashboard.
+1. Open **Classic Monks** in your WordPress admin sidebar.
+2. Open the **WooCommerce** tab.
+3. Open the **Coupons** subtab.
+4. Toggle on **Enable URL Coupons**. The nested options expand below the toggle.
 
-### Step 2: Go to the WooCommerce Tab
+### Step 2: Configure the Parameter Name
 
-Click on the **WooCommerce** menu, then click the **Coupons** subtab.
+- **URL Parameter Name** (default `coupon`) is the query parameter that carries the code, for example `?coupon=SAVE20`. Leave it as `coupon`, or change it if you need a different parameter elsewhere.
 
-### Step 3: Enable URL Coupons
+### Step 3: Choose the Redirect
 
-Toggle on **Enable URL Coupons**. Nested options expand.
+- **Default Redirect After Application** controls where a customer lands after the coupon is applied:
+  - **No Redirect (Stay on Current Page)** keeps them where they clicked.
+  - **Cart Page** sends them to the cart to review the applied discount.
+  - **Checkout Page** moves them straight to checkout.
+  - **Shop Page** returns them to the catalog.
 
-### Step 4: Configure Sub-Options
+### Step 4: Configure Tracking
 
-The 2 sub-options include:
+- **Track Coupon Sources** (On by default) logs the source of URL coupon applications for analytics.
+- **Support UTM Parameters** (On by default) preserves UTM parameters through the redirect so campaign tracking stays intact.
+- Turn both off only if you do not want application logs or UTM preservation.
 
-- **Track Coupon Sources**: Record the source of the URL for analytics
-- **Support UTM Parameters**: Pass UTM parameters through to the redirect URL
+### Step 5: Create a Coupon and Share a Link
 
-### Step 5: Save Changes
+Create or use any WooCommerce coupon (for example `SAVE20`), then share the link:
 
-Click **Save Changes**.
+```
+yoursite.com/shop/?coupon=SAVE20
+yoursite.com/cart/?coupon=FREESHIP&utm_source=email
+yoursite.com/checkout/?coupon=WELCOME10&utm_campaign=newsletter
+```
 
-### Step 6: Create URL Coupons
+### Step 6: Save Changes and Test
 
-Use the URL format `https://yoursite.com/cart/?coupon=CODE` where `CODE` is the actual coupon code. Add UTM parameters as needed.
-
-### Step 7: Test
-
-Click a URL coupon in a private/incognito browser. The coupon should be applied automatically.
+Click **Save Changes** in the Classic Monks settings. Open a coupon link in a private browser window and confirm the coupon applies automatically and (if set) you are redirected to the configured page.
 
 ---
 
 ## Configuration Options
 
-| Option | Description | Default |
-|--------|-------------|---------|
-| **Enable URL Coupons** | Master toggle. | Off |
-| **Track Coupon Sources** | Record source for analytics. | Off |
-| **Support UTM Parameters** | Pass UTM through to redirect. | Off |
-| **Default Redirect After** | (configured in URL Coupons meta) | Cart page |
-| **URL Parameter Name** | (configured in URL Coupons meta) | "coupon" |
-
-The Default Redirect After and URL Parameter Name are configured in the URL Coupons metabox (when editing the URL Coupons post type).
+| Option | Behavior | Default |
+|--------|----------|---------|
+| **Enable URL Coupons** | Master toggle for the feature. | Off |
+| **URL Parameter Name** | Query parameter that carries the coupon code. | `coupon` |
+| **Default Redirect After Application** | Where to send the visitor after the coupon applies: No Redirect, Cart Page, Checkout Page, or Shop Page. | No Redirect |
+| **Track Coupon Sources** | Log the source of URL coupon applications. | On |
+| **Support UTM Parameters** | Preserve UTM parameters through the redirect. | On |
 
 ---
 
 ## What Gets Affected
 
-- The cart: the coupon is applied when the URL is visited
-- The redirect: the customer is sent to the configured page (cart, checkout, or shop)
-- The analytics: the source is recorded (if Track Coupon Sources is enabled)
-- The UTM parameters: passed through to the redirect URL (if Support UTM Parameters is enabled)
+- The cart: a coupon arrives and is applied automatically when a URL coupon link is visited
+- Redirect behavior: the visitor is sent to the configured page after application (when a redirect is set)
+- Analytics: source data is recorded when **Track Coupon Sources** is on
+- Campaign tracking: UTM parameters survive the redirect when **Support UTM Parameters** is on
 
 ## What Does NOT Get Affected
 
-- Manual coupon code entry: customers can still enter codes manually
-- Coupon eligibility: determined by the coupon's existing restrictions
-- The coupon's effect on the order: the URL-applied discount is the same as a manually-applied one
-- The order meta: the source and UTM are stored separately (if enabled)
+- Manual coupon entry: typing a code at checkout still works
+- Coupon eligibility rules: URL application obeys the coupon's existing usage restrictions
+- The coupon's effect: a URL-applied discount is identical to a manually entered one
+- Product and catalog data: URL coupons only apply a discount; they do not change prices or stock
 
 ---
 
 ## Advanced Options (Developers)
 
-This feature registers 3 WordPress hooks in `url-coupons.php`:
-
-**Actions:**
-
-- `template_redirect` calls `cm_process_url_coupon()` (Processes URL coupon activation (priority 20))
-- `wp_enqueue_scripts` calls `cm_url_coupons_enqueue_scripts()` (Enqueues URL coupon scripts)
-- `add_meta_boxes` calls `cm_add_url_coupon_meta_box()` (Adds URL coupon metabox to coupons)
+The feature registers its hooks in `functions/woocommerce/coupons/url-coupons.php`:
 
 ```php
-// Hooked in url-coupons.php
-add_action( 'template_redirect', 'cm_process_url_coupon' );
+add_action( 'init', 'cm_initialize_url_coupons' );
+add_action( 'template_redirect', 'cm_process_url_coupon', 20 );
+add_action( 'wp_enqueue_scripts', 'cm_url_coupons_enqueue_scripts' );
+add_action( 'add_meta_boxes', 'cm_add_url_coupon_meta_box' );
+
+add_action( 'wp_ajax_cm_track_url_coupon_click', 'cm_track_url_coupon_click_ajax' );
+add_action( 'wp_ajax_nopriv_cm_track_url_coupon_click', 'cm_track_url_coupon_click_ajax' );
 ```
 
-The feature modifies WooCommerce behavior by registering or removing hooks. Disabling it reverses those changes.
+- **`template_redirect`** (priority 20) runs `cm_process_url_coupon()`, which reads the coupon parameter, applies the coupon, and performs the configured redirect.
+- **`wp_ajax_` / `wp_ajax_nopriv_` on `cm_track_url_coupon_click`** record source clicks for analytics, for both guests and logged-in users.
+- `init` initializes the feature; `wp_enqueue_scripts` loads frontend assets; `add_meta_boxes` registers the URL coupon meta box.
+
+---
+
+## Common Use Cases
+
+**Email campaign discounts.** Put `?coupon=SAVE20` on your newsletter's call-to-action links. Subscribers get the discount without searching for a code, and you can read the campaign source in analytics.
+
+**Affiliate and influencer tracking.** Hand each partner a coupon link with a source tag. **Track Coupon Sources** tells you which partner's links produced redemptions, so you can measure affiliate performance.
+
+**Social launches.** Share a `?coupon=` link on Instagram, X, or Facebook. With **Support UTM Parameters** on, append `utm_source`, `utm_medium`, and `utm_campaign` to attribute channel performance.
+
+**Print and QR promotions.** Put a coupon-applying QR code on packaging, flyers, or in-store signage. Scanning it applies the discount and opens the cart or checkout so the shopper can complete the purchase on their phone.
+
+**Checkout conversion.** Use the Checkout redirect on high-intent links so customers skip the cart and move straight to paying, with their discount already applied.
+
+---
 
 ## Troubleshooting
 
-### The URL coupon is not being applied
+### The URL coupon is not applying
 
-**Cause:** The toggle is off, the coupon doesn't exist, or the URL is malformed.
-**Fix:** Verify the toggle is on. Verify the coupon code exists in WooCommerce > Coupons. Verify the URL format is `?coupon=CODE` (case-sensitive).
+**Cause:** The master toggle is off, the coupon does not exist, the parameter name does not match, or the coupon's restrictions are unmet.
+**Fix:** Confirm **Enable URL Coupons** is on. Verify the coupon code exists in **WooCommerce > Coupons** and that the URL uses the configured **URL Parameter Name**. Confirm the cart meets the coupon's usage restrictions.
 
-### The customer is redirected but the coupon is not applied
+### The coupon applies but the customer is not redirected where I expected
 
-**Cause:** The redirect happened before the coupon was applied, or the coupon's conditions are not met.
-**Fix:** Verify the cart meets the coupon's conditions. The redirect happens after the coupon is applied; if the coupon fails (e.g., minimum spend not met), the redirect still happens but the coupon is not in the cart.
+**Cause:** The **Default Redirect After Application** setting differs from what you intend, or the link overrides it.
+**Fix:** Check the configured redirect in the Coupons subtab. Confirm whether the link expects a specific destination (cart, checkout, or shop) that matches your setting, or use No Redirect to keep the visitor on the current page.
 
-### The UTM parameters are not being tracked
+### UTM parameters disappear after the redirect
 
-**Cause:** The "Support UTM Parameters" option is off, or the parameters are not in the URL.
-**Fix:** Verify the option is on. Verify the URL includes the UTM parameters (e.g., `?coupon=CODE&utm_source=email`).
+**Cause:** **Support UTM Parameters** is off.
+**Fix:** Turn on **Support UTM Parameters** so UTM values are preserved onto the redirect target and appear in your analytics.
 
-### The source is not recorded in the order
+### I cannot tell which campaign a redemption came from
 
-**Cause:** The "Track Coupon Sources" option is off.
-**Fix:** Verify the option is on. The source is stored as order meta. Configure in the plugin settings to customize the data being stored.
+**Cause:** **Track Coupon Sources** is off or no source was attached to the link.
+**Fix:** Turn on **Track Coupon Sources**. For new links, use distinct UTM or source values per campaign so the logs distinguish one promotion from another.
+
+---
+
+## Frequently Asked Questions
+
+### Do I still need to create a coupon, or does the link create one?
+
+You still create the coupon in **WooCommerce > Coupons** as normal. The URL coupon feature only adds the ability to apply that existing coupon from a link; it does not create coupons for you.
+
+### Can I change the parameter from `coupon` to something else?
+
+Yes. Set **URL Parameter Name** to any value you want, and share links that use that parameter. Just keep it consistent across all your campaigns.
+
+### Do URL coupons respect a coupon's usage limits and restrictions?
+
+Yes. A URL-applied coupon is a normal coupon application. It honors usage limits, minimum spend, product/category restrictions, and expiration dates like any other application.
+
+### What happens if a customer visits a URL coupon with an empty cart?
+
+The coupon is applied to the session and remains ready; once the customer adds the required product, the discount takes effect, provided the coupon's conditions are met.
+
+### Does this work for guest users?
+
+Yes. URL coupons apply for guests and logged-in users alike, and source/UTM tracking runs for both (via the nopriv AJAX hooks).
 
 ---
 
 ## Related Articles
 
-- [How to Enable Maximum Discount Amount in WordPress](woocommerce-enable-coupon-max-discount.md)
-- [How to Enable Auto-Apply Coupons in WordPress](woocommerce-enable-auto-apply-coupons.md)
-- [How to Use Content Management in WordPress](../core/core-content-management.md)
+- [How to Set Up WooCommerce Coupon Auto-Apply in WordPress](woocommerce-enable-auto-apply-coupons.md)
+- [How to Set a Maximum Discount on WooCommerce Coupons in WordPress](woocommerce-enable-coupon-max-discount.md)
+- [How to Restrict WooCommerce Coupons by User Role in WordPress](woocommerce-enable-user-role-restrictions.md)
