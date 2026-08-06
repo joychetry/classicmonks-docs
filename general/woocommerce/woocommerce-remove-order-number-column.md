@@ -1,134 +1,149 @@
 ---
-title: "How to Remove Order Number Column from Admin Orders Page in WordPress | CM"
+title: "How to Hide the Order Number Column in WooCommerce Admin"
 slug: remove-order-number-column
-description: "Hide the order number column from the WooCommerce admin orders page in Classic Monks. Provides more space for other important order information."
-last_updated: 2026-06-24
+description: "Remove the order number column from the WooCommerce admin orders page. Free up space for other columns while keeping order numbers accessible elsewhere."
+last_updated: 2026-08-06
 author: Joy
 reading_time: 3 min
 canonical: https://classicmonks.com/docs/remove-order-number-column/
 ---
 
-# How to Remove Order Number Column from Admin Orders Page in WordPress
+# How to Hide the Order Number Column in WooCommerce Admin
 
-> Remove Order Number Column from Admin Orders Page hides the order number column from the WooCommerce admin orders table. Provides more space for other important order information.
+> Remove the order number column from the WooCommerce admin orders table so the other columns have more room. Order numbers remain visible in the order details and customer column.
 
 ## Key Takeaways
 
-- Single toggle, no nested options
-- Hides the order number column from the orders list table
-- The order number is still accessible in the order details
-- Saves horizontal space for other columns
-- Useful when other columns (like custom order columns) are more important
+- Hide the order number column from the admin orders list
+- Free horizontal space for other order columns
+- Order numbers stay accessible in order details
+- One toggle, no nested options
+- Works well with custom order columns
 
-## What Is the Remove Order Number Column feature?
+## What Does the Feature Do?
 
-By default, the WooCommerce admin orders table shows: order number, date, status, customer, total, items, actions. The order number is the first column. The Remove Order Number Column feature hides this column, freeing horizontal space for other columns (like the custom order columns added by the [Enable Custom Order Columns](woocommerce-enable-custom-order-columns.md) feature).
+The WooCommerce admin orders table starts with an order number column. The **Remove Order Number Column** feature hides it, giving the remaining columns more horizontal room.
+
+Removing the column does not remove the order number itself. The number still appears in the order details page and is often shown within the customer column.
 
 ## Why You Need It
 
-The order number column is useful but takes up horizontal space:
+The order number column uses valuable space:
 
-- **Many custom columns**: If you've added several custom order columns, the order number column may push them off-screen
-- **Order number is accessible elsewhere**: The order number is shown in the order details page, in the customer column (e.g., "John Smith - #1234"), and in the URL when editing
-- **Order number is redundant**: The order details page always shows it
-
-For most stores with many custom columns, removing the order number column improves admin efficiency.
+- When several columns are enabled, the order number pushes them off-screen
+- The number is still available in the order details and URL
+- Removing it lets status, date, total, and customer data dominate the row
+- It pairs with the custom order columns feature for a dense but readable table
 
 ---
 
-## How to Remove Order Number Column from Admin Orders Page in WordPress
+## How to Remove the Order Number Column from the WooCommerce Admin
 
-### Step 1: Navigate to Settings
+### Step 1: Enable the Feature
 
-Click into the **Classic Monks** plugin settings in your WordPress dashboard.
+1. In WordPress admin, open **Classic Monks > WooCommerce**.
+2. Open the **My Account** settings area.
+3. Toggle on **Remove Order Number Column from Admin Orders Page**.
 
-### Step 2: Go to the WooCommerce Tab
+### Step 2: Save and Test
 
-Click on the **WooCommerce** menu, then click the **My Account** subtab.
-
-### Step 3: Enable Remove Order Number Column
-
-Toggle on **Remove Order Number Column from Admin Orders Page**.
-
-### Step 4: Save Changes
-
-Click **Save Changes**.
-
-### Step 5: Test
-
-Go to **WooCommerce > Orders** in the WordPress admin. The order number column should not be visible.
+Click **Save Changes**. Open **WooCommerce > Orders** and confirm the order number column no longer appears, while the other columns fill the freed space.
 
 ---
 
 ## Configuration Options
 
-| Option | Description | Default |
-|--------|-------------|---------|
-| **Remove Order Number Column from Admin Orders Page** | Master toggle. | Off |
+| Option | Default |
+|--------|---------|
+| **Remove Order Number Column from Admin Orders Page** | Off |
 
-No nested options.
+There are no nested options. The feature is a single on/off control.
 
 ---
 
 ## What Gets Affected
 
-- The admin orders list table: the order number column is hidden
-- The order number is still accessible in:
-  - The order details page (top of the page)
-  - The customer column (often shown as "Customer Name - #1234")
-  - The order URL (post=1234)
-  - The order actions menu
+- The admin orders list: the order number column is hidden
+- The available horizontal space: other columns use the freed room
 
 ## What Does NOT Get Affected
 
-- The order number itself: still generated and stored as the post ID
-- The order edit page: still shows the order number
-- The order in the customer account: still shows the order number
-- The order emails: still include the order number
+- The order number itself: still generated and stored
+- The order details page: still shows the order number
+- Order emails and the customer account: the number still appears
+- The customer column: may still include the order number as it always has
 
 ---
 
 ## Advanced Options (Developers)
 
-This feature registers 1 WordPress hook in `woocommerce-functions.php`:
-
-**Filters:**
-
-- `manage_edit-shop_order_columns` calls `cm_remove_order_number_column()` (Removes order number column from order list)
+The feature registers one hook in `functions/woocommerce/woocommerce-functions.php`:
 
 ```php
-// Hooked in woocommerce-functions.php
 add_filter( 'manage_edit-shop_order_columns', 'cm_remove_order_number_column' );
 ```
 
-The feature modifies WooCommerce behavior by registering or removing hooks. Disabling it reverses those changes.
+**`manage_edit-shop_order_columns`** calls `cm_remove_order_number_column()`, which unsets the `order_number` key so that column is not rendered in the admin orders list.
+
+---
+
+## Common Use Cases
+
+**Dense order tables.** Stores that enable many order columns remove the number column so the rest fit on screen.
+
+**Clean scanning.** Some teams prefer status, date, and customer over a redundant number column.
+
+**Paired with custom columns.** This feature complements the custom order columns feature by freeing space for the added columns.
+
+---
 
 ## Troubleshooting
 
-### The order number column is still showing
+### The column is still showing
 
-**Cause:** The toggle is off, or a caching plugin is serving the old page.
-**Fix:** Verify the toggle is on. Clear all caching layers.
+**Cause:** The toggle is off, or a caching plugin serves the old table.
+**Fix:** Confirm the toggle is on and clear caches.
 
-### The order number is not accessible anywhere
+### The order number is no longer visible anywhere
 
-**Cause:** The order number column is hidden, but the order number should still be in the order details and URL.
-**Fix:** Verify the order number is shown in the order details page. If not, check the theme's admin template.
+**Cause:** The feature only hides the list column; the number stays in the order details.
+**Fix:** Open an order's details page to locate the number. If the theme layout hides it there separately, check the theme's admin template.
 
-### The orders table is now hard to scan
+### I want the column back
 
-**Cause:** Removing the order number column makes the table look different.
-**Fix:** Use the `manage_edit-shop_order_columns` filter to reorder the remaining columns. Put the most important columns (status, date, total, customer) first.
+**Cause:** The toggle is on.
+**Fix:** Turn the toggle off and the order number column returns.
 
-### I want the order number back
+---
 
-**Cause:** The toggle is on, and the order number column is hidden.
-**Fix:** Disable the toggle. The order number column will reappear.
+## Frequently Asked Questions
+
+### Does this delete order numbers?
+
+No. The order number is still generated and stored. Only the list column is hidden.
+
+### Where can I still see the order number?
+
+In the order details page and often within the customer column of the orders list.
+
+### Why remove the column?
+
+To free horizontal space so the other order columns are readable, especially when custom columns are enabled.
+
+### Is it on by default?
+
+No. The feature is off until you enable the toggle.
+
+---
+
+## Working With the Remaining Columns
+
+Once the order number column is gone, the orders table shows the other built-in columns using the freed space. Teams that enable additional order columns from the classic order columns feature can fit more data on screen without the row stretching. The customer column typically still carries the order number or order details link, so staff keep a way to reach a specific order even with the number column hidden. For stores that scan orders by status, date, or total, removing the number column makes those columns the primary anchor points.
 
 ---
 
 ## Related Articles
 
-- [How to Remove Display Name from Account Settings in WordPress](woocommerce-remove-woocommerce-display-name-option.md)
+- [How to Remove the Display Name from Account Settings in WooCommerce](woocommerce-remove-woocommerce-display-name-option.md)
 - [How to Add Custom Columns to the WooCommerce Orders Table](woocommerce-enable-custom-order-columns.md)
-- [How to Use Content Management in WordPress](../core/core-content-management.md)
+- [How to Create Custom Order Statuses in WooCommerce](woocommerce-enable-custom-order-status.md)

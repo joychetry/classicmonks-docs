@@ -1,176 +1,143 @@
 ---
-title: "How to Allow Reset Password Email in WordPress | CM"
+title: "How to Keep the Reset Password Email in WooCommerce"
 slug: allow-reset-password-email
-description: "Allow the WooCommerce customer reset password email even when all other WooCommerce emails are disabled. Ensures customers can always recover their account access."
-last_updated: 2026-07-28
+description: "Keep the WooCommerce customer reset password email working even when the other WooCommerce emails are disabled. Preserve account recovery with Classic Monks."
+last_updated: 2026-08-06
 author: Joy
-reading_time: 5 min
+reading_time: 4 min
 canonical: https://classicmonks.com/docs/allow-reset-password-email/
 merged_docs: "How to Only Allow Reset Password Email in WordPress (Email tab)"
 ---
 
-# How to Allow Reset Password Email in WordPress
+# How to Keep the Reset Password Email in WooCommerce
 
-> Allow Reset Password Email maintains the customer reset password email even when all other WooCommerce emails are disabled. Ensures customers can always recover their account access, which is critical for account security.
+> Keep the WooCommerce customer reset password email active even when the other WooCommerce emails are disabled. Classic Monks lets you preserve account recovery while suppressing the rest of the transactional emails.
 
 ## Key Takeaways
 
-- Single toggle, no nested options
-- Allows the customer reset password email specifically
-- Works in combination with Disable WooCommerce Emails (which suppresses other emails)
-- Ensures account recovery is always possible
-- Critical for account security and user trust
+- Keep the customer reset password email working
+- Works together with the Disable WooCommerce Emails feature
+- Ensures customers can always recover account access
+- One toggle inside the WooCommerce Email settings
+- Suppresses all other email classes when the disable feature is active
 
-## What Is the Allow Reset Password Email Feature?
+## What Does the Feature Do?
 
-When the Disable WooCommerce Emails feature is on, all WooCommerce transactional emails are suppressed, including the customer reset password email. The Allow Reset Password Email feature re-enables the reset password email specifically, ensuring customers can always recover their account access.
+The **Allow Reset Password Email** option controls whether the WooCommerce customer reset password email stays active when the **Disable WooCommerce Emails** feature is turned on.
 
-This is most useful in combination with the [Disable WooCommerce Emails](woocommerce-disable-woocommerce-emails.md) feature. The Disable feature suppresses all emails; the Allow feature re-enables the one email that is critical for account access.
-
-The two features can also be used independently: this feature alone ensures the password reset email is the only one sent, even without the broader disable.
+When you disable all WooCommerce emails, every WooCommerce email class is normally suppressed. If you also enable **Allow Reset Password Email**, the reset password email class is excluded from that suppression, so customers can still recover their accounts even though the other transactional emails are off.
 
 ## Why You Need It
 
-In some environments, transactional emails are not desired at all, but account recovery is non-negotiable:
+Account recovery is too important to lose:
 
-- **B2B / wholesale**: Wholesale customers may forget passwords more often due to multi-account usage. Always allow the reset password email to prevent account lockouts.
-- **Headless commerce**: The frontend handles all customer communication; WooCommerce is the backend, and the only customer-facing email is the password reset
-- **Test environments**: Developers do not want test orders to spam real customers, but they need the password reset to work for their own admin access
-- **Compliance**: Some regulated industries require all transactional email to be suppressed, but account recovery is a legal requirement
-
-The feature ensures that even with all other emails off, the customer (or admin) can still recover their password.
+- A customer who cannot receive a password reset email may lose access to their account and orders
+- Disabling all emails can unintentionally break the password reset flow
+- Keeping this one email active preserves security and self-service recovery
+- It lets you quiet the rest of the transactional emails without a support burden
 
 ---
 
-## How to Allow Reset Password Email in Classic Monks
+## How to Keep the Reset Password Email When Other WooCommerce Emails Are Off
 
-### Step 1: Navigate to Settings
+### Step 1: Disable the Other WooCommerce Emails
 
-Click into the **Classic Monks** plugin settings in your WordPress dashboard.
+1. In WordPress admin, open **Classic Monks > WooCommerce**.
+2. Open the **Email** settings area.
+3. Toggle on **Disable WooCommerce Emails** to suppress the transactional email classes.
 
-### Step 2: Go to the WooCommerce Tab
+### Step 2: Keep the Reset Password Email
 
-Click on the **WooCommerce** menu, then click the **Email** subtab.
+1. In the same **Email** settings area, toggle on **Allow Reset Password Email**.
+2. With both on, the reset password email class continues to work while the other WooCommerce emails are suppressed.
 
-### Step 3: Enable Allow Reset Password Email
+### Step 3: Save and Test
 
-Toggle on **Allow Reset Password Email**.
-
-### Step 4: Save Changes
-
-Click **Save Changes**.
-
-### Step 5: Test
-
-Log out. Click "Lost your password?" on the login page. Enter a customer email. The reset password email should be sent (even if Disable WooCommerce Emails is on).
+Click **Save Changes**. Use the forgot-password flow at login and confirm the reset password email still reaches the customer, while other transactional emails (such as new-order notifications) are suppressed.
 
 ---
 
 ## Configuration Options
 
-| Option | Description | Default |
-|--------|-------------|---------|
-| **Allow Reset Password Email** | Master toggle. | Off |
+| Option | Effect | Default |
+|--------|--------|---------|
+| **Disable WooCommerce Emails** | Suppresses the WooCommerce transactional email classes. | Off |
+| **Allow Reset Password Email** | Excepts the reset password email class from the suppression. | Off |
 
-This feature works in combination with the [Disable WooCommerce Emails](woocommerce-disable-woocommerce-emails.md) feature. The reset password email is the one exception to the disable.
+The option only matters when **Disable WooCommerce Emails** is also on. With the disable feature off, all emails send normally and this toggle has no visible effect.
 
 ---
 
-## What Gets Suppressed and What Does Not
+## What Gets Affected
 
-| Email | Sent when feature off | Sent when feature on |
-|-------|----------------------|----------------------|
-| Order confirmation (customer) | Yes | **No** |
-| Processing order (customer) | Yes | **No** |
-| Completed order (customer) | Yes | **No** |
-| Refunded order (customer) | Yes | **No** |
-| Cancelled order (customer) | Yes | **No** |
-| Failed order (customer) | Yes | **No** |
-| Order on-hold (customer) | Yes | **No** |
-| New order (admin) | Yes | **No** |
-| Low stock (admin) | Yes | **No** |
-| Out of stock (admin) | Yes | **No** |
-| Customer note (customer) | Yes | **No** |
-| **Customer reset password** | Yes | **Yes (always)** |
-
-The reset password email is ALWAYS sent, regardless of the toggle. The toggle controls whether everything else is suppressed.
+- The customer reset password email: kept active when the disable feature is on and this toggle is enabled
+- The other WooCommerce email classes: still suppressed by the disable feature
 
 ## What Does NOT Get Affected
 
-- **WordPress core password reset email**: The WordPress core password reset (for admin users) is a separate flow. Use the [Disable Password Change Email](../email/email-disable-password-change-email.md) feature to suppress the confirmation email for admin password changes.
-- **Other plugin password reset emails**: Custom plugins may have their own password reset flows. The Classic Monks feature only affects WooCommerce's specific email.
-- **WordPress core user emails**: New user emails, etc. are controlled by separate features in the Notifications subtab.
-- **Customer saved passwords or sessions**: Unaffected.
+- WooCommerce's other transactional emails when the disable feature is on: these remain suppressed
+- On-screen checkout and order pages: unaffected
+- WordPress core emails: separate, not controlled here
 
 ---
 
-## Advanced Options (Developers)
+## How It Works
 
-This feature shares the same implementation file as Disable WooCommerce Emails (`disable-woocommerce-emails.php`). The option `woocommerce_allow_reset_password_email` controls whether `WC_Email_Customer_Reset_Password` is the exception to the suppression.
-
-**Filters:**
-
-- `woocommerce_email_classes` calls `cm_disable_woocommerce_emails()` (disables all WooCommerce email classes except `WC_Email_Customer_Reset_Password` when this feature is on; priority 90)
-
-```php
-// Hooked in disable-woocommerce-emails.php
-add_filter( 'woocommerce_email_classes', 'cm_disable_woocommerce_emails' );
-```
-
-The feature modifies WooCommerce behavior by filtering the email classes. Disabling it reverses those changes.
-
-## Troubleshooting
-
-### The reset password email is not being sent
-
-**Cause:** The toggle is off, or the user is in a role that is excluded by another filter.
-**Fix:** Verify the toggle is on. Test with a regular customer account. Check your [SMTP settings](../email/email-smtp-settings.md).
-
-### The reset password email is being suppressed by Disable WooCommerce Emails
-
-**Cause:** The two features work together. The reset password email is the exception only when this toggle is on.
-**Fix:** Verify both toggles are correctly configured. If Disable WooCommerce Emails is on and Allow Reset Password Email is also on, the reset password email should still be sent.
-
-### I want to disable the reset password email too (for testing)
-
-**Cause:** The toggle is on by default when Disable WooCommerce Emails is on.
-**Fix:** Turn off Allow Reset Password Email. The reset password email will be suppressed.
-
-### The customer reset password email is being blocked by a security plugin
-
-**Cause:** A security plugin (e.g., Wordfence) is blocking the email as part of its brute-force protection.
-**Fix:** Check the security plugin's logs. Whitelist the WooCommerce reset password endpoint if needed.
-
-### The reset password email arrives but goes to spam
-
-**Cause:** The email is sent but the recipient's mail server filters it as spam.
-**Fix:** Check the spam folder. Verify the recipient's email address. Ensure your [SMTP settings](../email/email-smtp-settings.md) are configured for high deliverability.
-
-### I have other password reset flows I want to keep
-
-**Cause:** The feature only affects WooCommerce's customer reset password. Other password reset flows (WordPress core, custom plugins) are independent.
-**Fix:** For other flows, you need to disable them via their own mechanisms. The Classic Monks feature is WooCommerce-specific.
+The reset password email is kept alive inside `cm_disable_woocommerce_emails()`. When the disable feature runs, it iterates over the WooCommerce email classes and disables each one, but it **skips** the `WC_Email_Customer_Reset_Password` class when the **Allow Reset Password Email** option is enabled. The result is that only the reset password email survives the bulk suppression.
 
 ---
 
 ## Common Use Cases
 
-### B2B / wholesale stores
+**Quiet email flow with account security.** Stores that want to stop most transactional emails but keep customer account recovery working.
 
-Wholesale customers may forget passwords more often due to multi-account usage. Always allow the reset password email to prevent account lockouts.
+**Self-service support.** Keeping password reset reduces customer support requests for locked accounts.
 
-### Multi-user accounts
+**Controlled email rollouts.** Using WooCommerce for emails while suppressing the extra transactional noise.
 
-Stores where the same customer has multiple accounts (e.g., business + personal). The reset email ensures the customer can always recover access.
+---
 
-### Compliance
+## Troubleshooting
 
-Some regulations require that customers can always recover their accounts. The reset password email is a basic security feature.
+### The reset password email is not sending
+
+**Cause:** The **Allow Reset Password Email** toggle is off, the disable feature is off (so emails send normally but this toggle is moot), or the password reset flow itself is not triggering.
+**Fix:** Confirm both toggles are set as intended. For an issue with the flow itself, check that the WordPress lost-password mechanism works, since WooCommerce sends through that path.
+
+### All emails are suppressed including reset password
+
+**Cause:** **Allow Reset Password Email** is off while **Disable WooCommerce Emails** is on.
+**Fix:** Turn on **Allow Reset Password Email** so the reset password email class is exempted from suppression.
+
+### The other emails still send
+
+**Cause:** The disable feature is off, so no suppression applies.
+**Fix:** If you want the other emails suppressed, turn on **Disable WooCommerce Emails**. The reset password setting only takes effect alongside it.
+
+---
+
+## Frequently Asked Questions
+
+### Why would I keep only the reset password email?
+
+To stop most transactional email noise while ensuring customers can still recover accounts they have accidentally locked themselves out of. It preserves security and reduces support load.
+
+### Do I need to enable both toggles?
+
+To keep reset password working while suppressing the rest, yes: **Disable WooCommerce Emails** on and **Allow Reset Password Email** on.
+
+### Does this change my checkout or order processing?
+
+No. The feature only controls the WooCommerce email classes. Orders and checkout work normally.
+
+### Is the reset password email a WooCommerce email?
+
+Yes. It is the `WC_Email_Customer_Reset_Password` class, which WooCommerce registers alongside the order emails. This feature exceptions that one class from the bulk disable.
 
 ---
 
 ## Related Articles
 
-- [How to Disable WooCommerce Emails in WordPress](woocommerce-disable-woocommerce-emails.md)
+- [How to Disable the WooCommerce Transactional Emails](woocommerce-disable-woocommerce-emails.md)
 - [How to Configure SMTP Settings in WordPress](../email/email-smtp-settings.md)
 - [How to Log WordPress Emails in Classic Monks](../email/email-logging.md)

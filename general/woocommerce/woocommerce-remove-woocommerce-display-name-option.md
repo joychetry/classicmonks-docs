@@ -1,139 +1,146 @@
 ---
-title: "How to Remove Display Name from Account Settings in WordPress | CM"
+title: "How to Remove the Display Name Field from the Account Form"
 slug: remove-woocommerce-display-name-option
-description: "Remove the display name field from customer account settings in Classic Monks. Simplifies the account management interface for B2C customers."
-last_updated: 2026-06-24
+description: "Remove the display name field from the WooCommerce account details form so customers cannot edit it there. Simplify the form with a Classic Monks toggle."
+last_updated: 2026-08-06
 author: Joy
 reading_time: 3 min
 canonical: https://classicmonks.com/docs/remove-woocommerce-display-name-option/
 ---
 
-# How to Remove Display Name from Account Settings in WordPress
+# How to Remove the Display Name Field from the Account Form
 
-> Remove Display Name from Account Settings hides the display name field from the WooCommerce customer account settings. Simplifies the account management interface for B2C customers who rarely change their display name.
+> Remove the display name field from the WooCommerce account settings so customers cannot edit it there. Simplify the account details form with Classic Monks.
 
 ## Key Takeaways
 
-- Single toggle, no nested options
-- Removes the display name field from the My Account > Account Details page
-- Customer's existing display name is preserved in the database
-- Simplifies the account form for B2C stores
-- Admin can still set the display name in the admin user edit page
+- Remove the display name field from the account settings form
+- Drop the field from required account fields
+- One toggle, no nested options
+- Existing display names stay intact
+- Admin user editing still manages the display name
 
-## What Is the Remove Display Name Option feature?
+## What Does the Feature Do?
 
-WooCommerce's account settings include a "Display name" field that lets customers choose how their name appears in reviews, comments, and order history. The Remove Display Name Option feature hides this field from the customer-facing account settings page.
+The WooCommerce account settings form includes a display name field where customers choose how their name appears. The **Remove Display Name from Account Settings** feature removes that field from the account form and from the required account fields.
 
-The customer's existing display name is preserved in the database. The field is only hidden from the account form; admins can still set the display name in the WordPress admin user edit page.
+Existing display names already set are preserved. Customs cannot edit the display name in the account area, but admins can still change it from the WordPress user editing screen.
 
 ## Why You Need It
 
-For most B2C stores, the display name field is unnecessary:
+The display name field is often unnecessary:
 
-- Most customers don't change their display name (they use their first name or full name)
-- The field adds visual clutter to the account form
-- For B2B stores, the display name may be important (e.g., "Acme Corp" as the display name)
-- For B2C stores, removing it simplifies the form
-
-For most consumer e-commerce stores, removing the display name field is a small UX improvement.
+- Few customers change their display name on the account page
+- Removing it shortens the account form
+- It reduces editing choices for stores that manage names centrally
+- Admins can still correct a display name in the user screen
 
 ---
 
-## How to Remove Display Name from Account Settings in WordPress
+## How to Remove the Display Name Field from the WooCommerce Account
 
-### Step 1: Navigate to Settings
+### Step 1: Enable the Feature
 
-Click into the **Classic Monks** plugin settings in your WordPress dashboard.
+1. In WordPress admin, open **Classic Monks > WooCommerce**.
+2. Open the **My Account** settings area.
+3. Toggle on **Remove Display Name from Account Settings**.
 
-### Step 2: Go to the WooCommerce Tab
+### Step 2: Save and Test
 
-Click on the **WooCommerce** menu, then click the **My Account** subtab.
-
-### Step 3: Enable Remove Display Name
-
-Toggle on **Remove Display Name from Account Settings**.
-
-### Step 4: Save Changes
-
-Click **Save Changes**.
-
-### Step 5: Test
-
-Log in as a customer. Go to My Account > Account Details. The display name field should not be visible.
+Click **Save Changes**. Log in as a customer and open **My Account > Account Details**. The display name field should no longer appear.
 
 ---
 
 ## Configuration Options
 
-| Option | Description | Default |
-|--------|-------------|---------|
-| **Remove Display Name from Account Settings** | Master toggle. | Off |
+| Option | Default |
+|--------|---------|
+| **Remove Display Name from Account Settings** | Off |
 
-No nested options.
+There are no nested options. The feature is a single on/off control.
 
 ---
 
 ## What Gets Affected
 
-- The customer account settings page: the display name field is removed
-- The customer's existing display name: preserved in the database
-- The customer's reviews and comments: continue to show the display name (no change)
-- The admin user edit page: still shows the display name field (admins can still manage it)
+- The customer account details form: the display name field is removed
+- The required account fields: the display name is dropped
 
 ## What Does NOT Get Affected
 
-- The customer's existing display name: not deleted
-- The customer's username: not affected (this is the WordPress login name)
-- The admin user edit page: still shows the display name field
-- The customer's reviews and comments: continue to show the display name (no change in display)
+- Existing display names: preserved in the database
+- The WordPress admin user edit screen: still shows and manages the display name
+- Usernames and other account fields: unchanged
+- Reviews and comments: these keep using the display name as they always have
 
 ---
 
 ## Advanced Options (Developers)
 
-This feature registers 2 WordPress hooks in `woocommerce-functions.php`:
-
-**Actions:**
-
-- `woocommerce_edit_account_form` calls `cm_hide_display_name_in_account_form()` (Hides display name field in account form)
-
-**Filters:**
-
-- `woocommerce_save_account_details_required_fields` calls `cm_remove_woocommerce_display_name_option()` (Removes display name from required fields)
+The feature registers hooks in `functions/woocommerce/woocommerce-functions.php`:
 
 ```php
-// Hooked in woocommerce-functions.php
 add_filter( 'woocommerce_save_account_details_required_fields', 'cm_remove_woocommerce_display_name_option' );
+add_filter( 'woocommerce_edit_account_form', 'cm_remove_woocommerce_display_name_option' );
+add_action( 'woocommerce_edit_account_form', 'cm_hide_display_name_in_account_form' );
 ```
 
-The feature modifies WooCommerce behavior by registering or removing hooks. Disabling it reverses those changes.
+- **`woocommerce_save_account_details_required_fields`** and **`woocommerce_edit_account_form`** call `cm_remove_woocommerce_display_name_option()`, which unsets `account_display_name` so the field is not processed or rendered as required.
+- **`woocommerce_edit_account_form`** also runs `cm_hide_display_name_in_account_form()`, which hides the field's row in the rendered form.
+
+---
+
+## Common Use Cases
+
+**Simpler account form.** Stores that manage names server-side remove the field to shorten the form.
+
+**Centralized naming.** Teams that control how names appear prefer that customers not edit the display name.
+
+**Cleaner profile UX.** Removing an rarely-used field keeps the account settings focused.
+
+---
 
 ## Troubleshooting
 
 ### The display name field is still showing
 
-**Cause:** The toggle is off, or a caching plugin is serving the old page.
-**Fix:** Verify the toggle is on. Clear all caching layers (page cache, object cache, CDN).
+**Cause:** The toggle is off, or a theme re-renders the account form.
+**Fix:** Confirm the toggle is on and clear caches. If a theme builds the account form independently, it may render the field from its own markup.
 
-### The customer's display name disappeared from their reviews
+### The display name disappeared but shows on comments
 
-**Cause:** This should not happen. The field is hidden but the data is preserved.
-**Fix:** Verify the customer's display name in the WordPress admin user edit page. If it's empty, the customer's display name was set to empty before the toggle was enabled.
+**Cause:** The feature removes the editable field and required status, but the stored display name is still used where WooCommerce displays it.
+**Fix:** This is expected. The stored value keeps being used for display; the customer simply cannot edit it in the account form.
 
-### The display name is empty on the customer's profile
+### Admins can still change the name
 
-**Cause:** The customer's display name was set to empty before the toggle was enabled, or the customer's profile was edited after the toggle.
-**Fix:** Edit the customer's profile in the WordPress admin to set a display name. Configure in the plugin settings to provide a default when the display name is empty.
+**Cause:** The admin user edit screen is separate from the customer account form.
+**Fix:** This is by design. Admins change display names in the WordPress user profile screen.
 
-### The field is hidden but the customer wants to change their display name
+---
 
-**Cause:** The toggle hides the field from the customer-facing form.
-**Fix:** The customer can request the change via support. Admins can change the display name in the WordPress user edit page.
+## Frequently Asked Questions
+
+### Does this delete display names?
+
+No. Existing display names are preserved. The field is only removed from the customer account form.
+
+### Can I still change a display name?
+
+Admins can change it through the WordPress user edit screen. Customers can no longer edit it in the account details form.
+
+### Is it different from the username?
+
+Yes. The username is the login name and is unchanged. This feature removes the display name field, which controls how a name appears publicly.
+
+### Does it affect reviews and comments?
+
+The stored display name continues to be used in reviews and comments. The feature only stops customers from editing it in the account form.
 
 ---
 
 ## Related Articles
 
-- [How to Remove Order Number Column from Admin Orders Page in WordPress](woocommerce-remove-order-number-column.md)
-- [How to Use Content Management in WordPress](../core/core-content-management.md)
+- [How to Remove the Order Number Column from the WooCommerce Admin](woocommerce-remove-order-number-column.md)
 - [How to Configure SMTP Settings in WordPress](../email/email-smtp-settings.md)
+- [How to Remove All WooCommerce Notices](woocommerce-remove-all-woocommerce-notices.md)

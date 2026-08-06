@@ -1,146 +1,150 @@
 ---
-title: "How to Disable Product Reviews in WordPress | CM"
+title: "How to Disable Product Reviews on Your WooCommerce Store"
 slug: disable-product-reviews
-description: "Completely disable the WooCommerce product review system in Classic Monks. Removes review forms and review displays from product pages."
-last_updated: 2026-06-24
+description: "Remove comment support from WooCommerce products so customers cannot leave or see reviews. Disable the whole review system with a Classic Monks toggle."
+last_updated: 2026-08-06
 author: Joy
 reading_time: 3 min
 canonical: https://classicmonks.com/docs/disable-product-reviews/
 ---
 
-# How to Disable Product Reviews in WordPress
+# How to Disable Product Reviews on Your WooCommerce Store
 
-> Disable Product Reviews removes the WooCommerce product review system entirely. Review forms, review displays, and the reviews tab on product pages are all removed.
+> Disable product reviews across the store by removing comment support from WooCommerce products. Customers can no longer leave reviews on product pages, and existing review areas stop being shown.
 
 ## Key Takeaways
 
-- Single toggle, site-wide effect
-- Removes review submission forms from product pages
-- Removes review displays from product pages
-- Removes the "Reviews" tab on single product pages
-- Existing reviews are preserved in the database (not deleted)
+- Remove comment support from WooCommerce products
+- Hide product review forms and displays
+- One toggle, no nested options
+- Works at the product post type level
+- Store and product data are unaffected
 
-## What Is the Disable Product Reviews feature?
+## What Does the Feature Do?
 
-WooCommerce's built-in review system allows customers to leave star ratings and text reviews on products. This feature completely suppresses the review system:
+WooCommerce products support comments, which power the product review system. The **Disable Product Reviews** feature removes comment support from the product post type, so the review areas are no longer shown on product pages.
 
-- The "Reviews" tab on single product pages is hidden
-- The review submission form is removed
-- Existing reviews are no longer displayed on the front-end
-- The "Verified owner" review label is hidden
-
-The raw review data (post type `review`) is preserved in the database. Disabling the display does not delete the data.
+Because the change is at the product post type level, it applies across the whole store rather than product by product.
 
 ## Why You Need It
 
-Most stores benefit from reviews, but some use cases don't:
+Reviews are not right for every store:
 
-- **B2B / wholesale**: Reviews are for B2C, not for B2B
-- **Service businesses**: The product page is for showcasing the service, not for reviews
-- **Digital products**: Reviews of digital products (e.g., "great PDF!") are low-value
-- **Curated catalogs**: Stores that curate products (rather than sell them) don't need reviews
-- **Spam reduction**: Removing the review form eliminates a major spam entry point
-
-For most consumer e-commerce stores, leave reviews enabled. For other business models, this feature simplifies the product page.
+- Some catalogs do not use customer reviews
+- Removing reviews hides the review form and display on product pages
+- It reduces moderation and spam load
+- It keeps product pages focused on the purchase
 
 ---
 
-## How to Disable Product Reviews in WordPress
+## How to Disable Product Reviews in WooCommerce
 
-### Step 1: Navigate to Settings
+### Step 1: Enable the Feature
 
-Click into the **Classic Monks** plugin settings in your WordPress dashboard.
+1. In WordPress admin, open **Classic Monks > WooCommerce**.
+2. Open the **Single Product** settings area.
+3. Toggle on **Disable Product Reviews**.
 
-### Step 2: Go to the WooCommerce Tab
+### Step 2: Save and Test
 
-Click on the **WooCommerce** menu, then click the **Single Product** subtab.
-
-### Step 3: Enable Disable Product Reviews
-
-Scroll to **Disable Product Reviews** and toggle on.
-
-### Step 4: Save Changes
-
-Click **Save Changes**.
-
-### Step 5: Test
-
-Visit any product on the front-end. The Reviews tab should not appear. The review submission form should not be visible.
+Click **Save Changes**. Open a product page and confirm the review form and review display no longer appear.
 
 ---
 
 ## Configuration Options
 
-| Option | Description | Default |
-|--------|-------------|---------|
-| **Disable Product Reviews** | Master toggle. | Off |
+| Option | Default |
+|--------|---------|
+| **Disable Product Reviews** | Off |
 
-No nested options.
+There are no nested options. The feature is a single on/off control.
 
 ---
 
 ## What Gets Affected
 
-| Element | Before | After |
-|---------|--------|-------|
-| Reviews tab on product page | Visible | Hidden |
-| Review submission form | Visible | Hidden |
-| Existing review displays | Visible | Hidden |
-| Star ratings in product meta | Visible | Hidden |
-| Review count in product loop | Visible | Hidden |
-| Admin > WooCommerce > Reviews menu | Visible | Hidden |
-| Reviews data in the database | Stored | Preserved (not deleted) |
+- Product pages: the review form and review display are removed
+- The product post type: comment support is removed
+- Reviews across the store: the review areas are hidden
 
 ## What Does NOT Get Affected
 
-- Existing review data in the database: not deleted
-- Product reviews imported from other sources: still in the database
-- The "Reviews" admin menu: hidden in the WP admin, but the data is preserved
-- Comment system on regular WordPress posts: not affected (this is product reviews only)
+- Product data, prices, and inventory: unchanged
+- The store's products and checkout: unaffected
+- Existing stored reviews: not deleted, just no longer shown in the product review area
+- Regular WordPress comments on posts: separate from product reviews
 
 ---
 
 ## Advanced Options (Developers)
 
-This feature registers 1 WordPress hook in `woocommerce-functions.php`:
-
-**Actions:**
-
-- `init` calls `cm_disable_woocommerce_reviews()` (Disables WooCommerce product reviews)
+The feature registers one hook in `functions/woocommerce/woocommerce-functions.php`:
 
 ```php
-// Hooked in woocommerce-functions.php
 add_action( 'init', 'cm_disable_woocommerce_reviews' );
 ```
 
-The feature modifies WooCommerce behavior by registering or removing hooks. Disabling it reverses those changes.
+**`init`** calls `cm_disable_woocommerce_reviews()`, which runs `remove_post_type_support('product', 'comments')`. This removes comment support from the product post type, so the review areas no longer render.
+
+---
+
+## Common Use Cases
+
+**Curated catalogs.** Stores that do not use customer reviews keep product pages focused on the sale.
+
+**Spam reduction.** Removing the review form eliminates a spam entry point.
+
+**Consistent product pages.** A store that never enables reviews can show the same clean layout on every product.
+
+---
 
 ## Troubleshooting
 
-### Reviews are still showing on the front-end
+### Reviews are still showing
 
-**Cause:** The toggle is off, or a caching plugin is serving the old page.
-**Fix:** Verify the toggle is on. Clear all caching layers. The reviews display is server-side, so caching is the most common cause.
+**Cause:** The toggle is off, or a theme renders a reviews section from its own template.
+**Fix:** Confirm the toggle is on and clear caches. If the theme adds a reviews section independently of WooCommerce comment support, it may render regardless.
 
-### The Reviews tab is still visible in the admin
+### The review form is gone but old reviews remain
 
-**Cause:** The Reviews admin menu is hidden when the toggle is on, but the toggle may not be applying to the admin menu.
-**Fix:** Verify the toggle is on. Hard-refresh the admin page. If still visible, the admin menu filter may need to be added (this feature is integrated with the standard WooCommerce reviews admin).
+**Cause:** The feature hides the review areas but does not delete stored reviews.
+**Fix:** This is expected. The review data stays in the database; it is simply no longer displayed through the product review area.
 
-### Existing reviews are still showing as a count
+### I want to re-enable reviews
 
-**Cause:** The review count in the product loop is fetched from the database. Disabling the toggle hides the form and display, but the count is still calculated.
-**Fix:** If you want the count to also be hidden, disable the reviews count display in the plugin settings under WooCommerce.
+**Cause:** The toggle is on.
+**Fix:** Turn the toggle off to restore comment support to products.
 
-### I want to re-enable reviews for a specific product
+---
 
-**Cause:** The toggle is site-wide, not per-product.
-**Fix:** Disable the toggle and use a different mechanism to hide reviews on specific products. Or use the `woocommerce_product_reviews_enabled` filter (see Advanced Options).
+## Frequently Asked Questions
+
+### What does disabling reviews do?
+
+It removes comment support from the product post type, so the review form and review display are no longer shown on product pages.
+
+### Are existing reviews deleted?
+
+No. Stored reviews remain in the database. They are just no longer displayed through the product review area.
+
+### Does it affect regular blog comments?
+
+No. This targets the product post type. Standard WordPress post comments are separate.
+
+### Is it on by default?
+
+No. The feature is off until you enable the toggle.
+
+---
+
+## Re-Enabling Reviews
+
+The feature can be reversed at any time. Turning the toggle off restores comment support to the product post type, so the review form and review display come back on product pages. Because the stored reviews are never deleted, re-enabling returns the previous review data to view alongside any new reviews. This makes the toggle safe to try: it removes the review areas now, and a later flip brings them back with the existing content intact.
 
 ---
 
 ## Related Articles
 
-- [How to Allow Duplicate Reviews in WordPress](woocommerce-allow-duplicate-reviews.md)
+- [How to Allow Multiple Reviews on a Product in WooCommerce](woocommerce-allow-duplicate-reviews.md)
 - [How to Customize the Add to Cart Button Text in WooCommerce](woocommerce-customize-add-to-cart-button.md)
-- [How to Use Content Management in WordPress](../core/core-content-management.md)
+- [How to Customize the Out of Stock Button in WooCommerce](woocommerce-customize-out-of-stock-button.md)

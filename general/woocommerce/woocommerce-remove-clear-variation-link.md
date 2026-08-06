@@ -1,133 +1,153 @@
 ---
-title: "How to Remove the Clear Variation Link in WordPress | CM"
+title: "How to Remove the Clear Variation Link in WooCommerce"
 slug: remove-clear-variation-link
-description: "Remove the Clear link that lets customers deselect chosen product variations in Classic Monks. Streamlines the variation selection process."
-last_updated: 2026-06-24
+description: "Remove the clear selection link from the WooCommerce variation dropdowns and buttons. Keep the selected variation in place with a Classic Monks toggle."
+last_updated: 2026-08-06
 author: Joy
 reading_time: 3 min
 canonical: https://classicmonks.com/docs/remove-clear-variation-link/
 ---
 
-# How to Remove the Clear Variation Link in WordPress
+# How to Remove the Clear Variation Link in WooCommerce
 
-> Remove Clear Variation Link removes the "Clear" link that allows customers to deselect chosen product variations. Streamlines the variation selection process and prevents accidental deselection.
+> Remove the "clear" link that WooCommerce shows next to variation dropdowns so the selected variation can only be changed, not reset. Classic Monks hides the reset variations link.
 
 ## Key Takeaways
 
-- Single toggle, no nested options
-- Removes the "Clear" link from the variation selection area
-- Customers can still change their selection (just can't clear to "no selection")
-- Prevents accidental clearing during multi-attribute selection
-- Useful for stores with many variations where clearing is a common user error
+- Remove the clear/reset variations link on variable product pages
+- Prevents customers from clearing the selected variation
+- Hides the link via WooCommerce's reset-variations filter and CSS
+- One toggle, no nested options
+- The variation can still be changed to a different option
 
-## What Is the Remove Clear Variation Link feature?
+## What Does the Feature Do?
 
-When a customer selects product variations (e.g., "Size: Medium, Color: Blue"), WooCommerce shows a "Clear" link that allows them to deselect all variations and return to the unselected state. The Remove Clear Variation Link feature removes this "Clear" link.
+WooCommerce shows a "clear" or reset link next to variation dropdowns that lets a customer remove their selection. The **Remove Clear Variation Link** feature hides that link, so the selected variation is not cleared by the customer.
 
-After disabling, customers can change their selection (clicking a different size or color) but cannot clear to "no selection". This is a minor UI change that affects user flow.
+The feature removes the reset link markup and hides the element that WooCommerce renders for it, keeping the selected variation in place.
 
 ## Why You Need It
 
-The "Clear" link is a small UI element that can cause issues:
+The clear link can be an unwanted control:
 
-- **Accidental deselection**: Users may click Clear by accident, then have to re-select all variations
-- **Mobile UX**: On small screens, the Clear link is easy to tap accidentally
-- **Variation abandonment**: Some users clear variations when they shouldn't, then abandon the purchase
-
-For most stores, the Clear link is harmless. For stores with many variations or mobile-heavy traffic, removing it can improve UX.
+- It lets customers clear the variation, which can break the add-to-cart selection
+- The link adds clutter next to the dropdown
+- Some stores prefer that customers change to a different option rather than reset
+- Removing it keeps the current selection stable on the product page
 
 ---
 
-## How to Remove the Clear Variation Link in WordPress
+## How to Remove the Clear Variation Link in WooCommerce
 
-### Step 1: Navigate to Settings
+### Step 1: Enable the Feature
 
-Click into the **Classic Monks** plugin settings in your WordPress dashboard.
+1. In WordPress admin, open **Classic Monks > WooCommerce**.
+2. Open the **Single Product** settings area.
+3. Toggle on **Remove Clear Variation Link**.
 
-### Step 2: Go to the WooCommerce Tab
+### Step 2: Save and Test
 
-Click on the **WooCommerce** menu, then click the **Single Product** subtab.
-
-### Step 3: Enable Remove Clear Variation Link
-
-Scroll to **Remove Clear Variation Link** and toggle on.
-
-### Step 4: Save Changes
-
-Click **Save Changes**.
-
-### Step 5: Test
-
-Visit a variable product on the front-end. Select a variation. The "Clear" link should not appear.
+Click **Save Changes**. Open a variable product and confirm the clear/reset variation link no longer appears next to the dropdowns, while the dropdowns still let customers pick a different option.
 
 ---
 
 ## Configuration Options
 
-| Option | Description | Default |
-|--------|-------------|---------|
-| **Remove Clear Variation Link** | Master toggle. | Off |
+| Option | Default |
+|--------|---------|
+| **Remove Clear Variation Link** | Off |
 
-No nested options.
+There are no nested options. The feature is a single on/off control.
 
 ---
 
 ## What Gets Affected
 
-- Variable product pages: the "Clear" link is removed
-- The variation selection area still functions (clicking a different size or color changes the selection)
-- The variation price and image still update correctly
+- Variable product pages: the clear/reset variations link is removed
+- The reset-variations element: hidden
 
 ## What Does NOT Get Affected
 
-- The variation dropdowns or swatches themselves
-- The "Add to Cart" button (except when no variation is selected, in which case the button may be hidden or disabled by WooCommerce's default behavior)
-- AJAX variation changes
-- Cart and checkout pages
+- The variation dropdowns: unchanged and still selectable
+- The variation data and prices: unchanged
+- The ability to change variation: customers can still pick a different option
+- The product page layout beyond the removed link
 
 ---
 
 ## Advanced Options (Developers)
 
-This feature registers 1 WordPress hook in `variation-display.php`:
-
-**Filters:**
-
-- `woocommerce_reset_variations_link` calls `__return_empty_string()` (Hides the reset variations link)
+The feature registers its logic in `functions/woocommerce/variation-display.php`:
 
 ```php
-// Hooked in variation-display.php
 add_filter( 'woocommerce_reset_variations_link', '__return_empty_string' );
+add_action( 'wp_head', function() {
+    echo '<style>.reset_variations { display: none !important; }</style>';
+} );
 ```
 
-The feature modifies WooCommerce behavior by registering or removing hooks. Disabling it reverses those changes.
+- **`woocommerce_reset_variations_link`** returns an empty string so WooCommerce does not render the reset link.
+- **`wp_head`** injects CSS that hides the `.reset_variations` element for added safety.
+
+---
+
+## Common Use Cases
+
+**Stable selections.** Stores that want the chosen variation to stay fixed on the product page.
+
+**Cleaner dropdowns.** Removing the extra link keeps the variation controls tidy.
+
+**Conversion flow.** Some themes place the reset link awkwardly, and removing it cleans the product page.
+
+---
 
 ## Troubleshooting
 
-### The Clear link is still showing
+### The clear link is still showing
 
-**Cause:** The toggle is off, or a caching plugin is serving an old page.
-**Fix:** Verify the toggle is on. Clear all caching layers (page cache, object cache, CDN).
+**Cause:** The toggle is off, or a theme renders the reset link from its own template.
+**Fix:** Confirm the toggle is on and clear caches. If a theme adds its own reset link markup, it is separate from WooCommerce's link.
 
-### The Add to Cart button is hidden when no variation is selected
+### Customers can no longer remove a variation
 
-**Cause:** WooCommerce's default behavior hides the Add to Cart button when no variation is selected. Without the Clear link, customers can't deselect to "no selection", but they can still change their selection.
-**Fix:** This is WooCommerce's default behavior. The Remove Clear Variation Link feature doesn't change this. If you want the Add to Cart to always show, customize the WooCommerce template or use a plugin.
+**Cause:** The feature removes the reset link by design.
+**Fix:** This is intended. Customers can still change the variation to a different option; only the reset/clear action is removed.
 
-### I want the Clear link to show in some places but not others
+### The variation is stuck on the first selection
 
-**Cause:** The toggle is global.
-**Fix:** The feature is global. If you need per-product control, use the plugin settings and check the product ID or product type before deciding to remove the link.
+**Cause:** Removing the reset link means the variation stays selected once chosen.
+**Fix:** If you want customers to reset, keep the feature off.
 
-### The variation selection area is broken after enabling
+---
 
-**Cause:** A theme or plugin conflict is preventing the variation JavaScript from loading.
-**Fix:** Check the browser console for errors. Disable other variation-related plugins to find the conflict. Verify the variation swatches/dropdowns are still visible (the Clear link is just one element of the variation area).
+## Frequently Asked Questions
+
+### What does this remove?
+
+The clear/reset variations link that WooCommerce shows next to variation dropdowns on variable product pages.
+
+### Can customers still change the variation?
+
+Yes. They can select a different option. The only thing removed is the ability to clear/reset the current selection.
+
+### Does it affect the variations themselves?
+
+No. The variation data, prices, and dropdowns are unchanged. Only the reset link is hidden.
+
+### Is it on by default?
+
+No. The feature is off until you enable the toggle.
+
+---
+
+## Changing Versus Clearing
+
+Removing the clear link does not stop customers from changing to a different variation. The dropdowns still list every option, and selecting another one updates the selection and price normally. The feature only removes the reset action, so a chosen variation stays put until the customer picks something else. This is useful where the reset link appears beside a dropdown and gets tapped by mistake, clearing the selection the customer intended to keep.
 
 ---
 
 ## Related Articles
 
-- [How to Auto-select First Variation in WordPress](woocommerce-auto-select-first-variation.md)
-- [How to Update Price on Variation Selection in WordPress](woocommerce-update-price-on-variation.md)
-- [How to Use Product Swatches in WordPress](woocommerce-product-swatches.md)
+- [How to Update Price on Variation Selection in WooCommerce](woocommerce-update-price-on-variation.md)
+- [How to Auto-Select the First Variation in WooCommerce](woocommerce-auto-select-first-variation.md)
+- [How to Add Variation Swatches to WooCommerce in WordPress](woocommerce-product-swatches.md)

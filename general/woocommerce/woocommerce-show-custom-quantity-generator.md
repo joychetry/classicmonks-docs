@@ -1,129 +1,140 @@
 ---
-title: "How to Show Custom Quantity Generator in WordPress | CM"
+title: "How to Add a Quantity Input to the WooCommerce Checkout"
 slug: show-custom-quantity-generator
-description: "Display a custom quantity input on the WooCommerce direct checkout page in Classic Monks. Lets customers set custom quantities (e.g., for bulk orders) when using direct checkout links."
-last_updated: 2026-06-24
+description: "Let customers set a quantity amount before paying using a WooCommerce direct checkout link. Enable the quantity input in the One Click Checkout settings."
+last_updated: 2026-08-06
 author: Joy
 reading_time: 3 min
 canonical: https://classicmonks.com/docs/show-custom-quantity-generator/
 ---
 
-# How to Show Custom Quantity Generator in WordPress
+# How to Add a Quantity Input to the WooCommerce Checkout
 
-> Show Custom Quantity Generator adds a custom quantity input on the direct checkout page. Useful for bulk orders or when customers need to specify a non-default quantity. Works in combination with WooCommerce Direct Checkout Links.
+> Show a quantity input on the WooCommerce direct checkout page so customers can set the amount before paying. Enable it in the One Click Checkout settings.
 
 ## Key Takeaways
 
-- Sub-option of [Enable WooCommerce Direct Checkout Links](woocommerce-enable-woocommerce-direct-checkout.md)
-- Displays a quantity input on the direct checkout page
-- Useful for bulk orders, B2B, or any case where customers need a custom quantity
-- Single toggle, no nested options
+- Show a quantity input on the direct checkout page
+- Customers set the amount before completing the order
+- Works with direct checkout links
+- Enabled by default when the direct checkout feature is on
+- Controlled from the One Click Checkout settings
 
-## What Is the Show Custom Quantity Generator feature?
+## What Does the Feature Do?
 
-When customers use a WooCommerce Direct Checkout link (e.g., `?sku=ABC123`), they typically land on the checkout page with the product pre-added at quantity 1. The Show Custom Quantity Generator feature adds a quantity input to the direct checkout page, so customers can adjust the quantity before completing checkout.
+A direct checkout link takes a customer straight to the checkout with a product pre-selected. The **Show Custom Quantity Generator** option decides whether that checkout form shows a quantity input the customer can change before paying.
 
-This is a sub-option of the [Enable WooCommerce Direct Checkout Links](woocommerce-enable-woocommerce-direct-checkout.md) master toggle.
+When enabled, a quantity field appears on the direct checkout page so customers can adjust the amount before placing the order.
 
 ## Why You Need It
 
-For B2B and bulk-order use cases, the default quantity 1 is rarely correct:
+Quantity control matters for certain direct-checkout flows:
 
-- **Wholesale orders**: Customers often need 10, 50, or 100 units
-- **Bulk promotions**: "Buy 10 for $X" requires the customer to set quantity
-- **Custom orders**: Some products are sold in configurable quantities
-- **Gifts and bundles**: Customers may want to buy multiple of the same item
-
-The Show Custom Quantity Generator feature provides a simple quantity input for these cases.
+- B2B and wholesale buyers may need more than one unit
+- Bulk promotions require a quantity the customer sets
+- Some products are bought in multiples
+- A single item is often the wrong default for these cases
 
 ---
 
-## How to Show Custom Quantity Generator in WordPress
+## How to Show a Custom Quantity Input on the WooCommerce Direct Checkout
 
-### Step 1: Enable WooCommerce Direct Checkout Links
+### Step 1: Enable Direct Checkout
 
-First, enable the master toggle. Go to **WooCommerce > One Click Checkout** and toggle on **Enable WooCommerce Direct Checkout Links**.
+1. In WordPress admin, open **Classic Monks > WooCommerce**.
+2. Open the **One Click Checkout** settings area.
+3. Confirm **Enable WooCommerce Direct Checkout Links** is on.
 
-### Step 2: Enable Show Custom Quantity Generator
+### Step 2: Enable the Quantity Input
 
-In the same section, toggle on **Show Custom Quantity Generator**. The option appears below the master toggle.
+In the same settings area, enable **Show Custom Quantity Generator**. It is on by default when the direct checkout feature is active.
 
-### Step 3: Save Changes
+### Step 3: Save and Test
 
-Click **Save Changes**.
-
-### Step 4: Test
-
-Create a direct checkout link: `https://yoursite.com/checkout/?sku=ABC123`. Click the link. The checkout page should show a quantity input that lets you change the quantity before placing the order.
+Click **Save Changes**. Open a direct checkout link and confirm the quantity input appears on the checkout form so the customer can set the amount.
 
 ---
 
 ## Configuration Options
 
-| Option | Description | Default |
-|--------|-------------|---------|
-| **Show Custom Quantity Generator** | Master toggle. | Off |
+| Option | Effect | Default |
+|--------|--------|---------|
+| **Show Custom Quantity Generator** | Shows a quantity input on the direct checkout page. | On |
 
-The master toggle [Enable WooCommerce Direct Checkout Links](woocommerce-enable-woocommerce-direct-checkout.md) must also be on for this to take effect.
+The quantity input appears on the direct checkout page created by the **Enable WooCommerce Direct Checkout Links** feature.
 
 ---
 
 ## What Gets Affected
 
-- The direct checkout page: a quantity input is shown
-- The customer's ability to set custom quantities before placing the order
-- The cart: the custom quantity is added to the cart
+- The direct checkout page: a quantity input is shown when enabled
+- The order placed through the direct link: uses the quantity the customer sets
 
 ## What Does NOT Get Affected
 
-- The standard checkout page (without the direct checkout link): the quantity input is NOT shown
-- The product page: the standard quantity input is still used
-- The cart page: the standard cart is still used
-- The customer's saved addresses or payment methods: not affected
+- The product page quantity input: unchanged
+- The main cart and standard checkout: unaffected
+- The direct checkout link's default quantity: still the starting value, now editable
 
 ---
 
-## Advanced Options (Developers)
+## How It Works
 
-This feature registers 1 WordPress hook in `woocommerce-functions.php`:
+The direct checkout page reads the product and quantity from the link. When **Show Custom Quantity Generator** is enabled, the checkout form renders a quantity field prefilled with the link's quantity, letting the customer change it before the order is placed. When disabled, the quantity is locked and the form notes that custom quantity selection is off.
 
-**Actions:**
+---
 
-- `wp_footer` calls the quantity generator script injection (Injects quantity generator JS)
+## Common Use Cases
 
-```php
-// Hooked in woocommerce-functions.php
-// Quantity generator JS is injected via wp_footer
-```
+**Wholesale link checkout.** A partner shares a direct link and buyers adjust quantity to their order size.
 
-The feature modifies WooCommerce behavior by registering or removing hooks. Disabling it reverses those changes.
+**Bulk promotions.** Customers set how many units they want from a promotion link.
+
+**Repeat purchases.** A returning customer buys more than one unit without a conflict on the product page default.
+
+---
 
 ## Troubleshooting
 
 ### The quantity input is not showing
 
-**Cause:** The toggle is off, or the master toggle (Enable WooCommerce Direct Checkout Links) is also off.
-**Fix:** Verify both toggles are on. The quantity input only appears on the direct checkout page, not the standard checkout page.
+**Cause:** **Show Custom Quantity Generator** is off, or the direct checkout feature is off.
+**Fix:** Confirm both the direct checkout toggle and **Show Custom Quantity Generator** are enabled in the One Click Checkout settings.
 
-### The quantity input is showing but the cart doesn't update
+### The quantity is locked and cannot be changed
 
-**Cause:** A theme or plugin conflict is preventing the quantity change from being captured.
-**Fix:** Verify the form is submitting correctly. Check the browser console for errors. Disable other cart-related plugins to find the conflict.
+**Cause:** The option is off, so the direct checkout page fixes the quantity.
+**Fix:** Enable **Show Custom Quantity Generator** to make the quantity editable on the form.
 
-### The quantity input allows invalid values (e.g., negative numbers, decimals)
+### The quantity I enter does not apply
 
-**Cause:** The default WooCommerce quantity input has built-in validation. Some custom inputs may not enforce this.
-**Fix:** Configure in the plugin settings to add HTML5 validation (e.g., `min="1"`, `step="1"`).
+**Cause:** Another plugin or theme may override the direct checkout form.
+**Fix:** Check for plugin conflicts on the checkout form and confirm the request to the direct checkout is using the custom quantity handler.
 
-### The quantity input shows on all checkout pages, not just direct checkout
+---
 
-**Cause:** The hook is firing on all checkout pages, not just the direct checkout page.
-**Fix:** Check the request parameters to verify the direct checkout link is being used. Configure in the plugin settings to restrict to direct checkout only.
+## Frequently Asked Questions
+
+### Where does the quantity input appear?
+
+On the WooCommerce direct checkout page that a direct checkout link opens. It is not added to the normal product page or standard checkout.
+
+### Is it on by default?
+
+Yes. **Show Custom Quantity Generator** defaults to on when the direct checkout feature is active.
+
+### Can customers change quantity with a direct link?
+
+Yes, when the option is enabled. The input is prefilled from the link but editable before payment.
+
+### Does it affect the product page?
+
+No. The product page has its own quantity input. This option only affects the direct checkout form.
 
 ---
 
 ## Related Articles
 
-- [How to Enable WooCommerce Direct Checkout Links in WordPress](woocommerce-enable-woocommerce-direct-checkout.md)
-- [How to Enable the Checkout Product Selector in WordPress](woocommerce-enable-checkout-product-selector.md)
-- [How to Use Content Management in WordPress](../core/core-content-management.md)
+- [How to Enable WooCommerce Direct Checkout Links](woocommerce-enable-woocommerce-direct-checkout.md)
+- [How to Add a Product Selector to the WooCommerce Checkout](woocommerce-enable-checkout-product-selector.md)
+- [How to Show Product Images in the WooCommerce Checkout](woocommerce-show-product-images-checkout.md)
