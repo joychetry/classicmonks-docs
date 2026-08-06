@@ -181,7 +181,7 @@ No. The columns only change what is displayed in the admin list. The underlying 
 
 ## Related Articles
 
-- [How to Enable Thank You Page Link in Orders in WordPress](woocommerce-enable-thank-you-page-link-orders.md)
+- [How to Access the Thank You Page from a WooCommerce Order](woocommerce-enable-thank-you-page-link-orders.md)
 - [How to Create Custom Order Statuses in WooCommerce](woocommerce-enable-custom-order-status.md)
 - [How to Remove Order Number Column from Admin Orders Page in WordPress](woocommerce-remove-order-number-column.md)
 

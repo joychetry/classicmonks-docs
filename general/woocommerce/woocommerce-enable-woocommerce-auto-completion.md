@@ -1,159 +1,180 @@
 ---
-title: "How to Enable Auto-Completion for Virtual/Downloadable Orders in WordPress | CM"
+title: "How to Auto-Complete WooCommerce Orders for Digital Products"
 slug: enable-woocommerce-auto-completion
-description: "Auto-complete orders for virtual and downloadable products in Classic Monks. Streamline digital product fulfillment with configurable product type logic and email notifications."
-last_updated: 2026-06-24
+description: "Automatically complete WooCommerce orders containing only virtual and downloadable products. Set product type logic and control order notes with Classic Monks."
+last_updated: 2026-08-06
 author: Joy
-reading_time: 4 min
+reading_time: 5 min
 canonical: https://classicmonks.com/docs/enable-woocommerce-auto-completion/
 ---
 
-# How to Enable Auto-Completion for Virtual/Downloadable Orders in WordPress
+# How to Auto-Complete WooCommerce Orders for Digital Products
 
-> Enable Auto-Completion for Virtual/Downloadable Orders automatically marks orders as completed upon payment. Streamlines digital product fulfillment with configurable product type logic and email notifications.
+> Automatically complete WooCommerce orders that contain only qualifying virtual or downloadable products once payment is confirmed. Choose the product type logic, log the action to order notes, and control how customer-visible notes are handled.
 
 ## Key Takeaways
 
-- Single toggle, master switch for the feature
-- 3 sub-options: log actions, send completion notification, disable customer note
-- Configurable product type logic (virtual only, downloadable only, both, or all)
-- Streamlines digital product fulfillment
-- Eliminates manual order processing for digital products
+- Auto-complete eligible orders when payment is confirmed
+- Choose product type logic: Virtual OR Downloadable, Virtual AND Downloadable, Virtual only, or Downloadable only
+- Log each auto-completion to the order notes (on by default)
+- Control whether the auto-completion note is visible to the customer
+- Tracks the number of auto-completed orders for the admin
 
-## What Is the Enable Auto-Completion feature?
+## What Does the Feature Do?
 
-By default, WooCommerce orders remain in "Processing" status until the admin manually marks them as "Completed". For digital products (e.g., ebooks, software, courses), the fulfillment is automatic (the customer downloads the product), so manual order completion is unnecessary overhead.
+WooCommerce leaves paid orders in a processing or similar status until an admin marks them completed. For digital stores that sell virtual or downloadable products, that manual step is wasted effort, because fulfillment is automatic and there is nothing to ship.
 
-The Enable Auto-Completion for Virtual/Downloadable Orders feature automatically marks orders as "Completed" when the payment is received, with configurable logic for which product types trigger auto-completion.
+The **Enable Auto-Completion for Virtual/Downloadable Products** feature marks eligible orders as **completed** automatically when payment is confirmed. Only orders whose items all match the configured product type logic are completed, so physical-product orders still move through your normal workflow.
 
-## Why You Need It
+## When to Enable It
 
-For digital product stores, the default WooCommerce workflow is inefficient:
+Enable it for stores that sell digital goods where manual completion is unnecessary:
 
-- **Manual work**: Every order requires manual "Mark as Completed" after payment
-- **Customer experience**: The customer is charged but doesn't get a "Completed" status email
-- **Reporting**: Orders stay in "Processing" status indefinitely, skewing fulfillment reports
+- Ebooks, software, and license keys delivered by download
+- Courses and memberships accessed after purchase
+- Services that are fulfilled without shipping
+- Any catalog where fulfillment is instant after payment
 
-Auto-completion solves these:
-
-- **Eliminates manual work**: Orders complete automatically
-- **Improves customer experience**: Customers get the completed status email (with download links)
-- **Better reporting**: Orders show correct status from payment onward
-
-For most digital product stores, this is a high-ROI feature.
+Keep it off (or selective) when orders mix in physical items, because those still need fulfillment before completion.
 
 ---
 
-## How to Enable Auto-Completion for Virtual/Downloadable Orders in WordPress
+## How to Automatically Complete Virtual and Downloadable Orders
 
-### Step 1: Navigate to Settings
+### Step 1: Enable the Feature
 
-Click into the **Classic Monks** plugin settings in your WordPress dashboard.
+1. In WordPress admin, open **Classic Monks > WooCommerce**.
+2. Open the **Orders** settings area.
+3. Toggle on **Enable Auto-Completion for Virtual/Downloadable Products**. The nested options expand below the toggle.
 
-### Step 2: Go to the WooCommerce Tab
+### Step 2: Set the Product Type Logic
 
-Click on the **WooCommerce** menu, then click the **Orders** subtab.
+Use **Product Type Logic** to decide which products qualify:
 
-### Step 3: Enable Auto-Completion
+- **Virtual OR Downloadable (More Flexible, Default)**: an order qualifies when every item is virtual or downloadable.
+- **Virtual AND Downloadable (Safest)**: an order qualifies only when every item is both virtual and downloadable.
+- **Virtual Only (Services, Memberships)**: an order qualifies when every item is virtual.
+- **Downloadable Only**: an order qualifies when every item is downloadable.
 
-Toggle on **Enable Auto-Completion for Virtual/Downloadable Products**. Nested options expand.
+Compare the first two carefully. **Virtual OR Downloadable** is the default and the more permissive choice; **Virtual AND Downloadable** is the strictest and avoids auto-completing products that are only one or the other.
 
-### Step 4: Configure Sub-Options
+### Step 3: Configure Logging and Notes
 
-The 3 sub-options include:
+- **Log Auto-Completion Actions** (on by default) writes an order note explaining that the order was auto-completed, along with the logic used, and logs a debug line.
+- **Disable Send Customer Note** (off by default) controls whether that auto-completion order note is sent to the customer. Leave it off to share the note with the customer, or turn it on to keep the note admin-only.
+- **Send Completion Notification** (on by default) appears in the settings. The completed-order email itself is sent by WooCommerce's standard transition when the order becomes completed; this setting reflects the intent to notify the customer.
 
-- **Log Auto-Completion Actions**: Record auto-completion in the order notes (recommended for audit)
-- **Send Completion Notification**: Send the standard WooCommerce "Completed order" email (recommended)
-- **Disable Send Customer Note**: Skip the customer note email (the completion email is enough)
+### Step 4: Save and Test
 
-### Step 5: Save Changes
-
-Click **Save Changes**.
-
-### Step 6: Test
-
-Place a test order for a virtual or downloadable product. After payment, the order status should automatically change to "Completed".
+Click **Save Changes**, then place a test order containing only products that match your logic. Confirm the order moves to **completed** automatically and that the order note and email behave as configured.
 
 ---
 
 ## Configuration Options
 
-| Option | Description | Default |
-|--------|-------------|---------|
+| Option | Behavior | Default |
+|--------|----------|---------|
 | **Enable Auto-Completion for Virtual/Downloadable Products** | Master toggle. | Off |
-| **Log Auto-Completion Actions** | Log to order notes. | Off |
-| **Send Completion Notification** | Send the Completed email. | Off |
-| **Disable Send Customer Note** | Skip the customer note email. | Off |
-| **Product Type Logic** | (configured in the code, not the UI) | Virtual and Downloadable |
-
-The Product Type Logic is configured at the code level (which product types trigger auto-completion). Default is virtual and downloadable products.
+| **Product Type Logic** | Virtual OR Downloadable, Virtual AND Downloadable, Virtual Only, or Downloadable Only. | Virtual OR Downloadable |
+| **Log Auto-Completion Actions** | Add an order note and debug log for each auto-completion. | On |
+| **Send Completion Notification** | Intended completion notification to the customer. | On |
+| **Disable Send Customer Note** | Keep the auto-completion order note admin-only, not shared with the customer. | Off |
 
 ---
 
 ## What Gets Affected
 
-- Orders for virtual/downloadable products: automatically marked as "Completed" after payment
-- The order status: changes from "Processing" to "Completed" without manual intervention
-- The completion email: sent to the customer (if enabled)
-- The order notes: includes a log entry (if enabled)
-- The order reports: shows correct status from payment onward
+- Eligible orders: marked **completed** automatically once payment is confirmed
+- Order status reporting: qualifying orders show the correct status from payment onward
+- Order notes: a note explains the auto-completion when logging is on
+- Admin tracking: a running count of auto-completed orders is stored and shown in the admin notice
 
 ## What Does NOT Get Affected
 
-- Orders for physical products: still require manual completion
-- The customer-facing order confirmation page: still shows the order details
-- The cart and checkout processes: unchanged
-- The WooCommerce REST API: still returns the same order data
+- Orders that contain any item failing the product type logic: these keep your normal workflow
+- Physical-product orders: not auto-completed
+- The customer-facing checkout and cart: unchanged
+- The WooCommerce REST API order data: unchanged by the feature
 
 ---
 
 ## Advanced Options (Developers)
 
-This feature registers 2 WordPress hooks in `auto-completion.php`:
-
-**Actions:**
-
-- `woocommerce_payment_complete` calls `cm_auto_complete_virtual_orders()` (Auto-completes virtual/downloadable orders on payment)
-- `woocommerce_order_status_processing` calls `cm_auto_complete_virtual_orders()` (Auto-completes virtual orders on processing status)
+The feature registers three hooks in `functions/woocommerce/auto-completion.php`:
 
 ```php
-// Hooked in auto-completion.php
 add_action( 'woocommerce_payment_complete', 'cm_auto_complete_virtual_orders' );
+add_action( 'woocommerce_order_status_processing', 'cm_auto_complete_virtual_orders' );
+add_action( 'woocommerce_payment_complete_order_status_processing', 'cm_auto_complete_virtual_orders' );
 ```
 
-The feature modifies WooCommerce behavior by registering or removing hooks. Disabling it reverses those changes.
+- **`woocommerce_payment_complete`** and **`woocommerce_order_status_processing`** run `cm_auto_complete_virtual_orders()` when payment is confirmed or the order moves to processing.
+- **`woocommerce_payment_complete_order_status_processing`** covers payment-gateway confirmations that set the processing status.
+
+Inside `cm_auto_complete_virtual_orders()`:
+
+- The order is skipped if it is already completed or if any item fails the configured **Product Type Logic** (`cm_order_contains_only_virtual_downloadable()` checks every item against the logic).
+- If **Log Auto-Completion Actions** is on, an order note is added recording the logic used. The note is a customer note unless **Disable Send Customer Note** is on, in which case it is admin-only.
+- The order is updated to **completed** via `update_status()`, which is what lets WooCommerce send its standard completed-order email.
+- A running count is stored in `cm_auto_completed_orders_count` and surfaced in the admin notice via `cm_get_auto_completion_admin_notice()`.
+
+---
 
 ## Troubleshooting
 
 ### Orders are not being auto-completed
 
-**Cause:** The toggle is off, the product is not virtual or downloadable, or the order hasn't been paid yet.
-**Fix:** Verify the toggle is on. Verify the product is set as "Virtual" or "Downloadable" in the product data. Verify the order has been paid (processing status).
+**Cause:** The feature toggle is off, the order contains an item that fails the product type logic, or the order is already completed.
+**Fix:** Confirm the toggle is on. Verify every item in the order matches the selected **Product Type Logic**, and that the order is not already in the completed status.
 
-### The completion email is not being sent
+### An order with one physical item still got completed
 
-**Cause:** The "Send Completion Notification" sub-option is off, or the email is filtered by another plugin.
-**Fix:** Verify the sub-option is on. Check the email logs (WooCommerce > Status > Logs) for errors. Disable email-related plugins to find the conflict.
+**Cause:** That item qualified under the logic, or the order was manually completed.
+**Fix:** Confirm which logic is set. If physical products should never auto-complete, verify those products are neither virtual nor downloadable (so they fail both **Virtual OR Downloadable** and the stricter options).
 
-### The order note is not being logged
+### The auto-completion note is not in the order notes
 
-**Cause:** The "Log Auto-Completion Actions" sub-option is off.
-**Fix:** Verify the sub-option is on. The note is added as an order note (visible in the admin order details).
+**Cause:** **Log Auto-Completion Actions** is off.
+**Fix:** Turn on **Log Auto-Completion Actions** so each auto-completion writes an order note (and a debug log line).
 
-### The customer note is still being sent
+### The customer received the order note but you do not want that
 
-**Cause:** The "Disable Send Customer Note" sub-option is off.
-**Fix:** Verify the sub-option is on. The customer note is a separate email from the completion email.
+**Cause:** **Disable Send Customer Note** is off, so the auto-completion note is shared with the customer.
+**Fix:** Turn on **Disable Send Customer Note** to keep the note admin-only.
 
-### Auto-completion is too aggressive (happens for products I don't want)
+### Auto-completion is too aggressive for some products
 
-**Cause:** The default product type logic includes all virtual and downloadable products.
-**Fix:** Configure in the plugin settings to limit which types trigger auto-completion. Or use the plugin settings to skip specific orders.
+**Cause:** The default **Virtual OR Downloadable** logic is permissive.
+**Fix:** Switch to **Virtual AND Downloadable** (Safest) or **Downloadable Only** to narrow which products trigger auto-completion.
+
+---
+
+## Frequently Asked Questions
+
+### What is the difference between "Virtual OR Downloadable" and "Virtual AND Downloadable"?
+
+**Virtual OR Downloadable** auto-completes an order when every item is either virtual or downloadable. **Virtual AND Downloadable** only auto-completes when every item is both virtual and downloadable, which is stricter and avoids completing products that are virtual but not downloadable (or vice versa).
+
+### Which orders get auto-completed?
+
+Only orders where every item passes the selected product type logic. If any item fails the logic, the order keeps your normal status flow, so physical or mixed orders are not auto-completed.
+
+### Does the customer get a completed-order email?
+
+Yes, when the order is completed through the standard WooCommerce status transition, WooCommerce sends its normal completed-order email. The **Send Completion Notification** setting reflects this intent in the UI.
+
+### How do I keep the auto-completion note private?
+
+Turn on **Disable Send Customer Note**. With it off, the note is a customer note; with it on, the note is admin-only while the order still gets its standard completion email.
+
+### Does this affect physical-product orders?
+
+No. Physical-product orders, and any order with an item that fails the logic, are not auto-completed and follow your normal workflow.
 
 ---
 
 ## Related Articles
 
-- [How to Enable Thank You Page Link in Orders in WordPress](woocommerce-enable-thank-you-page-link-orders.md)
+- [How to Access the Thank You Page from a WooCommerce Order](woocommerce-enable-thank-you-page-link-orders.md)
 - [How to Create Custom Order Statuses in WooCommerce](woocommerce-enable-custom-order-status.md)
-- [How to Use Content Management in WordPress](../core/core-content-management.md)
+- [How to Add Custom Columns to the WooCommerce Orders Table](woocommerce-enable-custom-order-columns.md)
