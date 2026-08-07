@@ -161,7 +161,7 @@ It covers performance, security, WooCommerce, Bricks, admin and interface, media
 
 WP Extended is a modular WordPress plugin that groups admin, content, media, login, export, security, and developer utilities into one install. The vendor counts 51 modules, and the free WordPress.org plugin includes 36 of them. Every feature is its own module with an enable switch, so you turn on what you need and leave the rest off, and the whole plugin is built and tested as one codebase rather than a bundle of separate installs.
 
-It is a close and honest competitor to Classic Monks on the "consolidate the small stuff" job. WP Extended's specialty is admin columns, code snippets, export tools, post-type switching, quick search, and folder organization, all with a clean modular interface and a strong free tier. It is lighter on Bricks depth, WooCommerce, AI, white labeling, and the security suite that Classic Monks carries.
+It is a close and honest competitor to Classic Monks on the "consolidate the small stuff" job. WP Extended's specialty is admin columns, code snippets, export tools, post-type switching, quick search, and folder organization, all with a clean modular interface and a strong free tier. It is lighter on Bricks depth, WooCommerce, AI, white labeling, and the security suite that Classic Monks carries. For a full head-to-head, see the [Classic Monks vs WP Extended comparison](https://classicmonks.com/docs/classic-monks-vs-wp-extended/).
 
 > **IMAGE PLACEHOLDER (name: wp-extended-modules):** Screenshot of the WP Extended module manager showing module categories, search, and enable switches, with most modules switched on. Suggested alt: "WP Extended module manager with its enable switches."
 
@@ -301,7 +301,7 @@ If you run an agency or maintain client sites, Classic Monks is built for exactl
 
 - [Classic Monks vs ASE](https://classicmonks.com/docs/classic-monks-vs-ase/)
 - [Classic Monks vs ASE: what ASE does not include](https://classicmonks.com/docs/classic-monks-vs-ase-what-ase-does-not-have/)
-- [Classic Monks vs WP Extended](https://classicmonks.com/) (comparison page in progress)
+- [Classic Monks vs WP Extended](https://classicmonks.com/docs/classic-monks-vs-wp-extended/)
 - [Browse the Classic Monks feature library](https://classicmonks.com/features/)
 - [Classic Monks pricing](https://classicmonks.com/pricing/)
 

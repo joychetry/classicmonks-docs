@@ -8,6 +8,7 @@ This folder contains Classic Monks vs competitor comparison pages.
 |------|-----------|-------------|
 | `classic-monks-vs-ase.md` | https://classicmonks.com/docs/classic-monks-vs-ase/ | Parity comparison: can Classic Monks replace ASE? Covers admin controls, security, code, pricing, and migration. |
 | `classic-monks-features-ase-does-not-have.md` | https://classicmonks.com/docs/classic-monks-vs-ase-what-ase-does-not-have/ | CM-only conversion: what Classic Monks adds that ASE does not include. Covers AI, Bricks, WooCommerce, performance, setup, media, staging, and white label. |
+| `classic-monks-vs-wp-extended.md` | https://classicmonks.com/docs/classic-monks-vs-wp-extended/ | Parity comparison: can Classic Monks replace WP Extended? Covers admin tools, content, code, media, performance, security, pricing, and migration. |
 
 ## Internal files
 
