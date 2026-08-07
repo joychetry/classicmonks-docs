@@ -178,7 +178,7 @@ It is a close and honest competitor to Classic Monks on the "consolidate the sma
 
 ASE is a free WordPress toolkit focused on admin and site enhancements. It offers dozens of small utilities: admin menu management, code snippets, login customization, and post-type controls. It is free, popular, well maintained, and a sensible starting point when your need is admin cleanup and utility features.
 
-ASE is an excellent option when your workload is admin polish and site utilities, and you do not need security depth, WooCommerce, Bricks, media workflows, or agency delivery. It is a focused admin toolkit rather than a broad core stack.
+ASE is an excellent option when your workload is admin polish and site utilities, and you do not need security depth, WooCommerce, Bricks, media workflows, or agency delivery. It is a focused admin toolkit rather than a broad core stack. For a full head-to-head, see the [Classic Monks vs ASE comparison](https://classicmonks.com/docs/classic-monks-vs-ase/).
 
 **Key features**
 
@@ -300,6 +300,7 @@ If you run an agency or maintain client sites, Classic Monks is built for exactl
 **Related reading**
 
 - [Classic Monks vs ASE](https://classicmonks.com/docs/classic-monks-vs-ase/)
+- [Classic Monks vs ASE: what ASE does not include](https://classicmonks.com/docs/classic-monks-vs-ase-what-ase-does-not-have/)
 - [Classic Monks vs WP Extended](https://classicmonks.com/) (comparison page in progress)
 - [Browse the Classic Monks feature library](https://classicmonks.com/features/)
 - [Classic Monks pricing](https://classicmonks.com/pricing/)
