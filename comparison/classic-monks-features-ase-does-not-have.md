@@ -23,6 +23,14 @@ type: comparison-alternative
 
 # Classic Monks vs ASE: What ASE Doesn't Include
 
+> **IMAGE PLACEHOLDER (name: cm-vs-ase-doesnot-hero)**
+>
+> **Why:** The H1 is "What ASE Doesn't Include," a CM-only conversion post. A hero visual that shows Classic Monks adding tools outside ASE's scope sets up the gain-based argument and gives the post a shareable featured image for social and search.
+> **Type:** Illustration or diagram of Classic Monks adding categories beyond ASE.
+> **Title:** What Classic Monks Adds Beyond ASE
+> **Alt text (L text):** Classic Monks adding AI, Bricks, WooCommerce, performance, media, staging, and setup tools outside ASE's feature set.
+> **Placement:** Immediately after the H1, as the article hero and OG image.
+
 This **Classic Monks vs ASE** comparison looks at what Classic Monks adds beyond ASE, including AI, Bricks, WooCommerce, performance, setup, media, staging, and agency delivery.
 
 We compared the official ASE feature page and pricing page with the live Classic Monks feature and pricing pages, the current Classic Monks changelog, and the local feature references used to verify implementation scope. The comparison reflects the July 31, 2026 feature set.
@@ -59,6 +67,14 @@ The clearest difference is category coverage. ASE concentrates on WordPress admi
 
 The table is a category comparison, not a claim that every individual ASE feature has a Classic Monks equivalent. For the module-by-module parity review, see the [full Classic Monks vs ASE comparison](https://classicmonks.com/docs/classic-monks-vs-ase/).
 
+> **IMAGE PLACEHOLDER (name: cm-added-category-map)**
+>
+> **Why:** The category table is the core of this post. A visual map of the capability areas Classic Monks adds (AI, Bricks, WooCommerce, performance, setup, media, staging, frontend, white label) makes the "what you gain" message scan instantly.
+> **Type:** Comparison diagram or category coverage map.
+> **Title:** Capabilities Classic Monks Adds Beyond ASE
+> **Alt text (L text):** Coverage map of the categories Classic Monks adds beyond ASE.
+> **Placement:** Directly above the "What does Classic Monks have that ASE does not?" category table.
+
 ## Does Classic Monks offer AI features that ASE does not?
 
 Yes. Classic Monks includes an AI layer that is not represented in ASE's current feature list.
@@ -76,6 +92,14 @@ The practical tools include:
 
 ASE can help clean up and configure a WordPress site. Classic Monks adds an AI-assisted production layer for the work that happens after the site is configured.
 
+> **IMAGE PLACEHOLDER (name: cm-ai-layer)**
+>
+> **Why:** AI is not in ASE's feature list, so this is a pure CM gain. A screenshot of the AI Agent or AI Tools interface shows the production layer in action rather than leaving it as a feature claim.
+> **Type:** UI screenshot of the Classic Monks AI interface.
+> **Title:** Classic Monks AI Tools and AI Agent
+> **Alt text (L text):** Classic Monks AI Tools screen showing content generation and image options.
+> **Placement:** In the "Does Classic Monks offer AI features that ASE does not?" section.
+
 Read the [Classic Monks AI feature guide](https://classicmonks.com/docs/ai-features-master/) and [AI Tools documentation](https://classicmonks.com/docs/ai-tools/).
 
 ## Is Classic Monks better for Bricks Builder sites?
@@ -85,6 +109,14 @@ If Bricks is part of your workflow, Classic Monks has a much broader native inte
 Classic Monks includes Bricks setup tools, Live Code Sync & Import, BEM class generation, a CSS variable picker, SVG and image conversion, builder interface controls, custom elements, query elements, dynamic data tags, conditions, interactions, animations, import/export, asset controls, and CSS minification.
 
 That changes the buying decision for a Bricks agency. You are not choosing between two admin utilities. You are choosing whether your core plugin should also improve the builder your team uses every day.
+
+> **IMAGE PLACEHOLDER (name: cm-bricks-workflow-ase)**
+>
+> **Why:** Bricks tools are a major CM-only gain because ASE has no Bricks category. A screenshot of Classic Monks tools inside the Bricks builder shows the deep integration and supports the change in the buying decision.
+> **Type:** UI screenshot of Classic Monks Bricks tools in the builder.
+> **Title:** Classic Monks Tools Inside the Bricks Builder
+> **Alt text (L text):** Classic Monks Bricks tools running inside the Bricks builder interface.
+> **Placement:** In the "Is Classic Monks better for Bricks Builder sites?" section.
 
 The Bricks tools include practical production features such as:
 
@@ -117,6 +149,14 @@ Examples include:
 
 For an agency building WooCommerce sites, this is a major difference. Classic Monks can cover store-specific work that would otherwise require a separate collection of extensions. ASE can still handle its own WordPress enhancement jobs, but it is not a WooCommerce toolkit.
 
+> **IMAGE PLACEHOLDER (name: cm-woocommerce-tab-ase)**
+>
+> **Why:** WooCommerce is another CM-only gain. A screenshot of the Classic Monks WooCommerce tab shows the store tools Classic Monks adds beyond ASE and makes the agency benefit concrete.
+> **Type:** UI screenshot of the Classic Monks WooCommerce tab.
+> **Title:** Classic Monks WooCommerce Tools
+> **Alt text (L text):** The Classic Monks WooCommerce settings tab with product, checkout, coupon, and order tools.
+> **Placement:** In the "What does Classic Monks add for WooCommerce?" section.
+
 ## Does Classic Monks include performance tools missing from ASE?
 
 Classic Monks has a broader performance and asset-management layer than the current ASE feature list shows. This is not a claim that Classic Monks replaces every caching product. It does not provide full-page caching, and you should keep a proper caching or hosting layer where the site needs one.
@@ -136,6 +176,14 @@ Classic Monks focuses on the controls around assets, media, and loading behavior
 
 This makes Classic Monks a better fit when you want site-level performance controls alongside admin and content features. For full-page caching, use a dedicated caching solution instead of pretending one plugin should do everything.
 
+> **IMAGE PLACEHOLDER (name: cm-performance-ase)**
+>
+> **Why:** Performance is a CM-only gain because ASE has no broad performance category. A screenshot of the performance or Assets Manager controls shows the asset and loading layer Classic Monks adds.
+> **Type:** UI screenshot of the Classic Monks performance or Assets Manager.
+> **Title:** Classic Monks Performance and Asset Controls
+> **Alt text (L text):** Classic Monks performance controls showing lazy loading, preloading, and image conversion.
+> **Placement:** In the "Does Classic Monks include performance tools missing from ASE?" section.
+
 See the [Classic Monks Assets Manager documentation](https://classicmonks.com/docs/perf-assets-manager/).
 
 ## How does Classic Monks improve a new WordPress setup?
@@ -145,6 +193,14 @@ Classic Monks includes Quick WordPress Setup, a guided setup feature for fresh W
 It also includes a separate Bricks setup workflow for importing Bricks theme styles, global settings, and templates.
 
 That matters when an agency repeats the same baseline work across client sites. Instead of installing several utility plugins, opening several settings screens, and rebuilding the same starting checklist, the team can begin with one setup workflow and then enable only the features needed for that project.
+
+> **IMAGE PLACEHOLDER (name: cm-quick-wp-setup)**
+>
+> **Why:** Quick WordPress Setup is a CM-only feature that ASE does not offer. A screenshot of the wizard shows agencies the repeatable provisioning workflow in action.
+> **Type:** UI screenshot of the Quick WordPress Setup wizard.
+> **Title:** Classic Monks Quick WordPress Setup
+> **Alt text (L text):** The Classic Monks Quick WordPress Setup wizard steps.
+> **Placement:** In the "How does Classic Monks improve a new WordPress setup?" section.
 
 Quick WordPress Setup is a feature for provisioning a real WordPress site. Read the [Quick WordPress Setup guide](https://classicmonks.com/docs/quick-wp-setup/) for the workflow and prerequisites. It is not the Classic Monks demo sandbox. If you want to try the plugin without changing an existing site, use the [Classic Monks demo](https://classicmonks.com/demo/).
 
@@ -158,6 +214,14 @@ The Folder Manager supports drag-and-drop organization, folder colors, multiple 
 
 Choose Classic Monks when your media problem is larger than categorizing files. It is designed to cover the movement from upload to organization, optimization, replacement, and delivery.
 
+> **IMAGE PLACEHOLDER (name: cm-media-folder-manager)**
+>
+> **Why:** Media breadth is a CM advantage. A screenshot of the Folder Manager or media tools shows the full upload-to-delivery workflow that goes beyond ASE's media modules.
+> **Type:** UI screenshot of the Classic Monks media or Folder Manager.
+> **Title:** Classic Monks Media and Folder Manager Tools
+> **Alt text (L text):** Classic Monks Folder Manager with drag-and-drop media organization.
+> **Placement:** In the "What media features does Classic Monks add beyond ASE?" section.
+
 ## Does Classic Monks offer staging protection that ASE does not?
 
 Classic Monks includes a dedicated Staging Protection section. It can use access tokens, temporary access tokens, HTTP Basic Authentication, IP or CIDR allowlists, URL-pattern restrictions, and visible staging indicators. It can also allow legitimate performance-testing tools, development endpoints, webhooks, API clients, and CI/CD systems when the staging lock is active.
@@ -165,6 +229,14 @@ Classic Monks includes a dedicated Staging Protection section. It can use access
 This is useful for agencies that share staging links with clients, QA teams, or external tools. It gives the site a defined access layer instead of relying on a forgotten password or an undocumented hosting rule. Read the [Staging Protection guide](https://classicmonks.com/docs/staging-protection/) for the supported access controls.
 
 ASE's current feature list does not show a comparable staging-protection category.
+
+> **IMAGE PLACEHOLDER (name: cm-staging-protection)**
+>
+> **Why:** Staging protection is a CM-only gain. A screenshot of the Staging Protection screen with access tokens, HTTP auth, and allowlists shows the access layer ASE does not provide.
+> **Type:** UI screenshot of the Classic Monks Staging Protection screen.
+> **Title:** Classic Monks Staging Protection
+> **Alt text (L text):** Classic Monks Staging Protection screen with access tokens and IP allowlist options.
+> **Placement:** In the "Does Classic Monks offer staging protection that ASE does not?" section.
 
 ## What agency and white-label features does Classic Monks add?
 
@@ -175,6 +247,14 @@ Classic Monks includes admin-bar greeting changes, admin footer customization, W
 The full white-label plugin capability is listed under the Enterprise plan. It should not be treated as included in every plan.
 
 For agencies, the value is not cosmetic. A cleaner admin reduces the number of third-party settings clients see, makes handover easier, and gives the team more control over what remains visible after launch.
+
+> **IMAGE PLACEHOLDER (name: cm-white-label)**
+>
+> **Why:** Agency white label is a CM-only gain. A screenshot of the white-label or branding controls shows the client-facing admin experience Classic Monks enables beyond ASE's basic login branding.
+> **Type:** UI screenshot of the Classic Monks white-label or branding settings.
+> **Title:** Classic Monks White-Label and Branding Controls
+> **Alt text (L text):** Classic Monks white-label settings for plugins, login, and admin branding.
+> **Placement:** In the "What agency and white-label features does Classic Monks add?" section.
 
 ## What does Classic Monks add for frontend experience?
 
@@ -188,6 +268,14 @@ Classic Monks includes frontend experience features that are outside ASE's curre
 - Admin transitions
 
 These features are not a substitute for good UX or performance work. They are useful when a project needs a controlled transition or loading layer without adding another narrowly focused plugin.
+
+> **IMAGE PLACEHOLDER (name: cm-frontend-experience)**
+>
+> **Why:** Frontend experience (preloader, page transitions) is a CM-only gain. A screenshot of the Preloader or Laser Loader settings, or a short animated visual, shows the loading and transition layer ASE lacks.
+> **Type:** UI screenshot of the Preloader or Laser Loader settings, or a short animated visual.
+> **Title:** Classic Monks Frontend Experience Tools
+> **Alt text (L text):** Classic Monks Preloader and Laser Loader settings.
+> **Placement:** In the "What does Classic Monks add for frontend experience?" section.
 
 Read the [Preloader documentation](https://classicmonks.com/docs/interface-preloader/) and [Laser Loader documentation](https://classicmonks.com/docs/interface-laser-loader/).
 

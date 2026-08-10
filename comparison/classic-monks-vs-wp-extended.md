@@ -23,6 +23,14 @@ type: comparison
 
 # Classic Monks vs WP Extended: Which WordPress Plugin Fits?
 
+> **IMAGE PLACEHOLDER (name: cm-vs-wpx-hero)**
+>
+> **Why:** The H1 asks "Which WordPress Plugin Fits?" for a parity comparison. A hero visual frames the decision (utility toolkit versus broader operating stack) and gives the post a shareable featured image for social and search.
+> **Type:** Comparison illustration or diagram.
+> **Title:** Classic Monks vs WP Extended: Which Plugin Fits Your WordPress Site?
+> **Alt text (L text):** A side-by-side comparison of Classic Monks and WP Extended showing which plugin fits each WordPress job.
+> **Placement:** Immediately after the H1, as the article hero and OG image.
+
 Classic Monks and WP Extended both exist to consolidate the small plugins a WordPress site accumulates, but they are built around different jobs.
 
 **WP Extended is a modular utility toolkit. Classic Monks is a broader operating stack.**
@@ -42,6 +50,14 @@ This comparison was checked on **August 7, 2026** against the [WP Extended modul
 ## Classic Monks vs WP Extended at a glance
 
 WP Extended presents **51 modules** across 6 categories: Admin Tools, Content Management, Developer Tools, Media Tools, Performance & Control, and Security & Privacy. The free WordPress.org plugin includes 36 of its modules; the rest are Pro. Classic Monks presents a **393+ feature library** across 10 tabs: AI, Core, Email, WooCommerce, Bricks Builder, Security, Interface, Performance, White Label, and Options. The counts use different inventory methods, so they are not an apples-to-apples benchmark. The useful comparison is what each plugin lets your team do.
+
+> **IMAGE PLACEHOLDER (name: cm-vs-wpx-category-map)**
+>
+> **Why:** The at-a-glance decision table compares jobs. A visual category map showing which areas Classic Monks and WP Extended each cover lets a scanning reader see the fit immediately, which is the section's whole purpose.
+> **Type:** Comparison diagram or coverage-map style graphic.
+> **Title:** Classic Monks vs WP Extended Category Coverage
+> **Alt text (L text):** Category coverage map comparing Classic Monks and WP Extended across admin, code, Bricks, WooCommerce, AI, media, and security.
+> **Placement:** Directly above the "Classic Monks vs WP Extended at a glance" category table.
 
 | Area | Classic Monks | WP Extended | Better fit |
 |---|---|---|---|
@@ -78,6 +94,14 @@ For basic cleanup and hardening, Classic Monks can replace a meaningful part of 
 
 **Verdict:** ASE-grade admin cleanup is close; WP Extended is a strong admin toolkit and Classic Monks becomes the better call when admin controls are only one part of a larger stack.
 
+> **IMAGE PLACEHOLDER (name: wpx-admin-vs-cm)**
+>
+> **Why:** Admin cleanup is the tightest competition in this comparison. A side-by-side screenshot of WP Extended's Admin Tools and Classic Monks' admin controls shows both products honestly and lets readers compare the actual interfaces instead of trusting a feature list.
+> **Type:** Side-by-side UI screenshots.
+> **Title:** Admin Controls: WP Extended vs Classic Monks
+> **Alt text (L text):** Side-by-side admin cleanup screens from WP Extended and Classic Monks.
+> **Placement:** In the "Which plugin is better for WordPress admin controls?" section after the verdict.
+
 ## Which plugin is better for code snippets?
 
 Both plugins let you add PHP, HTML, CSS, and JavaScript without editing theme files.
@@ -88,6 +112,14 @@ Classic Monks' Code Manager is a deeper workflow. It supports PHP, JavaScript, C
 
 **Verdict:** If code snippets are a small part of the job, either works, and WP Extended's free tier is a fair low-cost option. If snippets are core to the workflow, Classic Monks' Code Manager is the stronger tool.
 
+> **IMAGE PLACEHOLDER (name: cm-code-manager)**
+>
+> **Why:** Code Manager is a stated CM strength, and the verdict says it is the deeper tool. A screenshot of the Code Manager interface with its validation, safe mode, and hook-placement options demonstrates that depth rather than leaving it as a claim.
+> **Type:** UI screenshot of Classic Monks Code Manager.
+> **Title:** Classic Monks Code Manager
+> **Alt text (L text):** Classic Monks Code Manager showing PHP, CSS, and JavaScript snippet options with validation and safe mode.
+> **Placement:** In the "Which plugin is better for code snippets?" section after the verdict.
+
 ## Does Classic Monks offer more than WP Extended for Bricks Builder, WooCommerce, and AI?
 
 Yes. These are the biggest differences between the two plugins.
@@ -97,6 +129,14 @@ WP Extended has **no Bricks, no WooCommerce, and no AI** categories in its modul
 - **Bricks Builder:** native setup, core and query elements, dynamic data, conditions, interactions, animations, import/export, asset controls, and CSS minification. If your teams build client sites with Bricks, Classic Monks sits inside the builder workflow rather than only cleaning up the dashboard around it.
 - **WooCommerce:** product swatches, single product, checkout, one-click checkout, coupons, orders, My Account, redirection, optimization, and email tools. WP Extended has no store-specific module category.
 - **AI:** AI Agent in the admin, AI Tools for content and media, image generation and editing, and multiple provider integrations. WP Extended has no AI layer.
+
+> **IMAGE PLACEHOLDER (name: cm-bricks-woo-ai)**
+>
+> **Why:** Bricks, WooCommerce, and AI are the biggest differences because WP Extended has none of them. A screenshot of the Classic Monks tab structure showing dedicated Bricks, WooCommerce, and AI tabs proves the scope in one image.
+> **Type:** UI screenshot of the Classic Monks tab bar.
+> **Title:** Classic Monks Bricks, WooCommerce, and AI Tabs
+> **Alt text (L text):** Classic Monks dashboard showing dedicated Bricks, WooCommerce, and AI tabs.
+> **Placement:** In the "Does Classic Monks offer more than WP Extended for Bricks Builder, WooCommerce, and AI?" section.
 
 Read the [Bricks Builder documentation](https://classicmonks.com/docs/bricks/) for the current builder workflow.
 
@@ -112,6 +152,14 @@ Classic Monks carries the broader operating layer across three areas.
 
 Classic Monks does **not** claim full-page caching, backups, or a WAF. Its job is the broader asset, media, and security layer; it routes caching to a dedicated caching product.
 
+> **IMAGE PLACEHOLDER (name: cm-perf-media-sec)**
+>
+> **Why:** The performance, media, and security layer is Classic Monks' broader operating advantage. A screenshot of the media, performance, or security tools shows the wider workflow WP Extended does not match.
+> **Type:** UI screenshot of Classic Monks media, performance, or security tools.
+> **Title:** Classic Monks Performance, Media, and Security Tools
+> **Alt text (L text):** Classic Monks media and performance controls showing conversion, watermark, and folder tools.
+> **Placement:** In the "Which plugin has stronger performance, media, and security tools?" section.
+
 ## Which plugin is better for site setup and agency delivery?
 
 Classic Monks is the clear fit for repeatable provisioning and agency handover.
@@ -121,6 +169,14 @@ Quick WordPress Setup provisions a fresh WordPress site in around ten minutes, c
 WP Extended does not show an equivalent setup wizard, staging-protection category, or client license expiry manager.
 
 **Verdict:** For a solo site or developer, this may not matter. For an agency that reproduces the same baseline across client projects, Classic Monks is the broader delivery system.
+
+> **IMAGE PLACEHOLDER (name: cm-setup-white-label)**
+>
+> **Why:** Setup and agency delivery is a clear CM advantage. A screenshot of Quick WordPress Setup or the white-label controls shows agencies the repeatable provisioning and handover workflow that WP Extended does not offer.
+> **Type:** UI screenshot of Quick WordPress Setup wizard or white-label settings.
+> **Title:** Classic Monks Setup and White-Label Controls
+> **Alt text (L text):** Classic Monks Quick WordPress Setup wizard and white-label settings.
+> **Placement:** In the "Which plugin is better for site setup and agency delivery?" section.
 
 ## What does WP Extended do better than Classic Monks?
 
@@ -203,6 +259,14 @@ Use this sequence on staging:
 8. Remove only the modules and plugins that are genuinely redundant.
 
 This approach avoids the usual mistake: reducing the plugin count first and discovering the missing workflow later.
+
+> **IMAGE PLACEHOLDER (name: cm-migration-sequence-wpx)**
+>
+> **Why:** The migration checklist is the practical takeaway. A numbered visual of the staging-first sequence makes it easy to save and follow, and reinforces the one-owner-per-concern rule.
+> **Type:** Numbered checklist or flow diagram.
+> **Title:** How to Migrate from WP Extended to Classic Monks
+> **Alt text (L text):** An eight-step illustrated sequence for migrating from WP Extended to Classic Monks on staging.
+> **Placement:** At the end of the "How to migrate from WP Extended to Classic Monks" section.
 
 ## Who should choose Classic Monks?
 

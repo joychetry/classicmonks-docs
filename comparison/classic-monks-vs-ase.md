@@ -22,6 +22,14 @@ type: comparison
 
 # Classic Monks vs ASE: Which WordPress Plugin Fits?
 
+> **IMAGE PLACEHOLDER (name: cm-vs-ase-hero)**
+>
+> **Why:** The H1 asks "Which WordPress Plugin Fits?" and this is a parity comparison. A hero visual makes the reader's decision path concrete before they read the verdict, and gives the post a shareable featured image for social and search.
+> **Type:** Comparison illustration or diagram.
+> **Title:** Classic Monks vs ASE: Which Plugin Fits Your WordPress Site?
+> **Alt text (L text):** A side-by-side comparison of Classic Monks and ASE showing which plugin fits each WordPress job.
+> **Placement:** Immediately after the H1, as the article hero and OG image.
+
 Classic Monks and Admin and Site Enhancements (ASE) solve some of the same WordPress problems, but they are built around different jobs.
 
 **ASE is a focused WordPress enhancement suite. Classic Monks is a broader modular core stack.**
@@ -41,6 +49,14 @@ This comparison was checked on **July 31, 2026** against the official [ASE featu
 ## Classic Monks vs ASE at a glance
 
 The official ASE page currently presents 76 feature cards. Classic Monks presents a 393+ feature library. Those counts use different inventory methods, so they are not an apples-to-apples benchmark. The useful comparison is what each plugin lets your team do.
+
+> **IMAGE PLACEHOLDER (name: cm-vs-ase-category-map)**
+>
+> **Why:** The decision table compares jobs across categories. A visual category map (which areas Classic Monks covers vs which ASE covers) lets a scanning reader absorb the fit at a glance, which is the section's whole purpose.
+> **Type:** Comparison diagram or coverage-map style graphic.
+> **Title:** Classic Monks vs ASE Category Coverage
+> **Alt text (L text):** Category coverage map comparing Classic Monks and ASE across admin, Bricks, WooCommerce, AI, performance, and staging.
+> **Placement:** Directly above the "Classic Monks vs ASE at a glance" category table.
 
 | Area | Classic Monks | ASE | Better fit |
 |---|---|---|---|
@@ -122,6 +138,14 @@ Key Classic Monks Bricks tools include:
 
 If your team builds client sites with Bricks, this is not a minor feature difference. Classic Monks can sit inside the builder workflow instead of only cleaning up the WordPress dashboard around it.
 
+> **IMAGE PLACEHOLDER (name: cm-bricks-workflow)**
+>
+> **Why:** Bricks is a headline differentiator because ASE has no Bricks category. A screenshot of Classic Monks tools inside the Bricks builder proves the feature exists and shows the workflow, which is far more convincing than a feature bullet.
+> **Type:** UI screenshot of Classic Monks Bricks tools inside the Bricks editor.
+> **Title:** Classic Monks Bricks Builder Tools
+> **Alt text (L text):** Classic Monks Bricks tools running inside the Bricks builder interface.
+> **Placement:** In the "Does Classic Monks offer more than ASE for Bricks Builder?" section, after the verdict statement.
+
 Read the [Bricks Builder documentation](https://classicmonks.com/docs/bricks/) for the current workflow.
 
 ## What does Classic Monks add for WooCommerce?
@@ -142,6 +166,14 @@ The WooCommerce feature set includes:
 - WooCommerce email controls
 
 For a WooCommerce agency, Classic Monks is not only an alternative to ASE. It can also reduce the number of store-specific add-ons around the admin toolkit.
+
+> **IMAGE PLACEHOLDER (name: cm-woocommerce-tab)**
+>
+> **Why:** WooCommerce is another ASE gap. A screenshot of the Classic Monks WooCommerce settings tab shows the breadth of store tools in one screen, making the "reduce store-specific add-ons" claim concrete.
+> **Type:** UI screenshot of the Classic Monks WooCommerce tab.
+> **Title:** Classic Monks WooCommerce Tools
+> **Alt text (L text):** The Classic Monks WooCommerce settings tab showing product, checkout, coupon, and order tools.
+> **Placement:** In the "What does Classic Monks add for WooCommerce?" section after the feature list.
 
 ## Which plugin has stronger performance and media tools?
 
@@ -165,6 +197,14 @@ ASE does have media and optimization modules, including Media Categories, Media 
 
 **Verdict:** Choose ASE for selected WordPress and media controls. Choose Classic Monks when performance and media operations are part of a larger site-delivery stack.
 
+> **IMAGE PLACEHOLDER (name: cm-performance-assets)**
+>
+> **Why:** Performance claims are stronger when shown. A screenshot of the Assets Manager or image-conversion controls demonstrates the asset and media layer Classic Monks adds beyond ASE.
+> **Type:** UI screenshot of the Classic Monks Assets Manager or performance tab.
+> **Title:** Classic Monks Asset and Performance Controls
+> **Alt text (L text):** Classic Monks Assets Manager screen with lazy loading and image conversion controls.
+> **Placement:** In the "Which plugin has stronger performance and media tools?" section near the verdict.
+
 Start with the [Classic Monks Assets Manager guide](https://classicmonks.com/docs/perf-assets-manager/) or the [Folder Manager guide](https://classicmonks.com/docs/folder-manager/).
 
 ## Which plugin is better for site setup and staging?
@@ -178,6 +218,14 @@ Classic Monks also includes Staging Protection with controls for HTTP authentica
 ASE's current feature list does not show an equivalent setup wizard or staging-protection category.
 
 This matters to agencies because the same setup and access mistakes repeat across projects. A setup wizard shortens the first hour. Staging controls reduce the chance that a private client site gets indexed or exposed by an overlooked access rule.
+
+> **IMAGE PLACEHOLDER (name: cm-setup-staging)**
+>
+> **Why:** Setup and staging are clear CM advantages that ASE lacks. A screenshot of Quick WordPress Setup or Staging Protection shows agencies the repeatable provisioning workflow in action.
+> **Type:** UI screenshot of Quick WordPress Setup wizard or Staging Protection screen.
+> **Title:** Classic Monks Setup and Staging Protection
+> **Alt text (L text):** Classic Monks Staging Protection screen with access tokens and HTTP authentication options.
+> **Placement:** In the "Which plugin is better for site setup and staging?" section.
 
 Read the [Quick WordPress Setup guide](https://classicmonks.com/docs/quick-wp-setup/) and [Staging Protection guide](https://classicmonks.com/docs/staging-protection/).
 
@@ -272,6 +320,14 @@ Use this sequence on staging:
 8. Remove only the modules and plugins that are genuinely redundant.
 
 This approach avoids the usual mistake: reducing the plugin count first and discovering the missing workflow later.
+
+> **IMAGE PLACEHOLDER (name: cm-migration-sequence)**
+>
+> **Why:** The migration section is the practical takeaway. A numbered visual of the staging-first migration sequence turns a long checklist into something a reader can save and follow, and reinforces the one-owner-per-concern rule.
+> **Type:** Numbered checklist or flow diagram.
+> **Title:** How to Migrate from ASE to Classic Monks
+> **Alt text (L text):** An eight-step illustrated sequence for migrating from ASE to Classic Monks on staging.
+> **Placement:** At the end of the "How to migrate from ASE to Classic Monks" section.
 
 ## Who should choose Classic Monks?
 
