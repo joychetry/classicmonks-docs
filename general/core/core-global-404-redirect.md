@@ -1,5 +1,5 @@
 ---
-title: "How to Set Up Global 404 Redirect in Classic Monks | CM"
+title: "How to Set Up Global 404 Redirect in Classic Monks"
 slug: global-404-redirect
 description: "Redirect all 404 errors site-wide in Classic Monks. Choose Home, Shop, a specific page, or a custom URL as the destination. Avoids showing visitors the default WordPress 404 page."
 last_updated: 2026-06-24

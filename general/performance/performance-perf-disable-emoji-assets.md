@@ -1,5 +1,5 @@
 ---
-title: "How to Disable WordPress Emoji via Assets Manager in WordPress | CM"
+title: "How to Disable WordPress Emoji via Assets Manager in WordPress"
 slug: perf-disable-emoji-assets
 description: "Disable the WordPress emoji script via the Assets Manager in Classic Monks. More granular control than the global emoji disable."
 last_updated: 2026-06-24

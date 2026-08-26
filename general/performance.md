@@ -1,5 +1,5 @@
 ---
-title: "How to Use the Performance Tab in Classic Monks: Feature Index | CM"
+title: "How to Use the Performance Tab in Classic Monks: Feature Index"
 slug: performance
 description: "Index of the Performance tab operational guides in Classic Monks. Covers WordPress optimizations, media, CDN, assets, lazy loading, intelligent preloading, and selective media preload."
 last_updated: 2026-07-28

@@ -1,5 +1,5 @@
 ---
-title: "How to Use Custom Taxonomy Filters in Classic Monks | CM"
+title: "How to Use Custom Taxonomy Filters in Classic Monks"
 slug: custom-taxonomy-filters
 description: "Add dropdown filter menus to WordPress post list tables in Classic Monks. Filter content by category, tag, or any custom taxonomy without leaving the list view."
 last_updated: 2026-06-24

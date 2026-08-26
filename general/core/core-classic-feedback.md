@@ -1,5 +1,5 @@
 ---
-title: "How to Use Classic Feedback in Classic Monks | CM"
+title: "How to Use Classic Feedback in Classic Monks"
 slug: classic-feedback
 description: "Add a 'Was this article helpful?' yes/no widget to posts in Classic Monks. Customize question text, theme, position, target post types, and Bricks dynamic data tags."
 last_updated: 2026-06-24

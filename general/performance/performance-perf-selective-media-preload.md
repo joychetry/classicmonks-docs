@@ -1,5 +1,5 @@
 ---
-title: "How to Use Selective Media Preload in WordPress | CM"
+title: "How to Use Selective Media Preload in WordPress"
 slug: perf-selective-media-preload
 description: "Preload selected media files and custom URLs on specific WordPress posts and pages with Classic Monks. Improve LCP without preloading every asset site-wide."
 last_updated: 2026-07-28

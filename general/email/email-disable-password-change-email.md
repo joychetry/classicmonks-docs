@@ -1,5 +1,5 @@
 ---
-title: "How to Disable Password Change Email in WordPress | CM"
+title: "How to Disable Password Change Email in WordPress"
 slug: disable-password-change-email
 description: "Stop WordPress from sending email notifications when users change their passwords. Reduces email clutter, prevents password-reset confusion, and limits notification surface area."
 last_updated: 2026-06-24

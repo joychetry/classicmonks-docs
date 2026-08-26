@@ -1,5 +1,5 @@
 ---
-title: "How to Use Quick Inspect in WordPress | CM"
+title: "How to Use Quick Inspect in WordPress"
 slug: quick-inspect
 description: "Add a Quick Inspect link to the Media Library in Classic Monks. Opens the media edit page in a modal window for fast editing without leaving the Media Library."
 last_updated: 2026-06-24

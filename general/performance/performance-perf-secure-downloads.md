@@ -1,5 +1,5 @@
 ---
-title: "How to Use Secure Downloads in WordPress | CM"
+title: "How to Use Secure Downloads in WordPress"
 slug: perf-secure-downloads
 description: "Add secure download links to media files in Classic Monks. Prevents direct file access by using signed, time-limited URLs for downloads."
 last_updated: 2026-06-24

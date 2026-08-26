@@ -1,5 +1,5 @@
 ---
-title: "How to Use Image Converter in WordPress | CM"
+title: "How to Use Image Converter in WordPress"
 slug: perf-image-converter
 description: "Convert WordPress images to WebP or AVIF with Classic Monks. Configure quality, backups, batch size, image dimensions, exclusions, logs, and automatic conversion on upload."
 last_updated: 2026-07-28

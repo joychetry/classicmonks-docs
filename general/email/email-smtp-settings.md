@@ -1,5 +1,5 @@
 ---
-title: "How to Configure SMTP Settings in WordPress | CM"
+title: "How to Configure SMTP Settings in WordPress"
 slug: smtp-settings
 description: "Replace WordPress's default mail() with SMTP in Classic Monks. Configure Gmail, Outlook, SendGrid, Mailgun, Amazon SES, or custom SMTP servers for reliable email delivery."
 last_updated: 2026-06-24

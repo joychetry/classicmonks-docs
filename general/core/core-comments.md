@@ -1,5 +1,5 @@
 ---
-title: "How to Configure Comments in Classic Monks: Feature Index | CM"
+title: "How to Configure Comments in Classic Monks: Feature Index"
 slug: comments
 description: "Index of comment system overrides in Classic Monks. Each comment feature has its own dedicated guide with configuration, troubleshooting, and developer filters."
 last_updated: 2026-06-24

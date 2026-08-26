@@ -1,5 +1,5 @@
 ---
-title: "How to Use Email OTP Two-Factor Authentication in WordPress | CM"
+title: "How to Use Email OTP Two-Factor Authentication in WordPress"
 slug: 2fa-email
 description: "Add email-based one-time password authentication to WordPress in Classic Monks. Users receive a 6-digit code via email as the second login factor."
 last_updated: 2026-06-24

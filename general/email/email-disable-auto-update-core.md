@@ -1,5 +1,5 @@
 ---
-title: "How to Disable WordPress Core Auto-Update Emails in WordPress | CM"
+title: "How to Disable WordPress Core Auto-Update Emails in WordPress"
 slug: disable-auto-update-core
 description: "Stop WordPress from sending email notifications when the core software auto-updates. Reduces admin email clutter from routine background updates."
 last_updated: 2026-06-24

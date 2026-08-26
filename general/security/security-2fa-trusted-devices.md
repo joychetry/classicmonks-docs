@@ -1,5 +1,5 @@
 ---
-title: "How to Allow Trusted Devices in WordPress | CM"
+title: "How to Allow Trusted Devices in WordPress"
 slug: 2fa-trusted-devices
 description: "Allow users to mark devices as trusted in Classic Monks. Avoid 2FA prompts for a configurable period (default 30 days) on devices the user has used before."
 last_updated: 2026-06-24

@@ -1,5 +1,5 @@
 ---
-title: "How to Enable Stay Logged In in WordPress | CM"
+title: "How to Enable Stay Logged In in WordPress"
 slug: stay-logged-in
 description: "Allow users to stay logged in for an extended period (30 days by default) in Classic Monks. Users don't need to log in again on every visit, even after closing the browser."
 last_updated: 2026-06-24

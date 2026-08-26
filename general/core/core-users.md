@@ -1,5 +1,5 @@
 ---
-title: "How to Manage Users in Classic Monks: 6 Features | CM"
+title: "How to Manage Users in Classic Monks: 6 Features"
 slug: users
 description: "Manage users in Classic Monks: local avatars, view admin as role, user switching, login and registration columns, disable gravatars, username changer."
 last_updated: 2026-06-24

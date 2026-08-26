@@ -1,5 +1,5 @@
 ---
-title: "How to Disable Core Sitemaps in Classic Monks | CM"
+title: "How to Disable Core Sitemaps in Classic Monks"
 slug: disable-core-sitemaps
 description: "Remove the WordPress 5.5+ core XML sitemaps in Classic Monks. Prevent conflicts with Yoast, RankMath, SEOPress, or other SEO plugin sitemaps."
 last_updated: 2026-06-24

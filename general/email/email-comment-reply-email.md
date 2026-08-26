@@ -1,5 +1,5 @@
 ---
-title: "How to Enable Comment Reply Email in WordPress | CM"
+title: "How to Enable Comment Reply Email in WordPress"
 slug: comment-reply-email
 description: "Send email notifications to commenters when someone replies to their comment in Classic Monks. Configurable notification type, opt-in/opt-out, and custom checkbox text."
 last_updated: 2026-06-24

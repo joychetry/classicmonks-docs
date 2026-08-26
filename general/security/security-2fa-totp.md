@@ -1,5 +1,5 @@
 ---
-title: "How to Use TOTP Two-Factor Authentication in WordPress | CM"
+title: "How to Use TOTP Two-Factor Authentication in WordPress"
 slug: 2fa-totp
 description: "Add TOTP-based two-factor authentication to WordPress in Classic Monks. Users scan a QR code with their authenticator app for secure logins."
 last_updated: 2026-06-24

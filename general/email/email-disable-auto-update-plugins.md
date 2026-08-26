@@ -1,5 +1,5 @@
 ---
-title: "How to Disable Plugin Auto-Update Emails in WordPress | CM"
+title: "How to Disable Plugin Auto-Update Emails in WordPress"
 slug: disable-auto-update-plugins
 description: "Stop WordPress from sending email notifications when plugins auto-update in the background. Reduces admin email clutter from routine plugin updates."
 last_updated: 2026-06-24

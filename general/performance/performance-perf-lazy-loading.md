@@ -1,5 +1,5 @@
 ---
-title: "How to Enable Lazy Loading in WordPress | CM"
+title: "How to Enable Lazy Loading in WordPress"
 slug: perf-lazy-loading
 description: "Configure lazy loading for images, iFrames, backgrounds, videos, and YouTube in Classic Monks. Includes thresholds, exclusions, critical image preloading, lazy rendering, and unloading."
 last_updated: 2026-07-28

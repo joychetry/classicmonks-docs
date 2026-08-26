@@ -1,5 +1,5 @@
 ---
-title: "How to Use Logs in Classic Monks: 404, Broken Links, Search, Debug | CM"
+title: "How to Use Logs in Classic Monks: 404, Broken Links, Search, Debug"
 slug: logs
 description: "Use the Logs submenu in Classic Monks to track 404 errors, broken links, redirects, search queries, and WordPress debug output."
 last_updated: 2026-06-24

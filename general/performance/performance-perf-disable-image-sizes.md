@@ -1,5 +1,5 @@
 ---
-title: "How to Disable Unnecessary Image Sizes in WordPress | CM"
+title: "How to Disable Unnecessary Image Sizes in WordPress"
 slug: perf-disable-image-sizes
 description: "Disable specific WordPress image sizes in Classic Monks. Prevents WordPress from generating sizes you don't use."
 last_updated: 2026-06-24

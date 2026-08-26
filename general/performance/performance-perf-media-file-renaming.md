@@ -1,5 +1,5 @@
 ---
-title: "How to Use Media File Renaming in WordPress | CM"
+title: "How to Use Media File Renaming in WordPress"
 slug: perf-media-file-renaming
 description: "Rename media files in the Media Library in Classic Monks. Change the file name without breaking references."
 last_updated: 2026-06-24

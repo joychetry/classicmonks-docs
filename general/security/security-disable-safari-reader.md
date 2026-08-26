@@ -1,5 +1,5 @@
 ---
-title: "How to Disable Safari Reader Mode in WordPress | CM"
+title: "How to Disable Safari Reader Mode in WordPress"
 slug: disable-safari-reader
 description: "Disable Safari Reader Mode (⌘+Shift+R) on your WordPress site. Prevents the simplified reading view that strips out branding and styling."
 last_updated: 2026-06-24

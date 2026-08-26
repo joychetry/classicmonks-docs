@@ -1,5 +1,5 @@
 ---
-title: "How to Use the File Downloader in Classic Monks: Plugin ZIPs | CM"
+title: "How to Use the File Downloader in Classic Monks: Plugin ZIPs"
 slug: file-downloader
 description: "Download any installed plugin or theme as a ZIP file in Classic Monks, and upload external files to your server via URL. No FTP required."
 last_updated: 2026-06-24

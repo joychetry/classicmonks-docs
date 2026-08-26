@@ -1,5 +1,5 @@
 ---
-title: "How to Use Public Post Preview in Classic Monks | CM"
+title: "How to Use Public Post Preview in Classic Monks"
 slug: public-post-preview
 description: "Share unpublished posts with clients or reviewers via a secure, temporary URL in Classic Monks. Optional password protection, configurable expiry, no login required."
 last_updated: 2026-06-24

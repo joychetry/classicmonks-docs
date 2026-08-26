@@ -1,5 +1,5 @@
 ---
-title: "How to Configure the Vision / Image Provider in Classic Monks | CM"
+title: "How to Configure the Vision / Image Provider in Classic Monks"
 slug: vision-image-provider
 description: "Configure the Vision / Image Provider in Classic Monks for image-aware workflows: alt text generation, image generation, image editing, Bricks AI attachments."
 last_updated: 2026-06-24

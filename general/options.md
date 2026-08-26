@@ -1,5 +1,5 @@
 ---
-title: "How to Use the Options Tab in Classic Monks: Feature Index | CM"
+title: "How to Use the Options Tab in Classic Monks: Feature Index"
 slug: options
 description: "Index of all Options tab features in Classic Monks. 7 administrative guides covering import, export, reset, uninstall, and license management."
 last_updated: 2026-06-24

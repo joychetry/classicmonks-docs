@@ -1,5 +1,5 @@
 ---
-title: "How to Enable Transitions in the Admin Area in WordPress | CM"
+title: "How to Enable Transitions in the Admin Area in WordPress"
 slug: interface-transitions-admin
 description: "Enable page transitions in the WordPress admin area in Classic Monks. Adds smooth transitions between admin pages for a more polished admin experience."
 last_updated: 2026-06-24

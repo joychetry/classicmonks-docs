@@ -1,5 +1,5 @@
 ---
-title: "How to Disable Author Edit in Classic Monks | CM"
+title: "How to Disable Author Edit in Classic Monks"
 slug: disable-author-edit
 description: "Prevent non-admin users from changing post authors in Classic Monks. Locks the author field on the post edit screen for editors and below."
 last_updated: 2026-06-24

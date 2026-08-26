@@ -1,5 +1,5 @@
 ---
-title: "How to Use the Email Tab in Classic Monks: Feature Index | CM"
+title: "How to Use the Email Tab in Classic Monks: Feature Index"
 slug: email
 description: "Index of all Email tab features in Classic Monks. Per-feature guides for email logging, SMTP settings, comment reply notifications, and WooCommerce email control."
 last_updated: 2026-06-24

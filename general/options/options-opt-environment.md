@@ -1,5 +1,5 @@
 ---
-title: "How to Use the Environment Manager in WordPress | CM"
+title: "How to Use the Environment Manager in WordPress"
 slug: opt-environment
 description: "Configure environment-specific settings in Classic Monks. Set different configurations for production, staging, and development environments."
 last_updated: 2026-06-24

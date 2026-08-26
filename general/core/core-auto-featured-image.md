@@ -1,5 +1,5 @@
 ---
-title: "How to Use Auto Featured Image in Classic Monks | CM"
+title: "How to Use Auto Featured Image in Classic Monks"
 slug: auto-featured-image
 description: "Auto Featured Image in Classic Monks automatically sets the first image in post content as the featured image when saving. Ensures every post has a featured image."
 last_updated: 2026-06-24

@@ -1,5 +1,5 @@
 ---
-title: "How to Hide the Remember Me Checkbox in WordPress | CM"
+title: "How to Hide the Remember Me Checkbox in WordPress"
 slug: hide-remember-me
 description: "Hide the Remember Me checkbox on the WordPress login form. Forces all logins to expire at the end of the session, improving security for shared or public computers."
 last_updated: 2026-06-24

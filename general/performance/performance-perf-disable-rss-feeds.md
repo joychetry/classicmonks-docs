@@ -1,5 +1,5 @@
 ---
-title: "How to Disable RSS Feeds in WordPress | CM"
+title: "How to Disable RSS Feeds in WordPress"
 slug: perf-disable-rss-feeds
 description: "Disable RSS feed generation in Classic Monks. Prevents WordPress from generating RSS/Atom feeds for posts, comments, and categories."
 last_updated: 2026-06-24

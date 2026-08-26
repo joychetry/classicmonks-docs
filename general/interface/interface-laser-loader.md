@@ -1,5 +1,5 @@
 ---
-title: "How to Use Laser Loader in WordPress | CM"
+title: "How to Use Laser Loader in WordPress"
 slug: interface-laser-loader
 description: "Add a laser-style page load progress bar to your WordPress site in Classic Monks. Shows a progress bar that sweeps across the page as it loads, with mobile, AJAX, percentage, RTL, and shadow options."
 last_updated: 2026-07-28

@@ -1,5 +1,5 @@
 ---
-title: "How to Enable HTML5 Comment Support in Classic Monks | CM"
+title: "How to Enable HTML5 Comment Support in Classic Monks"
 slug: html5-comment-support
 description: "Add HTML5 input types and validation attributes to the WordPress comment form in Classic Monks. Modern browser validation, mobile-friendly keyboards, no breaking changes."
 last_updated: 2026-06-24

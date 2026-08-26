@@ -1,5 +1,5 @@
 ---
-title: "How to Manage Content in Classic Monks: Feature Index | CM"
+title: "How to Manage Content in Classic Monks: Feature Index"
 slug: content-management
 description: "Index of content management features in Classic Monks. Each feature has its own dedicated guide with configuration, troubleshooting, and developer filters."
 last_updated: 2026-06-24

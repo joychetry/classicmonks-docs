@@ -1,5 +1,5 @@
 ---
-title: "AI Provider Setup in Classic Monks: 8 Providers | CM"
+title: "AI Provider Setup in Classic Monks: 8 Providers"
 slug: ai-provider
 description: Configure the AI Provider in Classic Monks to connect with OpenRouter, OpenAI, Anthropic, Gemini, NVIDIA, Zhipu, OpenAI-compatible, or custom endpoints.
 last_updated: 2026-06-24

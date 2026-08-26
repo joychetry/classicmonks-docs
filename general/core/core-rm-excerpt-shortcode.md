@@ -1,5 +1,5 @@
 ---
-title: "How to Use the RankMath Meta Excerpt Shortcode in Classic Monks | CM"
+title: "How to Use the RankMath Meta Excerpt Shortcode in Classic Monks"
 slug: rm-excerpt-shortcode
 description: "Display the RankMath SEO meta description as visible page content using the [rm_excerpt] shortcode in Classic Monks. Show SEO descriptions on archive pages, related post sections, and more."
 last_updated: 2026-06-24

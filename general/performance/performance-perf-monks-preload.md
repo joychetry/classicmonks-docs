@@ -1,5 +1,5 @@
 ---
-title: "How to Enable Intelligent Preloading in WordPress | CM"
+title: "How to Enable Intelligent Preloading in WordPress"
 slug: perf-monks-preload
 description: "Configure Intelligent Preloading in Classic Monks. Preload likely next pages with trigger, delay, request-limit, mobile, slow-connection, ignore-rule, and error controls."
 last_updated: 2026-07-28

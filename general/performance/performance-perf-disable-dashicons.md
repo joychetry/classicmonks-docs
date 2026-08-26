@@ -1,5 +1,5 @@
 ---
-title: "How to Disable Dashicons in WordPress | CM"
+title: "How to Disable Dashicons in WordPress"
 slug: perf-disable-dashicons
 description: "Disable the Dashicons font on the frontend in Classic Monks. Removes the icon font that WordPress loads on every frontend page."
 last_updated: 2026-06-24

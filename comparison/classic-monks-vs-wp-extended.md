@@ -10,7 +10,7 @@ secondary_keywords:
   - "WordPress plugin like WP Extended"
   - "WP Extended vs Classic Monks"
 date: 2026-08-07
-last_updated: 2026-08-07
+last_updated: 2026-08-20
 author: "Joy Chetry"
 og_title: "Classic Monks vs WP Extended: Which WordPress Plugin Fits?"
 og_description: "Compare Classic Monks and WP Extended for WordPress agencies, including admin tools, content, code, media, performance, security, pricing, and migration fit."
@@ -43,7 +43,7 @@ That distinction matters. If your problem is admin cleanup, content utilities, c
 
 > **Low-risk next step:** Use the [zero-install Classic Monks demo](https://classicmonks.com/demo/) to explore the stack, then validate the workflows that matter on staging before changing plugin ownership.
 
-This comparison was checked on **August 7, 2026** against the [WP Extended modules page](https://wpextended.io/modules/), [WP Extended pricing](https://wpextended.io/pricing/), the official [Classic Monks feature library](https://classicmonks.com/features/), the local feature inventory (`cm-features-what-is-it.md`), and the Classic Monks changelog.
+This comparison was checked on **August 20, 2026** against the [WP Extended modules page](https://wpextended.io/modules/), [WP Extended pricing](https://wpextended.io/pricing/), the official [Classic Monks feature library](https://classicmonks.com/features/), the local feature inventory (`cm-features-what-is-it.md`), and the Classic Monks changelog.
 
 **How we classified the comparison:** We marked a workflow as covered when Classic Monks supports the core job in its current implementation or documentation, and where the local feature inventory documents it. Differences involving depth, roles, execution contexts, or edge cases remain noted as limitations.
 
@@ -197,6 +197,7 @@ Keep WP Extended, or use a dedicated product, when you depend on a module Classi
 These are real, named modules. Some overlap with Classic Monks' broader export, folder, and user workflows; several do not have a confirmed direct CM equivalent. Do not replace a required workflow because a feature-count headline looks attractive.
 
 See the [Classic Monks feature library](https://classicmonks.com/features/) before you disable a required WP Extended module.
+For the categories where Classic Monks goes beyond WP Extended, see [Classic Monks vs WP Extended: What WP Extended Doesn't Include](https://classicmonks.com/docs/classic-monks-features-wp-extended-does-not-have/).
 
 ## Classic Monks vs WP Extended pricing
 
@@ -204,16 +205,16 @@ Pricing changes, so these are the values verified during this comparison.
 
 ### WP Extended pricing
 
-WP Extended publishes plan names, not dollars, on its pricing page:
+WP Extended's pricing is published directly. The free WordPress.org plugin includes 36 modules; Pro adds 15 more modules plus advanced options.
 
 | Plan | Sites | Model |
 |---|---|---|
-| Single Site | 1 | Annual, includes updates and support while active |
-| Multi Site | Freelancers and small agencies | Annual |
-| Unlimited | Agencies and teams | Annual |
-| Unlimited Lifetime | Unlimited | One-time |
+| Single Site | 1 | $29/year |
+| Multi Site | 50 | $119/year |
+| Unlimited | Unlimited | $199/year |
+| Unlimited Lifetime | Unlimited | $499 one-time |
 
-The free WordPress.org plugin includes 36 modules. Pro adds the remaining modules plus advanced options. Because WP Extended does not publish dollar figures on the pricing page, confirm the current number on [WP Extended pricing](https://wpextended.io/pricing/) before buying.
+Prices verified August 20, 2026 on [WP Extended pricing](https://wpextended.io/pricing/).
 
 ### Classic Monks pricing
 
@@ -321,7 +322,7 @@ The practical next step is simple: install Classic Monks on staging, run the wor
 
 ---
 
-**Last updated:** August 7, 2026  
+**Last updated:** August 20, 2026  
 **Sources:** [WP Extended Modules](https://wpextended.io/modules/), [WP Extended Pricing](https://wpextended.io/pricing/), [Classic Monks Features](https://classicmonks.com/features/), [Classic Monks Pricing](https://classicmonks.com/pricing/), the local `cm-features-what-is-it.md` feature inventory, and [Classic Monks Changelog](https://classicmonks.com/changelog/).
 
 <script type="application/ld+json">
@@ -340,7 +341,7 @@ The practical next step is simple: install Classic Monks on staging, run the wor
       "description": "Classic Monks vs WP Extended for WordPress agencies: compare admin tools, content, code, media, performance, security, pricing, and migration fit before switching.",
       "image": "https://classicmonks.com/wp-content/uploads/2025/05/classicmonks-logo.svg",
       "datePublished": "2026-08-07",
-      "dateModified": "2026-08-07",
+      "dateModified": "2026-08-20",
       "author": {
         "@type": "Person",
         "name": "Joy Chetry"

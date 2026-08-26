@@ -1,5 +1,5 @@
 ---
-title: "How to Disable Assets Manager for Logged-In Users in WordPress | CM"
+title: "How to Disable Assets Manager for Logged-In Users in WordPress"
 slug: perf-assets-manager-admin
 description: "Disable the Assets Manager for logged-in users in Classic Monks. Ensures admins see all assets for debugging."
 last_updated: 2026-06-24

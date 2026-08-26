@@ -1,5 +1,5 @@
 ---
-title: "How to Move the Admin Bar to the Bottom in WordPress | CM"
+title: "How to Move the Admin Bar to the Bottom in WordPress"
 slug: interface-admin-bar-bottom
 description: "Move the WordPress admin bar from the top to the bottom of the screen in Classic Monks. Provides better access to admin bar items on mobile devices."
 last_updated: 2026-06-24

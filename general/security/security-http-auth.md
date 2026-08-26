@@ -1,5 +1,5 @@
 ---
-title: "How to Enable HTTP Authentication for Staging in WordPress | CM"
+title: "How to Enable HTTP Authentication for Staging in WordPress"
 slug: http-auth
 description: "Add browser-level HTTP authentication to your WordPress site in Classic Monks. Prevents any access (frontend or admin) until the user enters a username and password."
 last_updated: 2026-06-24

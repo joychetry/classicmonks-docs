@@ -1,5 +1,5 @@
 ---
-title: "How to Use the Time Format Conversion in Classic Monks | CM"
+title: "How to Use the Time Format Conversion in Classic Monks"
 slug: time-format-conversion
 description: "Convert WordPress time displays from 24-hour to 12-hour format with the [cm_time_format] shortcode in Classic Monks. Useful for international sites and audience-specific time preferences."
 last_updated: 2026-06-24

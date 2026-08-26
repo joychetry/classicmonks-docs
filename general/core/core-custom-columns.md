@@ -1,5 +1,5 @@
 ---
-title: "How to Use Custom Columns in Classic Monks: 14 Admin Columns | CM"
+title: "How to Use Custom Columns in Classic Monks: 14 Admin Columns"
 slug: custom-columns
 description: "Customize the columns shown in WordPress post, page, and custom post type list tables with 14 optional data fields from Classic Monks."
 last_updated: 2026-06-24

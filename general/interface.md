@@ -1,5 +1,5 @@
 ---
-title: "How to Use the Interface Tab in Classic Monks: Feature Index | CM"
+title: "How to Use the Interface Tab in Classic Monks: Feature Index"
 slug: interface
 description: "Index of all Interface tab features in Classic Monks. 29 features across 6 subtabs covering media management, admin UX, forms, and loading animations."
 last_updated: 2026-06-24

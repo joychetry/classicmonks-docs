@@ -1,5 +1,5 @@
 ---
-title: "How to Disable Print in WordPress | CM"
+title: "How to Disable Print in WordPress"
 slug: disable-print
 description: "Disable the CTRL+P keyboard shortcut to print the page in Classic Monks. Prevents users from easily printing the page to paper or PDF."
 last_updated: 2026-06-24

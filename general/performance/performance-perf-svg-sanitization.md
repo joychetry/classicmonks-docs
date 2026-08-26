@@ -1,5 +1,5 @@
 ---
-title: "How to Enable SVG Security Sanitization in WordPress | CM"
+title: "How to Enable SVG Security Sanitization in WordPress"
 slug: perf-svg-sanitization
 description: "Sanitize SVG files on upload to prevent malicious code injection in Classic Monks. Strips potentially dangerous elements from SVG files."
 last_updated: 2026-06-24

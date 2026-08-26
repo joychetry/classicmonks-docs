@@ -1,5 +1,5 @@
 ---
-title: "How to Use the Classic Monks License Manager in WordPress | CM"
+title: "How to Use the Classic Monks License Manager in WordPress"
 slug: opt-license
 description: "Manage your Classic Monks license key. Activate, deactivate, and check license status."
 last_updated: 2026-06-24

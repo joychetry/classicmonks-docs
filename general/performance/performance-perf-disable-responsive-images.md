@@ -1,5 +1,5 @@
 ---
-title: "How to Disable WP Responsive Images in WordPress | CM"
+title: "How to Disable WP Responsive Images in WordPress"
 slug: perf-disable-responsive-images
 description: "Disable WordPress's built-in responsive image handling in Classic Monks. Prevents WordPress from generating and loading multiple image sizes."
 last_updated: 2026-06-24

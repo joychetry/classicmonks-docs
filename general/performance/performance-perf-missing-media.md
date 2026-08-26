@@ -1,5 +1,5 @@
 ---
-title: "How to Use the Missing Media Checker in WordPress | CM"
+title: "How to Use the Missing Media Checker in WordPress"
 slug: perf-missing-media
 description: "Find missing media files referenced in posts or pages in Classic Monks. Identifies broken image links for repair."
 last_updated: 2026-06-24

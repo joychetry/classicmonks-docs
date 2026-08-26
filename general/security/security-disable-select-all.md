@@ -1,5 +1,5 @@
 ---
-title: "How to Disable Select All in WordPress | CM"
+title: "How to Disable Select All in WordPress"
 slug: disable-select-all
 description: "Disable the CTRL+A keyboard shortcut to select all text in Classic Monks. Prevents users from easily selecting all text on the page with a single shortcut."
 last_updated: 2026-06-24

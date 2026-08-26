@@ -1,5 +1,5 @@
 ---
-title: "How to Configure AI Advanced Settings in Classic Monks | CM"
+title: "How to Configure AI Advanced Settings in Classic Monks"
 slug: ai-advanced
 description: "Configure AI Advanced Settings in Classic Monks: debug mode for logging, max retries for failed API calls, chat history limit for context management."
 last_updated: 2026-06-24

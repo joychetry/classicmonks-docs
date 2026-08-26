@@ -1,5 +1,5 @@
 ---
-title: "How to Use the White Label Tab in Classic Monks: Feature Index | CM"
+title: "How to Use the White Label Tab in Classic Monks: Feature Index"
 slug: white-label
 description: "Index of all White Label tab features in Classic Monks. 24 per-feature guides covering admin branding, login page customization, and menu management."
 last_updated: 2026-06-24

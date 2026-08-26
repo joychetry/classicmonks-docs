@@ -1,5 +1,5 @@
 ---
-title: "How to Remove RSD Link in WordPress | CM"
+title: "How to Remove RSD Link in WordPress"
 slug: perf-remove-rsd-link
 description: "Remove the RSD (Really Simple Discovery) link from the WordPress head in Classic Monks. Reduces unnecessary link tags in the page source."
 last_updated: 2026-06-24

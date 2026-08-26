@@ -1,5 +1,5 @@
 ---
-title: "How to Enable SVG Support in WordPress | CM"
+title: "How to Enable SVG Support in WordPress"
 slug: perf-svg-support
 description: "Enable SVG file uploads and display in WordPress via Classic Monks. Allows SVG files to be uploaded to the Media Library."
 last_updated: 2026-06-24

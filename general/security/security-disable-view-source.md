@@ -1,5 +1,5 @@
 ---
-title: "How to Disable View Source in WordPress | CM"
+title: "How to Disable View Source in WordPress"
 slug: disable-view-source
 description: "Disable the keyboard shortcut to view page source in Classic Monks. Prevents users from easily viewing the page's HTML source code via CTRL+U or ⌘+U."
 last_updated: 2026-06-24

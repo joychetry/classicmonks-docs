@@ -1,5 +1,5 @@
 ---
-title: "How to Use Quick WordPress Setup in WordPress | CM"
+title: "How to Use Quick WordPress Setup in WordPress"
 slug: quick-wp-setup
 description: "Run the Quick WordPress Setup wizard in Classic Monks to configure a fresh WordPress site in 2-3 minutes. Installs plugins, creates pages, sets permalinks, and optimizes your environment."
 last_updated: 2026-06-24

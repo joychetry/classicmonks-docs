@@ -1,5 +1,5 @@
 ---
-title: "How to Show the Staging Environment Indicator in WordPress | CM"
+title: "How to Show the Staging Environment Indicator in WordPress"
 slug: staging-indicator
 description: "Show a visible staging environment indicator in the WordPress admin. Reminds everyone working on a staging site that they're not on production, preventing accidental edits and user confusion."
 last_updated: 2026-06-24

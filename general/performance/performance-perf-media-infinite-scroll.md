@@ -1,5 +1,5 @@
 ---
-title: "How to Enable Media Library Infinite Scrolling in WordPress | CM"
+title: "How to Enable Media Library Infinite Scrolling in WordPress"
 slug: perf-media-infinite-scroll
 description: "Enable infinite scrolling in the Media Library in Classic Monks. Loads more files as you scroll instead of paginating."
 last_updated: 2026-06-24

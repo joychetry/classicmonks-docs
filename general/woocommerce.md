@@ -1,5 +1,5 @@
 ---
-title: "How to Use the WooCommerce Tab in Classic Monks: Feature Index | CM"
+title: "How to Use the WooCommerce Tab in Classic Monks: Feature Index"
 slug: woocommerce
 description: "Index of all WooCommerce tab features in Classic Monks. 49 per-feature guides covering product swatches, checkout, coupons, orders, optimization, and more."
 last_updated: 2026-06-24

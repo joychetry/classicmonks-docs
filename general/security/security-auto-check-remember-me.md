@@ -1,5 +1,5 @@
 ---
-title: "How to Auto-check Remember Me in WordPress | CM"
+title: "How to Auto-check Remember Me in WordPress"
 slug: auto-check-remember-me
 description: "Auto-check the Remember Me checkbox on the WordPress login form. Ensures users always have the longest session possible by default."
 last_updated: 2026-06-24

@@ -1,5 +1,5 @@
 ---
-title: "How to Use the Gallery Shortcode in WordPress | CM"
+title: "How to Use the Gallery Shortcode in WordPress"
 slug: gallery-shortcode
 description: "Add a [gallery] shortcode for folder-based media galleries in Classic Monks. Dynamically display all images from a media folder as a responsive gallery."
 last_updated: 2026-06-24

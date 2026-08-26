@@ -1,5 +1,5 @@
 ---
-title: "How to Remove Shortlink in WordPress | CM"
+title: "How to Remove Shortlink in WordPress"
 slug: perf-remove-shortlink
 description: "Remove the shortlink from the WordPress head in Classic Monks. Removes the WP shortlink that can be used for attacks."
 last_updated: 2026-06-24

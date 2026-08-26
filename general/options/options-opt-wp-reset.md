@@ -1,5 +1,5 @@
 ---
-title: "How to Use WP Reset in WordPress | CM"
+title: "How to Use WP Reset in WordPress"
 slug: opt-wp-reset
 description: "Reset the WordPress database to a fresh install state. Useful for development and staging sites."
 last_updated: 2026-06-24

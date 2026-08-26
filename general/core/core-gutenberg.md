@@ -1,5 +1,5 @@
 ---
-title: "How to Disable the Gutenberg Editor in Classic Monks: 8 Controls | CM"
+title: "How to Disable the Gutenberg Editor in Classic Monks: 8 Controls"
 slug: gutenberg
 description: "Control the Gutenberg editor in Classic Monks: disable for specific post types, remove block patterns, revert widgets, disable fullscreen mode, and more."
 last_updated: 2026-06-24

@@ -1,5 +1,5 @@
 ---
-title: "How to Use the Admin Notices Manager in WordPress | CM"
+title: "How to Use the Admin Notices Manager in WordPress"
 slug: admin-notices-manager
 description: "Manage WordPress admin notices in Classic Monks. Dismiss, hide, or rearrange admin notices for a cleaner dashboard experience."
 last_updated: 2026-06-24

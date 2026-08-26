@@ -1,5 +1,5 @@
 ---
-title: "How to Use AI Agent in Classic Monks: Admin Bar Chat | CM"
+title: "How to Use AI Agent in Classic Monks: Admin Bar Chat"
 slug: ai-agent
 description: Set up the Classic Monks AI Agent in your WordPress admin bar. Chat with AI about your site, generate content, attach images, and customize the system prompt.
 last_updated: 2026-06-24

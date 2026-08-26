@@ -1,5 +1,5 @@
 ---
-title: "How to Configure Email Notifications in WordPress | CM"
+title: "How to Configure Email Notifications in WordPress"
 slug: notifications
 description: "Index of email notification features in WordPress via Classic Monks. Per-feature guides for comment reply, password change, new user, admin email, and auto-update emails."
 last_updated: 2026-06-24

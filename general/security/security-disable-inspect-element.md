@@ -1,5 +1,5 @@
 ---
-title: "How to Disable Inspect Element in WordPress | CM"
+title: "How to Disable Inspect Element in WordPress"
 slug: disable-inspect-element
 description: "Disable the F12 or CTRL+Shift+I keyboard shortcut to open browser dev tools in Classic Monks. Prevents users from easily inspecting the page's HTML, CSS, and JavaScript."
 last_updated: 2026-06-24

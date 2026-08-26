@@ -1,5 +1,5 @@
 ---
-title: "How to Use the Plugin Manager in WordPress | CM"
+title: "How to Use the Plugin Manager in WordPress"
 slug: advanced-plugin-manager
 description: "Install WordPress plugins from URLs, local ZIP files, Google Drive, or WordPress.org author search in Classic Monks. Four installation methods in one unified Plugin Manager."
 last_updated: 2026-07-28

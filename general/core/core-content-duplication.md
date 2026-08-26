@@ -1,5 +1,5 @@
 ---
-title: "How to Use Content Duplication in Classic Monks | CM"
+title: "How to Use Content Duplication in Classic Monks"
 slug: content-duplication
 description: "Duplicate any post, page, or custom post type in one click in Classic Monks. Preserves all metadata, custom fields, and taxonomies in the copy."
 last_updated: 2026-06-24

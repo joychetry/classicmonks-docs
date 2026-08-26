@@ -1,5 +1,5 @@
 ---
-title: "How to Skip Smaller Images in Auto Resize in WordPress | CM"
+title: "How to Skip Smaller Images in Auto Resize in WordPress"
 slug: perf-skip-smaller-images
 description: "Skip images that are already smaller than the target dimension in Classic Monks. Prevents upscaling when auto resizing."
 last_updated: 2026-06-24

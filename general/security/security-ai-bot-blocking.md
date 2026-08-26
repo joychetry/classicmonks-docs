@@ -1,5 +1,5 @@
 ---
-title: "How to Block AI Crawlers in WordPress | CM"
+title: "How to Block AI Crawlers in WordPress"
 slug: ai-bot-blocking
 description: "Block AI crawlers (GPTBot, ClaudeBot, CCBot, etc.) in Classic Monks. Prevents your content from being used to train AI models without your consent."
 last_updated: 2026-06-24

@@ -1,5 +1,5 @@
 ---
-title: "How to Use the Taxonomy Switcher in Classic Monks | CM"
+title: "How to Use the Taxonomy Switcher in Classic Monks"
 slug: taxonomy-switcher
 description: "Migrate posts between categories, tags, and custom taxonomies in Classic Monks. Preserves post associations, drops incompatible terms, supports bulk switching."
 last_updated: 2026-06-24

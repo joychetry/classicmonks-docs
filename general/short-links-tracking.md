@@ -1,5 +1,5 @@
 ---
-title: "How to Create Short Links with Click Tracking in Classic Monks | CM"
+title: "How to Create Short Links with Click Tracking in Classic Monks"
 slug: short-links-tracking
 description: "Create branded short URLs with click tracking in Classic Monks. Built-in short link manager with expiration, password protection, and analytics."
 last_updated: 2026-06-24

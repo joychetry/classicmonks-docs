@@ -1,5 +1,5 @@
 ---
-title: "How to Use the Security Tab in Classic Monks: Feature Index | CM"
+title: "How to Use the Security Tab in Classic Monks: Feature Index"
 slug: security
 description: "Index of all Security tab features in Classic Monks. 39 per-feature guides covering WP protection, 2FA, content protection, stay logged in, and staging protection."
 last_updated: 2026-06-24

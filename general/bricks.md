@@ -1,5 +1,5 @@
 ---
-title: "How to Use the Bricks Tab in Classic Monks: Feature Index | CM"
+title: "How to Use the Bricks Tab in Classic Monks: Feature Index"
 slug: bricks
 description: "Index of all Bricks tab features in Classic Monks. 300+ features across 8 subtabs covering setup, the AI builder, elements, dynamic data, and conditions."
 last_updated: 2026-08-04

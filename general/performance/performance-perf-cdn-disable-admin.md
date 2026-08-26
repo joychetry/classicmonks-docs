@@ -1,5 +1,5 @@
 ---
-title: "How to Disable CDN for Admin Users in WordPress | CM"
+title: "How to Disable CDN for Admin Users in WordPress"
 slug: perf-cdn-disable-admin
 description: "Disable CDN rewriting for logged-in admin users in Classic Monks. Ensures admins see the latest content without CDN caching."
 last_updated: 2026-06-24

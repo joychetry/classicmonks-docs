@@ -1,5 +1,5 @@
 ---
-title: "How to Use AI Tools in Classic Monks: 7 Post Editor Tools | CM"
+title: "How to Use AI Tools in Classic Monks: 7 Post Editor Tools"
 slug: ai-tools
 description: "Use the 7 AI Tools in Classic Monks for title generation, excerpt generation, summarization, post review, alt text, image generation, and image editing."
 last_updated: 2026-06-24

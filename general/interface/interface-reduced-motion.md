@@ -1,5 +1,5 @@
 ---
-title: "How to Respect Reduced Motion Preference in WordPress | CM"
+title: "How to Respect Reduced Motion Preference in WordPress"
 slug: interface-reduced-motion
 description: "Respect the CSS prefers-reduced-motion media query in Classic Monks. Disables page transitions and loading animations for users who have enabled reduced motion in their OS settings."
 last_updated: 2026-06-24

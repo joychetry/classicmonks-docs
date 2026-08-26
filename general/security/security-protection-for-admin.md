@@ -1,5 +1,5 @@
 ---
-title: "How to Apply Content Protection to Administrators in WordPress | CM"
+title: "How to Apply Content Protection to Administrators in WordPress"
 slug: protection-for-admin
 description: "Apply content protection (text selection, right-click, etc.) to administrators in WordPress via Classic Monks. By default, content protection excludes admins, but you can opt-in to apply it to admins too."
 last_updated: 2026-06-24

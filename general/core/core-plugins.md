@@ -1,5 +1,5 @@
 ---
-title: "How to Manage Plugins in Classic Monks: Active, Updates, Maintenance | CM"
+title: "How to Manage Plugins in Classic Monks: Active, Updates, Maintenance"
 slug: plugins
 description: "Manage plugins in Classic Monks: reorder the active list, disable auto-updates, show maintenance status, and access the Advanced Plugin Manager."
 last_updated: 2026-06-24

@@ -1,5 +1,5 @@
 ---
-title: "How to Use Cloudflare Turnstile in WordPress | CM"
+title: "How to Use Cloudflare Turnstile in WordPress"
 slug: cloudflare-turnstile
 description: "Add Cloudflare Turnstile captcha to WordPress, WooCommerce, and comment forms in Classic Monks. Free, privacy-first alternative to Google reCAPTCHA."
 last_updated: 2026-06-24

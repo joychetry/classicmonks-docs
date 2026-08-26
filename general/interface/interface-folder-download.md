@@ -1,5 +1,5 @@
 ---
-title: "How to Use Folder Download in WordPress | CM"
+title: "How to Use Folder Download in WordPress"
 slug: folder-download
 description: "Download media folders as ZIP archives in Classic Monks. Download an entire folder's contents as a single ZIP file with one click."
 last_updated: 2026-06-24

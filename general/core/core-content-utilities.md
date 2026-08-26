@@ -1,5 +1,5 @@
 ---
-title: "How to Use Content Utilities in Classic Monks: Feature Index | CM"
+title: "How to Use Content Utilities in Classic Monks: Feature Index"
 slug: content-utilities
 description: "Index of content utilities in Classic Monks. SEO and visibility features with per-feature guides covering configuration, troubleshooting, and developer filters."
 last_updated: 2026-06-24

@@ -1,5 +1,5 @@
 ---
-title: "How to Import Settings in WordPress | CM"
+title: "How to Import Settings in WordPress"
 slug: opt-import
 description: "Import Classic Monks settings from a JSON file. Quickly configure a new site by importing settings from an existing one."
 last_updated: 2026-06-24

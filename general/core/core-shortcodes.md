@@ -1,5 +1,5 @@
 ---
-title: "How to Use Shortcodes and Filter Utilities in Classic Monks: Feature Index | CM"
+title: "How to Use Shortcodes and Filter Utilities in Classic Monks: Feature Index"
 slug: shortcodes
 description: "Index of shortcode utilities in Classic Monks. Four specialized shortcodes for tag display, SEO meta descriptions, time format, and currency conversion."
 last_updated: 2026-06-24

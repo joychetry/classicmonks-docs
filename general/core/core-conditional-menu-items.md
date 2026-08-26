@@ -1,5 +1,5 @@
 ---
-title: "How to Use Conditional Menu Items in WordPress | CM"
+title: "How to Use Conditional Menu Items in WordPress"
 slug: conditional-menu-items
 description: "Control menu item visibility by user role, device type, page context, and more in Classic Monks. Uses advanced AND/OR logic for granular navigation control."
 last_updated: 2026-08-03

@@ -1,5 +1,5 @@
 ---
-title: "How to Disable Text Selection in WordPress | CM"
+title: "How to Disable Text Selection in WordPress"
 slug: disable-text-selection
 description: "Disable text selection on the WordPress frontend in Classic Monks. Prevents casual copying of content. Optional NoScript overlay for users with JavaScript disabled."
 last_updated: 2026-06-24

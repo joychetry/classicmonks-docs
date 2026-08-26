@@ -1,5 +1,5 @@
 ---
-title: "How to Allow Performance Testing Tools in WordPress | CM"
+title: "How to Allow Performance Testing Tools in WordPress"
 slug: allow-performance-tools
 description: "Whitelist performance testing tools (GTmetrix, Pingdom, Lighthouse, etc.) in Classic Monks. Allows them to bypass staging protection for performance audits."
 last_updated: 2026-06-24

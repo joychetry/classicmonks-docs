@@ -1,5 +1,5 @@
 ---
-title: "How to Disable All Updates in WordPress | CM"
+title: "How to Disable All Updates in WordPress"
 slug: perf-disable-all-updates
 description: "Disable all WordPress, plugin, and theme updates in Classic Monks. Prevents automatic and manual updates for a controlled update workflow."
 last_updated: 2026-06-24

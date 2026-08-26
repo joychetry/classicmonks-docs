@@ -1,5 +1,5 @@
 ---
-title: "How to Use a Custom Login URL in WordPress | CM"
+title: "How to Use a Custom Login URL in WordPress"
 slug: custom-login-url
 description: "Change the default WordPress login URL from /wp-login.php to a custom slug in Classic Monks. Adds a custom whitelist, redirect, and a hidden protection against brute force attacks."
 last_updated: 2026-06-24
