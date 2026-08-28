@@ -23,7 +23,7 @@ internal_links:
   - "/features/"
   - "/demo/"
   - "/docs/classic-monks-vs-wp-extended/"
-  - "/all-in-one-wordpress-plugin-alternatives/"
+  - "/docs/alternatives/"
 ---
 
 # WP Extended Alternative: Classic Monks for Agencies
@@ -99,7 +99,7 @@ This is where a freelancer or small agency hits the limit. Once a stack needs al
 - **White label and agency delivery:** rebrand the plugin, hide it from the plugins list, client license expiry controls.
 - **AI tools, staging protection, Code Manager with validation and safe mode, email controls, and settings export and import.**
 
-For that wider set, the alternative to WP Extended is not one more admin toolkit. It is a plugin that covers the admin layer and the deeper jobs in the same install.
+For that wider set, the alternative to WP Extended is not one more admin toolkit. It is a plugin that covers the admin layer and the deeper jobs in the same install. See the [all-in-one WordPress plugin alternatives guide](https://classicmonks.com/docs/alternatives/) for how the whole field lines up before you decide.
 
 ## What Classic Monks covers that WP Extended does not
 
@@ -241,7 +241,7 @@ Implement `BlogPosting` (headline, dates, author, publisher) and `FAQPage` (the 
 - Classic Monks features: [/features/](https://classicmonks.com/features/)
 - Try the demo: [/demo/](https://classicmonks.com/demo/)
 - Classic Monks vs WP Extended: [/docs/classic-monks-vs-wp-extended/](https://classicmonks.com/docs/classic-monks-vs-wp-extended/)
-- All-in-One WordPress Plugin Alternatives: [/all-in-one-wordpress-plugin-alternatives/](https://classicmonks.com/all-in-one-wordpress-plugin-alternatives/)
+- All-in-One WordPress Plugin Alternatives: [/docs/alternatives/](https://classicmonks.com/docs/alternatives/)
 
 ## Source verification
 

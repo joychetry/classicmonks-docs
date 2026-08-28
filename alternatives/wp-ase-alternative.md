@@ -24,7 +24,7 @@ internal_links:
   - "/features/"
   - "/demo/"
   - "/docs/classic-monks-vs-ase/"
-  - "/all-in-one-wordpress-plugin-alternatives/"
+  - "/docs/alternatives/"
 ---
 
 # ASE Alternative: Classic Monks for Agencies
@@ -102,7 +102,7 @@ This is where a freelancer or small agency hits the limit. Once a stack needs al
 - **Staging protection:** access tokens, HTTP authentication, IP allowlists, testing-tool detection, and staging indicators.
 - **Agency white label:** full plugin branding and hiding, login customization, and client license expiry controls.
 
-For that wider set, the alternative to ASE is not one more admin toolkit. It is a plugin that covers the admin layer and the deeper jobs in the same install.
+For that wider set, the alternative to ASE is not one more admin toolkit. It is a plugin that covers the admin layer and the deeper jobs in the same install. See the [all-in-one WordPress plugin alternatives guide](https://classicmonks.com/docs/alternatives/) for how the whole field lines up before you decide.
 
 ## What Classic Monks covers that ASE does not
 
@@ -272,7 +272,7 @@ Implement `BlogPosting` (headline, dates, author, publisher) and `FAQPage` (the 
 - Try the demo: [/demo/](https://classicmonks.com/demo/)
 - Classic Monks vs ASE: [/docs/classic-monks-vs-ase/](https://classicmonks.com/docs/classic-monks-vs-ase/)
 - What ASE doesn't have: [/docs/classic-monks-vs-ase-what-ase-does-not-have/](https://classicmonks.com/docs/classic-monks-vs-ase-what-ase-does-not-have/)
-- All-in-One WordPress Plugin Alternatives: [/all-in-one-wordpress-plugin-alternatives/](https://classicmonks.com/all-in-one-wordpress-plugin-alternatives/)
+- All-in-One WordPress Plugin Alternatives: [/docs/alternatives/](https://classicmonks.com/docs/alternatives/)
 
 ## Source verification
 

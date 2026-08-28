@@ -362,7 +362,7 @@ Choose Classic Monks for the wider stack: AI, Bricks, WooCommerce, performance, 
 [Try the zero-install Classic Monks demo](https://classicmonks.com/demo/)  
 [Browse the Classic Monks feature library](https://classicmonks.com/features/)  
 [Check Classic Monks pricing](https://classicmonks.com/pricing/)  
-[Read the best all-in-one WordPress plugins guide](https://classicmonks.com/blog/best-all-in-one-wordpress-plugins/)
+[Read the best all-in-one WordPress plugins guide](https://classicmonks.com/best-all-in-one-wordpress-plugins/)  
 
 ---
 
@@ -412,6 +412,7 @@ Implement `BlogPosting` (headline, dates, author, publisher) and `FAQPage` (the 
 ## Internal links
 
 * Best All-in-One WordPress Plugins in 2026: [/best-all-in-one-wordpress-plugins/](https://classicmonks.com/best-all-in-one-wordpress-plugins/)
+* All-in-One WordPress Plugin Alternatives: [/docs/alternatives/](https://classicmonks.com/docs/alternatives/)
 * Classic Monks pricing: [/pricing/](https://classicmonks.com/pricing/)
 * Classic Monks features: [/features/](https://classicmonks.com/features/)
 * Try the demo: [/demo/](https://classicmonks.com/demo/)

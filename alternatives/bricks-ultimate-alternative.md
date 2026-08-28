@@ -272,6 +272,7 @@ Start with the elements your templates actually use, test on staging, and move t
 [Check Classic Monks pricing](https://classicmonks.com/pricing/)
 [Read the full Classic Monks vs Bricks Ultimate comparison](https://classicmonks.com/docs/classic-monks-vs-bricks-ultimate/)
 [Read the best all-in-one WordPress plugins guide](https://classicmonks.com/best-all-in-one-wordpress-plugins/)
+[Compare all-in-one WordPress plugin alternatives](https://classicmonks.com/docs/alternatives/)
 
 ## Author
 

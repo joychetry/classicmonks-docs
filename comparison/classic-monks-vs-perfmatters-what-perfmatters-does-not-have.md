@@ -242,6 +242,7 @@ Implement `BlogPosting` (headline, dates, author, publisher) and `FAQPage` (the 
 ## Internal links
 
 - Best All-in-One WordPress Plugins in 2026: [/best-all-in-one-wordpress-plugins/](https://classicmonks.com/best-all-in-one-wordpress-plugins/)
+- All-in-One WordPress Plugin Alternatives: [/docs/alternatives/](https://classicmonks.com/docs/alternatives/)
 - Classic Monks pricing: [/pricing/](https://classicmonks.com/pricing/)
 - Classic Monks features: [/features/](https://classicmonks.com/features/)
 - Try the demo: [/demo/](https://classicmonks.com/demo/)

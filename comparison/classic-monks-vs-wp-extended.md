@@ -37,7 +37,7 @@ Classic Monks and WP Extended both exist to consolidate the small plugins a Word
 
 That distinction matters. If your problem is admin cleanup, content utilities, code snippets, and a handful of developer and security controls, WP Extended is a strong, honest option with a generous free tier. If you also need Bricks Builder tools, WooCommerce controls, AI workflows, a deeper performance layer, staging protection, media management, and agency white labeling, Classic Monks is the broader fit.
 
-> See this comparison in context: [Best All-in-One WordPress Plugins in 2026](https://classicmonks.com/blog/best-all-in-one-wordpress-plugins/) (the hub article that ranks Classic Monks and WP Extended alongside ASE, Jetpack, WPMU DEV, and Perfmatters).
+> See this comparison in context: [Best All-in-One WordPress Plugins in 2026](https://classicmonks.com/best-all-in-one-wordpress-plugins/) (the hub article that ranks Classic Monks and WP Extended alongside ASE, Jetpack, WPMU DEV, and Perfmatters).
 
 > **Quick verdict:** Choose Classic Monks when you want one modular stack for building, operating, and handing over WordPress sites, including Bricks, WooCommerce, security, performance, and agency delivery. Choose WP Extended when your needs are mostly admin and content utilities and you want a lightweight toolkit with a generous free tier. Use both during migration if that is the safest path, but assign one owner per shared concern.
 
@@ -318,7 +318,8 @@ The practical next step is simple: install Classic Monks on staging, run the wor
 [Try the zero-install Classic Monks demo](https://classicmonks.com/demo/)  
 [Browse the Classic Monks feature library](https://classicmonks.com/features/)  
 [Check Classic Monks pricing](https://classicmonks.com/pricing/)  
-[Read the best all-in-one WordPress plugins guide](https://classicmonks.com/blog/best-all-in-one-wordpress-plugins/)
+[Read the best all-in-one WordPress plugins guide](https://classicmonks.com/best-all-in-one-wordpress-plugins/)  
+[Compare all-in-one WordPress plugin alternatives](https://classicmonks.com/docs/alternatives/)
 
 ---
 
