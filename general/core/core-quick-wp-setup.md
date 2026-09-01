@@ -1,309 +1,265 @@
 ---
-title: "How to Use Quick WordPress Setup in WordPress"
+title: "Set Up a Fresh WordPress Site Fast | Classic Monks"
 slug: quick-wp-setup
-description: "Run the Quick WordPress Setup wizard in Classic Monks to configure a fresh WordPress site in 2-3 minutes. Installs plugins, creates pages, sets permalinks, and optimizes your environment."
-last_updated: 2026-06-24
+description: "Configure a fresh WordPress site in minutes with the Classic Monks setup wizard. Install plugins, create pages, set permalinks, and remove default content."
+last_updated: 2026-08-30
 author: Joy
-reading_time: 10 min
+reading_time: 8 min
 canonical: https://classicmonks.com/docs/quick-wp-setup/
 ---
 
-# How to Use Quick WordPress Setup in WordPress
+# How to Set Up a New WordPress Site Quickly
 
-> Quick WordPress Setup is a one-time automated wizard that configures your WordPress site with recommended settings, installs essential plugins and themes, creates standard pages, and optimizes your environment. It compresses 20-30 minutes of manual setup into a 2-3 minute wizard.
+> Quick WordPress Setup is a one-time wizard in Classic Monks that configures a fresh WordPress site in 2 to 3 minutes. Select the settings you want, and it installs plugins and themes, creates standard pages, sets permalinks, and cleans up default content automatically.
 
 ## Key Takeaways
 
-- One-time wizard for fresh WordPress installations
-- 7 configuration sections with detailed sub-options
-- Installs plugins and themes from the WordPress repository or local ZIP upload
+- One-time wizard for fresh WordPress installations, not existing sites
+- Eight configuration sections with detailed sub-options
+- Installs plugins and themes from the WordPress repository or a local ZIP upload
 - Creates standard pages (Home, About, Contact, Services, Blog, Privacy, Terms, FAQ)
-- Configures site identity, timezone, membership, permalinks, and homepage
-- Removes default content (Hello World, Sample Page, default plugins)
-- Includes self-hosted Google Analytics v4 setup
-- Re-runnable via Options > Environment
+- Configures site identity, timezone, membership, permalinks, homepage, and media
+- Removes default content and plugins (Hello World, Sample Page, Akismet, Hello Dolly)
+- Re-runnable through Options > Environment
+- Optional self-hosted Google Analytics v4 setup
 
 ---
 
 ## What Is Quick WordPress Setup?
 
-Quick WordPress Setup is a guided wizard that automates the manual configuration steps you would normally perform on a fresh WordPress installation. Instead of clicking through WordPress Settings, installing plugins one at a time, creating pages manually, and editing the database, you check the boxes you want and the wizard handles the rest.
+A fresh WordPress installation arrives with default content (a Hello World post, a Sample Page, and plugins such as Akismet and Hello Dolly), a UTC timezone, a generic site identity, and no permalink structure. Setting up a new WordPress site by hand means clicking through several Settings screens, installing plugins one at a time, and creating pages manually. That routine takes 20 to 30 minutes.
 
-The wizard is split into 7 configuration sections, each with detailed sub-options:
+Quick WordPress Setup compresses the whole job into one 2 to 3 minute wizard. You tick the boxes you want, and the wizard applies site identity, user registration, plugins and themes, homepage, permalinks, search engine visibility, cleanup, media sizes, and dashboard options in a single pass. For agencies that provision client sites, the time saved multiplies across every project.
 
-1. **Site Identity**, Site title, tagline, logo, favicon, language, week start day, timezone, and date/time formats
-2. **Membership**, User registration and default user role
-3. **Install Plugins and Themes**, Search WordPress.org or upload ZIP files
-4. **Homepage Settings**, Latest posts or static page with page selection
-5. **Search Engine Visibility**, Indexing, permalinks, comments, and page creation
-6. **Cleanup and Optimization**, Remove default content, plugins, themes, and config files
-7. **Media Settings**, Thumbnail sizes, upload folders, and avatars
-8. **Dashboard and Interface**, Screen options, patterns, and welcome guide
+The wizard is organized into eight configuration sections, each with its own sub-options:
 
-## Why You Need It
-
-A clean WordPress install ships with default content (Hello World post, Sample Page, default plugins like Akismet and Hello Dolly), unset permalinks, UTC timezone, generic site identity, and no standard pages. Manually addressing all of this takes 20-30 minutes of clicking through settings screens, plugin searches, and page creation.
-
-Quick WordPress Setup compresses that into a 2-3 minute wizard. For agencies building client sites, the savings multiply across every project.
+1. Site Identity
+2. Membership
+3. Install Plugins and Themes
+4. Homepage Settings
+5. Search Engine Visibility
+6. Cleanup and Optimization
+7. Media Settings
+8. Dashboard and Interface
 
 ---
 
-## How to Use Quick WordPress Setup in Classic Monks
+## Recommendations Before Enabling
 
-### Step 1: Navigate to Settings
+- **Run it only on a fresh WordPress install.** The wizard is destructive by design. It removes default content (the Hello World post, Sample Page, and default plugins), creates new pages, and overwrites settings. Running it on an existing site will replace your current configuration.
+- **Remove the `DISALLOW_FILE_MODS` constant first.** The wizard must write plugin and theme files. If `DISALLOW_FILE_MODS` is defined in wp-config.php, the setup button is disabled with a warning notice. Remove the constant, run the wizard, then re-enable it.
+- **Confirm file system write access.** WordPress must be able to write to wp-config.php, the plugins folder, and the themes folder. Check permissions if the wizard completes but settings are not applied.
 
-Click into the **Classic Monks** plugin settings in your WordPress dashboard.
+---
 
-### Step 2: Go to the Core Tab
+## How to Set Up a New WordPress Site in Classic Monks
 
-Click on the **Core** menu. The Setup subtab opens by default.
+### Step 1: Open the Classic Monks settings
 
-### Step 3: Enable Quick WordPress Setup
+Click **Classic Monks** in the WordPress admin sidebar.
+
+### Step 2: Go to the Core tab
+
+Click the **Core** menu. The Setup subtab opens by default.
+
+### Step 3: Start WordPress Setup
 
 The Setup subtab shows a **Start WordPress Setup** button. Click it to open the setup modal.
 
-### Step 4: Configure Each Section
+### Step 4: Configure each section
 
-The modal walks through 7 sections. Use the **Select All** or **Deselect All** buttons in the modal footer to quickly toggle all options. Check the boxes you want and fill in the relevant fields.
+Walk through the eight configuration sections. Use **Select All** or **Deselect All** in the modal footer to toggle everything at once, or tick individual boxes and fill in the fields you want.
 
 ### Step 5: Run Setup
 
-Click **Run Setup** in the modal footer. The wizard shows real-time progress with a progress bar and log. The whole process takes 2-3 minutes.
+Click **Run Setup** in the modal footer. The wizard shows real-time progress with a progress bar and a log. The whole run takes 2 to 3 minutes.
 
-### Step 6: Reload and Verify
+### Step 6: Reload and verify
 
-After setup completes, reload the WordPress admin. The configured settings are now in effect. The Setup subtab will show a "Re-run WordPress Setup" button if you want to run the wizard again with different options.
+When setup finishes, reload the WordPress admin. Your configured settings are now active. The Setup subtab changes to show a **Re-run WordPress Setup** button so you can run the wizard again with different options.
 
 ---
 
-## Section 1: Site Identity
+## Configure the Setup Options
 
-The Site Identity section configures your WordPress site's identity and regional settings.
+Each section controls a specific part of your new site. The defaults are safe starting points; change only what your project needs.
+
+### Site Identity
+
+The Site Identity section sets your site's name, regional settings, and brand assets.
 
 | Option | Type | Description | Default |
 |--------|------|-------------|---------|
 | **Site Title** | Text input | The name of your site. Appears in the browser tab, search results, and theme header. | Current site title |
 | **Tagline** | Text input | A short description of your site. Appears below the site title in the theme header. | Current tagline |
-| **Set Site Logo** | Toggle | Upload a logo to use as your site's main logo. Opens the WordPress Media Library. | Off |
-| **Set Site Icon (Favicon)** | Toggle | Upload a square image (512x512px minimum) for the browser tab icon. Opens the WordPress Media Library. | Off |
-| **Site Language** | Dropdown | Select the WordPress admin language. Shows all available translations. | English (United States) |
-| **Week Starts On** | Dropdown | Which day the week starts on (used by calendars and week-based queries). | Sunday |
-| **Set Timezone & Date Format** | Toggle | Opens sub-options for timezone, date format, and time format. | Off |
+| **Set Site Logo** | Toggle | Open the WordPress Media Library and upload a logo to use as the site's main logo. | Off |
+| **Set Site Icon (Favicon)** | Toggle | Upload a square image (512x512px minimum) for the browser tab icon. | Off |
+| **Site Language** | Dropdown | Choose the WordPress admin language. Lists all available translations. | English (United States) |
+| **Week Starts On** | Dropdown | Which day the week starts on for calendars and week-based queries. | Sunday |
+| **Set Timezone & Date Format** | Toggle | Reveals sub-options for timezone, date format, and time format. | Off |
 
-When **Set Timezone & Date Format** is enabled, three additional fields appear:
+When **Set Timezone & Date Format** is enabled, three extra fields appear:
 
 | Sub-Option | Type | Description |
 |------------|------|-------------|
-| **Timezone** | Dropdown (grouped by region) | Select your timezone. Grouped by continent (Africa, America, Asia, Europe, etc.). |
-| **Date Format** | Dropdown | 5 options: "F j, Y", "Y-m-d", "m/d/Y", "d/m/Y", "j F Y". Shows a live preview of each. |
-| **Time Format** | Dropdown | 3 options: "g:i a" (lowercase AM/PM), "g:i A" (uppercase AM/PM), "H:i" (24-hour). |
+| **Timezone** | Dropdown | Grouped by continent (Africa, America, Asia, Europe, and so on). |
+| **Date Format** | Dropdown | Five options (F j, Y; Y-m-d; m/d/Y; d/m/Y; j F Y) with a live preview. |
+| **Time Format** | Dropdown | g:i a (lowercase AM/PM), g:i A (uppercase AM/PM), or H:i (24-hour). |
 
----
-
-## Section 2: Membership
+### Membership
 
 The Membership section controls whether visitors can register and what role they receive.
 
 | Option | Type | Description | Default |
 |--------|------|-------------|---------|
-| **Anyone Can Register** | Toggle | Allow visitors to create user accounts on your website. When enabled, users can register for new accounts. | Off |
-| **New User Default Role** | Dropdown | Select the default role assigned to new users when they register. Shows all registered roles (Subscriber, Contributor, Author, Editor, Administrator, plus any custom roles). | Subscriber |
+| **Anyone Can Register** | Toggle | Allow visitors to create user accounts on your website. | Off |
+| **New User Default Role** | Dropdown | The role assigned to new registrations. Lists all registered roles including any custom ones. | Subscriber |
 
-**Why this matters:** If you're building a client site, you may want to enable registration with a custom role (e.g., "Customer" for WooCommerce, or "Subscriber" for a blog). The wizard sets this once so you don't have to find it in Settings > General.
+**Why this matters:** on a client site you may want registration with a custom role (a Customer role for WooCommerce, or Subscriber for a blog). The wizard sets this once so you do not have to find it in Settings > General.
 
----
+### Install Plugins and Themes
 
-## Section 3: Install Plugins and Themes
+This section installs plugins and themes from the WordPress.org repository or from local ZIP files.
 
-The Install Plugins and Themes section lets you search the WordPress.org repository, upload ZIP files, and activate a theme.
+For plugins:
 
-### Plugins
+1. Type in the search box to find plugins in the WordPress.org repository (for example Wordfence, RankMath, or WPForms).
+2. Click each result to add it to the install queue (shown in the Selected list).
+3. Or click **Add Plugin(s)** to upload plugin ZIP files from your computer. Multiple files can be selected and `.zip` is the accepted format.
 
-| Option | Type | Description |
-|--------|------|-------------|
-| **Install Plugins** (Search) | Live search | Type in the search box to find plugins from the WordPress.org repository. Results appear as you type. Click a result to add it to the install queue. |
-| **Upload Plugins** (Upload) | File upload | Click "Add Plugin(s)" to upload plugin ZIP files from your computer. Multiple files can be selected. Accepted format: `.zip` |
+For themes:
 
-**How it works:**
-1. Search for plugins in the search box (e.g., "Wordfence", "RankMath", "WPForms")
-2. Click on each result to add it to the queue (shown in the "Selected" list)
-3. Or click "Add Plugin(s)" to upload ZIP files directly
-4. All queued plugins will be automatically installed and activated when you run the setup
+1. Search for themes or upload theme ZIP files.
+2. Select a theme from the **Select Theme to Activate** dropdown, which lists installed and queued themes.
+3. The selected theme activates when you run the setup.
 
-### Themes
+**Note:** plugins are activated automatically. Themes must be explicitly selected for activation.
 
-| Option | Type | Description |
-|--------|------|-------------|
-| **Install Themes** (Search) | Live search | Search for themes from the WordPress.org repository. Click a result to add it to the install queue. |
-| **Upload Theme(s)** (Upload) | File upload | Click "Add Theme(s)" to upload theme ZIP files. Multiple files can be selected. |
-| **Select Theme to Activate** | Dropdown | After adding themes, select one to activate. The dropdown populates with all installed and queued themes. |
+### Homepage Settings
 
-**How it works:**
-1. Search for themes or upload ZIP files
-2. Select a theme from the "Select Theme to Activate" dropdown
-3. The selected theme will be activated when you run the setup
-
-**Note:** Plugins are automatically activated. Themes must be explicitly selected for activation.
-
----
-
-## Section 4: Homepage Settings
-
-The Homepage Settings section configures what visitors see on your site's front page.
+The Homepage Settings section decides what visitors see on the front page.
 
 | Option | Type | Description | Default |
 |--------|------|-------------|---------|
-| **Your latest posts** | Radio button | Show a blog-style feed of your latest posts on the homepage. | Selected (default) |
-| **A static page** | Radio button | Show a specific page as the homepage. Reveals two page dropdowns when selected. |, |
+| **Your latest posts** | Radio | Show a blog-style feed of your latest posts on the homepage. | Selected |
+| **A static page** | Radio | Show a specific page as the homepage. Reveals two dropdowns when selected. | Not selected |
 
-When "A static page" is selected, two additional fields appear:
+When **A static page** is selected, two extra fields appear:
 
 | Sub-Option | Type | Description |
 |------------|------|-------------|
-| **Homepage** | Dropdown | Select which page to use as the homepage. Lists all published pages. |
-| **Posts Page** | Dropdown | Select which page to use for the blog feed. Lists all published pages. |
+| **Homepage** | Dropdown | Which page to use as the homepage. Lists all published pages. |
+| **Posts Page** | Dropdown | Which page to use for the blog feed. Lists all published pages. |
 
-**Tip:** If you're creating pages in the "Search Engine Visibility" section (Auto Create Important Pages), the Homepage and Posts Page dropdowns will be populated with those newly created pages. You can also use the "Set Created Home Page as Front Page" and "Set Created Blog Page as Posts Page" toggles to automatically assign them.
+**Tip:** if you create pages in the Search Engine Visibility section (Auto Create Important Pages), those pages populate the Homepage and Posts Page dropdowns. You can also use the toggles in that section to assign the created Home page as the front page and the created Blog page as the posts page.
 
----
+### Search Engine Visibility
 
-## Section 5: Search Engine Visibility
-
-The Search Engine Visibility section controls indexing, permalinks, comments, and page creation.
+The Search Engine Visibility section controls indexing, permalink structure, comments, and page creation. For a live, read-only check of how your indexing settings look, see [How to Enable Search Engine Visibility Status in WordPress](core-search-engine-visibility-status.md).
 
 | Option | Type | Description | Default |
 |--------|------|-------------|---------|
-| **Discourage search engines from indexing this site** | Toggle | Sets the `blog_public` option to 0. Prevents Google, Bing, and other search engines from indexing your site. Useful for staging or development sites. | Off |
+| **Discourage search engines from indexing this site** | Toggle | Sets `blog_public` to 0 and prevents Google, Bing, and other engines from indexing the site. Useful for staging or development. | Off |
 | **Set Permalink Structure** | Toggle | Opens a dropdown to select the permalink structure. | Off |
+| **Disable Comments and Pings** | Toggle | Disables comments and pings on new posts. Existing comments are preserved. | Off |
+| **Auto Create Important Pages** | Toggle | Reveals sub-options to create standard pages. | Off |
 
-When **Set Permalink Structure** is enabled:
+When **Set Permalink Structure** is enabled, you can pick a structure. Post name (`/%postname%/`) is recommended for most sites because it produces clean, readable URLs.
 
-| Sub-Option | Description |
-|------------|-------------|
-| **Plain** | `/?p=123`, Default WordPress structure |
-| **Day and name** | `/%year%/%monthnum%/%day%/%postname%/` |
-| **Month and name** | `/%year%/%monthnum%/%postname%/` |
-| **Post name** | `/%postname%/`, Recommended for most sites |
-| **Numeric** | `/archives/%post_id%` |
-| **Post name with ID** | `/%postname%/%post_id%/` |
-
-| Option | Type | Description | Default |
-|--------|------|-------------|---------|
-| **Disable Comments and Pings** | Toggle | Disables comments on new posts and disables pings. Existing comments are preserved. | Off |
-| **Auto Create Important Pages** | Toggle | Opens sub-options to select which standard pages to create. | Off |
-
-When **Auto Create Important Pages** is enabled, 9 page options appear:
+When **Auto Create Important Pages** is enabled, these page options appear:
 
 | Sub-Option | Default | Description |
 |------------|:-------:|-------------|
-| **Home Page** | On | Creates a blank "Home" page |
-| **About Us** | On | Creates a blank "About Us" page |
-| **Contact** | On | Creates a blank "Contact" page |
-| **Services** | Off | Creates a blank "Services" page |
-| **Blog** | Off | Creates a blank "Blog" page |
-| **Privacy Policy** | On | Creates a "Privacy Policy" page with WordPress's default privacy policy content |
-| **Terms and Conditions** | On | Creates a blank "Terms and Conditions" page |
-| **FAQ** | Off | Creates a blank "FAQ" page |
-| **Set Created Home Page as Front Page** | On | Automatically assigns the new Home page as the site front page |
-| **Set Created Blog Page as Posts Page** | Off | Automatically assigns the new Blog page as the posts page |
+| **Home Page** | On | Creates a blank Home page. |
+| **About Us** | On | Creates a blank About Us page. |
+| **Contact** | On | Creates a blank Contact page. |
+| **Services** | Off | Creates a blank Services page. |
+| **Blog** | Off | Creates a blank Blog page. |
+| **Privacy Policy** | On | Creates a Privacy Policy page with WordPress's default privacy content. |
+| **Terms and Conditions** | On | Creates a blank Terms and Conditions page. |
+| **FAQ** | Off | Creates a blank FAQ page. |
+| **Set Created Home Page as Front Page** | On | Assigns the new Home page as the site front page. |
+| **Set Created Blog Page as Posts Page** | Off | Assigns the new Blog page as the posts page. |
 
----
-
-## Section 6: Cleanup and Optimization
+### Cleanup and Optimization
 
 The Cleanup and Optimization section removes default WordPress content that clutters a fresh installation.
 
 | Option | Type | Description | Default |
 |--------|------|-------------|---------|
-| **Remove "Hello World" post** | Toggle | Deletes the default "Hello World" blog post. | Off |
-| **Remove Sample Page** | Toggle | Deletes the default "Sample Page". | Off |
-| **Rename "Uncategorized" to "General"** | Toggle | Renames the default "Uncategorized" category to "General". | Off |
+| **Remove "Hello World" post** | Toggle | Deletes the default Hello World blog post. | Off |
+| **Remove Sample Page** | Toggle | Deletes the default Sample Page. | Off |
+| **Rename "Uncategorized" to "General"** | Toggle | Renames the default Uncategorized category to General. | Off |
 | **Remove Default Plugins** | Toggle | Deactivates and deletes default plugins (Akismet, Hello Dolly). | Off |
-| **Remove Unused Themes** | Toggle | Removes all themes except the active one (Twenty Twenty-Four, etc.). | Off |
-| **Remove wp-config-sample.php & readme.html** | Toggle | Deletes `wp-config-sample.php` and `readme.html` from the root directory. | Off |
+| **Remove Unused Themes** | Toggle | Removes all themes except the active one. | Off |
+| **Remove wp-config-sample.php & readme.html** | Toggle | Deletes those two files from the site root. | Off |
 
-**Note:** The "Remove Default Plugins" option deactivates AND deletes Akismet and Hello Dolly. If you need Akismet, install it separately after running the wizard.
+**Note:** Remove Default Plugins deactivates and deletes Akismet and Hello Dolly. If you need Akismet, install it again after running the wizard.
 
----
-
-## Section 7: Media Settings
+### Media Settings
 
 The Media Settings section controls how WordPress handles media uploads.
 
 | Option | Type | Description | Default |
 |--------|------|-------------|---------|
-| **Disable Thumbnail Sizes** | Toggle | Prevents WordPress from generating thumbnail image sizes (150x150, 300x300). Reduces disk usage and database entries. | Off |
-| **Disable Year/Month Folders for Uploads** | Toggle | Saves uploads directly to `/wp-content/uploads/` instead of `/wp-content/uploads/2026/06/`. Simplifies URLs. | Off |
-| **Disable Avatars** | Toggle | Disables the Gravatar avatar system. No profile pictures are loaded from Gravatar servers. | Off (respects current setting) |
+| **Disable Thumbnail Sizes** | Toggle | Stops WordPress from generating thumbnail sizes (150x150, 300x300). Saves disk space and database entries. | Off |
+| **Disable Year/Month Folders for Uploads** | Toggle | Saves uploads directly to `/wp-content/uploads/` instead of dated folders. | Off |
+| **Disable Avatars** | Toggle | Turns off the Gravatar avatar system so no profile pictures load from Gravatar servers. | Off |
 
----
+### Dashboard and Interface
 
-## Section 8: Dashboard and Interface
-
-The Dashboard and Interface section cleans up the WordPress admin interface.
+The Dashboard and Interface section cleans up the WordPress admin.
 
 | Option | Type | Description | Default |
 |--------|------|-------------|---------|
-| **Disable Screen Options & Widgets** | Toggle | Removes the "Screen Options" tab and admin dashboard widgets. Provides a cleaner admin experience. | Off |
-| **Disable Patterns & Welcome Guide** | Toggle | Disables the WordPress block pattern library and the welcome guide that appears on first login. | Off |
+| **Disable Screen Options & Widgets** | Toggle | Removes the Screen Options tab and admin dashboard widgets. | Off |
+| **Disable Patterns & Welcome Guide** | Toggle | Disables the block pattern library and the welcome guide that shows on first login. | Off |
 
----
+### Self-Host Google Analytics v4
 
-## Self-Hosted Google Analytics v4
-
-The Setup subtab also includes the **Self-Host Google Analytics v4** toggle, which is a separate but related feature. When enabled, you can:
+The Setup subtab also includes the **Self-Host Google Analytics v4** toggle, a separate but related feature. For the full walkthrough of self-hosting GA4 on any site, see [How to Use Self-Hosted Google Analytics v4 in WordPress](core-self-hosted-analytics.md).
 
 | Option | Type | Description | Default |
 |--------|------|-------------|---------|
-| **Self-Host Google Analytics v4** | Toggle | Self-host the GA4 tracking script instead of loading from Google's servers. | Off |
-| **Google Analytics Tracking ID** | Text input | Your GA4 measurement ID (format: G-XXXXXXXXXX). | Empty |
-| **Tracking Script** | Dropdown | **Minimal Analytics** (1.4KB, recommended) for ultra-fast tracking, or **Gtag.js** (90KB) for full GA4 features (events, ecommerce, custom dimensions). | Minimal Analytics |
-| **Disable for logged in admins** | Toggle | Prevent analytics tracking for administrators. Prevents admin activity from skewing analytics data. | On |
+| **Self-Host Google Analytics v4** | Toggle | Serve the GA4 tracking script from your own server instead of Google's. | Off |
+| **Google Analytics Tracking ID** | Text input | Your GA4 measurement ID (format G-XXXXXXXXXX). | Empty |
+| **Tracking Script** | Dropdown | Minimal Analytics (1.4KB, recommended) for fast tracking, or Gtag.js (90KB) for full GA4 features such as events, ecommerce, and custom dimensions. | Minimal Analytics |
+| **Disable for logged in admins** | Toggle | Skip tracking for administrators so admin activity does not skew your data. | On |
 
-This is a performance-focused alternative to loading the standard Google Analytics script from Google's servers. Minimal Analytics is a lightweight implementation that provides the core GA4 metrics without the overhead of the full Gtag.js library.
-
----
-
-## What the Setup Wizard Configures
-
-| Section | What it does |
-|---------|-------------|
-| **Site Identity** | Sets site title, tagline, logo, favicon, language, week start day, timezone, date and time formats |
-| **Membership** | Enables/disables user registration, sets default user role |
-| **Install Plugins and Themes** | Searches WordPress.org repository, uploads ZIP files, activates selected theme |
-| **Homepage Settings** | Configures static homepage or latest posts, sets homepage and posts page |
-| **Search Engine Visibility** | Toggles search engine indexing, sets permalink structure, disables comments, auto-creates standard pages |
-| **Cleanup and Optimization** | Removes default content and plugins, renames Uncategorized |
-| **Media Settings** | Disables thumbnail sizes, year/month folders, avatars |
-| **Dashboard and Interface** | Disables screen options, patterns, welcome guide |
+Minimal Analytics provides the core GA4 metrics without the overhead of the full Gtag.js library, making it a lean, performance-focused way to track a fresh site.
 
 ---
 
-## Re-running Setup
+## Verify It Works
 
-After the first run, the button changes to **WordPress Setup Completed** and is disabled. To re-run:
-
-1. Go to **Options > Environment** in the Classic Monks settings
-2. Find the Quick WordPress Setup option
-3. Enable it again
-4. Reload the page
-5. Return to Core > Setup, the button is now **Re-run WordPress Setup**
-
-Re-running is useful when:
-
-- Setting up a second site with similar configuration
-- Recovering from a botched first run
-- Adopting a new standard configuration across multiple sites
-
-**Important:** Re-running the wizard applies all checked sections. Deselect any sections you want to keep current before re-running. The wizard only changes what you check.
+- Reload the front end and confirm the homepage, pages, and URL structure match what you configured.
+- Check the site title and tagline in the browser tab.
+- Open Settings > Permalinks and confirm the structure applied.
+- Confirm the Hello World post, Sample Page, and default plugins are gone.
+- For self-hosted analytics, load the site in an incognito window and confirm the tracking script in browser dev tools.
 
 ---
 
-## Developer Integration
+## Re-run Setup (Maintenance)
 
-The setup wizard runs as an AJAX-driven modal. The setup state is tracked in the `wp_setup_completed` option. The `wp_setup` feature flag controls whether the button is available.
+After the first run, the button reads **WordPress Setup Completed** and is disabled. To run the wizard again:
 
-**Option mapping:** The setup wizard maps its options to Classic Monks plugin options using the following mapping:
+1. Go to **Options > Environment** in the Classic Monks settings. See [How to Use the Environment Manager in WordPress](../options/options-opt-environment.md).
+2. Find the Quick WordPress Setup option and enable it again.
+3. Reload the page.
+4. Return to Core > Setup. The button now reads **Re-run WordPress Setup**.
+
+Re-running is useful when you are setting up a second site with the same configuration, recovering from a botched first run, or adopting a new standard across multiple sites.
+
+**Important:** re-running applies every checked section. Deselect any sections you want to keep current first. The wizard only changes what you check.
+
+---
+
+## Advanced Options (Developers)
+
+The setup wizard runs as an AJAX-driven modal. The setup state is tracked in the `wp_setup_completed` option, and the `wp_setup` feature flag controls whether the button is available.
+
+The wizard maps its options to Classic Monks plugin options:
 
 | Setup Option | Plugin Options Set |
 |-------------|-------------------|
@@ -315,51 +271,52 @@ The setup wizard runs as an AJAX-driven modal. The setup state is tracked in the
 | `disable_yearmonth_folders` | `disable_year_month_folders` |
 | `disable_core_sitemaps` | `disable_core_sitemaps` |
 
-The wizard uses `cm_update_option()` to persist each setting and `cm_is_feature_enabled()` to check feature flags. After completion, it sets `wp_setup_completed` to `true` and disables the `enable_wp_setup` toggle automatically.
+The wizard uses `cm_update_option()` to persist each setting and `cm_is_feature_enabled()` to check feature flags. After completion it sets `wp_setup_completed` to `true` and disables the `enable_wp_setup` toggle automatically.
 
 ---
 
 ## Troubleshooting
 
-### "WordPress Setup Completed" Button Is Greyed Out
+### The WordPress Setup Completed button is greyed out
 
-**Cause:** The setup has been run and the wp_setup feature flag is off.
-**Fix:** Go to **Options > Environment** and enable Quick WordPress Setup, then reload.
+The setup has run and the `wp_setup` feature flag is off. Go to **Options > Environment**, enable Quick WordPress Setup, and reload.
 
-### Setup Modal Does Not Open
+### The setup modal does not open
 
-**Cause:** JavaScript conflict with another plugin or theme, or a console error.
-**Fix:** Open browser dev tools, check the console for errors. Disable other plugins one at a time to identify the conflict.
+This is usually a JavaScript conflict with another plugin or theme. Open browser dev tools, check the console for errors, and disable other plugins one at a time to isolate the conflict.
 
-### Setup Completes But Settings Are Not Applied
+### Setup completes but settings are not applied
 
-**Cause:** File system permissions prevent WordPress from writing to wp-config.php or the database.
-**Fix:** Verify WordPress has write access to the filesystem. Check wp-config.php permissions.
+File system permissions may be blocking writes to wp-config.php or the database. Verify WordPress has write access and check the wp-config.php permissions.
 
-### Plugin or Theme Installation Fails
+### Plugin or theme installation fails
 
-**Cause:** The server cannot reach the WordPress.org API, or the ZIP file is invalid.
-**Fix:** Check the server's internet connection. For ZIP uploads, verify the file is a valid plugin/theme ZIP. Check the PHP `upload_max_filesize` setting if the ZIP is large.
+The server could not reach the WordPress.org API, or the ZIP file is invalid. Check the server connection, verify the ZIP is a valid plugin or theme archive, and raise `upload_max_filesize` if the ZIP is large.
 
-### Self-Hosted Analytics Script Does Not Track
+### The self-hosted analytics script does not track
 
-**Cause:** Tracking ID is wrong, the Minimal Analytics script is not loaded, or caching is serving stale pages.
-**Fix:** Verify the tracking ID in browser dev tools. Clear all caching layers. Test in incognito mode.
+The tracking ID may be wrong, the script may not load, or a cache is serving stale pages. Verify the ID in dev tools, clear every caching layer, and test in incognito mode.
 
-### Re-Run Setup Resets Settings I Did Not Want Changed
+### Re-run setup resets settings you did not want changed
 
-**Cause:** Re-running the wizard applies all checked sections, including ones you may not want to re-run.
-**Fix:** Before re-running, deselect any sections you want to keep current. The wizard only changes what you check.
+Re-running applies every checked section. Deselect any sections you want to keep current before you re-run.
 
-### Pages Are Created But Not Assigned as Homepage
+### Pages are created but not assigned as the homepage
 
-**Cause:** The "Set Created Home Page as Front Page" option is off, or the page order is different than expected.
-**Fix:** Enable the "Set Created Home Page as Front Page" toggle in the Search Engine Visibility section. If pages are created but not assigned, manually set them in Settings > Reading.
+The **Set Created Home Page as Front Page** toggle is off, or the page order differs from what you expected. Enable that toggle in the Search Engine Visibility section, or assign the pages manually in Settings > Reading.
 
-### The Setup Progress Bar Freezes
+### The setup progress bar freezes
 
-**Cause:** A server timeout or a slow plugin installation is blocking the AJAX request.
-**Fix:** Check the server error log. Increase the PHP `max_execution_time` setting if the setup takes longer than expected. The wizard handles timeouts gracefully and retries failed steps.
+A server timeout or a slow plugin install is blocking the AJAX request. Check the server error log and raise `max_execution_time` if the run takes longer than expected. The wizard handles timeouts gracefully and retries failed steps.
+
+---
+
+## Related Articles
+
+- [How to Use Self-Hosted Google Analytics v4 in WordPress](core-self-hosted-analytics.md)
+- [How to Enable Search Engine Visibility Status in WordPress](core-search-engine-visibility-status.md)
+- [How to Add Code Snippets in WordPress (PHP, CSS, JS, HTML)](../code-manager.md)
+- [How to Use the Environment Manager in WordPress](../options/options-opt-environment.md)
 
 ---
 
@@ -367,40 +324,28 @@ The wizard uses `cm_update_option()` to persist each setting and `cm_is_feature_
 
 ### When should I run Quick WordPress Setup?
 
-Only on a fresh WordPress install. The wizard is destructive: it removes default content (Hello World, Sample Page, default plugins), creates new pages, and changes settings. Running it on an existing site will overwrite your configuration.
+Only on a fresh WordPress install, because the wizard deletes default content, creates pages, and changes settings. Running it on an existing site will overwrite your configuration.
 
-### Can I run it more than once?
+### Can I run the setup wizard more than once?
 
-The first run is one-time. After completion, the button changes to "Re-run WordPress Setup" and is disabled by default. To re-run, go to **Options > Environment** in Classic Monks settings, enable Quick WordPress Setup, reload, then re-run from Core > Setup.
+Yes, but the button is disabled until you re-enable the feature. Go to **Options > Environment**, enable Quick WordPress Setup, reload, then re-run it from Core > Setup.
 
-### What if the wizard fails partway through?
+### What plugins does Quick WordPress Setup install by default?
 
-The wizard shows real-time progress for each section. If it fails (e.g., a plugin install times out), check the setup log. The sections that completed successfully stay applied; the failed section can be retried individually by re-running the wizard.
-
-### Does it work with `DISALLOW_FILE_MODS` enabled?
-
-No. The wizard needs to install plugins and themes, which `DISALLOW_FILE_MODS` blocks. If your wp-config.php has this constant, the Quick WordPress Setup button is disabled with a warning notice. Remove the constant temporarily, run the wizard, then re-enable it.
-
-### What plugins does it install by default?
-
-The wizard searches the WordPress.org repository for plugins you select. It does not auto-install a fixed list. Common picks include security (Wordfence, Sucuri), SEO (RankMath, Yoast), and forms (WPForms, Contact Form 7), but the choice is yours.
-
-### Can I use it on multisite?
-
-The wizard is designed for single-site installs. On multisite, the wizard may not correctly configure network-wide settings. Use it on individual subsites with caution.
+It does not install a fixed list. You pick plugins by searching the WordPress.org repository or uploading ZIP files, and only your selections are installed and activated.
 
 ### What happens to existing content?
 
-The wizard only removes default WordPress content (Hello World, Sample Page). Your existing posts, pages, media, and custom content are not affected. The "Remove Default Plugins" option only removes Akismet and Hello Dolly, not your custom plugins.
+Your posts, pages, media, and custom content are preserved. The wizard removes only default content such as the Hello World post and Sample Page, and Remove Default Plugins targets only Akismet and Hello Dolly.
 
-### Is there a way to automate the wizard for deployment?
+### Does the wizard work with `DISALLOW_FILE_MODS` enabled?
 
-The wizard is designed for manual use in the admin interface. For automated deployment, use WP-CLI or a custom migration script that sets the same options the wizard uses.
+No. Installing plugins and themes requires file writes, which that constant blocks, so the setup button is disabled with a warning.
+
+### Can I use it on multisite?
+
+The wizard is built for single-site installs. On multisite it may not configure network-wide settings correctly, so use it on individual subsites with caution.
 
 ---
 
-## Related Articles
-
-- [How to Use Self-Hosted Google Analytics v4 in Classic Monks](core-self-hosted-analytics.md)
-- [How to Add Code Snippets in WordPress (PHP, CSS, JS)](../code-manager.md)
-- [How to Use the Environment Manager in WordPress](../options/options-environment.md)
+*Written by Joy. Last updated August 30, 2026. Tested with WordPress 6.x and Classic Monks 2.2.2.*
