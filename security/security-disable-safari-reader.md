@@ -1,8 +1,8 @@
 ---
 title: "How to Disable Safari Reader Mode in WordPress"
 slug: disable-safari-reader
-description: "Disable Safari Reader Mode (⌘+Shift+R) on your WordPress site. Prevents the simplified reading view that strips out branding and styling."
-last_updated: 2026-06-24
+description: "Block the Safari Reader keyboard shortcut (Cmd+Shift+R) on Mac desktop. A light deterrent, not a full Reader block. Does not remove the Reader button on iPhone."
+last_updated: 2026-09-04
 author: Joy
 reading_time: 3 min
 canonical: https://classicmonks.com/docs/disable-safari-reader/
@@ -10,45 +10,44 @@ canonical: https://classicmonks.com/docs/disable-safari-reader/
 
 # How to Disable Safari Reader Mode in WordPress
 
-> Disable Safari Reader Mode in Classic Monks prevents Safari's Reader Mode (⌘+Shift+R) on your site. Keeps users on the full, styled version of your pages with branding intact.
+> Classic Monks can block the Safari Reader keyboard shortcut (Cmd+Shift+R) on Mac desktop. It keeps casual shortcut users on the styled version of your pages. It does not remove the Reader button, and it does not work on iPhone tap-to-open Reader.
 
 ## Key Takeaways
 
 - Single toggle, no nested options
-- Disables Safari's Reader Mode (the simplified reading view)
-- Keeps users on the full styled version of pages
-- Soft deterrent (users can still access content via Reader Mode by changing Safari settings)
-- Useful for sites that rely on their styling and branding
+- Blocks the Cmd+Shift+R shortcut in Safari on Mac desktop only
+- Does not hide the Reader icon and does not stop Reader on iPhone or iPad
+- Light deterrent. Anyone can still open Reader from the Safari menu
+- Best used together with the other Content Protection toggles, not on its own
 
 ## What Is the Disable Safari Reader Mode feature?
 
-Safari's Reader Mode is a feature that strips a webpage down to its essential text content, removing ads, navigation, and styling. The user activates it with ⌘+Shift+R (or by tapping the Reader icon in the address bar).
+Safari Reader strips a page down to plain text. No branding, no layout, no ads. People open it with Cmd+Shift+R on a Mac, through View > Show Reader, or by tapping the Reader icon in the address bar on iPhone and iPad.
 
-For most sites, Reader Mode is a positive feature: it makes content easier to read. But for some sites (e.g., brand-focused sites, sites with integrated advertising), it's a problem because it strips the visual experience.
+This toggle blocks one of those paths: the keyboard shortcut on Mac desktop. When it is on, pressing Cmd+Shift+R does nothing on your site.
 
-The Disable Safari Reader Mode feature prevents Safari from offering Reader Mode on your site.
+It does not remove the Reader icon. It does not stop someone tapping Reader on an iPhone. If you need a hard content lock on iOS, this is not it.
 
 ## Why You Need It
 
-Reader Mode can be problematic for some sites:
+For most blogs and news sites, leave Reader alone. People like it, and fighting it usually costs more goodwill than it saves.
 
-- **Brand-focused sites**: Reader Mode removes the branding, weakening the brand experience
-- **Advertising-supported sites**: Reader Mode removes ads, reducing ad revenue
-- **Custom layouts**: Reader Mode strips custom layouts, losing design intent
-- **Interactive content**: Reader Mode may break interactive elements
+It makes sense in a few cases:
 
-For most sites (especially content-focused blogs and news sites), Reader Mode is a positive feature. For sites where branding or layout is critical, disabling it is worth considering.
+- Brand-heavy pages where the design is the point
+- Ad-supported layouts where Reader wipes the revenue
+- Custom or interactive layouts that fall apart in plain text
+
+Even then, treat it as friction against casual use, not protection.
 
 ## Trade-offs vs allowing Reader Mode
 
-Disabling Reader Mode has trade-offs:
+- Some readers prefer Reader for distraction-free reading
+- Reader helps visitors with reading difficulties
+- iPhone users open Reader often, and this toggle does not affect them at all
+- Determined visitors can still open Reader from the menu in seconds
 
-- **User experience**: Some users prefer Reader Mode for distraction-free reading
-- **Accessibility**: Reader Mode is helpful for users with reading difficulties
-- **Sharing and quoting**: Reader Mode makes it easier to share specific paragraphs
-- **Mobile experience**: iPhone users in particular use Reader Mode frequently
-
-For most sites, the trade-offs are not worth it.
+For most sites, the trade-offs are not worth it. Turn this on only if you have a concrete reason.
 
 ---
 
@@ -64,7 +63,7 @@ Click on the **Security** menu, then click the **Content Protection** subtab.
 
 ### Step 3: Enable Disable Safari Reader Mode
 
-Scroll to **Disable Safari Reader Mode** and toggle on.
+Scroll to **Disable Safari Reader Mode (Cmd+Shift+R)** and toggle on.
 
 ### Step 4: Save Changes
 
@@ -72,7 +71,9 @@ Click **Save Changes**.
 
 ### Step 5: Test
 
-Visit your site in Safari (desktop or mobile). Try to activate Reader Mode (⌘+Shift+R or the Reader icon in the address bar). The Reader Mode option should not be available.
+On a Mac, open your site in Safari and press Cmd+Shift+R. The shortcut should do nothing.
+
+Do not test this on an iPhone expecting the Reader icon to disappear. It will still be there. That is expected behavior, not a bug.
 
 ---
 
@@ -80,7 +81,7 @@ Visit your site in Safari (desktop or mobile). Try to activate Reader Mode (⌘+
 
 | Option | Description | Default |
 |--------|-------------|---------|
-| **Disable Safari Reader Mode** | Master toggle. | Off |
+| **Disable Safari Reader Mode** | Blocks the Cmd+Shift+R shortcut in Safari on Mac desktop. | Off |
 
 No nested options.
 
@@ -88,56 +89,50 @@ No nested options.
 
 ## What Gets Affected
 
-- Safari (desktop and iOS): Reader Mode option is hidden
-- The browser's address bar: no Reader icon
-- The keyboard shortcut (⌘+Shift+R): no effect
-- The user experience: users see the full styled version of pages
+- Safari on Mac desktop: the Cmd+Shift+R shortcut is blocked
+- Only for logged-out visitors by default (admins are skipped unless "Apply to Administrators" is on)
 
 ## What Does NOT Get Affected
 
-- Other browsers: Chrome, Firefox, Edge, etc. are not affected
-- Safari users with Reader Mode enabled by default: still see the full styled version (Reader Mode is hidden, not disabled)
-- The page content: unchanged
-- The SEO: search engines can still read the full content (they use the HTML)
+- iPhone and iPad: tapping the Reader icon still works
+- Safari menu: View > Show Reader still works
+- Other browsers: Chrome, Firefox, Edge are not affected
+- Page content and SEO: unchanged, search engines read the same HTML
+- No meta tag is added to the page head
 
 ---
 
 ## Advanced Options (Developers)
 
-This feature registers 1 WordPress hook in `disable-safari-reader.php`:
+There is no dedicated file or filter for this toggle. It ships inside the shared content protection script in `functions/security/disable-right-click.php`.
 
-**Actions:**
+When enabled, `cm_disable_right_click_script()` (hooked to `wp_head` at priority 1) outputs a small keydown handler. The Safari part is one check:
 
-- `wp_head` calls `cm_disable_safari_reader()` (Adds meta tag to disable Safari Reader Mode)
-
-```php
-// Hooked in disable-safari-reader.php
-add_action( 'wp_head', 'cm_disable_safari_reader' );
+```js
+if (m && e.metaKey && e.shiftKey && e.key.toLowerCase() === "r") return p(e);
 ```
 
-The feature modifies WordPress behavior by registering or removing hooks. Disabling it reverses those changes and WordPress returns to its default behavior.
+Where `m` matches Mac platforms and `p(e)` calls preventDefault plus stopPropagation. Disabling the toggle removes the check and Safari behaves normally again.
+
+There is no `cm_disable_safari_reader_post_types` filter and no per-page control. The toggle is global.
 
 ## Troubleshooting
 
-### Reader Mode is still available
+### The Reader icon is still showing
 
-**Cause:** The toggle is off, or the user is using a different browser.
-**Fix:** Verify the toggle is on. Test in Safari specifically. Chrome, Firefox, etc. are not affected.
+Expected. This feature never hid the icon. It only blocks the keyboard shortcut on Mac desktop. On iPhone and iPad the icon stays and Reader still opens on tap.
 
-### The meta tag is not being added
+### The shortcut still works on my Mac
 
-**Cause:** A theme or plugin is removing the meta tag.
-**Fix:** Check the browser's developer tools to verify the meta tag is in the page head. If the tag is not present, check for plugins that strip meta tags from the head.
+Check three things. One, the toggle is on and you saved. Two, you are testing in Safari on a Mac, not another browser. Three, you are logged out or have "Apply to Administrators" enabled, since admins are skipped by default.
 
-### The page still appears in Reader Mode
+### I want to allow the shortcut on specific pages
 
-**Cause:** Safari may use cached content.
-**Fix:** Clear Safari's cache (Safari > Clear History and Website Data). Reload the page.
+Not supported. The toggle is global when on. There is no per post type or per page exception.
 
-### I want to allow Reader Mode for specific pages
+### The page still opens in Reader from the menu
 
-**Cause:** The feature is global.
-**Fix:** Use the `cm_disable_safari_reader_post_types` filter to allow Reader Mode for specific content types. For per-page control, use the `wp_head` action with a conditional check (see Advanced Options).
+Expected. View > Show Reader and the address bar icon are separate paths Safari controls. This toggle does not touch them.
 
 ---
 
