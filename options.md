@@ -1,7 +1,7 @@
 ---
 title: "How to Use the Options Tab in Classic Monks: Feature Index"
 slug: options
-description: "Index of all Options tab features in Classic Monks. 7 administrative guides covering import, export, reset, uninstall, and license management."
+description: "Index of all Options tab features in Classic Monks. 8 administrative guides covering migration, import, export, reset, uninstall, and license management."
 last_updated: 2026-06-24
 author: Joy
 reading_time: 2 min
@@ -10,13 +10,19 @@ canonical: https://classicmonks.com/docs/options/
 
 # How to Use the Options Tab in Classic Monks: Feature Index
 
-> The Options tab in Classic Monks adds 7 administrative features across 6 subtabs. This index links to every per-feature guide.
+> The Options tab in Classic Monks adds 8 administrative features across 7 subtabs. This index links to every per-feature guide.
 
 ## Environment
 
 | Feature | Guide |
 |---------|-------|
 | Environment Manager | [View guide](options/opt-environment.md) |
+
+## Migration
+
+| Feature | Guide |
+|---------|-------|
+| Migration from ASE or Perfmatters | [View guide](options/migrate-from-ase-perfmatters.md) |
 
 ## Import / Export
 
