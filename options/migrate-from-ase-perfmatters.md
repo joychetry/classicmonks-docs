@@ -12,6 +12,14 @@ canonical: "https://classicmonks.com/docs/migrate-from-ase-perfmatters/"
 
 > Switching plugins used to mean rebuilding every setting by hand. Classic Monks scans your old plugin and carries the active setup across for you.
 
+> **IMAGE PLACEHOLDER (name: migration-hero)**
+>
+> **Why:** Featured and OG image, sets the switch narrative before any steps.
+> **Type:** Illustration, side-by-side ASE and Perfmatters marks pointing into the Classic Monks dashboard.
+> **Title:** Switch to Classic Monks in one click
+> **Suggested alt:** "Migrate from ASE or Perfmatters to Classic Monks"
+> **Placement:** Directly under the H1 block, article hero. Future file: docs/images/options/migration/migration-hero.png.
+
 ## Key Takeaways
 
 - The Migration assistant lives under Classic Monks, Options, Migration, and it handles ASE (free or Pro) and Perfmatters.
@@ -39,6 +47,14 @@ Use it when you are consolidating. If ASE or Perfmatters is still active on the 
 
 Go to Classic Monks, Options, Migration. You will see one card per source plugin with a Migrate button. A greyed-out button means that plugin left no data on this site.
 
+> **IMAGE PLACEHOLDER (name: migration-provider-cards)**
+>
+> **Why:** Readers must recognize the subtab on sight, including the disabled-button state.
+> **Type:** UI screenshot of Options, Migration with both provider cards visible.
+> **Title:** Migration subtab with ASE and Perfmatters cards
+> **Suggested alt:** "Classic Monks Migration subtab showing ASE and Perfmatters Migrate buttons"
+> **Placement:** End of Step 1. Future file: docs/images/options/migration/migration-provider-cards.png.
+
 ### Step 2: Open the drawer and scan
 
 Click Migrate on the source you are leaving. A slide-in drawer opens. Click Scan. Classic Monks reads the source options and reports back, usually within seconds.
@@ -47,13 +63,37 @@ Click Migrate on the source you are leaving. A slide-in drawer opens. Click Scan
 
 Matched Features lists every active source setting that has a Classic Monks equivalent, grouped by area (Performance, Security, Interface, and so on). Each row starts checked. Uncheck anything you want to keep as-is. Notes under some rows flag when stored data travels with the toggle.
 
+> **IMAGE PLACEHOLDER (name: migration-matched-features)**
+>
+> **Why:** The grouped checkbox list is the core review moment, show it exactly.
+> **Type:** UI screenshot of the drawer Matched Features card with groups and checked rows.
+> **Title:** Matched features grouped by area
+> **Suggested alt:** "Migration drawer showing matched ASE features grouped by area"
+> **Placement:** End of Step 3. Future file: docs/images/options/migration/migration-matched-features.png.
+
 ### Step 4: Read what did not match
 
 The Not Migrated list names everything staying behind and says why. Check it before you continue. If something on that list matters to you, plan the manual step now instead of discovering it later.
 
+> **IMAGE PLACEHOLDER (name: migration-not-migrated)**
+>
+> **Why:** The honest skip list is the trust moment, readers should see its shape.
+> **Type:** UI screenshot of the drawer Not Migrated card with two or three reasoned rows.
+> **Title:** Not Migrated list with reasons
+> **Suggested alt:** "Migration drawer Not Migrated list showing skipped features with reasons"
+> **Placement:** End of Step 4. Future file: docs/images/options/migration/migration-not-migrated.png.
+
 ### Step 5: Set the overwrite toggle and apply
 
 Leave Overwrite Existing Settings on for a fresh switch. Turn it off when Classic Monks already holds values you want to keep. Click Migrate Selected. Applied rows flip to a migrated state right in the drawer, so you can move a subset now and the rest later.
+
+> **IMAGE PLACEHOLDER (name: migration-overwrite-apply)**
+>
+> **Why:** The overwrite default (on) is the riskiest control, show where it sits.
+> **Type:** UI screenshot of the overwrite toggle and the Migrate Selected footer button.
+> **Title:** Overwrite toggle and Migrate Selected button
+> **Suggested alt:** "Migration drawer overwrite toggle and Migrate Selected button"
+> **Placement:** End of Step 5. Future file: docs/images/options/migration/migration-overwrite-apply.png.
 
 ### Step 6: Reload and verify
 
@@ -102,6 +142,14 @@ From Perfmatters: header, body, and footer code (Code Manager is a snippet syste
 - Columns look right: open Posts and Pages list tables and confirm the order and visibility match the old layout.
 - Avatars survived: check two or three user profiles for their images.
 - Performance behaves: view source on the frontend and confirm the expected removals (emojis, embeds, version string) actually took effect.
+
+> **IMAGE PLACEHOLDER (name: migration-verified-smtp)**
+>
+> **Why:** Show what success looks like on the highest-risk import.
+> **Type:** UI screenshot of Email Manager with the Imported from ASE connection row.
+> **Title:** Imported SMTP connection in Email Manager
+> **Suggested alt:** "Email Manager showing the Imported from ASE SMTP connection"
+> **Placement:** End of Verification. Future file: docs/images/options/migration/migration-verified-smtp.png.
 
 ## Troubleshooting
 
